@@ -908,39 +908,26 @@ body {
   .cat-section.active { 
     max-width: 1200px; 
     padding: 0 32px 100px;
+    display: block;
+  }
+  .cat-section.active > h2 { 
+    font-size: 26px; 
+    margin: 24px 0 4px;
+  }
+  .cat-stats { font-size: 15px; }
+  
+  /* ✅ Grille 2 colonnes pour les cartes dans le conteneur */
+  .cat-section.active .deals-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px 20px;
     align-items: stretch;
   }
-  .cat-section.active > h2 { 
-    font-size: 26px; 
-    margin: 24px 0 4px;
-    grid-column: 1 / -1;
-  }
-  .cat-stats { font-size: 15px; }
   
-  /* Sous-titres */
-  .sub-header { 
+  /* Sous-titres — pleine largeur dans la grille */
+  .cat-section.active .sub-header { 
     font-size: 22px; 
     margin: 20px 0 8px; 
-    grid-column: 1 / -1;
-  }
-  
-  /* Viande: sous-catégories en ligne */
-  #section-viande.active {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    align-items: start;
-  }
-  #section-viande.active > h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-  }
-  #section-viande .sub-header {
-    font-size: 20px;
-    margin: 0 0 8px;
     grid-column: 1 / -1;
   }
   
@@ -999,23 +986,12 @@ body {
   .cat-section.active { 
     max-width: 1400px; 
     padding: 0 48px 100px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px 24px;
   }
 
-  /* Viande: sous-catégories en 3 colonnes */
-  #section-viande.active {
-    display: grid;
+  /* ✅ 3 colonnes sur grand écran */
+  .cat-section.active .deals-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 24px;
-    align-items: start;
-  }
-  #section-viande.active > h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-  }
-  #section-viande .sub-header {
-    margin-top: 0;
+    gap: 16px 24px;
   }
   
   .deal-card { padding: 18px 22px; margin-bottom: 0; min-height: 130px; }
@@ -1033,13 +1009,13 @@ body {
 /* Très grand écran 1600px+ */
 @media (min-width: 1600px) {
   .cat-section.active { max-width: 1600px; padding: 0 64px 100px; }
+  .cat-section.active .deals-container { gap: 20px 28px; }
   .header { padding: 28px 64px 20px; }
   .cat-tabs { padding: 18px 64px; }
   .hero-banner { padding: 56px 64px 36px; }
   .hero-banner h1 { font-size: 48px; }
   .share-bar { padding: 24px 64px; }
-  
-  #section-viande .deal-card { padding: 20px 26px; }
+  .deal-card { padding: 20px 26px; }
 }
 </style>
 </head>
