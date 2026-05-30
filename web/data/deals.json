@@ -8,7 +8,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 2.79,
       "per_kg": 1.4,
       "per_lb": 0.64,
@@ -16,7 +16,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159587/1779319586/extra_large.jpg",
-      "flipp_item_id": "1014979975",
       "protein_per_100g": 20,
       "protein_per_dollar": 142.9,
       "recipe": {
@@ -48,7 +47,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432570/1779585288/extra_large.jpg",
-      "flipp_item_id": "1015510678",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -69,7 +67,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200151/1779726410/extra_large.jpg",
-      "flipp_item_id": "1015671634",
       "protein_per_100g": 25,
       "protein_per_dollar": 68.9,
       "recipe": {
@@ -101,7 +98,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432569/1779585288/extra_large.jpg",
-      "flipp_item_id": "1015510695",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -122,7 +118,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432620/1779586004/extra_large.jpg",
-      "flipp_item_id": "1015517628",
       "protein_per_100g": 20,
       "protein_per_dollar": 36.3,
       "recipe": {
@@ -146,7 +141,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 1.29,
       "per_kg": 6.45,
       "per_lb": 2.93,
@@ -154,7 +149,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773213/1779807449/extra_large.jpg",
-      "flipp_item_id": "1016045125",
       "protein_per_100g": 20,
       "protein_per_dollar": 31.0,
       "recipe": {
@@ -178,7 +172,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 2.69,
       "per_kg": 6.72,
       "per_lb": 3.05,
@@ -186,7 +180,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159598/1779319586/extra_large.jpg",
-      "flipp_item_id": "1014974913",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -199,7 +192,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 4.99,
       "per_kg": 7.34,
       "per_lb": 3.33,
@@ -207,7 +200,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159604/1779319591/extra_large.jpg",
-      "flipp_item_id": "1014980469",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -228,7 +220,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261845/1779432497/extra_large.jpg",
-      "flipp_item_id": "1015378853",
       "protein_per_100g": 20,
       "protein_per_dollar": 25.7,
       "recipe": {
@@ -260,7 +251,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200327/1779726683/extra_large.jpg",
-      "flipp_item_id": "1015673856",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -281,7 +271,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261843/1779432496/extra_large.jpg",
-      "flipp_item_id": "1015372838",
       "protein_per_100g": 20,
       "protein_per_dollar": 22.5,
       "recipe": {
@@ -313,7 +302,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 21.9,
       "recipe": {
@@ -345,7 +333,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432628/1779585291/extra_large.jpg",
-      "flipp_item_id": "1015511445",
       "protein_per_100g": 20,
       "protein_per_dollar": 21.5,
       "recipe": {
@@ -377,7 +364,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 20.2,
       "recipe": {
@@ -401,7 +387,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": 9.95,
       "per_lb": 4.51,
@@ -409,7 +395,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159649/1779319589/extra_large.jpg",
-      "flipp_item_id": "1014969383",
       "protein_per_100g": 20,
       "protein_per_dollar": 20.1,
       "recipe": {
@@ -441,7 +426,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245936/1779721622/extra_large.jpg",
-      "flipp_item_id": "1015124880",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -462,7 +446,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200297/1779726597/extra_large.jpg",
-      "flipp_item_id": "1015673133",
       "protein_per_100g": 17,
       "protein_per_dollar": 17.0,
       "recipe": {
@@ -494,7 +477,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432627/1779585291/extra_large.jpg",
-      "flipp_item_id": "1015511337",
       "protein_per_100g": 20,
       "protein_per_dollar": 19.3,
       "recipe": {
@@ -526,7 +508,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242107/1779437058/extra_large.jpg",
-      "flipp_item_id": "1015658636",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -547,7 +528,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 19.0,
       "recipe": {
@@ -579,7 +559,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422228154/1780003748/extra_large.jpg",
-      "flipp_item_id": "1016840683",
       "protein_per_100g": 25,
       "protein_per_dollar": 23.7,
       "recipe": {
@@ -611,7 +590,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 18.9,
       "recipe": {
@@ -635,7 +613,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 3.19,
       "per_kg": 10.63,
       "per_lb": 4.82,
@@ -643,7 +621,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960391/1779256303/extra_large.jpg",
-      "flipp_item_id": "1015632989",
       "protein_per_100g": 20,
       "protein_per_dollar": 18.8,
       "recipe": {
@@ -675,7 +652,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200274/1779726470/extra_large.jpg",
-      "flipp_item_id": "1015672511",
       "protein_per_100g": 20,
       "protein_per_dollar": 18.8,
       "recipe": {
@@ -699,7 +675,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 2.29,
       "per_kg": 11.45,
       "per_lb": 5.19,
@@ -707,7 +683,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773243/1779807466/extra_large.jpg",
-      "flipp_item_id": "1016045151",
       "protein_per_100g": 20,
       "protein_per_dollar": 17.5,
       "recipe": {
@@ -731,7 +706,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 5.99,
       "per_kg": 11.98,
       "per_lb": 5.43,
@@ -739,7 +714,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159644/1779319585/extra_large.jpg",
-      "flipp_item_id": "1014983049",
       "protein_per_100g": 20,
       "protein_per_dollar": 16.7,
       "recipe": {
@@ -771,7 +745,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432613/1779585999/extra_large.jpg",
-      "flipp_item_id": "1015517519",
       "protein_per_100g": 20,
       "protein_per_dollar": 16.7,
       "recipe": {
@@ -803,7 +776,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 15.1,
       "recipe": {
@@ -835,7 +807,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241945/1779437051/extra_large.jpg",
-      "flipp_item_id": "1015658355",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -856,7 +827,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432630/1779585293/extra_large.jpg",
-      "flipp_item_id": "1015511454",
       "protein_per_100g": 20,
       "protein_per_dollar": 15.0,
       "recipe": {
@@ -888,7 +858,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245938/1779721623/extra_large.jpg",
-      "flipp_item_id": "1015124904",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.9,
       "recipe": {
@@ -920,7 +889,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -941,7 +909,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -954,7 +921,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 2.79,
       "per_kg": 13.95,
       "per_lb": 6.33,
@@ -962,7 +929,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890437/1779841015/extra_large.jpg",
-      "flipp_item_id": "1016182784",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.3,
       "recipe": {
@@ -994,7 +960,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261798/1779432499/extra_large.jpg",
-      "flipp_item_id": "1015403628",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.3,
       "recipe": {
@@ -1026,7 +991,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422345889/1780090258/extra_large.jpg",
-      "flipp_item_id": "1017035041",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.2,
       "recipe": {
@@ -1050,7 +1014,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 15.99,
       "per_kg": 14.15,
       "per_lb": 6.42,
@@ -1058,7 +1022,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159654/1779319593/extra_large.jpg",
-      "flipp_item_id": "1014979386",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.1,
       "recipe": {
@@ -1090,7 +1053,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261801/1779432501/extra_large.jpg",
-      "flipp_item_id": "1015442697",
       "protein_per_100g": 20,
       "protein_per_dollar": 14.0,
       "recipe": {
@@ -1122,7 +1084,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 13.8,
       "recipe": {
@@ -1154,7 +1115,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 13.8,
       "recipe": {
@@ -1178,7 +1138,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": 14.95,
       "per_lb": 6.78,
@@ -1186,7 +1146,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890469/1779841009/extra_large.jpg",
-      "flipp_item_id": "1016182816",
       "protein_per_100g": 20,
       "protein_per_dollar": 13.4,
       "recipe": {
@@ -1218,7 +1177,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200146/1779726407/extra_large.jpg",
-      "flipp_item_id": "1015671560",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1239,7 +1197,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432636/1779585298/extra_large.jpg",
-      "flipp_item_id": "1015511450",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1260,7 +1217,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 12.6,
       "recipe": {
@@ -1292,7 +1248,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 12.5,
       "recipe": {
@@ -1324,7 +1279,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261825/1779432498/extra_large.jpg",
-      "flipp_item_id": "1015411355",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1345,7 +1299,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432702/1779585297/extra_large.jpg",
-      "flipp_item_id": "1015512783",
       "protein_per_100g": 20,
       "protein_per_dollar": 11.7,
       "recipe": {
@@ -1377,7 +1330,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422110709/1779908477/extra_large.jpg",
-      "flipp_item_id": "1016641736",
       "protein_per_100g": 20,
       "protein_per_dollar": 11.6,
       "recipe": {
@@ -1401,7 +1353,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 6.5,
       "per_kg": 17.33,
       "per_lb": 7.86,
@@ -1409,7 +1361,6 @@
       "source": "estime",
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/417279866/1776436701/extra_large.jpg",
-      "flipp_item_id": "1007490647",
       "protein_per_100g": 20,
       "protein_per_dollar": 11.5,
       "recipe": {
@@ -1441,7 +1392,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245869/1779422504/extra_large.jpg",
-      "flipp_item_id": "1015124012",
       "protein_per_100g": 20,
       "protein_per_dollar": 11.4,
       "recipe": {
@@ -1465,7 +1415,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 15.99,
       "per_kg": 17.63,
       "per_lb": 8.0,
@@ -1473,7 +1423,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159653/1779319592/extra_large.jpg",
-      "flipp_item_id": "1014972090",
       "protein_per_100g": 18,
       "protein_per_dollar": 10.2,
       "recipe": {
@@ -1497,7 +1446,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 7.99,
       "per_kg": 17.76,
       "per_lb": 8.06,
@@ -1505,7 +1454,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159655/1779319593/extra_large.jpg",
-      "flipp_item_id": "1014969414",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1518,7 +1466,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": 17.98,
       "per_lb": 8.16,
@@ -1526,7 +1474,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159646/1779319587/extra_large.jpg",
-      "flipp_item_id": "1014979392",
       "protein_per_100g": 20,
       "protein_per_dollar": 11.1,
       "recipe": {
@@ -1550,7 +1497,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 5.49,
       "per_kg": 18.3,
       "per_lb": 8.3,
@@ -1558,7 +1505,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420963443/1779257598/extra_large.jpg",
-      "flipp_item_id": "1015641995",
       "protein_per_100g": 20,
       "protein_per_dollar": 10.9,
       "recipe": {
@@ -1582,7 +1528,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 5.49,
       "per_kg": 18.3,
       "per_lb": 8.3,
@@ -1590,7 +1536,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960305/1779256293/extra_large.jpg",
-      "flipp_item_id": "1015632838",
       "protein_per_100g": 20,
       "protein_per_dollar": 10.9,
       "recipe": {
@@ -1622,7 +1567,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261781/1779432508/extra_large.jpg",
-      "flipp_item_id": "1015442873",
       "protein_per_100g": 20,
       "protein_per_dollar": 10.7,
       "recipe": {
@@ -1654,7 +1598,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261811/1779432507/extra_large.jpg",
-      "flipp_item_id": "1015372929",
       "protein_per_100g": 20,
       "protein_per_dollar": 10.1,
       "recipe": {
@@ -1686,7 +1629,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245921/1779721613/extra_large.jpg",
-      "flipp_item_id": "1015124665",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1707,7 +1649,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200258/1779726619/extra_large.jpg",
-      "flipp_item_id": "1015673303",
       "protein_per_100g": 20,
       "protein_per_dollar": 10.0,
       "recipe": {
@@ -1739,7 +1680,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 18,
       "protein_per_dollar": 8.8,
       "recipe": null
@@ -1760,7 +1700,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 18,
       "protein_per_dollar": 8.8,
       "recipe": null
@@ -1773,7 +1712,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 7.99,
       "per_kg": 21.31,
       "per_lb": 9.67,
@@ -1781,7 +1720,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960311/1779256297/extra_large.jpg",
-      "flipp_item_id": "1015632851",
       "protein_per_100g": 20,
       "protein_per_dollar": 9.4,
       "recipe": {
@@ -1813,7 +1751,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200171/1779726440/extra_large.jpg",
-      "flipp_item_id": "1015672020",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1834,7 +1771,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245855/1779422503/extra_large.jpg",
-      "flipp_item_id": "1015123857",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1855,7 +1791,6 @@
       "source": "estime",
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421501339/1779678975/extra_large.jpg",
-      "flipp_item_id": "1015603642",
       "protein_per_100g": 20,
       "protein_per_dollar": 8.9,
       "recipe": {
@@ -1887,7 +1822,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200699/1779449796/extra_large.jpg",
-      "flipp_item_id": "1015676001",
       "protein_per_100g": 20,
       "protein_per_dollar": 8.8,
       "recipe": {
@@ -1919,7 +1853,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245849/1779422499/extra_large.jpg",
-      "flipp_item_id": "1015123792",
       "protein_per_100g": 20,
       "protein_per_dollar": 8.3,
       "recipe": {
@@ -1943,7 +1876,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": 23.97,
       "per_lb": 10.87,
@@ -1951,7 +1884,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270013/1779433259/extra_large.jpg",
-      "flipp_item_id": "1015498517",
       "protein_per_100g": 20,
       "protein_per_dollar": 8.3,
       "recipe": {
@@ -1983,7 +1915,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245866/1779422502/extra_large.jpg",
-      "flipp_item_id": "1015123979",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2004,7 +1935,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261802/1779432501/extra_large.jpg",
-      "flipp_item_id": "1015409240",
       "protein_per_100g": 18,
       "protein_per_dollar": 7.4,
       "recipe": {
@@ -2036,7 +1966,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432637/1779585299/extra_large.jpg",
-      "flipp_item_id": "1015511581",
       "protein_per_100g": 22,
       "protein_per_dollar": 8.8,
       "recipe": {
@@ -2060,7 +1989,7 @@
       "store": "Rachelle Béry",
       "store_id": 37869,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+      "store_url": "",
       "price": 11.99,
       "per_kg": 26.41,
       "per_lb": 11.98,
@@ -2068,7 +1997,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421186623/1779327054/extra_large.jpg",
-      "flipp_item_id": "1015739315",
       "protein_per_100g": 20,
       "protein_per_dollar": 7.6,
       "recipe": {
@@ -2100,7 +2028,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245805/1779422498/extra_large.jpg",
-      "flipp_item_id": "1015123303",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2121,7 +2048,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245860/1779422497/extra_large.jpg",
-      "flipp_item_id": "1015123915",
       "protein_per_100g": 20,
       "protein_per_dollar": 7.5,
       "recipe": {
@@ -2153,7 +2079,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421250785/1779893911/extra_large.jpg",
-      "flipp_item_id": "1015048301",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2174,7 +2099,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242058/1779437050/extra_large.jpg",
-      "flipp_item_id": "1015659623",
       "protein_per_100g": 20,
       "protein_per_dollar": 7.5,
       "recipe": {
@@ -2206,7 +2130,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 7.3,
       "recipe": {
@@ -2230,7 +2153,7 @@
       "store": "Rachelle Béry",
       "store_id": 37869,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+      "store_url": "",
       "price": 5.99,
       "per_kg": 29.95,
       "per_lb": 13.59,
@@ -2238,7 +2161,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421186613/1779327052/extra_large.jpg",
-      "flipp_item_id": "1015739329",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2259,7 +2181,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200265/1779726624/extra_large.jpg",
-      "flipp_item_id": "1015673419",
       "protein_per_100g": 25,
       "protein_per_dollar": 8.3,
       "recipe": {
@@ -2291,7 +2212,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200324/1779726680/extra_large.jpg",
-      "flipp_item_id": "1015673805",
       "protein_per_100g": 20,
       "protein_per_dollar": 6.7,
       "recipe": {
@@ -2323,7 +2243,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 18,
       "protein_per_dollar": 5.9,
       "recipe": null
@@ -2344,7 +2263,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242068/1779437054/extra_large.jpg",
-      "flipp_item_id": "1015659656",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2365,7 +2283,6 @@
       "source": "estime",
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183748/1779457568/extra_large.jpg",
-      "flipp_item_id": "1014902973",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.7,
       "recipe": {
@@ -2397,7 +2314,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245919/1779721612/extra_large.jpg",
-      "flipp_item_id": "1015124634",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.7,
       "recipe": {
@@ -2429,7 +2345,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261828/1779432500/extra_large.jpg",
-      "flipp_item_id": "1015349936",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.7,
       "recipe": {
@@ -2461,7 +2376,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161616/1779743806/extra_large.jpg",
-      "flipp_item_id": "1014882335",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.5,
       "recipe": {
@@ -2493,7 +2407,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421187874/1779743817/extra_large.jpg",
-      "flipp_item_id": "1014966496",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.5,
       "recipe": {
@@ -2517,7 +2430,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": 37.31,
       "per_lb": 16.92,
@@ -2525,7 +2438,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421301650/1779433268/extra_large.jpg",
-      "flipp_item_id": "1015493247",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.4,
       "recipe": {
@@ -2549,7 +2461,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 14.99,
       "per_kg": 39.97,
       "per_lb": 18.13,
@@ -2557,7 +2469,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890415/1779840999/extra_large.jpg",
-      "flipp_item_id": "1016182762",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2570,7 +2481,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 15.0,
       "per_kg": 40.0,
       "per_lb": 18.14,
@@ -2578,7 +2489,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960397/1779256295/extra_large.jpg",
-      "flipp_item_id": "1015632995",
       "protein_per_100g": 20,
       "protein_per_dollar": 5.0,
       "recipe": {
@@ -2610,7 +2520,6 @@
       "source": "reel",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200293/1779726594/extra_large.jpg",
-      "flipp_item_id": "1015673068",
       "protein_per_100g": 20,
       "protein_per_dollar": 4.7,
       "recipe": {
@@ -2642,7 +2551,6 @@
       "source": "nom",
       "valid_to": "2026-05-31",
       "image_url": "https://f.wishabi.net/page_items/421611242/1779728863/extra_large.jpg",
-      "flipp_item_id": "1015745382",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2655,7 +2563,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 15.99,
       "per_kg": 53.3,
       "per_lb": 24.18,
@@ -2663,7 +2571,6 @@
       "source": "nom",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159658/1779319596/extra_large.jpg",
-      "flipp_item_id": "1014975047",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2676,7 +2583,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 24.99,
       "per_kg": 66.64,
       "per_lb": 30.23,
@@ -2684,7 +2591,6 @@
       "source": "estime",
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270099/1779433262/extra_large.jpg",
-      "flipp_item_id": "1015493253",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2705,7 +2611,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2737,7 +2642,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2769,7 +2673,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2801,7 +2704,6 @@
       "source": "nom",
       "valid_to": "2026-05-31",
       "image_url": "https://f.wishabi.net/page_items/421611244/1779728865/extra_large.jpg",
-      "flipp_item_id": "1015745386",
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2833,7 +2735,6 @@
       "source": "nom",
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": 1.9,
       "recipe": {
@@ -2865,7 +2766,6 @@
       "source": "nom",
       "valid_to": "2026-05-31",
       "image_url": "https://f.wishabi.net/page_items/421611211/1779728856/extra_large.jpg",
-      "flipp_item_id": "1015745426",
       "protein_per_100g": 17,
       "protein_per_dollar": 0.9,
       "recipe": {
@@ -2899,7 +2799,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422345883/1780090256/extra_large.jpg",
-      "flipp_item_id": "1017035031",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2920,7 +2819,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422228152/1780003746/extra_large.jpg",
-      "flipp_item_id": "1016840674",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2941,7 +2839,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432572/1779585290/extra_large.jpg",
-      "flipp_item_id": "1015510736",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2954,7 +2851,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 0.99,
       "per_kg": null,
       "per_lb": null,
@@ -2962,7 +2859,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890417/1779841001/extra_large.jpg",
-      "flipp_item_id": "1016182764",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2975,7 +2871,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 0.99,
       "per_kg": null,
       "per_lb": null,
@@ -2983,7 +2879,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159613/1779319601/extra_large.jpg",
-      "flipp_item_id": "1014979461",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2996,7 +2891,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 0.99,
       "per_kg": null,
       "per_lb": null,
@@ -3004,7 +2899,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877768/1779855032/extra_large.jpg",
-      "flipp_item_id": "1016243624",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3025,7 +2919,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241939/1779437048/extra_large.jpg",
-      "flipp_item_id": "1015658288",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3038,7 +2931,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 0.99,
       "per_kg": null,
       "per_lb": null,
@@ -3046,7 +2939,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770530/1779805452/extra_large.jpg",
-      "flipp_item_id": "1016047979",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3067,7 +2959,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183757/1779457570/extra_large.jpg",
-      "flipp_item_id": "1014902982",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3088,7 +2979,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183718/1779457559/extra_large.jpg",
-      "flipp_item_id": "1014902921",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3109,7 +2999,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432577/1779585294/extra_large.jpg",
-      "flipp_item_id": "1015510897",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3122,7 +3011,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 1.49,
       "per_kg": null,
       "per_lb": null,
@@ -3130,7 +3019,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877804/1779855040/extra_large.jpg",
-      "flipp_item_id": "1016243872",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3143,7 +3031,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 1.49,
       "per_kg": null,
       "per_lb": null,
@@ -3151,7 +3039,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877793/1779855031/extra_large.jpg",
-      "flipp_item_id": "1016243838",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3164,7 +3051,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 1.59,
       "per_kg": null,
       "per_lb": null,
@@ -3172,7 +3059,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159610/1779319598/extra_large.jpg",
-      "flipp_item_id": "1014971858",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3193,7 +3079,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245932/1779721620/extra_large.jpg",
-      "flipp_item_id": "1015124839",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3225,7 +3110,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245795/1779422503/extra_large.jpg",
-      "flipp_item_id": "1015123198",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -3257,7 +3141,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183734/1779457565/extra_large.jpg",
-      "flipp_item_id": "1014902955",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3270,7 +3153,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3278,7 +3161,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773246/1779807450/extra_large.jpg",
-      "flipp_item_id": "1016045172",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3291,7 +3173,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3299,7 +3181,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890449/1779840997/extra_large.jpg",
-      "flipp_item_id": "1016182796",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3323,7 +3204,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3331,7 +3212,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877797/1779855035/extra_large.jpg",
-      "flipp_item_id": "1016243850",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3344,7 +3224,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3352,7 +3232,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877794/1779855032/extra_large.jpg",
-      "flipp_item_id": "1016243837",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3365,7 +3244,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3373,7 +3252,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877779/1779855029/extra_large.jpg",
-      "flipp_item_id": "1016243642",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3394,7 +3272,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245844/1779422504/extra_large.jpg",
-      "flipp_item_id": "1015123733",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3415,7 +3292,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245839/1779422501/extra_large.jpg",
-      "flipp_item_id": "1015123675",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3436,7 +3312,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241967/1779437061/extra_large.jpg",
-      "flipp_item_id": "1015658575",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3457,7 +3332,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421250792/1779893912/extra_large.jpg",
-      "flipp_item_id": "1015048305",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3470,7 +3344,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 1.99,
       "per_kg": null,
       "per_lb": null,
@@ -3478,7 +3352,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960411/1779256295/extra_large.jpg",
-      "flipp_item_id": "1015632744",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3502,7 +3375,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 2.49,
       "per_kg": null,
       "per_lb": null,
@@ -3510,7 +3383,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159614/1779319602/extra_large.jpg",
-      "flipp_item_id": "1014972121",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3523,7 +3395,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 2.49,
       "per_kg": null,
       "per_lb": null,
@@ -3531,7 +3403,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877839/1779855033/extra_large.jpg",
-      "flipp_item_id": "1016243640",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3563,7 +3434,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421246012/1779422508/extra_large.jpg",
-      "flipp_item_id": "1015125314",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3584,7 +3454,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200337/1779726691/extra_large.jpg",
-      "flipp_item_id": "1015674019",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3597,7 +3466,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 2.49,
       "per_kg": null,
       "per_lb": null,
@@ -3605,7 +3474,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770525/1779805455/extra_large.jpg",
-      "flipp_item_id": "1016048751",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3637,7 +3505,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432579/1779585296/extra_large.jpg",
-      "flipp_item_id": "1015510921",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3658,7 +3525,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241933/1779437045/extra_large.jpg",
-      "flipp_item_id": "1015658193",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3690,7 +3556,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242010/1779437051/extra_large.jpg",
-      "flipp_item_id": "1015659427",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3703,7 +3568,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 2.89,
       "per_kg": null,
       "per_lb": null,
@@ -3711,7 +3576,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159589/1779319588/extra_large.jpg",
-      "flipp_item_id": "1014969101",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3732,7 +3596,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242019/1779437058/extra_large.jpg",
-      "flipp_item_id": "1015659528",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3753,7 +3616,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161778/1779326897/extra_large.jpg",
-      "flipp_item_id": "1014882616",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3774,7 +3636,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161992/1779326908/extra_large.jpg",
-      "flipp_item_id": "1014882628",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3795,7 +3656,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421187674/1779326917/extra_large.jpg",
-      "flipp_item_id": "1014916352",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3816,7 +3676,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421187688/1779326926/extra_large.jpg",
-      "flipp_item_id": "1015020788",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3829,7 +3688,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -3837,7 +3696,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773236/1779807464/extra_large.jpg",
-      "flipp_item_id": "1016045148",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -3861,7 +3719,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -3869,7 +3727,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877852/1779855038/extra_large.jpg",
-      "flipp_item_id": "1016244168",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -3901,7 +3758,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245794/1779422502/extra_large.jpg",
-      "flipp_item_id": "1015123188",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3922,7 +3778,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245842/1779422503/extra_large.jpg",
-      "flipp_item_id": "1015123708",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3943,7 +3798,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422110703/1779908475/extra_large.jpg",
-      "flipp_item_id": "1016641693",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3964,7 +3818,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245927/1779721617/extra_large.jpg",
-      "flipp_item_id": "1015124780",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -3996,7 +3849,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245804/1779422497/extra_large.jpg",
-      "flipp_item_id": "1015123293",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4020,7 +3872,7 @@
       "store": "Rachelle Béry",
       "store_id": 37869,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4028,7 +3880,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421186603/1779327051/extra_large.jpg",
-      "flipp_item_id": "1015739294",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4049,7 +3900,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200280/1779726474/extra_large.jpg",
-      "flipp_item_id": "1015672615",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4070,7 +3920,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421307301/1779726478/extra_large.jpg",
-      "flipp_item_id": "1015672753",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4091,7 +3940,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200295/1779726596/extra_large.jpg",
-      "flipp_item_id": "1015673101",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4123,7 +3971,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421250825/1779893916/extra_large.jpg",
-      "flipp_item_id": "1015048605",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4136,7 +3983,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4144,7 +3991,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420963452/1779257605/extra_large.jpg",
-      "flipp_item_id": "1015642011",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4157,7 +4003,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4165,7 +4011,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770531/1779805453/extra_large.jpg",
-      "flipp_item_id": "1016049074",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4178,7 +4023,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4186,7 +4031,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770553/1779805453/extra_large.jpg",
-      "flipp_item_id": "1016048750",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4199,7 +4043,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4207,7 +4051,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770501/1779805451/extra_large.jpg",
-      "flipp_item_id": "1016048743",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4231,7 +4074,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 2.99,
       "per_kg": null,
       "per_lb": null,
@@ -4239,7 +4082,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960313/1779256298/extra_large.jpg",
-      "flipp_item_id": "1015632856",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4252,7 +4094,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 3.0,
       "per_kg": null,
       "per_lb": null,
@@ -4260,7 +4102,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773254/1779807457/extra_large.jpg",
-      "flipp_item_id": "1016045177",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4281,7 +4122,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421249335/1779386433/extra_large.jpg",
-      "flipp_item_id": "1015045990",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4302,7 +4142,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261750/1779432501/extra_large.jpg",
-      "flipp_item_id": "1015391569",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -4326,7 +4165,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 3.17,
       "per_kg": null,
       "per_lb": null,
@@ -4334,7 +4173,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877835/1779855031/extra_large.jpg",
-      "flipp_item_id": "1016243637",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -4366,7 +4204,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242090/1779437047/extra_large.jpg",
-      "flipp_item_id": "1015660219",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4387,7 +4224,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421407686/1779678955/extra_large.jpg",
-      "flipp_item_id": "1015603544",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4419,7 +4255,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421501239/1779678959/extra_large.jpg",
-      "flipp_item_id": "1015600319",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4443,7 +4278,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 3.49,
       "per_kg": null,
       "per_lb": null,
@@ -4451,7 +4286,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159632/1779319596/extra_large.jpg",
-      "flipp_item_id": "1014982275",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4472,7 +4306,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242070/1779437054/extra_large.jpg",
-      "flipp_item_id": "1015659662",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4504,7 +4337,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261865/1779432499/extra_large.jpg",
-      "flipp_item_id": "1015434650",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4517,7 +4349,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 3.5,
       "per_kg": null,
       "per_lb": null,
@@ -4525,7 +4357,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416903868/1776436699/extra_large.jpg",
-      "flipp_item_id": "1007282654",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4538,7 +4369,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 3.5,
       "per_kg": null,
       "per_lb": null,
@@ -4546,7 +4377,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902981/1776436700/extra_large.jpg",
-      "flipp_item_id": "1007251981",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4559,7 +4389,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 3.5,
       "per_kg": null,
       "per_lb": null,
@@ -4567,7 +4397,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902982/1776436701/extra_large.jpg",
-      "flipp_item_id": "1007251098",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4588,7 +4417,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261748/1779432499/extra_large.jpg",
-      "flipp_item_id": "1015392750",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4609,7 +4437,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432699/1779585295/extra_large.jpg",
-      "flipp_item_id": "1015512712",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4630,7 +4457,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422345880/1780090255/extra_large.jpg",
-      "flipp_item_id": "1017035029",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4662,7 +4488,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183744/1779457567/extra_large.jpg",
-      "flipp_item_id": "1014902967",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4694,7 +4519,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422110640/1779908466/extra_large.jpg",
-      "flipp_item_id": "1016641412",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4715,7 +4539,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421246028/1779422521/extra_large.jpg",
-      "flipp_item_id": "1015125361",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4736,7 +4559,6 @@
       "source": null,
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4768,7 +4590,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421407879/1779678957/extra_large.jpg",
-      "flipp_item_id": "1015604779",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4789,7 +4610,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245840/1779422501/extra_large.jpg",
-      "flipp_item_id": "1015123686",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4810,7 +4630,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245847/1779422498/extra_large.jpg",
-      "flipp_item_id": "1015123772",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4842,7 +4661,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245856/1779422504/extra_large.jpg",
-      "flipp_item_id": "1015123868",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4874,7 +4692,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200268/1779726467/extra_large.jpg",
-      "flipp_item_id": "1015672415",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4895,7 +4712,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421475200/1779586006/extra_large.jpg",
-      "flipp_item_id": "1015517683",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4919,7 +4735,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 4.0,
       "per_kg": null,
       "per_lb": null,
@@ -4927,7 +4743,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416907602/1776436698/extra_large.jpg",
-      "flipp_item_id": "1007282895",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4951,7 +4766,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 4.0,
       "per_kg": null,
       "per_lb": null,
@@ -4959,7 +4774,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416907601/1776436697/extra_large.jpg",
-      "flipp_item_id": "1007257796",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4980,7 +4794,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200150/1779726410/extra_large.jpg",
-      "flipp_item_id": "1015671619",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5001,7 +4814,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421307302/1779726478/extra_large.jpg",
-      "flipp_item_id": "1015672769",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5022,7 +4834,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261738/1779432492/extra_large.jpg",
-      "flipp_item_id": "1015348954",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5054,7 +4865,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432610/1779585998/extra_large.jpg",
-      "flipp_item_id": "1015517493",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5086,7 +4896,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161631/1779743810/extra_large.jpg",
-      "flipp_item_id": "1014882342",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5107,7 +4916,6 @@
       "source": null,
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 23,
       "protein_per_dollar": null,
       "recipe": {
@@ -5131,7 +4939,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 4.49,
       "per_kg": null,
       "per_lb": null,
@@ -5139,7 +4947,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159659/1779319596/extra_large.jpg",
-      "flipp_item_id": "1014981449",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5171,7 +4978,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200339/1779726692/extra_large.jpg",
-      "flipp_item_id": "1015674055",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -5203,7 +5009,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200304/1779726602/extra_large.jpg",
-      "flipp_item_id": "1015673225",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -5227,7 +5032,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 4.49,
       "per_kg": null,
       "per_lb": null,
@@ -5235,7 +5040,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960294/1779256301/extra_large.jpg",
-      "flipp_item_id": "1015632813",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5256,7 +5060,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261799/1779432499/extra_large.jpg",
-      "flipp_item_id": "1015433243",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5269,7 +5072,7 @@
       "store": "Rachelle Béry",
       "store_id": 37869,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+      "store_url": "",
       "price": 4.79,
       "per_kg": null,
       "per_lb": null,
@@ -5277,7 +5080,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421186591/1779327051/extra_large.jpg",
-      "flipp_item_id": "1015739269",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5309,7 +5111,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245786/1779422495/extra_large.jpg",
-      "flipp_item_id": "1015123115",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5330,7 +5131,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421407954/1779469956/extra_large.jpg",
-      "flipp_item_id": "1015744644",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5351,7 +5151,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200294/1779726595/extra_large.jpg",
-      "flipp_item_id": "1015673085",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5383,7 +5182,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242020/1779437059/extra_large.jpg",
-      "flipp_item_id": "1015659534",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5404,7 +5202,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242080/1779437059/extra_large.jpg",
-      "flipp_item_id": "1015659690",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5436,7 +5233,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261751/1779432502/extra_large.jpg",
-      "flipp_item_id": "1015401414",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -5460,7 +5256,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 4.99,
       "per_kg": null,
       "per_lb": null,
@@ -5468,7 +5264,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960312/1779256298/extra_large.jpg",
-      "flipp_item_id": "1015632853",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -5492,7 +5287,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 5.0,
       "per_kg": null,
       "per_lb": null,
@@ -5500,7 +5295,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773214/1779807450/extra_large.jpg",
-      "flipp_item_id": "1016045126",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5513,7 +5307,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 5.0,
       "per_kg": null,
       "per_lb": null,
@@ -5521,7 +5315,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902966/1776436699/extra_large.jpg",
-      "flipp_item_id": "1007249436",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5534,7 +5327,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 5.0,
       "per_kg": null,
       "per_lb": null,
@@ -5542,7 +5335,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902955/1776436700/extra_large.jpg",
-      "flipp_item_id": "1007278309",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5566,7 +5358,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 5.0,
       "per_kg": null,
       "per_lb": null,
@@ -5574,7 +5366,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902954/1776436699/extra_large.jpg",
-      "flipp_item_id": "1007248401",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5598,7 +5389,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 5.0,
       "per_kg": null,
       "per_lb": null,
@@ -5606,7 +5397,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902956/1776436700/extra_large.jpg",
-      "flipp_item_id": "1007257621",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5627,7 +5417,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261797/1779432498/extra_large.jpg",
-      "flipp_item_id": "1015401300",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -5659,7 +5448,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161921/1779326915/extra_large.jpg",
-      "flipp_item_id": "1014882939",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5672,7 +5460,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 5.49,
       "per_kg": null,
       "per_lb": null,
@@ -5680,7 +5468,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773217/1779807452/extra_large.jpg",
-      "flipp_item_id": "1016045130",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5701,7 +5488,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421307262/1779726451/extra_large.jpg",
-      "flipp_item_id": "1015672374",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": null
@@ -5722,7 +5508,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261862/1779432497/extra_large.jpg",
-      "flipp_item_id": "1015372759",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5743,7 +5528,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245858/1779422506/extra_large.jpg",
-      "flipp_item_id": "1015123890",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5775,7 +5559,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245876/1779422508/extra_large.jpg",
-      "flipp_item_id": "1015124092",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -5807,7 +5590,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242015/1779437055/extra_large.jpg",
-      "flipp_item_id": "1015659482",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5820,7 +5602,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 5.99,
       "per_kg": null,
       "per_lb": null,
@@ -5828,7 +5610,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270023/1779433266/extra_large.jpg",
-      "flipp_item_id": "1015510252",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5841,7 +5622,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 5.99,
       "per_kg": null,
       "per_lb": null,
@@ -5849,7 +5630,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270022/1779433266/extra_large.jpg",
-      "flipp_item_id": "1015511203",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5870,7 +5650,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242130/1779437046/extra_large.jpg",
-      "flipp_item_id": "1015661684",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5883,7 +5662,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 6.79,
       "per_kg": null,
       "per_lb": null,
@@ -5891,7 +5670,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877838/1779855033/extra_large.jpg",
-      "flipp_item_id": "1016243638",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5915,7 +5693,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 6.79,
       "per_kg": null,
       "per_lb": null,
@@ -5923,7 +5701,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877834/1779855030/extra_large.jpg",
-      "flipp_item_id": "1016243636",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5955,7 +5732,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421501334/1779678972/extra_large.jpg",
-      "flipp_item_id": "1015613795",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5987,7 +5763,6 @@
       "source": null,
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": null
@@ -6008,7 +5783,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245872/1779422506/extra_large.jpg",
-      "flipp_item_id": "1015124046",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6040,7 +5814,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245857/1779422505/extra_large.jpg",
-      "flipp_item_id": "1015123878",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6072,7 +5845,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200306/1779726603/extra_large.jpg",
-      "flipp_item_id": "1015673241",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6104,7 +5876,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242172/1779437049/extra_large.jpg",
-      "flipp_item_id": "1015662977",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6125,7 +5896,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242060/1779437051/extra_large.jpg",
-      "flipp_item_id": "1015659632",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6157,7 +5927,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242226/1779437062/extra_large.jpg",
-      "flipp_item_id": "1015659706",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -6181,7 +5950,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 6.99,
       "per_kg": null,
       "per_lb": null,
@@ -6189,7 +5958,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420963450/1779257603/extra_large.jpg",
-      "flipp_item_id": "1015642007",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6221,7 +5989,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261863/1779432497/extra_large.jpg",
-      "flipp_item_id": "1015433929",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -6245,7 +6012,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 6.99,
       "per_kg": null,
       "per_lb": null,
@@ -6253,7 +6020,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960314/1779256299/extra_large.jpg",
-      "flipp_item_id": "1015632858",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6277,7 +6043,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 6.99,
       "per_kg": null,
       "per_lb": null,
@@ -6285,7 +6051,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270151/1779433266/extra_large.jpg",
-      "flipp_item_id": "1015508631",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6306,7 +6071,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432638/1779585300/extra_large.jpg",
-      "flipp_item_id": "1015511611",
       "protein_per_100g": 23,
       "protein_per_dollar": null,
       "recipe": {
@@ -6330,7 +6094,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 7.25,
       "per_kg": null,
       "per_lb": null,
@@ -6338,7 +6102,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877767/1779855032/extra_large.jpg",
-      "flipp_item_id": "1016243621",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6351,7 +6114,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 7.49,
       "per_kg": null,
       "per_lb": null,
@@ -6359,7 +6122,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159595/1779319593/extra_large.jpg",
-      "flipp_item_id": "1014974896",
       "protein_per_100g": 23,
       "protein_per_dollar": null,
       "recipe": {
@@ -6391,7 +6153,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421162000/1779326914/extra_large.jpg",
-      "flipp_item_id": "1014882636",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6423,7 +6184,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421187713/1779326939/extra_large.jpg",
-      "flipp_item_id": "1014920602",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6447,7 +6207,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 7.79,
       "per_kg": null,
       "per_lb": null,
@@ -6455,7 +6215,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770521/1779805451/extra_large.jpg",
-      "flipp_item_id": "1016044053",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6479,7 +6238,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 7.9,
       "per_kg": null,
       "per_lb": null,
@@ -6487,7 +6246,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890468/1779841008/extra_large.jpg",
-      "flipp_item_id": "1016182815",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6519,7 +6277,6 @@
       "source": null,
       "valid_to": null,
       "image_url": null,
-      "flipp_item_id": null,
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6551,7 +6308,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421407877/1779678955/extra_large.jpg",
-      "flipp_item_id": "1015603859",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6583,7 +6339,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245878/1779422510/extra_large.jpg",
-      "flipp_item_id": "1015124114",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6615,7 +6370,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245937/1779721623/extra_large.jpg",
-      "flipp_item_id": "1015124894",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6636,7 +6390,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245930/1779721619/extra_large.jpg",
-      "flipp_item_id": "1015124817",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6657,7 +6410,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200145/1779726407/extra_large.jpg",
-      "flipp_item_id": "1015671546",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6689,7 +6441,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200257/1779726618/extra_large.jpg",
-      "flipp_item_id": "1015673285",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6721,7 +6472,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242159/1779724450/extra_large.jpg",
-      "flipp_item_id": "1015662616",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6734,7 +6484,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 7.99,
       "per_kg": null,
       "per_lb": null,
@@ -6742,7 +6492,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420963453/1779257606/extra_large.jpg",
-      "flipp_item_id": "1015642013",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6774,7 +6523,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261755/1779432505/extra_large.jpg",
-      "flipp_item_id": "1015432588",
       "protein_per_100g": 23,
       "protein_per_dollar": null,
       "recipe": {
@@ -6798,7 +6546,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 7.99,
       "per_kg": null,
       "per_lb": null,
@@ -6806,7 +6554,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960407/1779256292/extra_large.jpg",
-      "flipp_item_id": "1015632734",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -6830,7 +6577,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 7.99,
       "per_kg": null,
       "per_lb": null,
@@ -6838,7 +6585,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960316/1779256301/extra_large.jpg",
-      "flipp_item_id": "1015632862",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6870,7 +6616,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183709/1779457557/extra_large.jpg",
-      "flipp_item_id": "1014902904",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6902,7 +6647,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261805/1779432503/extra_large.jpg",
-      "flipp_item_id": "1015391502",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -6934,7 +6678,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421210956/1779326910/extra_large.jpg",
-      "flipp_item_id": "1014965502",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6966,7 +6709,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161459/1779326898/extra_large.jpg",
-      "flipp_item_id": "1014882056",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -6990,7 +6732,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -6998,7 +6740,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159652/1779319591/extra_large.jpg",
-      "flipp_item_id": "1014974883",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -7022,7 +6763,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7030,7 +6771,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877773/1779855036/extra_large.jpg",
-      "flipp_item_id": "1016243628",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7051,7 +6791,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245848/1779422498/extra_large.jpg",
-      "flipp_item_id": "1015123781",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -7083,7 +6822,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422110695/1779908473/extra_large.jpg",
-      "flipp_item_id": "1016641646",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7104,7 +6842,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245787/1779422496/extra_large.jpg",
-      "flipp_item_id": "1015123124",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7117,7 +6854,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7125,7 +6862,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420963444/1779257599/extra_large.jpg",
-      "flipp_item_id": "1015641997",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7138,7 +6874,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7146,7 +6882,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960307/1779256294/extra_large.jpg",
-      "flipp_item_id": "1015632843",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7159,7 +6894,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7167,7 +6902,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270015/1779433261/extra_large.jpg",
-      "flipp_item_id": "1015493273",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7180,7 +6914,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7188,7 +6922,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270016/1779433262/extra_large.jpg",
-      "flipp_item_id": "1015518954",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7212,7 +6945,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7220,7 +6953,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270014/1779433260/extra_large.jpg",
-      "flipp_item_id": "1015509698",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7233,7 +6965,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7241,7 +6973,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270017/1779433262/extra_large.jpg",
-      "flipp_item_id": "1015510305",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7265,7 +6996,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 8.99,
       "per_kg": null,
       "per_lb": null,
@@ -7273,7 +7004,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270018/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015517296",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7305,7 +7035,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421407687/1779678956/extra_large.jpg",
-      "flipp_item_id": "1015604002",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7318,7 +7047,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 9.49,
       "per_kg": null,
       "per_lb": null,
@@ -7326,7 +7055,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960276/1779256290/extra_large.jpg",
-      "flipp_item_id": "1015632775",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7358,7 +7086,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421432622/1779586005/extra_large.jpg",
-      "flipp_item_id": "1015517711",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7390,7 +7117,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161911/1779326911/extra_large.jpg",
-      "flipp_item_id": "1014882934",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -7422,7 +7148,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422345872/1780090251/extra_large.jpg",
-      "flipp_item_id": "1017035021",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7443,7 +7168,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/422345923/1780090266/extra_large.jpg",
-      "flipp_item_id": "1017035093",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7464,7 +7188,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421183891/1779744553/extra_large.jpg",
-      "flipp_item_id": "1015772033",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7485,7 +7208,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421183874/1779744543/extra_large.jpg",
-      "flipp_item_id": "1015771888",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7498,7 +7220,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 9.99,
       "per_kg": null,
       "per_lb": null,
@@ -7506,7 +7228,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890407/1779840993/extra_large.jpg",
-      "flipp_item_id": "1016182754",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7530,7 +7251,7 @@
       "store": "L'Inter-Marché",
       "store_id": 36918,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/inter-marche-flyer",
+      "store_url": "",
       "price": 9.99,
       "per_kg": null,
       "per_lb": null,
@@ -7538,7 +7259,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421159657/1779319595/extra_large.jpg",
-      "flipp_item_id": "1014979646",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7559,7 +7279,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245806/1779422499/extra_large.jpg",
-      "flipp_item_id": "1015123315",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -7591,7 +7310,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245859/1779422496/extra_large.jpg",
-      "flipp_item_id": "1015123906",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -7623,7 +7341,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245873/1779422506/extra_large.jpg",
-      "flipp_item_id": "1015124057",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7655,7 +7372,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245870/1779422504/extra_large.jpg",
-      "flipp_item_id": "1015124022",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7687,7 +7403,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245874/1779422507/extra_large.jpg",
-      "flipp_item_id": "1015124070",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7708,7 +7423,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245879/1779422510/extra_large.jpg",
-      "flipp_item_id": "1015124125",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -7740,7 +7454,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200320/1779726644/extra_large.jpg",
-      "flipp_item_id": "1015673708",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7772,7 +7485,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242188/1779724457/extra_large.jpg",
-      "flipp_item_id": "1015663331",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7804,7 +7516,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241931/1779437044/extra_large.jpg",
-      "flipp_item_id": "1015658078",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7817,7 +7528,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 9.99,
       "per_kg": null,
       "per_lb": null,
@@ -7825,7 +7536,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270149/1779433264/extra_large.jpg",
-      "flipp_item_id": "1015509593",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7849,7 +7559,7 @@
       "store": "Supermarché Aurès",
       "store_id": 37374,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/aures-flyer",
+      "store_url": "",
       "price": 10.42,
       "per_kg": null,
       "per_lb": null,
@@ -7857,7 +7567,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421877776/1779855039/extra_large.jpg",
-      "flipp_item_id": "1016243630",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7870,7 +7579,7 @@
       "store": "Fruiterie Potager",
       "store_id": 36808,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+      "store_url": "",
       "price": 10.99,
       "per_kg": null,
       "per_lb": null,
@@ -7878,7 +7587,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421773222/1779807455/extra_large.jpg",
-      "flipp_item_id": "1016045134",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7910,7 +7618,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245845/1779422496/extra_large.jpg",
-      "flipp_item_id": "1015123749",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -7931,7 +7638,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245888/1779422505/extra_large.jpg",
-      "flipp_item_id": "1015124253",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": null
@@ -7944,7 +7650,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 10.99,
       "per_kg": null,
       "per_lb": null,
@@ -7952,7 +7658,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960385/1779256298/extra_large.jpg",
-      "flipp_item_id": "1015632983",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -7984,7 +7689,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245861/1779422498/extra_large.jpg",
-      "flipp_item_id": "1015123926",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8016,7 +7720,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200292/1779726594/extra_large.jpg",
-      "flipp_item_id": "1015673055",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8037,7 +7740,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200302/1779726600/extra_large.jpg",
-      "flipp_item_id": "1015673201",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8069,7 +7771,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421241974/1779437047/extra_large.jpg",
-      "flipp_item_id": "1015658713",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -8093,7 +7794,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 11.99,
       "per_kg": null,
       "per_lb": null,
@@ -8101,7 +7802,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270171/1779433265/extra_large.jpg",
-      "flipp_item_id": "1015509701",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8125,7 +7825,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 11.99,
       "per_kg": null,
       "per_lb": null,
@@ -8133,7 +7833,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270111/1779433265/extra_large.jpg",
-      "flipp_item_id": "1015497929",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8146,7 +7845,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 11.99,
       "per_kg": null,
       "per_lb": null,
@@ -8154,7 +7853,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269925/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015509628",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8167,7 +7865,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 12.0,
       "per_kg": null,
       "per_lb": null,
@@ -8175,7 +7873,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/417280976/1776436701/extra_large.jpg",
-      "flipp_item_id": "1007491480",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -8199,7 +7896,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 12.0,
       "per_kg": null,
       "per_lb": null,
@@ -8207,7 +7904,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/417280977/1776436702/extra_large.jpg",
-      "flipp_item_id": "1007491485",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -8231,7 +7927,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 12.0,
       "per_kg": null,
       "per_lb": null,
@@ -8239,7 +7935,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416904185/1776436697/extra_large.jpg",
-      "flipp_item_id": "1007252145",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8271,7 +7966,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421407685/1779678955/extra_large.jpg",
-      "flipp_item_id": "1015603850",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8292,7 +7986,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161632/1779743811/extra_large.jpg",
-      "flipp_item_id": "1014882343",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8324,7 +8017,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421183882/1779744548/extra_large.jpg",
-      "flipp_item_id": "1015771958",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8337,7 +8029,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8345,7 +8037,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890426/1779841008/extra_large.jpg",
-      "flipp_item_id": "1016182773",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8377,7 +8068,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200289/1779726591/extra_large.jpg",
-      "flipp_item_id": "1015673005",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -8409,7 +8099,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200299/1779726599/extra_large.jpg",
-      "flipp_item_id": "1015673165",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -8441,7 +8130,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200298/1779726598/extra_large.jpg",
-      "flipp_item_id": "1015673149",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8462,7 +8150,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242075/1779437057/extra_large.jpg",
-      "flipp_item_id": "1015659676",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8486,7 +8173,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8494,7 +8181,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960318/1779256303/extra_large.jpg",
-      "flipp_item_id": "1015632867",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8518,7 +8204,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8526,7 +8212,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421301645/1779433265/extra_large.jpg",
-      "flipp_item_id": "1015519063",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -8550,7 +8235,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8558,7 +8243,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270097/1779433260/extra_large.jpg",
-      "flipp_item_id": "1015508811",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8582,7 +8266,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8590,7 +8274,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270101/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015510382",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8603,7 +8286,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8611,7 +8294,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270112/1779433266/extra_large.jpg",
-      "flipp_item_id": "1015519303",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8635,7 +8317,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 12.99,
       "per_kg": null,
       "per_lb": null,
@@ -8643,7 +8325,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269908/1779433260/extra_large.jpg",
-      "flipp_item_id": "1015528070",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -8667,7 +8348,7 @@
       "store": "Rachelle Béry",
       "store_id": 37869,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+      "store_url": "",
       "price": 13.49,
       "per_kg": null,
       "per_lb": null,
@@ -8675,7 +8356,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421186619/1779327050/extra_large.jpg",
-      "flipp_item_id": "1015739309",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8696,7 +8376,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245865/1779422501/extra_large.jpg",
-      "flipp_item_id": "1015123968",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8728,7 +8407,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421307297/1779726624/extra_large.jpg",
-      "flipp_item_id": "1015673437",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -8760,7 +8438,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200261/1779726621/extra_large.jpg",
-      "flipp_item_id": "1015673351",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -8784,7 +8461,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8792,7 +8469,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960366/1779256300/extra_large.jpg",
-      "flipp_item_id": "1015632953",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8816,7 +8492,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8824,7 +8500,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960380/1779256294/extra_large.jpg",
-      "flipp_item_id": "1015632978",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -8848,7 +8523,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8856,7 +8531,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960377/1779256292/extra_large.jpg",
-      "flipp_item_id": "1015632972",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8880,7 +8554,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8888,7 +8562,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269935/1779433258/extra_large.jpg",
-      "flipp_item_id": "1015508790",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8912,7 +8585,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8920,7 +8593,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269943/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015509627",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8944,7 +8616,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8952,7 +8624,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269949/1779433267/extra_large.jpg",
-      "flipp_item_id": "1015498476",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -8976,7 +8647,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -8984,7 +8655,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269946/1779433265/extra_large.jpg",
-      "flipp_item_id": "1015518718",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8997,7 +8667,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -9005,7 +8675,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269939/1779433260/extra_large.jpg",
-      "flipp_item_id": "1015508702",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9018,7 +8687,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -9026,7 +8695,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269940/1779433261/extra_large.jpg",
-      "flipp_item_id": "1015508802",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9050,7 +8718,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -9058,7 +8726,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269942/1779433262/extra_large.jpg",
-      "flipp_item_id": "1015518861",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9071,7 +8738,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 13.99,
       "per_kg": null,
       "per_lb": null,
@@ -9079,7 +8746,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269937/1779433259/extra_large.jpg",
-      "flipp_item_id": "1015510357",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9111,7 +8777,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200264/1779726623/extra_large.jpg",
-      "flipp_item_id": "1015673404",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -9143,7 +8808,6 @@
       "source": null,
       "valid_to": "2026-06-07",
       "image_url": "https://f.wishabi.net/page_items/419503449/1778072360/extra_large.jpg",
-      "flipp_item_id": "1011556264",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9164,7 +8828,6 @@
       "source": null,
       "valid_to": "2026-06-07",
       "image_url": "https://f.wishabi.net/page_items/419503584/1778072364/extra_large.jpg",
-      "flipp_item_id": "1011555382",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9188,7 +8851,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 14.99,
       "per_kg": null,
       "per_lb": null,
@@ -9196,7 +8859,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270102/1779433264/extra_large.jpg",
-      "flipp_item_id": "1015509864",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9220,7 +8882,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 14.99,
       "per_kg": null,
       "per_lb": null,
@@ -9228,7 +8890,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270148/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015519251",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9252,7 +8913,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 14.99,
       "per_kg": null,
       "per_lb": null,
@@ -9260,7 +8921,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270147/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015498554",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9273,7 +8933,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 15.0,
       "per_kg": null,
       "per_lb": null,
@@ -9281,7 +8941,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416902930/1778074990/extra_large.jpg",
-      "flipp_item_id": "1007254394",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9302,7 +8961,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242156/1779724449/extra_large.jpg",
-      "flipp_item_id": "1015662517",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9334,7 +8992,6 @@
       "source": null,
       "valid_to": "2026-06-24",
       "image_url": "https://f.wishabi.net/page_items/421183722/1779457561/extra_large.jpg",
-      "flipp_item_id": "1014902934",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9347,7 +9004,7 @@
       "store": "Mayrand",
       "store_id": 38798,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/mayrand-flyer",
+      "store_url": "",
       "price": 15.49,
       "per_kg": null,
       "per_lb": null,
@@ -9355,7 +9012,6 @@
       "source": null,
       "valid_to": "2026-06-02",
       "image_url": "https://f.wishabi.net/page_items/421770502/1779805452/extra_large.jpg",
-      "flipp_item_id": "1016048905",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9376,7 +9032,6 @@
       "source": null,
       "valid_to": "2026-06-07",
       "image_url": "https://f.wishabi.net/page_items/419503459/1778072362/extra_large.jpg",
-      "flipp_item_id": "1011555405",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -9408,7 +9063,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161636/1779743812/extra_large.jpg",
-      "flipp_item_id": "1014882347",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9421,7 +9075,7 @@
       "store": "5 Saveurs",
       "store_id": 36848,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer",
+      "store_url": "",
       "price": 15.99,
       "per_kg": null,
       "per_lb": null,
@@ -9429,7 +9083,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421890467/1779841007/extra_large.jpg",
-      "flipp_item_id": "1016182814",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9450,7 +9103,6 @@
       "source": null,
       "valid_to": "2026-05-24",
       "image_url": "https://f.wishabi.net/page_items/419503512/1778072363/extra_large.jpg",
-      "flipp_item_id": "1011555379",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9471,7 +9123,6 @@
       "source": null,
       "valid_to": "2026-06-14",
       "image_url": "https://f.wishabi.net/page_items/419503452/1778072363/extra_large.jpg",
-      "flipp_item_id": "1011555829",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9484,7 +9135,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 16.99,
       "per_kg": null,
       "per_lb": null,
@@ -9492,7 +9143,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269906/1779433259/extra_large.jpg",
-      "flipp_item_id": "1015519219",
       "protein_per_100g": 22,
       "protein_per_dollar": null,
       "recipe": {
@@ -9516,7 +9166,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 17.0,
       "per_kg": null,
       "per_lb": null,
@@ -9524,7 +9174,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/416904184/1776436696/extra_large.jpg",
-      "flipp_item_id": "1007251732",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": {
@@ -9556,7 +9205,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245875/1779422508/extra_large.jpg",
-      "flipp_item_id": "1015124082",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9588,7 +9236,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421242203/1779437057/extra_large.jpg",
-      "flipp_item_id": "1015663592",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9601,7 +9248,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9609,7 +9256,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270113/1779433267/extra_large.jpg",
-      "flipp_item_id": "1015527100",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9633,7 +9279,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9641,7 +9287,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421301641/1779433271/extra_large.jpg",
-      "flipp_item_id": "1015493291",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9654,7 +9299,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9662,7 +9307,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270116/1779433269/extra_large.jpg",
-      "flipp_item_id": "1015498558",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9675,7 +9319,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9683,7 +9327,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269903/1779433256/extra_large.jpg",
-      "flipp_item_id": "1015508807",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -9707,7 +9350,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9715,7 +9358,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270104/1779433266/extra_large.jpg",
-      "flipp_item_id": "1015517294",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9728,7 +9370,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9736,7 +9378,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421301640/1779433271/extra_large.jpg",
-      "flipp_item_id": "1015527418",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9749,7 +9390,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9757,7 +9398,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270114/1779433268/extra_large.jpg",
-      "flipp_item_id": "1015528198",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9770,7 +9410,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 17.99,
       "per_kg": null,
       "per_lb": null,
@@ -9778,7 +9418,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421270100/1779433263/extra_large.jpg",
-      "flipp_item_id": "1015509699",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9802,7 +9441,7 @@
       "store": "le Choix du Président",
       "store_id": 37215,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer",
+      "store_url": "",
       "price": 18.0,
       "per_kg": null,
       "per_lb": null,
@@ -9810,7 +9449,6 @@
       "source": null,
       "valid_to": "2026-07-08",
       "image_url": "https://f.wishabi.net/page_items/417279861/1776436698/extra_large.jpg",
-      "flipp_item_id": "1007490543",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9831,7 +9469,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200696/1779449794/extra_large.jpg",
-      "flipp_item_id": "1015675980",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9855,7 +9492,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 18.99,
       "per_kg": null,
       "per_lb": null,
@@ -9863,7 +9500,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269921/1779433259/extra_large.jpg",
-      "flipp_item_id": "1015510349",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9884,7 +9520,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245846/1779422497/extra_large.jpg",
-      "flipp_item_id": "1015123759",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9905,7 +9540,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245852/1779422501/extra_large.jpg",
-      "flipp_item_id": "1015123823",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9929,7 +9563,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 19.99,
       "per_kg": null,
       "per_lb": null,
@@ -9937,7 +9571,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269934/1779433257/extra_large.jpg",
-      "flipp_item_id": "1015529324",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -9969,7 +9602,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200698/1779449796/extra_large.jpg",
-      "flipp_item_id": "1015675995",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -10001,7 +9633,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161640/1779743813/extra_large.jpg",
-      "flipp_item_id": "1014882349",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10014,7 +9645,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 22.99,
       "per_kg": null,
       "per_lb": null,
@@ -10022,7 +9653,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269904/1779433257/extra_large.jpg",
-      "flipp_item_id": "1015498534",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10043,7 +9673,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421250774/1779893910/extra_large.jpg",
-      "flipp_item_id": "1015048289",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -10067,7 +9696,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 23.0,
       "per_kg": null,
       "per_lb": null,
@@ -10075,7 +9704,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960364/1779256298/extra_large.jpg",
-      "flipp_item_id": "1015632948",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -10099,7 +9727,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 24.99,
       "per_kg": null,
       "per_lb": null,
@@ -10107,7 +9735,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960306/1779256294/extra_large.jpg",
-      "flipp_item_id": "1015632840",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10128,7 +9755,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421200291/1779726593/extra_large.jpg",
-      "flipp_item_id": "1015673039",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -10160,7 +9786,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421161635/1779743812/extra_large.jpg",
-      "flipp_item_id": "1014882346",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10173,7 +9798,7 @@
       "store": "Les aliments M&M",
       "store_id": 40051,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/m-m-flyer",
+      "store_url": "",
       "price": 29.99,
       "per_kg": null,
       "per_lb": null,
@@ -10181,7 +9806,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421269920/1779433259/extra_large.jpg",
-      "flipp_item_id": "1015498553",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -10213,7 +9837,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421261795/1779432497/extra_large.jpg",
-      "flipp_item_id": "1015434794",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10234,7 +9857,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/421245963/1779422514/extra_large.jpg",
-      "flipp_item_id": "1015125074",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10247,7 +9869,7 @@
       "store": "Les Marchés Tradition",
       "store_id": 38622,
       "store_emoji": "🏪",
-      "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer",
+      "store_url": "",
       "price": 35.0,
       "per_kg": null,
       "per_lb": null,
@@ -10255,7 +9877,6 @@
       "source": null,
       "valid_to": "2026-06-03",
       "image_url": "https://f.wishabi.net/page_items/420960396/1779256295/extra_large.jpg",
-      "flipp_item_id": "1015632994",
       "protein_per_100g": 25,
       "protein_per_dollar": null,
       "recipe": {
@@ -10304,7 +9925,7 @@
       "le Choix du Président"
     ],
     "week": "2026-05-30",
-    "generated_at": "2026-05-30T11:08:23.704440"
+    "generated_at": "2026-05-30T11:13:09.124493"
   },
   "recipes_available": {
     "boeuf": 5,

@@ -18,7 +18,7 @@ WEB_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
 os.makedirs(WEB_DIR, exist_ok=True)
 
 # ─── URLs des circulaires par magasin ───
-# Donne l'URL de la circulaire en ligne (site officiel ou Flipp)
+# Sites OFFICIELS seulement — zéro Flipp
 STORE_URLS = {
     "Super C": "https://www.superc.ca/fr/online-grocery/current-offers/weekly-flyer",
     "Metro": "https://www.metro.ca/fr/circulaire",
@@ -29,17 +29,6 @@ STORE_URLS = {
     "Costco": "https://www.costco.ca/warehouse-savings.html",
     "Tigre Géant": "https://www.tigregeant.ca/",
     "Adonis": "https://www.adonis.ca/fr/circulaires",
-    "Kim Phat": "https://flipp.com/fr-ca/kim-phat-flyer",
-    "Marché Tau": "https://flipp.com/fr-ca/marche-tau-flyer",
-    "Les Marchés Tradition": "https://flipp.com/fr-ca/marches-tradition-flyer",
-    "Mayrand": "https://flipp.com/fr-ca/mayrand-flyer",
-    "Rachelle Béry": "https://flipp.com/fr-ca/rachelle-bery-flyer",
-    "L'Inter-Marché": "https://flipp.com/fr-ca/inter-marche-flyer",
-    "Supermarché Aurès": "https://flipp.com/fr-ca/aures-flyer",
-    "Fruiterie Potager": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
-    "5 Saveurs": "https://flipp.com/fr-ca/5-saveurs-flyer",
-    "Les aliments M&M": "https://flipp.com/fr-ca/m-m-flyer",
-    "le Choix du Président": "https://flipp.com/fr-ca/president-s-choice-flyer",
 }
 
 POISSON_KW = ['saumon','crevette','poisson','thon','truite','morue','cabillaud','sole','tilapia',
@@ -105,17 +94,14 @@ def estimate_protein_per_100g(name, meat_type):
 
 
 def get_store_url(store_name):
-    """Retourne l'URL de la circulaire pour un magasin donné."""
-    # Cherche correspondance exacte
+    """Retourne l'URL de la circulaire pour un magasin donné.
+    Sites officiels seulement — pas de Flipp."""
     if store_name in STORE_URLS:
         return STORE_URLS[store_name]
-    # Cherche correspondance partielle
     for key, url in STORE_URLS.items():
         if key.lower() in store_name.lower() or store_name.lower() in key.lower():
             return url
-    # Fallback: recherche Flipp
-    slug = store_name.lower().replace(" ", "-").replace("'", "-").replace("é","e").replace("è","e").replace("ê","e").replace("ô","o").replace("ç","c")
-    return f"https://flipp.com/fr-ca/{slug}-flyer"
+    return ""  # pas de lien si pas de site officiel connu
 
 
 def get_recipe_link(meat_type, all_recipes):
@@ -191,7 +177,7 @@ def export_deals():
         SELECT p.id, p.name, p.meat_type, p.package_weight_g,
                s.name as store, s.id as store_id,
                ph.price, ph.unit_price, ph.unit_type,
-               ph.valid_to, ph.merchant_name, ph.image_url, ph.flipp_item_id
+               ph.valid_to, ph.merchant_name, ph.image_url
         FROM products p
         JOIN stores s ON s.id = p.store_id
         JOIN price_history ph ON ph.product_id = p.id
@@ -279,7 +265,6 @@ def export_deals():
             "source": source,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
-            "flipp_item_id": r["flipp_item_id"],
             "protein_per_100g": protein_per_100g,
             "protein_per_dollar": protein_per_dollar,
             "recipe": recipe,
