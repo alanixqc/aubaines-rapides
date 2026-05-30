@@ -13,7 +13,7 @@ def store_emoji(name):
         if k in name: return v
     return "🏪"
 
-MEAT_EMOJI = {"boeuf":"🥩","poulet":"🍗","porc":"🥓"}
+MEAT_EMOJI = {"boeuf":"🥩","poulet":"🍗","porc":"🥓","legume":"🥦","légume":"🥦"}
 
 DEFAULT_WEIGHTS = {
     "boeuf hache":0.454, "porc hache":0.450, "poulet hache":0.454,
@@ -46,6 +46,32 @@ def short_name(name, maxlen=35):
     if len(name) > maxlen: n += "…"
     return n
 
+# Items exclus (bouffe à chien/chat, bouillon, etc.)
+EXCLUDE_PATTERNS = [
+    "pour chien", "pour chiens", "pour chat", "pour chats",
+    "dog chow", "purina", "whiskas", "friskies", "pedigree",
+    "bonkers", "gâterie", "gaterie", "treat", "lick",
+    "bouillon", "cube de", "poudre de",
+    "aliment sec", "aliments secs", "nourriture sèche",
+    "litière", "litiere", "tastefuls",
+    "à mâcher", "a macher",
+    "bâtonnet", "batonnet",
+    "biscuit pour",
+    "croustille", "chips",
+    "sauce salade", "vinaigrette salade", "tartinade salade",
+    "salade de", "kit de salade",
+    "salade hachée", "salades hachées", "salade hachee", "salades hachees",
+    "salade gastronomique", "salade plaisir",
+]
+
+def is_excluded(name):
+    n = strip_accents(name.lower())
+    for p in EXCLUDE_PATTERNS:
+        if p in n:
+            return True
+    return False
+
+
 def main():
     if len(sys.argv) < 2:
         query = input("🔍 Quel produit chercher ? ")
@@ -57,22 +83,86 @@ def main():
 
     db = get_db()
     terms = [strip_accents(t).lower() for t in query.lower().strip().split()]
+    query_lower = strip_accents(query.lower().strip())
+
+    # Noms de legumes connus (auto-filtre meat_type = legume)
+    VEGGIE_NAMES = {
+        "carotte", "carottes", "brocoli", "brocolis", "chou-fleur", "choufleur",
+        "laitue", "tomate", "tomates", "concombre", "concombres",
+        "poivron", "poivrons", "oignon", "oignons", "patate", "patates",
+        "pomme de terre", "céleri", "celeri", "épinard", "epinard", "épinards",
+        "chou", "choux", "kale", "courge", "courgette", "aubergine",
+        "betterave", "radis", "navet", "asperge", "asperges",
+        "haricot", "haricots", "pois", "maïs", "mais", "champignon",
+        "champignons", "salade", "avocat", "endive", "scarole", "panais",
+        "lentille", "lentilles", "brocolini", "okra",
+    }
+    is_veggie_search = query_lower in VEGGIE_NAMES
+
+    # Detecter si c'est une recherche par categorie (mot exact)
+    CATEGORY_TERMS = {"legume": "legume", "legumes": "legume",
+                       "légume": "legume", "légumes": "legume",
+                       "boeuf": "boeuf", "bœuf": "boeuf",
+                       "poulet": "poulet", "porc": "porc",
+                       "viande": None}
+    category_filter = None
+    if query_lower in CATEGORY_TERMS:
+        category_filter = CATEGORY_TERMS[query_lower]
+
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
-    rows = db.execute("""
-        SELECT p.id, p.name, p.meat_type, p.package_weight_g,
-               s.name as store, ph.price, ph.unit_price, ph.unit_type,
-               ph.valid_to, ph.merchant_name, ph.image_url
-        FROM products p
-        JOIN stores s ON s.id = p.store_id
-        JOIN price_history ph ON ph.product_id = p.id
-        WHERE ph.week_start = ? AND ph.price IS NOT NULL AND p.meat_type IS NOT NULL
-        ORDER BY ph.price ASC LIMIT 3000
-    """, (max_week,)).fetchall()
+    if category_filter is not None:
+        # Recherche par categorie
+        if category_filter:
+            rows = db.execute("""
+                SELECT p.id, p.name, p.meat_type, p.package_weight_g,
+                       s.name as store, ph.price, ph.unit_price, ph.unit_type,
+                       ph.valid_to, ph.merchant_name, ph.image_url
+                FROM products p
+                JOIN stores s ON s.id = p.store_id
+                JOIN price_history ph ON ph.product_id = p.id
+                WHERE ph.week_start = ? AND ph.price IS NOT NULL AND p.meat_type = ?
+                ORDER BY ph.price ASC LIMIT 3000
+            """, (max_week, category_filter)).fetchall()
+        else:
+            # Toutes les viandes (boeuf/poulet/porc)
+            rows = db.execute("""
+                SELECT p.id, p.name, p.meat_type, p.package_weight_g,
+                       s.name as store, ph.price, ph.unit_price, ph.unit_type,
+                       ph.valid_to, ph.merchant_name, ph.image_url
+                FROM products p
+                JOIN stores s ON s.id = p.store_id
+                JOIN price_history ph ON ph.product_id = p.id
+                WHERE ph.week_start = ? AND ph.price IS NOT NULL
+                  AND p.meat_type IN ('boeuf','poulet','porc')
+                ORDER BY ph.price ASC LIMIT 3000
+            """, (max_week,)).fetchall()
+    else:
+        # Recherche par mot-cle dans le nom
+        meat_filter = "AND p.meat_type = 'legume'" if is_veggie_search else "AND p.meat_type IS NOT NULL"
+        rows = db.execute(f"""
+            SELECT p.id, p.name, p.meat_type, p.package_weight_g,
+                   s.name as store, ph.price, ph.unit_price, ph.unit_type,
+                   ph.valid_to, ph.merchant_name, ph.image_url
+            FROM products p
+            JOIN stores s ON s.id = p.store_id
+            JOIN price_history ph ON ph.product_id = p.id
+            WHERE ph.week_start = ? AND ph.price IS NOT NULL {meat_filter}
+            ORDER BY ph.price ASC LIMIT 3000
+        """, (max_week,)).fetchall()
     db.close()
 
     results, seen = [], set()
     for r in rows:
-        if all(t in strip_accents(r["name"]).lower() for t in terms):
+        if is_excluded(r["name"]):
+            continue
+        if category_filter is not None:
+            # Recherche par categorie: prendre tous les resultats
+            k = (r["name"], r["merchant_name"])
+            if k not in seen:
+                seen.add(k)
+                results.append(r)
+        elif all(t in strip_accents(r["name"]).lower() for t in terms):
+            # Recherche par mot-cle dans le nom
             k = (r["name"], r["merchant_name"])
             if k not in seen:
                 seen.add(k)
@@ -82,7 +172,7 @@ def main():
         print(f"\n❌ Rien pour « {query} » cette semaine.")
         return
 
-    # Enrichir chaque résultat
+    # Enrichir chaque resultat
     enriched = []
     for r in results:
         per_kg = None
@@ -93,7 +183,7 @@ def main():
         if r["package_weight_g"] and r["price"]:
             w_kg = r["package_weight_g"] / 1000
             per_kg = r["price"] / w_kg
-            source = "réel"
+            source = "reel"
 
         # 2) Prix unitaire de l'image
         if per_kg is None and r["unit_price"]:
@@ -122,7 +212,7 @@ def main():
             if w and r["price"]:
                 w_kg = w
                 per_kg = r["price"] / w
-                source = "estimé"
+                source = "estime"
                 is_est = True
 
         enriched.append({"r":r, "per_kg":per_kg, "source":source, "is_est":is_est})
@@ -137,17 +227,71 @@ def main():
     with_kg = [e for e in enriched if e["per_kg"]]
     wo_kg = [e for e in enriched if not e["per_kg"]]
 
-    # ─── TITRE ───
+    # TITRE
     mtypes = set(r["meat_type"] for r in results if r["meat_type"])
-    emoji = MEAT_EMOJI.get(list(mtypes)[0],"🥩") if len(mtypes)==1 else "🥩🍗🥓"
+    if is_veggie_search:
+        emoji = "🥦"
+    elif len(mtypes) == 1:
+        emoji = MEAT_EMOJI.get(list(mtypes)[0], "🥩")
+    else:
+        emoji = "🥩🍗🥓"
     print(f"\n{emoji}  {query.upper()} × {len(results)} offres")
 
-    # ─── TOP 5 ───
+    # Mode legume specifique: format compact (meilleur deal seulement)
+    if is_veggie_search and with_kg:
+        b = with_kg[0]
+        r = b["r"]
+        tag = ""
+        if b["source"] == "reel": tag = " ✅"
+        elif b["source"] == "estime": tag = " ~"
+        per_lb = round(b["per_kg"] / 2.20462, 2) if b["per_kg"] else 0
+        link = ""
+        if r["image_url"]:
+            link = f" · [🔗]({r['image_url']})"
+        print()
+        print(f"   {store_emoji(r['merchant_name'])} **{r['merchant_name']}**")
+        print(f"   {short_name(r['name'], 35)}")
+        print(f"   💰 {r['price']:.2f}$  ·  {b['per_kg']:.2f}$/kg  ·  {per_lb:.2f}$/lb{tag}{link}")
+        if r["valid_to"]:
+            print(f"   ⏳ jusqu'au {r['valid_to']}")
+        if r["image_url"]:
+            print(f"   ![]({r['image_url']})")
+        # 2e et 3e
+        if len(with_kg) > 1:
+            e2 = with_kg[1]
+            r2 = e2["r"]
+            t2 = ""
+            if e2["source"] == "reel": t2 = " ✅"
+            elif e2["source"] == "estime": t2 = " ~"
+            plb2 = round(e2["per_kg"] / 2.20462, 2)
+            print(f"\n🥈  {store_emoji(r2['merchant_name'])} {r2['merchant_name']}")
+            print(f"   {short_name(r2['name'], 30)}")
+            print(f"   💰 {r2['price']:.2f}$  ·  {e2['per_kg']:.2f}$/kg  ·  {plb2:.2f}$/lb{t2}")
+        if len(with_kg) > 2:
+            e3 = with_kg[2]
+            r3 = e3["r"]
+            t3 = ""
+            if e3["source"] == "reel": t3 = " ✅"
+            elif e3["source"] == "estime": t3 = " ~"
+            plb3 = round(e3["per_kg"] / 2.20462, 2)
+            print(f"\n🥉  {store_emoji(r3['merchant_name'])} {r3['merchant_name']}")
+            print(f"   {short_name(r3['name'], 30)}")
+            print(f"   💰 {r3['price']:.2f}$  ·  {e3['per_kg']:.2f}$/kg  ·  {plb3:.2f}$/lb{t3}")
+        # Autres
+        if wo_kg:
+            print(f"\n📋 Moins cher (à l'unité):")
+            for e in wo_kg[:2]:
+                r2 = e["r"]
+                print(f"   {store_emoji(r2['merchant_name'])} {r2['merchant_name']} — {r2['price']:.2f}$ — {short_name(r2['name'], 35)}")
+        print()
+        return
+
+    # TOP 5 (mode normal)
     for i, e in enumerate(with_kg[:5], 1):
         r = e["r"]
         tag = ""
-        if e["source"] == "réel": tag = " ✅"
-        elif e["source"] == "estimé": tag = " ~"
+        if e["source"] == "reel": tag = " ✅"
+        elif e["source"] == "estime": tag = " ~"
         per_lb = round(e["per_kg"] / 2.20462, 2) if e["per_kg"] else 0
         name_short = short_name(r["name"], 30)
         link = ""
@@ -159,7 +303,7 @@ def main():
         if r["valid_to"]:
             print(f"   ⏳ jusqu'au {r['valid_to']}")
 
-    # ─── SANS PRIX/KG ───
+    # SANS PRIX/KG
     if wo_kg:
         print(f"\n📋 Autres offres (pas de $/kg)")
         for e in wo_kg[:3]:
@@ -167,15 +311,15 @@ def main():
             name_short = short_name(r["name"], 35)
             print(f"   {store_emoji(r['merchant_name'])} {r['merchant_name']} — {r['price']:.2f}$ — {name_short}")
 
-    # ─── MEILLEUR ACHAT ───
+    # MEILLEUR ACHAT
     if with_kg:
         b = with_kg[0]
         r = b["r"]
         per_lb = round(b["per_kg"] / 2.20462, 2) if b["per_kg"] else 0
         name_short = short_name(r["name"], 40)
-        tag = " ✅ poids réel" if b["source"] == "réel" else ""
+        tag = " ✅ poids réel" if b["source"] == "reel" else ""
         print(f"\n{'═'*35}")
-        print(f"🏆  MEILLEUR ACHAT")
+        print("🏆  MEILLEUR ACHAT")
         print(f"{'═'*35}")
         print(f"   {store_emoji(r['merchant_name'])} {r['merchant_name']}")
         print(f"   {name_short}")

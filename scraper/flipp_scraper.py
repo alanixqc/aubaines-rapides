@@ -76,6 +76,35 @@ MEAT_KEYWORDS = {
                "pork cutlet", "ground pork", "pork steak", "pork filet",
                "spare ribs", "back ribs", "breakfast sausage"],
     },
+    "legume": {
+        "fr": ["légume", "legume", "légumes", "legumes", "carotte", "carottes",
+               "brocoli", "brocolis", "chou-fleur", "chou fleur", "laitue",
+               "tomate", "tomates", "concombre", "concombres",
+               "poivron", "poivrons", "oignon", "oignons", "patate", "patates",
+               "pomme de terre", "pommes de terre", "céleri", "celeri",
+               "épinard", "epinard", "épinards", "epinards",
+               "chou", "choux", "chou frisé", "kale", "courge", "courges",
+               "courgette", "courgettes", "aubergine", "aubergines",
+               "betterave", "betteraves", "radis", "navet", "navets",
+               "asperge", "asperges", "haricot", "haricots", "pois", "maïs", "mais",
+               "champignon", "champignons", "salade", "salades", "avocat", "avocats",
+               "bok choy", "endive", "endives", "scarole", "panais",
+               "topinambour", "artichaut", "germe de luzerne",
+               "pousse de bambou", "chataigne d'eau", "légumineuse",
+               "lentille", "lentilles", "pois chiche", "pois chiches", "pois cassé",
+               "brocolini", "okra", "légume surgelé", "legume surgele",
+               "légume congelé", "legume congele", "mélange de légumes",
+               "melange de legumes"],
+        "en": ["vegetable", "vegetables", "carrot", "carrots", "broccoli",
+               "cauliflower", "lettuce", "tomato", "tomatoes", "cucumber",
+               "cucumbers", "pepper", "peppers", "onion", "onions",
+               "potato", "potatoes", "celery", "spinach",
+               "cabbage", "kale", "squash", "zucchini", "eggplant",
+               "eggplants", "beet", "beets", "radish", "turnip",
+               "asparagus", "beans", "peas", "corn", "mushroom",
+               "mushrooms", "salad", "avocado", "avocados",
+               "mixed vegetables", "frozen vegetables"],
+    },
 }
 
 
@@ -147,11 +176,18 @@ class FlippScraper:
         # (évite 'shampooing'/'champignon'/'hamburger' → 'ham' en anglais)
         exclude_patterns = [
             r'\bshampoo', r'\brevitalisant', r'\bchampignon', r'\bchampfleury',
-            r'\bcantaloup', r'\btomate', r'\bpain', r'\bburger bun',
+            r'\bcantaloup', r'\bpain', r'\bburger bun',
             r'\bhot.dog', r'\bhamburger', r'\bhambourgeois',
             r'\bpersonnelle', r'\bnourriture\b.*\bchien\b',
             r'\bfour\b.*\bmicro.ondes\b', r'\bensemble?\b.*\bconstruction\b',
-            r'\bmuffin', r'\bgâteau', r'\bmaïs\b',
+            r'\bmuffin', r'\bgâteau',
+            r'\bcroustille', r'\bchips\b',
+            r'\bsalade.*gastronomique', r'\bsalade.*plaisir', r'\bsalade.*préparée',
+            r'\bsalade.*preparée', r'\bsalade.*césar', r'\bsalade.*cesar',
+            r'\bsalade.*repas', r'\bsalade.*kit',
+            r'\bsalade\s+de\b', r'\bkit\s+de\s+salade',
+            r'\bsalade.*hachée', r'\bsalade.*hachee',
+            r'\b(sauce|vinaigrette).*salade', r'\btartinade.*salade',
         ]
         for pattern in exclude_patterns:
             if re.search(pattern, name_lower):
@@ -309,10 +345,15 @@ class FlippScraper:
                 (parsed["name"], store_id, parsed["meat_type"]),
             )
             product = db.execute(
-                "SELECT id FROM products WHERE name = ? AND store_id = ?",
+                "SELECT id, meat_type FROM products WHERE name = ? AND store_id = ?",
                 (parsed["name"], store_id),
             ).fetchone()
             product_id = product["id"]
+            
+            # Update meat_type si change (ex: NULL -> legume ou legume -> NULL)
+            if product["meat_type"] != parsed["meat_type"]:
+                db.execute("UPDATE products SET meat_type = ? WHERE id = ?",
+                           (parsed["meat_type"], product_id))
 
             # 3. Insérer l'historique de prix
             week_start = get_week_start()

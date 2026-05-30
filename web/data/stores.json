@@ -3,126 +3,147 @@
     "id": 36848,
     "name": "5 Saveurs",
     "emoji": "🏪",
-    "slug": "5-saveurs"
+    "slug": "5-saveurs",
+    "store_url": "https://flipp.com/fr-ca/5-saveurs-flyer"
   },
   {
     "id": 44977,
     "name": "Adonis",
     "emoji": "🏪",
-    "slug": "adonis"
+    "slug": "adonis",
+    "store_url": "https://www.adonis.ca/fr/circulaires"
   },
   {
     "id": 37030,
     "name": "Costco",
     "emoji": "⭕",
-    "slug": "costco"
+    "slug": "costco",
+    "store_url": "https://www.costco.ca/warehouse-savings.html"
   },
   {
     "id": 36808,
     "name": "Fruiterie Potager",
     "emoji": "🏪",
-    "slug": "fruiterie-potager"
+    "slug": "fruiterie-potager",
+    "store_url": "https://flipp.com/fr-ca/fruiterie-potager-flyer"
   },
   {
     "id": 37937,
     "name": "IGA",
     "emoji": "🟢",
-    "slug": "iga"
+    "slug": "iga",
+    "store_url": "https://www.iga.net/fr/circulaire"
   },
   {
     "id": 44979,
     "name": "Kim Phat",
     "emoji": "🏪",
-    "slug": "kim-phat"
+    "slug": "kim-phat",
+    "store_url": "https://flipp.com/fr-ca/kim-phat-flyer"
   },
   {
     "id": 36918,
     "name": "L'Inter-Marché",
     "emoji": "🏪",
-    "slug": "l'inter-marché"
+    "slug": "l'inter-marché",
+    "store_url": "https://flipp.com/fr-ca/inter-marche-flyer"
   },
   {
     "id": 38622,
     "name": "Les Marchés Tradition",
     "emoji": "🏪",
-    "slug": "les-marchés-tradition"
+    "slug": "les-marchés-tradition",
+    "store_url": "https://flipp.com/fr-ca/marches-tradition-flyer"
   },
   {
     "id": 40051,
     "name": "Les aliments M&M",
     "emoji": "🏪",
-    "slug": "les-aliments-m&m"
+    "slug": "les-aliments-m&m",
+    "store_url": "https://flipp.com/fr-ca/m-m-flyer"
   },
   {
     "id": 38591,
     "name": "Marche C & T",
     "emoji": "🏪",
-    "slug": "marche-c-&-t"
+    "slug": "marche-c-&-t",
+    "store_url": "https://flipp.com/fr-ca/marche-c-&-t-flyer"
   },
   {
     "id": 44978,
     "name": "Marché Tau",
     "emoji": "🏪",
-    "slug": "marche-tau"
+    "slug": "marche-tau",
+    "store_url": "https://flipp.com/fr-ca/marche-tau-flyer"
   },
   {
     "id": 40525,
     "name": "Maxi",
     "emoji": "🟠",
-    "slug": "maxi"
+    "slug": "maxi",
+    "store_url": "https://www.maxi.ca/fr/online-grocery/current-offers/weekly-flyer"
   },
   {
     "id": 38798,
     "name": "Mayrand",
     "emoji": "🏪",
-    "slug": "mayrand"
+    "slug": "mayrand",
+    "store_url": "https://flipp.com/fr-ca/mayrand-flyer"
   },
   {
     "id": 37470,
     "name": "Metro",
     "emoji": "🔴",
-    "slug": "metro"
+    "slug": "metro",
+    "store_url": "https://www.metro.ca/fr/circulaire"
   },
   {
     "id": 39250,
     "name": "Provigo",
     "emoji": "🟣",
-    "slug": "provigo"
+    "slug": "provigo",
+    "store_url": "https://www.provigo.ca/fr/online-grocery/current-offers/weekly-flyer"
   },
   {
     "id": 37869,
     "name": "Rachelle Béry",
     "emoji": "🏪",
-    "slug": "rachelle-béry"
+    "slug": "rachelle-béry",
+    "store_url": "https://flipp.com/fr-ca/rachelle-bery-flyer"
   },
   {
     "id": 38325,
     "name": "Super C",
     "emoji": "🟡",
-    "slug": "super-c"
+    "slug": "super-c",
+    "store_url": "https://www.superc.ca/fr/online-grocery/current-offers/weekly-flyer"
   },
   {
     "id": 37374,
     "name": "Supermarché Aurès",
     "emoji": "🏪",
-    "slug": "supermarché-aurès"
+    "slug": "supermarché-aurès",
+    "store_url": "https://flipp.com/fr-ca/aures-flyer"
   },
   {
     "id": 39116,
     "name": "Tigre Géant",
     "emoji": "🏪",
-    "slug": "tigre-géant"
+    "slug": "tigre-géant",
+    "store_url": "https://www.tigregeant.ca/"
   },
   {
     "id": 38989,
     "name": "Walmart",
     "emoji": "🔵",
-    "slug": "walmart"
+    "slug": "walmart",
+    "store_url": "https://www.walmart.ca/fr/ads"
   },
   {
     "id": 37215,
     "name": "le Choix du Président",
     "emoji": "🏪",
-    "slug": "le-choix-du-président"
+    "slug": "le-choix-du-président",
+    "store_url": "https://flipp.com/fr-ca/president-s-choice-flyer"
   }
 ]

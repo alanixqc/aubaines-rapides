@@ -617,6 +617,14 @@ body {
 }
 .modal-recipe-btn:hover { background:#9e3d26; }
 
+.modal-store-btn {
+  display:block; margin-top:10px; padding:10px; background:#c9942e; color:#fff8ee;
+  text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
+  font-size:13px; font-weight:600; border-radius:4px; cursor:pointer;
+  text-decoration:none; transition:background 0.15s;
+}
+.modal-store-btn:hover { background:#a87a1e; }
+
 /* ===== RESPONSIVE ===== */
 @media (min-width: 600px) {
   .header { padding: 20px 24px 16px; }
@@ -709,6 +717,7 @@ body {
   <div class="modal-price-lg" id="modalPrice"></div>
   <div class="modal-details" id="modalDetails"></div>
   <a class="modal-recipe-btn" id="modalRecipeBtn" href="#" target="_blank" style="display:none">🍳 Voir la recette suggérée</a>
+  <a class="modal-store-btn" id="modalStoreBtn" href="#" target="_blank" style="display:none">🏪 Voir la circulaire →</a>
 </div>
 
 <!-- STORES BAR -->
@@ -918,6 +927,15 @@ function showDealDetail(id) {
     recipeBtn.style.display = "block";
   } else {
     recipeBtn.style.display = "none";
+  }
+  
+  const storeBtn = document.getElementById("modalStoreBtn");
+  if (d.store_url) {
+    storeBtn.href = d.store_url;
+    storeBtn.textContent = `🏪 Voir la circulaire ${d.store} →`;
+    storeBtn.style.display = "block";
+  } else {
+    storeBtn.style.display = "none";
   }
   
   document.getElementById("modalOverlay").classList.add("open");

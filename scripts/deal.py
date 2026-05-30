@@ -25,7 +25,7 @@ def store_emoji(name):
     return "🏪"
 
 
-MEAT_EMOJI = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓"}
+MEAT_EMOJI = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓", "legume": "🥦", "légume": "🥦"}
 
 
 DEFAULT_WEIGHTS = {
@@ -153,6 +153,14 @@ EXCLUDE_PATTERNS = [
     "bouillon", "cube de", "poudre de",
     "aliment sec", "aliments secs", "nourriture sèche",
     "litière", "litiere", "tastefuls",
+    "à mâcher", "a macher",
+    "bâtonnet", "batonnet",
+    "biscuit pour",
+    "croustille", "chips",
+    "sauce salade", "vinaigrette salade", "tartinade salade",
+    "salade de", "kit de salade",
+    "salade hachée", "salades hachées", "salade hachee", "salades hachees",
+    "salade gastronomique", "salade plaisir",
 ]
 
 
@@ -247,14 +255,14 @@ def format_price_line(price, per_kg, source, image_url):
     elif source == "estimé":
         tag = " ~"
     per_lb = per_kg / 2.20462
-    link = ""
-    if image_url:
-        link = f" · [🔗]({image_url})"
-    return f"💰 {price:.2f}$  ·  {per_kg:.2f}$/kg  ·  {per_lb:.2f}$/lb{tag}{link}"
+    return f"💰 {price:.2f}$  ·  {per_kg:.2f}$/kg  ·  {per_lb:.2f}$/lb{tag}"
 
 
 def format_protein_line(name, meat_type, price, weight_kg):
-    """Calcule et formate les infos protéines."""
+    """Calcule et formate les infos nutritionnelles."""
+    # Legumes -> afficher la categorie plutot que proteines
+    if meat_type and meat_type.lower() in ("legume", "legume"):
+        return "   🥦 Legume frais"
     prot_100g = get_protein_per_100g(name, meat_type)
 
     # Protéines par livre
@@ -329,7 +337,11 @@ def main():
         x["r"]["price"] or 0,
     ))
 
-    # ─── AFFICHAGE PRODUIT ───
+    # ─── SÉPARER VIANDE ET LÉGUMES ───
+    meat_items = [e for e in enriched if e["r"]["meat_type"] != "legume"]
+    veg_items = [e for e in enriched if e["r"]["meat_type"] == "legume"]
+
+    # ─── AFFICHAGE VIANDE (top 3) ───
     def print_item(medal, e):
         r = e["r"]
         print(f"\n{medal}  {store_emoji(r['merchant_name'])} **{r['merchant_name']}**")
@@ -341,11 +353,21 @@ def main():
         if r["image_url"]:
             print(f"   ![]({r['image_url']})")
 
-    print_item("🏆", enriched[0])
-    if len(enriched) >= 2:
-        print_item("🥈", enriched[1])
-    if len(enriched) >= 3:
-        print_item("🥉", enriched[2])
+    if meat_items:
+        print("\n🥩  TOP 3 VIANDE")
+        print_item("🏆", meat_items[0])
+        if len(meat_items) >= 2:
+            print_item("🥈", meat_items[1])
+        if len(meat_items) >= 3:
+            print_item("🥉", meat_items[2])
+
+    if veg_items:
+        print("\n🥦  TOP 3 LÉGUMES")
+        print_item("🏆", veg_items[0])
+        if len(veg_items) >= 2:
+            print_item("🥈", veg_items[1])
+        if len(veg_items) >= 3:
+            print_item("🥉", veg_items[2])
 
     # ─── FOOTER ───
     store_list = ", ".join(f"{store_emoji(s)}{s}" for s in (nearby if nearby else ["tous"]))

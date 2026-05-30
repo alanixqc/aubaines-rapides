@@ -1,7 +1,5 @@
 """build_site.py — Exporte la DB → JSON pour le site Aubaines Rapides
-Version 2: catégories enrichies (viande, poisson, fruits, légumes, panier)
-             + recettes liées aux deals
-             + protéines/$ calculées
+Version 3: ajoute store_url pour liens vers circulaire + flipp_item_id
 """
 import json
 import sqlite3
@@ -19,7 +17,31 @@ RECIPE_DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "recipes.
 WEB_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
 os.makedirs(WEB_DIR, exist_ok=True)
 
-# ─── Catégories améliorées ───
+# ─── URLs des circulaires par magasin ───
+# Donne l'URL de la circulaire en ligne (site officiel ou Flipp)
+STORE_URLS = {
+    "Super C": "https://www.superc.ca/fr/online-grocery/current-offers/weekly-flyer",
+    "Metro": "https://www.metro.ca/fr/circulaire",
+    "IGA": "https://www.iga.net/fr/circulaire",
+    "Maxi": "https://www.maxi.ca/fr/online-grocery/current-offers/weekly-flyer",
+    "Provigo": "https://www.provigo.ca/fr/online-grocery/current-offers/weekly-flyer",
+    "Walmart": "https://www.walmart.ca/fr/ads",
+    "Costco": "https://www.costco.ca/warehouse-savings.html",
+    "Tigre Géant": "https://www.tigregeant.ca/",
+    "Adonis": "https://www.adonis.ca/fr/circulaires",
+    "Kim Phat": "https://flipp.com/fr-ca/kim-phat-flyer",
+    "Marché Tau": "https://flipp.com/fr-ca/marche-tau-flyer",
+    "Les Marchés Tradition": "https://flipp.com/fr-ca/marches-tradition-flyer",
+    "Mayrand": "https://flipp.com/fr-ca/mayrand-flyer",
+    "Rachelle Béry": "https://flipp.com/fr-ca/rachelle-bery-flyer",
+    "L'Inter-Marché": "https://flipp.com/fr-ca/inter-marche-flyer",
+    "Supermarché Aurès": "https://flipp.com/fr-ca/aures-flyer",
+    "Fruiterie Potager": "https://flipp.com/fr-ca/fruiterie-potager-flyer",
+    "5 Saveurs": "https://flipp.com/fr-ca/5-saveurs-flyer",
+    "Les aliments M&M": "https://flipp.com/fr-ca/m-m-flyer",
+    "le Choix du Président": "https://flipp.com/fr-ca/president-s-choice-flyer",
+}
+
 POISSON_KW = ['saumon','crevette','poisson','thon','truite','morue','cabillaud','sole','tilapia',
               'espadon','flétan','maquereau','sardine','anchois','hareng','éperlan','dorade',
               'moule','palourde','crabe','homard','calmar','poulpe','crevettes','pétoncle',
@@ -48,33 +70,22 @@ PROTEIN_PER_100G = {
 def classify_meat_type(name, current_mt):
     """Améliore la classification des types de viande/aliments."""
     name_lower = name.lower()
-    
-    # Poisson & fruits de mer
     for kw in POISSON_KW:
         if kw in name_lower:
             return "poisson"
-    
-    # Fruits
     for kw in FRUIT_KW:
         if kw in name_lower:
             return "fruit"
-    
-    # Conserves / panier
     for kw in CONSERVE_KW:
         if kw in name_lower:
             return "panier"
-    
-    # Si déjà classifié comme légume (via Flipp), garder
     if current_mt in ("legume", "légume"):
         return "legume"
-    
     return current_mt or "autre"
 
 
 def clean_french_name(name):
-    """Nettoie le nom pour garder seulement le français.
-    Les circulaires canadiennes sont bilingues: 'FRENCH | ENGLISH'
-    On garde seulement la partie avant |."""
+    """Nettoie le nom pour garder seulement le français."""
     import re
     name = re.split(r'\s*\|\s*', name)[0]
     name = re.sub(r'\s*\([a-zA-Z]+\)', '', name)
@@ -93,6 +104,20 @@ def estimate_protein_per_100g(name, meat_type):
     return None
 
 
+def get_store_url(store_name):
+    """Retourne l'URL de la circulaire pour un magasin donné."""
+    # Cherche correspondance exacte
+    if store_name in STORE_URLS:
+        return STORE_URLS[store_name]
+    # Cherche correspondance partielle
+    for key, url in STORE_URLS.items():
+        if key.lower() in store_name.lower() or store_name.lower() in key.lower():
+            return url
+    # Fallback: recherche Flipp
+    slug = store_name.lower().replace(" ", "-").replace("'", "-").replace("é","e").replace("è","e").replace("ê","e").replace("ô","o").replace("ç","c")
+    return f"https://flipp.com/fr-ca/{slug}-flyer"
+
+
 def get_recipe_link(meat_type, all_recipes):
     """Trouve une recette qui correspond au type de viande."""
     if meat_type not in all_recipes:
@@ -100,7 +125,6 @@ def get_recipe_link(meat_type, all_recipes):
     mt_recipes = all_recipes[meat_type]
     if not mt_recipes:
         return None
-    # Prendre la plus populaire ou une au hasard
     return mt_recipes[0]
 
 
@@ -157,7 +181,7 @@ def load_recipes():
 
 
 def export_deals():
-    """Exporte tous les deals avec classification enrichie + recettes."""
+    """Exporte tous les deals avec classification enrichie + recettes + URLs."""
     db = get_db()
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
     
@@ -235,14 +259,19 @@ def export_deals():
         if mt in recipes_by_meat:
             recipe = get_recipe_link(mt, recipes_by_meat)
         
+        # URL de la circulaire du magasin
+        store_name = r["merchant_name"]
+        store_url = get_store_url(store_name)
+        
         deals.append({
             "id": r["id"],
             "name": clean_french_name(r["name"]),
             "name_short": short_name(clean_french_name(r["name"]), 40),
             "category": mt,
-            "store": r["merchant_name"],
+            "store": store_name,
             "store_id": r["store_id"],
-            "store_emoji": store_emoji(r["merchant_name"]),
+            "store_emoji": store_emoji(store_name),
+            "store_url": store_url,
             "price": round(r["price"], 2) if r["price"] else None,
             "per_kg": per_kg,
             "per_lb": per_lb,
@@ -250,6 +279,7 @@ def export_deals():
             "source": source,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
+            "flipp_item_id": r["flipp_item_id"],
             "protein_per_100g": protein_per_100g,
             "protein_per_dollar": protein_per_dollar,
             "recipe": recipe,
@@ -317,12 +347,14 @@ def export_products():
             continue
         seen.add(k)
         mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
+        store_name = r["merchant_name"]
         products.append({
             "name": r["name"],
             "name_short": short_name(r["name"], 50),
             "category": mt,
-            "store": r["merchant_name"],
-            "store_emoji": store_emoji(r["merchant_name"]),
+            "store": store_name,
+            "store_emoji": store_emoji(store_name),
+            "store_url": get_store_url(store_name),
             "price": round(r["price"], 2) if r["price"] else None,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
@@ -334,7 +366,11 @@ def export_stores():
     db = get_db()
     rows = db.execute("SELECT id, name, slug FROM stores ORDER BY name").fetchall()
     db.close()
-    return [{"id": r["id"], "name": r["name"], "emoji": store_emoji(r["name"]), "slug": r["slug"]} for r in rows]
+    return [{
+        "id": r["id"], "name": r["name"],
+        "emoji": store_emoji(r["name"]), "slug": r["slug"],
+        "store_url": get_store_url(r["name"])
+    } for r in rows]
 
 
 def export_recipes_top():
@@ -382,45 +418,34 @@ def export_recipes_top():
 
 
 def main():
-    print("📦 Exportation v2 des données pour le site...")
+    print("🔨 Génération des données du site...")
     
+    print("  📦 Deals...")
     deals = export_deals()
     with open(os.path.join(WEB_DIR, "deals.json"), "w", encoding="utf-8") as f:
         json.dump(deals, f, ensure_ascii=False, indent=2)
-    cats = deals['stats']['by_category']
-    print(f"  ✅ deals.json — {deals['stats']['total']} deals")
-    print(f"     Catégories: {', '.join(f'{k}: {v}' for k, v in sorted(cats.items()))}")
+    print(f"    ✅ {deals['stats']['total']} deals exportés")
     
+    print("  📈 Tendances...")
     trends = export_trends()
     with open(os.path.join(WEB_DIR, "trends.json"), "w", encoding="utf-8") as f:
         json.dump(trends, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ trends.json — {len(trends)} produits")
+    print(f"    ✅ {len(trends)} séries temporelles")
     
-    products = export_products()
-    with open(os.path.join(WEB_DIR, "products.json"), "w", encoding="utf-8") as f:
-        json.dump(products, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ products.json — {len(products)} produits")
-    
+    print("  🏪 Magasins...")
     stores = export_stores()
     with open(os.path.join(WEB_DIR, "stores.json"), "w", encoding="utf-8") as f:
         json.dump(stores, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ stores.json — {len(stores)} magasins")
+    print(f"    ✅ {len(stores)} magasins")
     
-    top_recipes = export_recipes_top()
+    print("  🍳 Recettes...")
+    recipes = export_recipes_top()
     with open(os.path.join(WEB_DIR, "recipes.json"), "w", encoding="utf-8") as f:
-        json.dump(top_recipes, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ recipes.json — {len(top_recipes)} meilleures recettes")
+        json.dump(recipes, f, ensure_ascii=False, indent=2)
+    print(f"    ✅ {len(recipes)} recettes")
     
-    stats = deals["stats"]
-    stats["stores_count"] = len(stores)
-    stats["trends_count"] = len(trends)
-    stats["recipes_count"] = len(top_recipes)
-    with open(os.path.join(WEB_DIR, "stats.json"), "w", encoding="utf-8") as f:
-        json.dump(stats, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ stats.json")
-    
-    print(f"\n📊 Résumé : {stats['total']} offres · {stats['stores_count']} magasins · {stats['recipes_count']} recettes · {stats['week']}")
-    print(f"   Viande: {sum(cats.get(m,0) for m in ['boeuf','poulet','porc','veau','viande'])} · Poisson: {cats.get('poisson',0)} · Légumes: {cats.get('legume',0)} · Fruits: {cats.get('fruit',0)} · Panier: {cats.get('panier',0)}")
+    print(f"\n✅ Données générées dans {WEB_DIR}")
+
 
 if __name__ == "__main__":
     main()
