@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aubaines Rapides — Recherche</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/location.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
     <div class="nav-links">
       <a href="index.html">Accueil</a>
       <a href="viande.html">🥩 Viande</a>
@@ -122,5 +124,6 @@ window.doSearch = doSearch;
 
 init();
 </script>
+<script src="js/location.js"></script>
 </body>
 </html>

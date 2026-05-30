@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aubaines Rapides — Tendances</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/location.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -12,6 +13,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
     <div class="nav-links">
       <a href="index.html">Accueil</a>
       <a href="viande.html">🥩 Viande</a>
@@ -178,5 +180,6 @@ function renderTrend(index) {
 
 init();
 </script>
+<script src="js/location.js"></script>
 </body>
 </html>
