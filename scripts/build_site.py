@@ -247,7 +247,6 @@ def export_deals():
         
         # URL de la circulaire du magasin
         store_name = r["merchant_name"]
-        store_url = get_store_url(store_name)
         
         deals.append({
             "id": r["id"],
@@ -257,7 +256,6 @@ def export_deals():
             "store": store_name,
             "store_id": r["store_id"],
             "store_emoji": store_emoji(store_name),
-            "store_url": store_url,
             "price": round(r["price"], 2) if r["price"] else None,
             "per_kg": per_kg,
             "per_lb": per_lb,

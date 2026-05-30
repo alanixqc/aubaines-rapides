@@ -617,13 +617,64 @@ body {
 }
 .modal-recipe-btn:hover { background:#9e3d26; }
 
-.modal-store-btn {
-  display:block; margin-top:10px; padding:10px; background:#c9942e; color:#fff8ee;
-  text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
-  font-size:13px; font-weight:600; border-radius:4px; cursor:pointer;
-  text-decoration:none; transition:background 0.15s;
+/* Image dans le modal — cliquable pour plein écran */
+.modal-img-wrap {
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e8dccb;
+  background: #f5eee0;
+  text-align: center;
 }
-.modal-store-btn:hover { background:#a87a1e; }
+.modal-img-wrap img {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  transition: opacity 0.15s;
+}
+.modal-img-wrap:hover img {
+  opacity: 0.85;
+}
+
+/* Plein écran image (comme Discord) */
+.img-fullscreen-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 999;
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+}
+.img-fullscreen-overlay.open { display: flex; }
+.img-fullscreen-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.img-fullscreen-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  z-index: 1000;
+}
+.img-fullscreen-close:hover { background: rgba(255,255,255,0.3); }
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 600px) {
@@ -714,10 +765,19 @@ body {
   <button class="modal-close" onclick="closeDealDetail()">✕</button>
   <h3 id="modalTitle"></h3>
   <div class="modal-store" id="modalStore"></div>
+  <!-- Image cliquable → plein écran -->
+  <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
+    <img id="modalImg" src="" alt="Photo du produit">
+  </div>
   <div class="modal-price-lg" id="modalPrice"></div>
   <div class="modal-details" id="modalDetails"></div>
   <a class="modal-recipe-btn" id="modalRecipeBtn" href="#" target="_blank" style="display:none">🍳 Voir la recette suggérée</a>
-  <a class="modal-store-btn" id="modalStoreBtn" href="#" target="_blank" style="display:none">🏪 Voir la circulaire →</a>
+</div>
+
+<!-- PLEIN ÉCRAN IMAGE (comme Discord) -->
+<div class="img-fullscreen-overlay" id="imgFullscreen" onclick="closeFullscreenImg()">
+  <button class="img-fullscreen-close" onclick="closeFullscreenImg()">✕</button>
+  <img id="imgFullscreenContent" src="" alt="Agrandissement">
 </div>
 
 <!-- STORES BAR -->
@@ -929,13 +989,14 @@ function showDealDetail(id) {
     recipeBtn.style.display = "none";
   }
   
-  const storeBtn = document.getElementById("modalStoreBtn");
-  if (d.store_url) {
-    storeBtn.href = d.store_url;
-    storeBtn.textContent = `🏪 Voir la circulaire ${d.store} →`;
-    storeBtn.style.display = "block";
+  // Image du produit — cliquable pour plein écran
+  const imgWrap = document.getElementById("modalImgWrap");
+  const modalImg = document.getElementById("modalImg");
+  if (d.image_url) {
+    modalImg.src = d.image_url;
+    imgWrap.style.display = "block";
   } else {
-    storeBtn.style.display = "none";
+    imgWrap.style.display = "none";
   }
   
   document.getElementById("modalOverlay").classList.add("open");
@@ -946,6 +1007,20 @@ function closeDealDetail() {
   document.getElementById("modalOverlay").classList.remove("open");
   document.getElementById("modalPanel").style.display = "none";
 }
+
+// ─── PLEIN ÉCRAN IMAGE (comme Discord) ───
+function openFullscreenImg(src) {
+  document.getElementById("imgFullscreenContent").src = src;
+  document.getElementById("imgFullscreen").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeFullscreenImg() {
+  document.getElementById("imgFullscreen").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeFullscreenImg();
+});
 
 // ─── INIT ───
 document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
