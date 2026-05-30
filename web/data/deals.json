@@ -44,7 +44,7 @@
       "weight_kg": 0.907,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_746259_gs1_01_ml_97ea8218-9f65-47a3-81d8-2db4282458ac.jpg?v=1767701079",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -131,7 +131,7 @@
       "weight_kg": 0.907,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_926364_f_01_184d0817-f870-469e-b682-2610181326fa.jpg?v=1767692854",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -248,7 +248,7 @@
       "weight_kg": 0.2,
       "source": "estime",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1132810_gs1_03_ml.jpg?v=1768403135",
       "protein_per_100g": 20,
       "protein_per_dollar": 26.7,
       "recipe": {
@@ -308,7 +308,7 @@
       "weight_kg": 0.17,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_624185_f_01_a40580e3-10ee-4d9c-9774-ac2c639c5041.jpg?v=1767956638",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -376,7 +376,7 @@
       "weight_kg": 0.425,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1552108_gs1_04_ml.jpg?v=1776248195",
       "protein_per_100g": 20,
       "protein_per_dollar": 21.9,
       "recipe": {
@@ -436,7 +436,7 @@
       "weight_kg": 0.907,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_926861_f_05.jpg?v=1775062783",
       "protein_per_100g": 20,
       "protein_per_dollar": 20.2,
       "recipe": {
@@ -594,7 +594,7 @@
       "weight_kg": 0.369,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1552074_gs1_07_ml.jpg?v=1769008088",
       "protein_per_100g": 20,
       "protein_per_dollar": 19.0,
       "recipe": {
@@ -654,7 +654,7 @@
       "weight_kg": 0.375,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1041421_gs1_03_ml.jpg?v=1772031965",
       "protein_per_100g": 20,
       "protein_per_dollar": 18.9,
       "recipe": {
@@ -834,7 +834,7 @@
       "weight_kg": 0.3,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1677980_f_01.jpg?v=1776203069",
       "protein_per_100g": 20,
       "protein_per_dollar": 15.1,
       "recipe": {
@@ -943,7 +943,7 @@
       "weight_kg": 0.5,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_597770_gs1_39.jpg?v=1775062164",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -962,7 +962,7 @@
       "weight_kg": 0.5,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_38049_gs1_39.jpg?v=1775062008",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -1131,7 +1131,7 @@
       "weight_kg": 0.55,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1417897_gs1_08_ml.jpg?v=1775682797",
       "protein_per_100g": 20,
       "protein_per_dollar": 13.8,
       "recipe": {
@@ -1161,7 +1161,7 @@
       "weight_kg": 0.55,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1417897_gs1_08_ml.jpg?v=1775682797",
       "protein_per_100g": 20,
       "protein_per_dollar": 13.8,
       "recipe": {
@@ -1259,7 +1259,7 @@
       "weight_kg": 0.44,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1678149_f_01.jpg?v=1773169901",
       "protein_per_100g": 20,
       "protein_per_dollar": 12.6,
       "recipe": {
@@ -1289,7 +1289,7 @@
       "weight_kg": 0.5,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1687611_gs1_03_ml.jpg?v=1770235816",
       "protein_per_100g": 20,
       "protein_per_dollar": 12.5,
       "recipe": {
@@ -1706,7 +1706,7 @@
       "weight_kg": 0.34,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/products/gs1_714076_gs1_01_ml.jpg?v=1745437315",
       "protein_per_100g": 18,
       "protein_per_dollar": 8.8,
       "recipe": null
@@ -1725,7 +1725,7 @@
       "weight_kg": 0.34,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_520596_gs1_01_ml.jpg?v=1745437315",
       "protein_per_100g": 18,
       "protein_per_dollar": 8.8,
       "recipe": null
@@ -2109,7 +2109,7 @@
       "weight_kg": 0.4,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1733795_f_01.jpg?v=1779803285",
       "protein_per_100g": 20,
       "protein_per_dollar": 7.3,
       "recipe": {
@@ -2218,7 +2218,7 @@
       "weight_kg": 0.227,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1691658_gs1_06_ml.jpg?v=1776359701",
       "protein_per_100g": 18,
       "protein_per_dollar": 5.9,
       "recipe": null
@@ -2572,7 +2572,7 @@
       "weight_kg": 0.142,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1656025_f_01.jpg?v=1774963020",
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2602,7 +2602,7 @@
       "weight_kg": 0.142,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1656024_f_01.jpg?v=1774963017",
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2632,7 +2632,7 @@
       "weight_kg": 0.142,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1656023_f_01.jpg?v=1774963018",
       "protein_per_100g": 20,
       "protein_per_dollar": 2.4,
       "recipe": {
@@ -2692,7 +2692,7 @@
       "weight_kg": 0.113,
       "source": "nom",
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1655986_f_01.jpg?v=1772832972",
       "protein_per_100g": 20,
       "protein_per_dollar": 1.9,
       "recipe": {
@@ -2830,7 +2830,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_473911_gs1_17_ml.jpg?v=1774618968",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -2944,7 +2944,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_614916_gs1_21.jpg?v=1775062221",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3039,7 +3039,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_566333_gs1_23_ml.jpg?v=1777585368",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3115,7 +3115,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_902924_gs1_05_ml.jpg?v=1767854526",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3232,7 +3232,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1197133_gs1_10.jpg?v=1775481253",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3357,7 +3357,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_932751_gs1_08.jpg?v=1775062796",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3607,7 +3607,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/products/preview_images_376019_f_111.jpg?v=1768285826",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3762,7 +3762,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1645894_gs1_09_ml.jpg?v=1767690284",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3830,7 +3830,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_424855_DEL_f_01_ceefa8ee-a612-4c15-a751-a45966006266.jpg?v=1767695069",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -3963,7 +3963,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1668343_f_01.jpg?v=1772840149",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4001,7 +4001,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1668340_f_01.jpg?v=1772840146",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4020,7 +4020,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1668342_f_01.jpg?v=1772840148",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4039,7 +4039,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1668345_f_01.jpg?v=1772840151",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4058,7 +4058,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1668345_f_01.jpg?v=1772840151",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4534,7 +4534,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1667695_f_01.jpg?v=1773483109",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4553,7 +4553,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_637710_gs1_25.jpg?v=1767689908",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -4681,7 +4681,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1667695_f_01.jpg?v=1773483109",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -4711,7 +4711,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1667695_f_01.jpg?v=1773483109",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5040,7 +5040,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1244648_gs1_05_ml_baf5fa85-8f9d-48b6-b376-82f5ce114b1e.jpg?v=1769007982",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -5089,7 +5089,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1291142_f_01.jpg?v=1769857125",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5108,7 +5108,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_424749_f_01_10029a83-a90a-4819-86d4-4fb30a35a74f.jpg?v=1772277393",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5421,7 +5421,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1132810_gs1_03_ml.jpg?v=1768403135",
       "protein_per_100g": 23,
       "protein_per_dollar": null,
       "recipe": {
@@ -5628,7 +5628,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1627937_f_01.jpg?v=1771023971",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5647,7 +5647,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1627937_f_01.jpg?v=1771023971",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -5990,7 +5990,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_424311_f_02.jpg?v=1775063046",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6009,7 +6009,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1465581_f_01.jpg?v=1767697019",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6134,7 +6134,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/products/gs1_714171_gs1_01_ml.jpg?v=1774468612",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -6417,7 +6417,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1492842_f_01.jpg?v=1767698932",
       "protein_per_100g": 18,
       "protein_per_dollar": null,
       "recipe": null
@@ -6436,7 +6436,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/products/gs1_714076_gs1_01_ml.jpg?v=1769612751",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": null
@@ -6932,7 +6932,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/gs1_1687611_gs1_03_ml.jpg?v=1770235816",
       "protein_per_100g": 20,
       "protein_per_dollar": null,
       "recipe": {
@@ -7670,7 +7670,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_926861_f_05.jpg?v=1775062783",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8604,7 +8604,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1656025_f_01.jpg?v=1774963020",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -8623,7 +8623,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1658545_f_01.jpg?v=1772752124",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -9775,7 +9775,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1662342_f_01.jpg?v=1776696469",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10382,7 +10382,7 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0557/6858/0157/files/preview_images_1641511_f_01.jpg?v=1772748591",
       "protein_per_100g": null,
       "protein_per_dollar": null,
       "recipe": null
@@ -10567,7 +10567,7 @@
       "le Choix du Président"
     ],
     "week": "2026-05-30",
-    "generated_at": "2026-05-30T12:17:34.892156"
+    "generated_at": "2026-05-30T12:36:04.298597"
   },
   "recipes_available": {
     "boeuf": 5,

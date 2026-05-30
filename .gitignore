@@ -26,3 +26,7 @@ data/*.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Cache temporaire (screenshots auto-générés)
+cache/tigregeant/section_*.png
+cache/tigregeant/circulaire_*.png

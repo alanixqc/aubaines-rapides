@@ -158,28 +158,18 @@ class TigreGeantScraper:
                 except:
                     pass
             
-            # Prendre un screenshot de la circulaire pour référence
-            screenshot_path = os.path.join(CACHE_DIR, f"circulaire_{get_week_start()}.png")
-            try:
-                page.screenshot(path=screenshot_path, full_page=True)
-                print(f"    📸 Screenshot sauvegardé: {screenshot_path}")
-            except:
-                screenshot_path = None
-            
             browser.close()
         
         # Traiter les items extraits
         print(f"\n  📦 {len(items)} items extraits de la circulaire")
         
-        # Debug: afficher les 10 premiers items bruts
-        print(f"  🔍 Échantillon des 10 premiers items:")
-        for item in items[:10]:
-            print(f"    - {item[:100]}")
-        
         for item_text in items[:100]:  # Limiter à 100 items
             parsed = self.parse_item_text(item_text)
             if parsed:
                 self.save_item(parsed)
+        
+        # ─── Enrichir avec images Shopify ───
+        self.enrich_with_shopify_images()
         
         # Rapport
         print(f"\n{'='*60}")
@@ -188,6 +178,7 @@ class TigreGeantScraper:
         print(f"  Items trouvés:      {self.stats['items_found']}")
         print(f"  Items sauvegardés:  {self.stats['items_saved']}")
         print(f"  Items viande:       {self.stats['meat_items']}")
+        print(f"  Images Shopify:     {self.stats.get('shopify_images', 0)}")
         print(f"{'='*60}")
         
         return self.stats
@@ -303,6 +294,152 @@ class TigreGeantScraper:
             return False
         finally:
             db.close()
+
+
+    # ─── Enrichissement images Shopify ───
+    def enrich_with_shopify_images(self):
+        """Trouve les images Shopify pour les items TG sans image."""
+        from difflib import SequenceMatcher
+        from collections import defaultdict
+        import urllib.request
+        
+        ACCENT_MAP = str.maketrans('éèêëàâäôöòûüùîïç', 'eeeeaaaooouuuiic')
+        
+        def normalize(name):
+            n = name.lower().translate(ACCENT_MAP)
+            n = re.sub(r'[^a-z0-9\s]', ' ', n)
+            return re.sub(r'\s+', ' ', n).strip()
+        
+        def keywords(name):
+            words = normalize(name).split()
+            stop = {'le','la','les','de','du','des','un','une','et','au','aux',
+                    'en','sur','par','pour','avec','sans','dans','est','ou','pas',
+                    'plus','format','chaque','pack','paquet','sac','boite','boîte',
+                    'sachet','ml','g','kg','lb','oz','x','environ','emb','bte'}
+            return [w for w in words if len(w) > 2 and w not in stop]
+        
+        def similarity(a, b):
+            a_n, b_n = normalize(a), normalize(b)
+            if a_n == b_n:
+                return 1.0
+            seq = SequenceMatcher(None, a_n, b_n).ratio()
+            a_kw, b_kw = set(keywords(a)), set(keywords(b))
+            if not a_kw or not b_kw:
+                return seq * 0.5
+            jaccard = len(a_kw & b_kw) / len(a_kw | b_kw)
+            return 0.5 * seq + 0.5 * jaccard
+        
+        # Charger/fetch produits Shopify
+        shopify_path = os.path.join(CACHE_DIR, 'shopify_products.json')
+        products = []
+        
+        if os.path.exists(shopify_path):
+            with open(shopify_path) as f:
+                products = json.load(f).get('products', [])
+            print(f"  🛒 {len(products)} produits Shopify chargés (cache)")
+        else:
+            print("  🛒 Téléchargement des produits Shopify...")
+            page = 1
+            while True:
+                url = f"https://www.gianttiger.com/fr/collections/flyers-and-deals/products.json?limit=250&page={page}"
+                try:
+                    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        data = json.loads(resp.read())
+                        batch = data.get("products", [])
+                        if not batch:
+                            break
+                        products.extend(batch)
+                        page += 1
+                except:
+                    break
+            with open(shopify_path, 'w') as f:
+                json.dump({"products": products}, f, ensure_ascii=False)
+            print(f"  ✅ {len(products)} produits Shopify téléchargés")
+        
+        # Corrections manuelles
+        MANUAL = {
+            "Étiquette Or Fumoir bacon": "Bacon fumée Gold Label - 375 g",
+            "Étiquette Or fumoir bacon": "Bacon fumée Gold Label - 375 g",
+            "Gold Label Smoke House Bacon": "Bacon fumée Gold Label - 375 g",
+            "Étiquette Or original lanières de saucisses": "Lanières de saucisse Gold Label Original, 300 g",
+            "Gold Label Original Sausage Strips": "Lanières de saucisse Gold Label Original, 300 g",
+            "Boston Market Turkey Breast Cutlettes": "Escalopes de poitrine de dinde Boston Market, 369 g",
+            "High Liner English Style Fillets": "High Liner Filets en Pâte à l'Anglaise, 500 g",
+            "La Cage Regular Chicken Nuggets": "La Cage Pépites de Poulet Régulier, 550 g",
+            "Aqua Star Pacific White Shrimp": "Crevettes blanches du Pacifique Aqua Star - 340 g",
+            "Aqua Star White Pacific Shrimp": "Crevettes blanches du Pacifique Aqua Star - 340 g",
+        }
+        
+        def manual_match(name):
+            name_lower = name.lower()
+            for k, v in MANUAL.items():
+                if k.lower() in name_lower:
+                    for p in products:
+                        if similarity(v, p.get('title', '')) > 0.5:
+                            for var in p.get('variants', []):
+                                img = var.get('featured_image', {}) or {}
+                                url = img.get('src', '') if img else ''
+                                if url:
+                                    return url
+            return None
+        
+        # Trouver les items dans la DB qui n'ont pas d'image
+        db = get_db()
+        rows = db.execute("""
+            SELECT ph.id, p.name, ph.price
+            FROM price_history ph
+            JOIN products p ON ph.product_id = p.id
+            JOIN stores s ON p.store_id = s.id
+            WHERE s.name = 'Tigre Géant'
+              AND (ph.image_url IS NULL OR ph.image_url = '')
+              AND ph.week_start = ?
+        """, (get_week_start(),)).fetchall()
+        
+        if not rows:
+            print(f"  ✅ Tous les items ont déjà une image")
+            db.close()
+            return
+        
+        print(f"  🔍 {len(rows)} items sans image → recherche Shopify...")
+        updated = 0
+        
+        for r in rows:
+            name = r['name']
+            price = r['price']
+            
+            img_url = manual_match(name)
+            
+            if not img_url:
+                # Fuzzy matching
+                best = None
+                best_score = 0
+                for p in products:
+                    title = p.get('title', '')
+                    for v in p.get('variants', []):
+                        p_price = float(v.get('price', 0))
+                        img = v.get('featured_image', {}) or {}
+                        url = img.get('src', '') if img else ''
+                        if not url:
+                            continue
+                        score = similarity(name, title)
+                        if abs(p_price - price) < 0.5:
+                            score += 0.15
+                        if score > best_score:
+                            best_score = score
+                            best = url
+                
+                if best and best_score >= 0.4:
+                    img_url = best
+            
+            if img_url:
+                db.execute("UPDATE price_history SET image_url = ? WHERE id = ?", (img_url, r['id']))
+                updated += 1
+        
+        db.commit()
+        db.close()
+        self.stats['shopify_images'] = updated
+        print(f"  ✅ {updated} images Shopify ajoutées")
 
 
 def main():
