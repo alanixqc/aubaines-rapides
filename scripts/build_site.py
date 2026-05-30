@@ -71,6 +71,16 @@ def classify_meat_type(name, current_mt):
     return current_mt or "autre"
 
 
+def clean_french_name(name):
+    """Nettoie le nom pour garder seulement le français.
+    Les circulaires canadiennes sont bilingues: 'FRENCH | ENGLISH'
+    On garde seulement la partie avant |."""
+    import re
+    name = re.split(r'\s*\|\s*', name)[0]
+    name = re.sub(r'\s*\([a-zA-Z]+\)', '', name)
+    return name.strip().capitalize()
+
+
 def estimate_protein_per_100g(name, meat_type):
     """Estime les protéines par 100g pour un produit."""
     name_lower = name.lower()
@@ -227,8 +237,8 @@ def export_deals():
         
         deals.append({
             "id": r["id"],
-            "name": r["name"],
-            "name_short": short_name(r["name"], 40),
+            "name": clean_french_name(r["name"]),
+            "name_short": short_name(clean_french_name(r["name"]), 40),
             "category": mt,
             "store": r["merchant_name"],
             "store_id": r["store_id"],
