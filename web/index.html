@@ -1122,6 +1122,7 @@ body {
 <footer class="footer">
   <p>Aubaines Rapides &copy; 2026</p>
   <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque mardi</p>
+  <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
 </footer>
 
 <script>
@@ -1594,6 +1595,24 @@ async function init() {
     return;
   }
   renderAll();
+  loadPipelineStatus();
+}
+
+function loadPipelineStatus() {
+  const el = document.getElementById("pipelineStatus");
+  fetch("data/status.json")
+    .then(r => r.ok ? r.json() : null)
+    .then(s => {
+      if (!s) { el.textContent = "⚙️ Statut indisponible"; return; }
+      if (s.warning) {
+        el.innerHTML = `⚠️ ${escapeHTML(s.warning)} · ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
+      } else if (s.success) {
+        el.innerHTML = `✅ Dernière mise à jour : ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
+      } else {
+        el.innerHTML = `❌ Échec du dernier scraping (${escapeHTML(s.last_run?.substring(0, 10) || "")})`;
+      }
+    })
+    .catch(() => { el.textContent = ""; });
 }
 
 init();

@@ -39,11 +39,31 @@ def setup_logging():
 
 
 def save_status(status_data):
+    # Seuil d'alerte : si moins de 50 deals viande, marquer un avertissement
+    total_meat = (
+        status_data.get("stats", {}).get("flipp_scrape", {}).get("meat_items", 0)
+        or status_data.get("stats", {}).get("total_meat", 0)
+    )
+    if status_data["success"] and total_meat < 50:
+        status_data["warning"] = f"Seulement {total_meat} items viande (seuil: 50)"
     status_data["last_run"] = datetime.now().isoformat()
     os.makedirs(os.path.dirname(STATUS_FILE), exist_ok=True)
     with open(STATUS_FILE, "w", encoding="utf-8") as f:
         json.dump(status_data, f, indent=2, ensure_ascii=False)
     logging.info(f"📝 Statut sauvegardé dans {STATUS_FILE}")
+    
+    # Copie allégée vers web/data/status.json pour le site
+    web_status = os.path.join(PROJECT_ROOT, "web", "data", "status.json")
+    web_data = {
+        "success": status_data["success"],
+        "last_run": status_data["last_run"],
+        "warning": status_data.get("warning"),
+        "total_products": status_data.get("stats", {}).get("total_products"),
+        "total_prices": status_data.get("stats", {}).get("total_prices"),
+    }
+    os.makedirs(os.path.dirname(web_status), exist_ok=True)
+    with open(web_status, "w", encoding="utf-8") as f:
+        json.dump(web_data, f, indent=2, ensure_ascii=False)
 
 
 def run_scraper(name, args=None, timeout=120):
