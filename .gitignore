@@ -12,6 +12,9 @@ data/*.db
 data/*.log
 data/*.json
 
+# Sauf web/data/ (pour le site GitHub Pages)
+!web/data/*.json
+
 # Environment
 .env
 .env.*
