@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Plan d'Affaires</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 30%, #0f1a2e 60%, #0a0a0f 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(233,69,96,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(46,204,113,0.06) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(233,69,96,0.15);
+    border: 1px solid rgba(233,69,96,0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: #e94560;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(2.5em, 6vw, 4.5em);
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 0%, #e94560 50%, #2ecc71 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  .hero p {
+    font-size: 1.2em;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .hero-metrics {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .hero-metrics .metric { text-align: center; }
+  .hero-metrics .num {
+    font-size: 2em;
+    font-weight: 700;
+    background: linear-gradient(135deg, #e94560, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-metrics .label { font-size: 0.8em; color: #666; margin-top: 4px; }
+
+  /* ---- Container ---- */
+  .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+  /* ---- Section headers ---- */
+  .section-title {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e94560, #0f3460);
+    font-size: 1.2em;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .section-subtitle {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 40px;
+    margin-left: 62px;
+  }
+
+  /* ---- Phase Cards ---- */
+  .phase {
+    background: #111118;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #1a1a2e;
+    position: relative;
+    overflow: hidden;
+  }
+  .phase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #e94560, #2ecc71);
+  }
+  .phase h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .phase h3 .tag {
+    font-size: 0.5em;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: rgba(233,69,96,0.15);
+    color: #e94560;
+    font-weight: 500;
+  }
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .phase-card {
+    background: #16161f;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #1e1e30;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .phase-card:hover {
+    transform: translateY(-3px);
+    border-color: #e94560;
+  }
+  .phase-card .icon { font-size: 2em; margin-bottom: 12px; }
+  .phase-card h4 { font-size: 1.1em; font-weight: 600; margin-bottom: 8px; }
+  .phase-card p { font-size: 0.9em; color: #888; line-height: 1.5; }
+  .phase-card .rev {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .rev-high { background: rgba(46,204,113,0.12); color: #2ecc71; }
+  .rev-mid { background: rgba(52,152,219,0.12); color: #3498db; }
+  .rev-low { background: rgba(155,89,182,0.12); color: #9b59b6; }
+
+  /* ---- Flywheel SVG ---- */
+  .flywheel-section {
+    background: #0d0d18;
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin-bottom: 60px;
+    border: 1px solid #1a1a2e;
+    text-align: center;
+  }
+  .flywheel-section h2 { margin-bottom: 40px; }
+  .flywheel {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+  .flywheel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    padding: 16px;
+    position: relative;
+  }
+  .flywheel-item .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .flywheel-item .circle:hover {
+    transform: scale(1.1);
+  }
+  .flywheel-item .label { font-size: 0.8em; color: #aaa; font-weight: 500; text-align: center; }
+  .flywheel-arrow {
+    font-size: 1.5em;
+    color: #e94560;
+    font-weight: 300;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  /* ---- Revenue Model ---- */
+  .rev-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  .rev-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background: #16161f;
+    color: #888;
+    font-weight: 500;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #1e1e30;
+  }
+  .rev-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #181825;
+  }
+  .rev-table tr:hover td { background: #16161f; }
+
+  .rev-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #e9456033, #e94560);
+    max-width: 100%;
+  }
+  .rev-bar.bar-green { background: linear-gradient(90deg, #2ecc7133, #2ecc71); }
+  .rev-bar.bar-blue { background: linear-gradient(90deg, #3498db33, #3498db); }
+  .rev-bar.bar-purple { background: linear-gradient(90deg, #9b59b633, #9b59b6); }
+  .rev-bar.bar-orange { background: linear-gradient(90deg, #e67e2233, #e67e22); }
+
+  /* ---- Timeline ---- */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 40px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #e94560, #2ecc71);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: #111118;
+    border-radius: 12px;
+    border: 1px solid #1a1a2e;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e94560;
+    border: 3px solid #0a0a0f;
+  }
+  .timeline-item.completed::before { background: #2ecc71; }
+  .timeline-item h4 { font-size: 1.1em; margin-bottom: 6px; }
+  .timeline-item .time { font-size: 0.8em; color: #666; margin-bottom: 8px; }
+  .timeline-item p { font-size: 0.9em; color: #888; }
+
+  /* ---- Ecosystem Loop SVG ---- */
+  .ecosystem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+  }
+  .loop-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    max-width: 700px;
+  }
+  .loop-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .loop-node {
+    background: #16161f;
+    border: 2px solid #1e1e30;
+    border-radius: 16px;
+    padding: 20px 16px;
+    text-align: center;
+    flex: 1;
+    max-width: 160px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .loop-node:hover {
+    border-color: #e94560;
+    transform: scale(1.05);
+  }
+  .loop-node .icon { font-size: 2em; margin-bottom: 6px; }
+  .loop-node .node-label { font-size: 0.75em; color: #ccc; font-weight: 600; }
+  .loop-node .node-sub { font-size: 0.65em; color: #666; margin-top: 4px; }
+  .loop-arrow {
+    font-size: 1.8em;
+    color: #e94560;
+    font-weight: 300;
+  }
+  .loop-arrow.down { transform: rotate(90deg); }
+
+  .center-hub {
+    background: linear-gradient(135deg, #e94560, #0f3460);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(233,69,96,0.3);
+  }
+  .center-hub .hub-icon { font-size: 1.5em; }
+
+  /* ---- Revenue Projection ---- */
+  .projection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .projection-card {
+    background: linear-gradient(135deg, #16161f, #111118);
+    border: 1px solid #1e1e30;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .projection-card .month { color: #666; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; }
+  .projection-card .amount {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #2ecc71, #e94560);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .projection-card .desc { font-size: 0.8em; color: #888; }
+
+  /* ---- Footer ---- */
+  footer {
+    text-align: center;
+    padding: 40px;
+    color: #444;
+    font-size: 0.85em;
+    border-top: 1px solid #111;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 768px) {
+    .phase { padding: 24px; }
+    .flywheel-item { width: 120px; }
+    .flywheel-item .circle { width: 60px; height: 60px; font-size: 1.5em; }
+    .flywheel-arrow { font-size: 1em; width: 20px; }
+    .loop-node { padding: 12px 8px; max-width: 120px; }
+    .loop-node .icon { font-size: 1.5em; }
+    .loop-arrow { font-size: 1.2em; }
+    .center-hub { width: 70px; height: 70px; font-size: 0.65em; }
+    .projection-card .amount { font-size: 1.8em; }
+  }
+
+  /* ---- Animations ---- */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  .delay-5 { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge fade-in">Plan d'Affaires 2026</div>
+    <h1 class="fade-in delay-1">Aubaines Rapides</h1>
+    <p class="fade-in delay-2">
+      Transformer un scraper de circulaires en un écosystème autonome qui génère des revenus récurrents.
+      De l'information → aux recettes → à la vente → en boucle.
+    </p>
+    <div class="hero-metrics fade-in delay-3">
+      <div class="metric">
+        <div class="num">3 614</div>
+        <div class="label">Produits dans la base</div>
+      </div>
+      <div class="metric">
+        <div class="num">18</div>
+        <div class="label">Magasins scannés</div>
+      </div>
+      <div class="metric">
+        <div class="num">4 081</div>
+        <div class="label">Données prix historiques</div>
+      </div>
+      <div class="metric">
+        <div class="num">52</div>
+        <div class="label">Semaines de projection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ÉTAT DES LIEUX ===== -->
+<div class="container">
+  <h2 class="section-title fade-in">
+    <span class="num">0</span>
+    État des Lieux
+  </h2>
+  <p class="section-subtitle fade-in">Ce qui existe déjà — la fondation est solide</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="icon">📡</div>
+        <h4>Scraper Flipp API</h4>
+        <p>Pipeline hebdomadaire automatisé (cron mardi 8h30). Scrape 15+ épiceries du Québec. Classifie bœuf, poulet, porc avec extraction de prix au kg.</p>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🗄️</div>
+        <h4>Base de données SQLite</h4>
+        <p>3 614 produits, 4 081 entrées de prix historiques. Poids réels via vision AI, prix unitaires, identifiants Flipp. Prêt pour l'analyse.</p>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🤖</div>
+        <h4>Commandes Discord</h4>
+        <p>!produit (recherche), !deal (top 3 deals), !deal CODE_POSTAL. Images inline, protéines par dollar, podium hebdomadaire.</p>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🌐</div>
+        <h4>Rapport HTML</h4>
+        <p>Page web statique avec les deals de la semaine. Design dark mode. Prêt à être embelli et transformé en site public.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LE FLYWHEEL ===== -->
+  <div class="flywheel-section fade-in">
+    <h2 class="section-title" style="justify-content:center;">
+      🔄 Le Moteur — Flywheel de Monetization
+    </h2>
+    <p style="color:#666;margin-bottom:40px;">
+      Chaque étape alimente la suivante. La boucle s'auto-renforce avec le temps.
+    </p>
+
+    <div class="flywheel">
+      <div class="flywheel-item" style="background:linear-gradient(135deg,#e9456015,#0f346015);border-radius:16px;padding:20px;">
+        <div class="circle" style="background:linear-gradient(135deg,#e94560,#c0392b);color:#fff;box-shadow:0 0 20px rgba(233,69,96,0.3);">
+          📊
+        </div>
+        <div class="label"><strong>1. Données Prix</strong><br><span style="color:#666;font-size:0.85em;">Scraper + Analyser</span></div>
+      </div>
+      <div class="flywheel-arrow">→</div>
+      <div class="flywheel-item" style="background:linear-gradient(135deg,#2ecc7115,#27ae6015);border-radius:16px;padding:20px;">
+        <div class="circle" style="background:linear-gradient(135deg,#2ecc71,#27ae60);color:#fff;box-shadow:0 0 20px rgba(46,204,113,0.3);">
+          📝
+        </div>
+        <div class="label"><strong>2. Contenu</strong><br><span style="color:#666;font-size:0.85em;">Recettes + Articles</span></div>
+      </div>
+      <div class="flywheel-arrow">→</div>
+      <div class="flywheel-item" style="background:linear-gradient(135deg,#3498db15,#2980b915);border-radius:16px;padding:20px;">
+        <div class="circle" style="background:linear-gradient(135deg,#3498db,#2980b9);color:#fff;box-shadow:0 0 20px rgba(52,152,219,0.3);">
+          🛒
+        </div>
+        <div class="label"><strong>3. Traffic</strong><br><span style="color:#666;font-size:0.85em;">Site + Newsletter</span></div>
+      </div>
+      <div class="flywheel-arrow">→</div>
+      <div class="flywheel-item" style="background:linear-gradient(135deg,#9b59b615,#8e44ad15);border-radius:16px;padding:20px;">
+        <div class="circle" style="background:linear-gradient(135deg,#9b59b6,#8e44ad);color:#fff;box-shadow:0 0 20px rgba(155,89,182,0.3);">
+          💰
+        </div>
+        <div class="label"><strong>4. Revenus</strong><br><span style="color:#666;font-size:0.85em;">Affiliation + Premium</span></div>
+      </div>
+      <div class="flywheel-arrow">→</div>
+      <div class="flywheel-item" style="background:linear-gradient(135deg,#e67e2215,#d3540015);border-radius:16px;padding:20px;">
+        <div class="circle" style="background:linear-gradient(135deg,#e67e22,#d35400);color:#fff;box-shadow:0 0 20px rgba(230,126,34,0.3);">
+          🚀
+        </div>
+        <div class="label"><strong>5. Croissance</strong><br><span style="color:#666;font-size:0.85em;">ROI → Plus de données</span></div>
+      </div>
+    </div>
+    <p style="color:#555;font-size:0.85em;margin-top:24px;">
+      ⚡ Chaque dollar réinvesti améliore les données → meilleur contenu → plus de trafic → plus de revenus
+    </p>
+  </div>
+
+  <!-- ===== PHASE 1: FOUNDATION ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">1</span>
+    Fondation — Site Web & Newsletter
+  </h2>
+  <p class="section-subtitle fade-in">Mois 1-2 · Coût: ~0$ (hébergement gratuit) · Revenu estimé: 0-50$/mois</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="icon">🌍</div>
+        <h4>Site Web Public</h4>
+        <p>Transformer le rapport HTML en site complet. Pages: Accueil (deals), Recherche, Top deals, À propos. Hébergement GitHub Pages ou Cloudflare Pages (gratuit).</p>
+        <span class="rev rev-low">Gratuit</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📧</div>
+        <h4>Newsletter Hebdo</h4>
+        <p>Email gratuit (MailerLite ou Beehiiv — jusqu'à 1 000 abonnés). Envoi automatique: top 5 deals + recette vedette + astuce économie. Build list via popup site.</p>
+        <span class="rev rev-low">Gratuit</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🔗</div>
+        <h4>Affiliation Amazon CA</h4>
+        <p>Amazon Associates Canada (gratuit, 4-10% commission). Ustensiles de cuisine, autocuiseurs, friteuses à air, planches à découper. Liens dans recettes et articles.</p>
+        <span class="rev rev-low">Gratuit</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📱</div>
+        <h4>Présence TikTok/YouTube</h4>
+        <p>Vidéos courtes: « Les 3 meilleurs deals de viande cette semaine », « Recette à 2.50$/portion ». Format vertical. Pas de montage cher — OBS + voix.</p>
+        <span class="rev rev-low">Gratuit (temps)</span>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:20px;background:#16161f;border-radius:12px;border:1px solid #1e1e30;">
+      <p style="color:#aaa;font-size:0.95em;">
+        <strong style="color:#e94560;">🎯 Objectif:</strong> 500 visiteurs/mois + 200 abonnés newsletter + premiers clics Amazon.
+        <strong style="color:#2ecc71;">💰 Potentiel:</strong> 0-50$/mois en affiliation (taux de conversion ~2%, panier moyen ~25$).
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== PHASE 2: RECETTES ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">2</span>
+    Engine de Recettes — L'IA au Cœur
+  </h2>
+  <p class="section-subtitle fade-in">Mois 2-4 · Coût: ~500-1000$ (API IA) · Revenu estimé: 100-300$/mois</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="icon">🤖</div>
+        <h4>Générateur de Recettes IA</h4>
+        <p>Script Python qui prend les meilleurs deals de la semaine → LLM génère 3 recettes originales. Chaque recette inclut: liste d'épicerie, temps, coût/portion, macros.</p>
+        <span class="rev rev-mid">Automatisé</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🛒</div>
+        <h4>Liste d'Épicerie Dynamique</h4>
+        <p>Les recettes listent les ingrédients exacts en vente cette semaine. Lien direct vers chaque item sur Flipp. L'utilisateur voit: « 3 recettes = 23.47$ d'épicerie ».</p>
+        <span class="rev rev-mid">15h dev</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📹</div>
+        <h4>Vidéos Recette Automatiques</h4>
+        <p>Script génère des vidéos TikTok/Reels à partir des recettes: images générées + overlay texte + musique libre de droits. Montage auto avec FFmpeg + Pillow.</p>
+        <span class="rev rev-mid">Script dev</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🍳</div>
+        <h4>Affiliation Ustensiles Ciblée</h4>
+        <p>Chaque recette recommande 3 outils Amazon: « Parfait avec une friteuse à air », « Un bon couteau Chef fait toute la différence ». Liens profonds Amazon.</p>
+        <span class="rev rev-high">✧ 4-10%</span>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:20px;background:#16161f;border-radius:12px;border:1px solid #1e1e30;">
+      <p style="color:#aaa;font-size:0.95em;">
+        <strong style="color:#e94560;">🎯 Objectif:</strong> 3 nouvelles recettes/semaine, 500-1000 visiteurs/mois, 50 clics Amazon/semaine.
+        <strong style="color:#2ecc71;">💰 Potentiel:</strong> 100-300$/mois (affiliation recettes + ustensiles).
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== PHASE 3: SUBSCRIPTION ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">3</span>
+    Premium & Abonnement — La VRAIE Source de Revenus
+  </h2>
+  <p class="section-subtitle fade-in">Mois 3-6 · Coût: ~200$/mois (serveur) · Revenu estimé: 500-2000$/mois</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="icon">⭐</div>
+        <h4>Premium (3.99$/mois)</h4>
+        <p>Alertes prix records (SMS/Discord), historique 52 semaines, top deals par protéine/$, export CSV, graphiques tendance, filtre par ratio protéines/$.</p>
+        <span class="rev rev-high">✧ 3.99$</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📋</div>
+        <h4>Plan Repas Pro (7.99$/mois)</h4>
+        <p>Plan de repas personnalisé selon les deals de ta région. Budget ajustable (50$/sem, 75$/sem, 100$/sem). Liste d'épicerie prête à acheter. Version PDF imprimable.</p>
+        <span class="rev rev-high">✧ 7.99$</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📊</div>
+        <h4>API Data (B2B) 49$/mois</h4>
+        <p>Pour épiceries, blogueurs, développeurs. Accès API aux prix historiques, tendances par catégorie, données nettoyées. Contrats avec épiceries locales.</p>
+        <span class="rev rev-high">✧ 49-99$</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🤝</div>
+        <h4>Parrainage (Sponsor)</h4>
+        <p>Entreprises locales: boucheries, épiceries fines, Traiteurs. « Deal de la semaine sponsorisé par... » Newsletter + site. Forfait 150-300$/mois.</p>
+        <span class="rev rev-high">✧ 150-300$</span>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:20px;background:#16161f;border-radius:12px;border:1px solid #1e1e30;">
+      <p style="color:#aaa;font-size:0.95em;">
+        <strong style="color:#e94560;">🎯 Objectif:</strong> 50 abonnés Premium + 20 Plan Repas + 3 sponsors locaux + 1 client API.
+        <strong style="color:#2ecc71;">💰 Potentiel combiné:</strong> 50×3.99$ + 20×7.99$ + 3×200$ + 1×49$ = <strong style="color:#fff;">~868$/mois</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== PHASE 4: SCALE ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">4</span>
+    Scale — L'Écosystème Complet
+  </h2>
+  <p class="section-subtitle fade-in">Mois 6-12 · Investissement: ~1000-2000$ · Revenu cible: 2000-5000$/mois</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="icon">📱</div>
+        <h4>App Mobile (PWA)</h4>
+        <p>Progressive Web App — scan code-barres en épicerie, compare instantanément avec les deals, liste d'épicerie intelligente. Pas besoin d'App Store.</p>
+        <span class="rev rev-high">✧ 5-10j dev</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🛍️</div>
+        <h4>Boutique Physique Virtuelle</h4>
+        <p>L'utilisateur entre son budget → l'IA optimise son panier: max protéines, min prix. Affiche le parcours d'épicerie (va chez Maxi pour le bœuf, IGA pour le poulet).</p>
+        <span class="rev rev-high">✧ Compétitif</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">🏪</div>
+        <h4>Réseau d'Épiceries Locales</h4>
+        <p>API pour que les épiceries partenaires soumettent leurs spéciaux directement. Commission sur les clics/ventes référées. Données exclusives.</p>
+        <span class="rev rev-high">✧ B2B</span>
+      </div>
+      <div class="phase-card">
+        <div class="icon">📈</div>
+        <h4>Analyse Prédictive</h4>
+        <p>Prédire quand le prix d'un item va descendre (basé sur cycles 52 sem). Alerter les utilisateurs: « Le bœuf haché baisse la semaine prochaine — attend ! »</p>
+        <span class="rev rev-high">✧ Upsell</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== L'ÉCOSYSTÈME EN BOUCLE ===== -->
+<div style="background:linear-gradient(180deg,#0a0a15,#0d0d20);padding:80px 20px;margin:40px 0;">
+  <div class="container" style="padding:0;">
+    <h2 class="section-title fade-in" style="justify-content:center;text-align:center;margin-bottom:30px;">
+      🔁 L'Écosystème qui Tourne en Boucle
+    </h2>
+    <p style="text-align:center;color:#666;margin-bottom:50px;font-size:1.05em;">
+      Une machine à économies qui s'auto-alimente. Chaque semaine, les données génèrent du contenu, le contenu génère du trafic, le trafic génère des revenus, les revenus améliorent la machine.
+    </p>
+
+    <!-- Row 1: Scraper → Recettes IA -->
+    <div class="ecosystem-container fade-in">
+      <div class="loop-diagram">
+        <div class="loop-row">
+          <div class="loop-node" style="border-color:#e94560;">
+            <div class="icon">📡</div>
+            <div class="node-label">Scraper Flipp</div>
+            <div class="node-sub">296 items/semaine</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#3498db;">
+            <div class="icon">🤖</div>
+            <div class="node-label">IA Génère Recettes</div>
+            <div class="node-sub">3 recettes/semaine</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#2ecc71;">
+            <div class="icon">🌐</div>
+            <div class="node-label">Site Web + SEO</div>
+            <div class="node-sub">Trafic organique</div>
+          </div>
+        </div>
+
+        <div class="loop-arrow down" style="margin:10px auto;">↓</div>
+
+        <div class="loop-row">
+          <div class="loop-node" style="border-color:#f39c12;">
+            <div class="icon">📧</div>
+            <div class="node-label">Newsletter</div>
+            <div class="node-sub">200 → 2000 abonnés</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#9b59b6;">
+            <div class="icon">📱</div>
+            <div class="node-label">TikTok / YouTube</div>
+            <div class="node-sub">Vidéos deals + recettes</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#e67e22;">
+            <div class="icon">💰</div>
+            <div class="node-label">Affiliation + Premium</div>
+            <div class="node-sub">Revenus récurrents</div>
+          </div>
+        </div>
+
+        <div class="loop-arrow down" style="margin:10px auto;">↓</div>
+
+        <div class="loop-row">
+          <div class="loop-node" style="border-color:#e94560;">
+            <div class="icon">🏪</div>
+            <div class="node-label">Sponsors Locaux</div>
+            <div class="node-sub">Boucheries, traiteurs</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#2ecc71;">
+            <div class="icon">🚀</div>
+            <div class="node-label">Réinvestissement</div>
+            <div class="node-sub">Meilleurs serveurs + API</div>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-node" style="border-color:#3498db;">
+            <div class="icon">🔥</div>
+            <div class="node-label">Plus de Données</div>
+            <div class="node-sub">Meilleurs deals analysés</div>
+          </div>
+        </div>
+
+        <!-- Circular: back to start -->
+        <div style="text-align:center;margin-top:20px;">
+          <div style="display:inline-block;background:linear-gradient(135deg,#e9456020,#0f346020);border:2px solid #e9456033;border-radius:50px;padding:12px 30px;">
+            <span style="color:#e94560;font-size:0.9em;font-weight:600;">⟳ LA BOUCLE EST COMPLÈTE — RECOMMENCE À ZÉRO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Revenue Hub -->
+    <div style="text-align:center;margin-top:30px;">
+      <div class="center-hub">
+        <div class="hub-icon">💎</div>
+        +500$/mois
+        <div style="font-weight:400;font-size:0.8em;opacity:0.8;">Objectif M6</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== REVENUE MODEL ===== -->
+<div class="container">
+  <h2 class="section-title fade-in">
+    <span class="num">💰</span>
+    Modèle de Revenus Détaillé
+  </h2>
+  <p class="section-subtitle fade-in">Projection réaliste pour les 12 premiers mois (scénario conservateur)</p>
+
+  <div class="phase fade-in">
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>Source de revenu</th>
+          <th>Effort</th>
+          <th>Potentiel M3</th>
+          <th>Potentiel M6</th>
+          <th>Potentiel M12</th>
+          <th>Barre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Affiliation Amazon</strong> — Ustensiles, bouquins, gadgets cuisine</td>
+          <td style="color:#888;">Faible 🔧</td>
+          <td>~25$/mois</td>
+          <td>~100$/mois</td>
+          <td>~300$/mois</td>
+          <td><div class="rev-bar bar-green" style="width:30%;"></div></td>
+        </tr>
+        <tr>
+          <td><strong>Newsletter Sponsors</strong> — Placement dans l'email hebdo</td>
+          <td style="color:#888;">Moyen</td>
+          <td style="color:#666;">—</td>
+          <td>~150$/mois</td>
+          <td>~400$/mois</td>
+          <td><div class="rev-bar" style="width:35%;"></div></td>
+        </tr>
+        <tr>
+          <td><strong>Abonnés Premium</strong> — Alertes, historique, graphiques</td>
+          <td style="color:#888;">Moyen</td>
+          <td style="color:#666;">—</td>
+          <td>~200$/mois</td>
+          <td>~600$/mois</td>
+          <td><div class="rev-bar bar-blue" style="width:40%;"></div></td>
+        </tr>
+        <tr>
+          <td><strong>Plan Repas Pro</strong> — Abonnement recettes personnalisées</td>
+          <td style="color:#888;">Élevé 🚀</td>
+          <td style="color:#666;">—</td>
+          <td>~160$/mois</td>
+          <td>~500$/mois</td>
+          <td><div class="rev-bar bar-purple" style="width:45%;"></div></td>
+        </tr>
+        <tr>
+          <td><strong>API B2B</strong> — Licence données aux entreprises</td>
+          <td style="color:#888;">Élevé</td>
+          <td style="color:#666;">—</td>
+          <td style="color:#666;">—</td>
+          <td>~250$/mois</td>
+          <td><div class="rev-bar bar-orange" style="width:30%;"></div></td>
+        </tr>
+        <tr>
+          <td><strong>Sponsors Locaux</strong> — Boucheries, épiceries fines</td>
+          <td style="color:#888;">Moyen</td>
+          <td style="color:#666;">—</td>
+          <td>~200$/mois</td>
+          <td>~500$/mois</td>
+          <td><div class="rev-bar" style="width:40%;"></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:30px;padding:24px;background:linear-gradient(135deg,#16161f,#111);border-radius:16px;border:1px solid #1e1e30;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center;">
+        <div>
+          <div style="font-size:0.8em;color:#666;">Mois 1-3</div>
+          <div style="font-size:1.8em;font-weight:700;color:#e94560;">0-50$</div>
+        </div>
+        <div>
+          <div style="font-size:0.8em;color:#666;">Mois 3-6</div>
+          <div style="font-size:1.8em;font-weight:700;color:#f39c12;">300-800$</div>
+        </div>
+        <div>
+          <div style="font-size:0.8em;color:#666;">Mois 6-9</div>
+          <div style="font-size:1.8em;font-weight:700;color:#3498db;">800-1 500$</div>
+        </div>
+        <div>
+          <div style="font-size:0.8em;color:#666;">Mois 9-12</div>
+          <div style="font-size:1.8em;font-weight:700;color:#2ecc71;">1 500-2 500$</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TIMELINE ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">📅</span>
+    Timeline de Lancement
+  </h2>
+  <p class="section-subtitle fade-in">Les 12 prochaines semaines — actions concrètes, pas de bullshit</p>
+
+  <div class="timeline">
+    <div class="timeline-item completed fade-in">
+      <h4>✅ Semaine 1-2 — Site Web Public</h4>
+      <div class="time">Maintenant</div>
+      <p>Héberger le rapport HTML sur GitHub Pages. Ajouter formulaire newsletter (MailerLite gratuit). Mettre en place Google Analytics et Search Console. Ajouter un blog minimal.</p>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <h4>📝 Semaine 3-4 — Engine Recettes IA</h4>
+      <div class="time">~4h de dev</div>
+      <p>Script Python qui prend les 3 meilleurs deals → appelle LLM (DeepSeek) → génère recette structurée (nom, ingrédients, étapes, coût/portion). Stocker dans SQLite. Publier sur site. Première intégration liens Amazon.</p>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <h4>📰 Semaine 4-6 — Newsletter + Growth</h4>
+      <div class="time">~6h total</div>
+      <p>Template email hebdomadaire. Automatiser l'envoi avec MailerLite API. Call-to-action: abonnement premium. Popup d'inscription sur le site. Land page pour attirer les abonnés via Facebook/Reddit Québec.</p>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <h4>🎬 Semaine 5-8 — Contenu TikTok/YouTube</h4>
+      <div class="time">~3h/semaine</div>
+      <p>Vidéos « Top 3 deals de la semaine » format 60s. Lien en bio vers le site. Vidéo recette « 4 portions à 2.50$ avec les deals de cette semaine ». Publier 2-3/semaine.</p>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <h4>💎 Semaine 6-10 — Abonnement Premium</h4>
+      <div class="time">~10h de dev</div>
+      <p>Système d'authentification simple (Google OAuth ou email). Paiement Stripe. Pages membres: historique graphique, alertes prix, export CSV. Stripe prend 2.9%+0.30$, toi tu gardes ~3.50$ sur 3.99$.</p>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <h4>📊 Semaine 8-12 — Plan Repas Pro</h4>
+      <div class="time">~8h de dev + IA</div>
+      <p>L'utilisateur entre budget + nb de personnes + restrictions → IA génère plan repas 7 jours basé sur les deals courants. Option génération PDF. Marque blanche possible pour influenceurs food.</p>
+    </div>
+  </div>
+
+  <!-- ===== COSTS ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">💸</span>
+    Coûts vs Revenus
+  </h2>
+  <p class="section-subtitle fade-in">Ce que ça coûte vraiment vs ce que ça rapporte — chiffres réels, pas de bullshit</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card" style="border-color:#e94560;">
+        <div class="icon">💻</div>
+        <h4>Hébergement</h4>
+        <p><strong style="color:#e94560;">0-5$/mois</strong><br>GitHub Pages gratuit. Si scale: VPS 5$/mois chez Hetzner ou Oracle Cloud gratuit.</p>
+      </div>
+      <div class="phase-card" style="border-color:#3498db;">
+        <div class="icon">🤖</div>
+        <h4>API IA (DeepSeek)</h4>
+        <p><strong style="color:#3498db;">0-3$/mois</strong><br>DeepSeek est très abordable. 3 recettes/semaine = ~15k tokens/semaine = ~0.06$/mois. Même avec usage heavy, < 3$.</p>
+      </div>
+      <div class="phase-card" style="border-color:#9b59b6;">
+        <div class="icon">📧</div>
+        <h4>Newsletter</h4>
+        <p><strong style="color:#9b59b6;">0-10$/mois</strong><br>MailerLite: gratuit jusqu'à 1 000 abonnés. Beehiiv: gratuit jusqu'à 2 500. Après, ~10$/mois.</p>
+      </div>
+      <div class="phase-card" style="border-color:#2ecc71;">
+        <div class="icon">💳</div>
+        <h4>Stripe (Paiements)</h4>
+        <p><strong style="color:#2ecc71;">2.9% + 0.30$/tx</strong><br>50 abonnés Premium à 3.99$ → ~6.55$ de frais. Tu gardes ~193$ nets sur 200$.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:30px;text-align:center;padding:20px;background:#0d0d18;border-radius:12px;border:1px solid #1e1e30;">
+      <div style="font-size:0.9em;color:#888;margin-bottom:10px;">COÛT TOTAL MENSUEL (avant scale)</div>
+      <div style="font-size:3em;font-weight:800;background:linear-gradient(135deg,#2ecc71,#3498db);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+        ~10-20$
+      </div>
+      <div style="color:#666;font-size:0.85em;">Ton cellulaire coûte plus cher par mois que tout ce projet</div>
+    </div>
+
+    <div style="margin-top:20px;text-align:center;padding:20px;background:#0d0d18;border-radius:12px;border:1px solid #1e1e30;">
+      <div style="font-size:0.9em;color:#888;margin-bottom:10px;">BREAK-EVEN (point mort)</div>
+      <div style="font-size:2em;font-weight:800;color:#2ecc71;">
+        5 abonnés Premium
+      </div>
+      <div style="color:#666;font-size:0.85em;">5 × 3.99$ = 19.95$ → tu couvres les frais. Tout le reste est profit.</div>
+    </div>
+  </div>
+
+  <!-- ===== WHY IT WORKS ===== -->
+  <h2 class="section-title fade-in">
+    <span class="num">💡</span>
+    Pourquoi Ça Va Marcher
+  </h2>
+  <p class="section-subtitle fade-in">Les 3 piliers qui rendent ce projet unique</p>
+
+  <div class="phase fade-in">
+    <div class="phase-grid">
+      <div class="phase-card" style="border-color:#e94560;">
+        <div class="icon">🎯</div>
+        <h4>1. Besoin Réel — Québec</h4>
+        <p>Les prix de l'épicerie explosent. Les gens veulent économiser. Il n'existe AUCUN service québécois qui combine deals de viande + recettes + planification. Tes concurrents: Flipp (générique, sans analyse) et des blogueuses recettes (sans deals).</p>
+      </div>
+      <div class="phase-card" style="border-color:#3498db;">
+        <div class="icon">🤖</div>
+        <h4>2. Automatisation Extrême</h4>
+        <p>Scraper + IA + génération contenu = tout tourne tout seul. Pas de rédacteur à payer. Pas de montage vidéo manuel. Tu bosses sur la machine, pas dans la machine. 2-3h/semaine max une fois lancé.</p>
+      </div>
+      <div class="phase-card" style="border-color:#2ecc71;">
+        <div class="icon">🔄</div>
+        <h4>3. Boucle Vertueuse</h4>
+        <p>Plus tu as de données → meilleures sont tes recettes → plus de trafic → plus d'abonnés → plus de revenus → meilleure infrastructure → meilleures données. Chaque mois, la machine s'améliore d'elle-même.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FIRST 24H ACTION ===== -->
+  <div class="phase fade-in" style="border-color:#e94560;background:linear-gradient(135deg,#1a0a1e,#0f1a1e);">
+    <h3 style="color:#e94560;">⚡ Ce que tu peux lancer <em>dès maintenant</em></h3>
+    <div class="phase-grid">
+      <div class="phase-card" style="background:#0d0d18;">
+        <div class="icon">1️⃣</div>
+        <h4>Héberger le site public</h4>
+        <p>Le rapport HTML existe déjà. Un push GitHub Pages et c'est en ligne. 30 minutes. Gratuit.</p>
+      </div>
+      <div class="phase-card" style="background:#0d0d18;">
+        <div class="icon">2️⃣</div>
+        <h4>Ajouter l'affiliation Amazon</h4>
+        <p>Créer un compte Amazon Associates CA. Ajouter 3-4 liens vers des ustensiles (couteau, planche, air fryer, mijoteuse) dans les pages existantes.</p>
+      </div>
+      <div class="phase-card" style="background:#0d0d18;">
+        <div class="icon">3️⃣</div>
+        <h4>Formulaire newsletter</h4>
+        <p>MailerLite gratuit. Popup sur le site « Reçois les deals + recettes chaque semaine ». 1h de setup.</p>
+      </div>
+      <div class="phase-card" style="background:#0d0d18;">
+        <div class="icon">4️⃣</div>
+        <h4>Première vidéo TikTok</h4>
+        <p>Filme ton écran avec les 3 deals. Voix off rapide. « Les 3 meilleurs deals de viande au Québec cette semaine ». Publie. Vois ce qui marche.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>Aubaines Rapides — Plan d'Affaires v1.0</p>
+  <p style="margin-top:5px;">Conçu pour Mark France · Mai 2026 · Saint-Jérôme, QC</p>
+  <p style="margin-top:5px;color:#333;">Données: 3 614 produits, 18 magasins, 4 081 prix historiques</p>
+</footer>
+
+</body>
+</html>
