@@ -392,8 +392,10 @@ def clean_french_name(name):
     if not name:
         return ""
     
-    # Capitaliser
-    name = name[0].upper() + name[1:] if len(name) > 1 else name.upper()
+    # Mettre le nom en minuscules sauf première lettre
+    # pour éviter les noms en MAJUSCULES des circulaires
+    name = name.lower()
+    name = name[0].upper() + name[1:] if len(name) > 1 else name
     
     # Vérifier si le nom contient encore des mots anglais
     name_lower = name.lower()
