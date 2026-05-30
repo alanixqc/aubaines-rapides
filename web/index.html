@@ -1167,13 +1167,17 @@ function renderTypeFilters(cat) {
 }
 
 function setTypeFilter(cat, type) {
-  typeFilter = type;
-  // Re-render the current category
+  typeFilter = (type === 'transforme') ? 'transformé' : type;
   const section = document.getElementById(`section-${cat}`);
+  if (!section) return;
+  
   // Update active state on buttons
   section.querySelectorAll('.type-filter-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent.trim().toLowerCase().startsWith(type === 'transforme' ? 'transform' : type));
+    const btnType = b.textContent.trim().toLowerCase().startsWith('transform') ? 'transformé' : 
+                    b.textContent.trim().toLowerCase().startsWith('frais') ? 'frais' : 'tout';
+    b.classList.toggle('active', btnType === typeFilter);
   });
+  
   // Re-render deals
   const dealsContainer = section.querySelector('.deals-container');
   if (dealsContainer) {
@@ -1343,6 +1347,7 @@ function renderAll() {
 
 function switchCat(cat) {
   currentCat = cat;
+  typeFilter = "tout"; // Reset filter on category switch
   document.querySelectorAll(".cat-tab").forEach(t => t.classList.toggle("active", t.dataset.cat === cat));
   document.querySelectorAll(".cat-section").forEach(s => s.classList.toggle("active", s.id === `section-${cat}`));
 }
