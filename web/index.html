@@ -986,6 +986,7 @@ function showDealDetail(id) {
     recipeBtn.textContent = `🍳 ${d.recipe.title}` + (d.recipe.rating ? ` ⭐${d.recipe.rating}` : "");
     recipeBtn.style.display = "block";
     recipeBtn.removeAttribute("href");
+    recipeBtn.removeAttribute("target");
     recipeBtn.style.cursor = "default";
   } else {
     recipeBtn.style.display = "none";
