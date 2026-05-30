@@ -352,6 +352,85 @@ def classify_meat_type(name, current_mt):
     return current_mt or "autre"
 
 
+def classify_product_type(name):
+    """Classifie un produit comme 'frais' ou 'transformé' selon son nom.
+    'frais' = viande crue, fruits/légumes frais, poisson frais, ingrédients bruts
+    'transformé' = surgelé, préparé, en conserve, transformé, pané, etc.
+    """
+    name_lower = name.lower()
+    
+    # Mots-clés de produits TRANSFORMÉS (surgelés, préparés, transformés)
+    TRANSFORMED_KW = [
+        # Surgelé
+        r'\bsurgelé', r'\bcongelé', r'\bfrozen', r'\bglacé',
+        # Préparé / prêt-à-manger
+        r'\bpréparé', r'\brepas\b', r'\bplat\b', r'\bdîner\b', r'\bsouper\b',
+        r'\bentrée\b', r'\bportion\b',
+        # Pané / frit
+        r'\bpané', r'\bfrit', r'\bbreaded', r'\bfried',
+        # Nuggets / lanières / burgers (préparés)
+        r'\bnuggets?\b', r'\blanières?\b', r'\bstrips?\b', r'\bburger', r'\bpépites?\b',
+        # Charcuterie / transformé
+        r'\bjambon\b', r'\bbacon\b', r'\bsaucisse\b', r'\bsaucisson\b',
+        r'\bviande fumée\b', r'\bsmoked meat\b', r'\bdeli\b', r'\bcharcuterie\b',
+        # Conserves
+        r'\bconserve\b', r'\ben conserve\b', r'\bbte\b', r'\bbocal\b',
+        r'\bsoupe\b', r'\bbouillon\b',
+        # Sauce / condiment
+        r'\bsauce\b', r'\bmayonnaise\b', r'\bketchup\b', r'\bmoutarde\b',
+        r'\bvinaigre\b', r'\bhuile\b',
+        # Boisson
+        r'\bboisson\b', r'\bjus\b', r'\bsoda\b', r'\bpepsi\b', r'\bcoca\b',
+        # Snack
+        r'\bcroustille\b', r'\bchips\b', r'\bnoix\b', r'\barachide\b',
+        r'\bbiscuit\b', r'\bgâteau\b', r'\btartinade\b', r'\bconfiture\b',
+        # Produits laitiers transformés
+        r'\bfromage\b', r'\byogourt\b', r'\byaourt\b', r'\bcrème\b',
+        r'\blait\b', r'\bbeurre\b', r'\boeuf\b',
+        # Pâtes / riz / féculents
+        r'\bpâtes\b', r'\briz\b', r'\bfarine\b', r'\bsucre\b', r'\bpain\b',
+        r'\bcéréale\b', r'\bgaufre\b', r'\bpizza\b',
+        # Autres transformés
+        r'\bmélangé\b', r'\bassaisonné\b', r'\bmariné\b', r'\btrempette\b',
+        r'\bcafé\b', r'\bthé\b', r'\bpapier\b', r'\bsavon\b', r'\bdétergent\b',
+        r'\bassiette\b', r'\bgobelet\b', r'\bsac\b', r'\bpoubelle\b',
+    ]
+    
+    for pattern in TRANSFORMED_KW:
+        if re.search(pattern, name_lower):
+            return "transformé"
+    
+    # Par défaut, si c'est de la viande/légume/fruit/poisson, c'est frais
+    # (sauf si déjà détecté comme transformé ci-dessus)
+    if any(mt in name_lower for mt in ['boeuf','bœuf','poulet','porc','veau','dinde',
+                                         'agneau','steak','rôti','côtelette',
+                                         'poitrine','cuisse','aile','pilons',
+                                         'longe','filet','haché',
+                                         'saumon','crevette','poisson','morue',
+                                         'tilapia','truite','aiglefin','éperlan',
+                                         'pomme','banane','orange','raisin',
+                                         'bleuet','fraise','framboise','mûre','mure',
+                                         'légume','legume','carotte','brocoli',
+                                         'laitue','tomate','concombre','oignon',
+                                         'patate','pomme de terre','salade',
+                                         'chou','maïs','poivron','haricot',
+                                         'melon','ananas','mangue','kiwi',
+                                         'pêche','poire','cerise','abricot',
+                                         'prune','nectarine','citron','lime',
+                                         'pamplemousse','canneberge','airelle',
+                                         'asperge','céleri','celeri','radis',
+                                         'épinard','avocat','courgette',
+                                         'aubergine','champignon','fève',
+                                         'pois','navet','betterave',
+                                         'persil','basilic','coriandre',
+                                         'lime','limon','clémentine','mandarine']):
+        return "frais"
+    
+    # Pour les catégories 'legume'/'fruit' sans indication, frais
+    # Pour le reste, panier par défaut
+    return "transformé"
+
+
 def translate_product_name(name):
     """Traduit un nom de produit anglais vers français.
     Utilise la table EN_TO_FR pour remplacer les termes anglais par leur équivalent français.
@@ -668,6 +747,7 @@ def export_deals():
                 "image_url": r["image_url"],
                 "protein_per_100g": protein_per_100g,
                 "protein_per_dollar": protein_per_dollar,
+                "product_type": classify_product_type(clean_name),
                 "recipe": recipe,
             })
         
