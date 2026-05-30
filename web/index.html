@@ -35,6 +35,48 @@ body {
   z-index: 100;
   box-shadow: 0 2px 12px rgba(61,44,30,0.06);
 }
+/* ===== WEEK NAVIGATION ===== */
+.week-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #d4c3a8;
+}
+.week-nav-btn {
+  background: #fffcf5;
+  border: 2px solid #d4c3a8;
+  padding: 6px 14px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7a6b55;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.week-nav-btn:hover {
+  border-color: #b8492e;
+  color: #b8492e;
+}
+.week-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  border-color: #e0d2be;
+  color: #c4b79b;
+}
+.week-nav-btn:disabled:hover {
+  border-color: #e0d2be;
+  color: #c4b79b;
+}
+.week-nav-label {
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  color: #8a7a64;
+  min-width: 120px;
+  text-align: center;
+}
 .header-top {
   display: flex;
   align-items: baseline;
@@ -697,6 +739,9 @@ body {
   .savings-ticker { justify-content: center; padding: 12px 24px; gap: 10px; }
   .ticker-item { padding: 6px 18px; font-size: 14px; }
   .ticker-item .num { font-size: 16px; }
+  .week-nav { gap: 12px; }
+  .week-nav-btn { padding: 7px 18px; font-size: 13px; }
+  .week-nav-label { font-size: 17px; min-width: 140px; }
   .modal-panel { border-radius: 16px 16px 0 0; padding: 28px 24px 36px; }
 }
 
@@ -720,6 +765,11 @@ body {
   
   .savings-ticker { padding: 14px 32px; gap: 12px; }
   .ticker-item { padding: 7px 20px; font-size: 14px; }
+  .ticker-item .num { font-size: 16px; }
+  
+  .week-nav { gap: 14px; margin-top: 12px; padding-top: 12px; }
+  .week-nav-btn { padding: 8px 22px; font-size: 14px; }
+  .week-nav-label { font-size: 18px; min-width: 180px; }
   
   .cat-tabs { padding: 16px 32px; gap: 10px; position: sticky; top: 78px; }
   .cat-tab { font-size: 16px; padding: 11px 28px; }
@@ -858,6 +908,12 @@ body {
     </a>
     <span class="week-badge" id="weekBadge">📅 ...</span>
   </div>
+  <!-- Navigation des semaines -->
+  <div class="week-nav" id="weekNav">
+    <button class="week-nav-btn" id="prevWeek" onclick="switchWeek(-1)" title="Semaine précédente">◀ Précédente</button>
+    <span class="week-nav-label" id="weekLabel">Semaine du ...</span>
+    <button class="week-nav-btn" id="nextWeek" onclick="switchWeek(1)" title="Semaine suivante">Suivante ▶</button>
+  </div>
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="Chercher un produit, une marque..." autocomplete="off">
     <button onclick="doSearch()">OK</button>
@@ -956,6 +1012,9 @@ const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Por
 
 let dealsAll = [], recipesAll = [], stats = {};
 let currentCat = "viande";
+let currentWeekIdx = 0;
+let weeks = [];
+let weekDealsMap = {};  // week_start -> {deals_with_kg, deals_wo_kg}
 
 // ─── LOAD ───
 async function loadData() {
@@ -968,12 +1027,51 @@ async function loadData() {
     const dealsData = await dealsRes.json();
     recipesAll = await recipesRes.json();
     stats = await statsRes.json();
-    dealsAll = (dealsData.deals_with_kg || []).concat(dealsData.deals_wo_kg || []);
+    
+    // Nouveau: charger les semaines
+    weeks = dealsData.weeks || [];
+    weekDealsMap = dealsData.deals_by_week || {};
+    currentWeekIdx = 0;
+    
+    // Charger la semaine courante
+    loadWeek(0, dealsData);
+    
     return true;
   } catch (e) {
     console.error("Erreur chargement:", e);
     return false;
   }
+}
+
+function loadWeek(idx, dealsData) {
+  if (!dealsData) return;
+  const week = weeks[idx];
+  if (!week) return;
+  
+  const wd = weekDealsMap[week];
+  if (!wd) return;
+  
+  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
+  
+  // Calculer les stats de la semaine
+  const byCat = {};
+  const storesSet = new Set();
+  for (const d of dealsAll) {
+    byCat[d.category] = (byCat[d.category] || 0) + 1;
+    if (d.store) storesSet.add(d.store);
+  }
+  stats = {
+    ...stats,
+    total: dealsAll.length,
+    by_category: byCat,
+    stores: Array.from(storesSet).sort(),
+    week: week,
+    weeks: weeks,
+  };
+  
+  // Mettre à jour la navigation
+  updateWeekNav();
+  renderAll();
 }
 
 function byCategory(cat) {
@@ -990,6 +1088,59 @@ function topDeals(cat, n = 5) {
     return (a.price || 0) - (b.price || 0);
   });
   return items.slice(0, n);
+}
+
+// ─── NAVIGATION SEMAINES ───
+function updateWeekNav() {
+  const week = weeks[currentWeekIdx];
+  if (!week) return;
+  
+  // Formater la date
+  const d = new Date(week + "T12:00:00");
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formatted = d.toLocaleDateString('fr-CA', options);
+  
+  document.getElementById("weekLabel").textContent = `Semaine du ${formatted}`;
+  document.getElementById("prevWeek").disabled = currentWeekIdx <= 0;
+  document.getElementById("nextWeek").disabled = currentWeekIdx >= weeks.length - 1;
+}
+
+function switchWeek(dir) {
+  const newIdx = currentWeekIdx + dir;
+  if (newIdx < 0 || newIdx >= weeks.length) return;
+  currentWeekIdx = newIdx;
+  
+  const week = weeks[newIdx];
+  const wd = weekDealsMap[week];
+  if (!wd) return;
+  
+  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
+  
+  // Recalculer stats
+  const byCat = {};
+  const storesSet = new Set();
+  for (const d of dealsAll) {
+    byCat[d.category] = (byCat[d.category] || 0) + 1;
+    if (d.store) storesSet.add(d.store);
+  }
+  stats = {
+    ...stats,
+    total: dealsAll.length,
+    by_category: byCat,
+    stores: Array.from(storesSet).sort(),
+    week: week,
+  };
+  
+  updateWeekNav();
+  
+  // Animer un petit flash pour signaler le changement
+  const app = document.getElementById("app");
+  app.style.opacity = "0.5";
+  
+  // Re-rendre
+  renderAll();
+  
+  app.style.opacity = "1";
 }
 
 // ─── RENDER ───

@@ -556,123 +556,157 @@ def load_recipes():
 
 
 def export_deals():
-    """Exporte tous les deals avec classification enrichie + recettes traduites."""
+    """Exporte tous les deals avec classification enrichie + recettes traduites.
+    Nouveau: exporte TOUTES les semaines disponibles pour navigation dans le temps."""
     db = get_db()
-    max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
     
     recipes_by_meat = load_recipes()
     
-    rows = db.execute("""
-        SELECT p.id, p.name, p.meat_type, p.package_weight_g,
-               s.name as store, s.id as store_id,
-               ph.price, ph.unit_price, ph.unit_type,
-               ph.valid_to, ph.merchant_name, ph.image_url
-        FROM products p
-        JOIN stores s ON s.id = p.store_id
-        JOIN price_history ph ON ph.product_id = p.id
-        WHERE ph.week_start = ? AND ph.price IS NOT NULL AND p.meat_type IS NOT NULL
-        ORDER BY ph.price ASC
-    """, (max_week,)).fetchall()
+    # Récupérer toutes les semaines disponibles
+    all_weeks = [r["w"] for r in db.execute("SELECT DISTINCT week_start as w FROM price_history ORDER BY w DESC").fetchall()]
     
-    seen_products = set()
-    category_counts = defaultdict(int)
-    store_set = set()
-    deals = []
+    if not all_weeks:
+        db.close()
+        return {"weeks": [], "deals": {}, "stats": {}}
     
-    for r in rows:
-        if is_excluded(r["name"]):
-            continue
-        pk = (r["name"], r["merchant_name"])
-        if pk in seen_products:
-            continue
-        seen_products.add(pk)
+    current_week = all_weeks[0]
+    
+    deals_by_week = {}
+    week_stats = {}
+    
+    for week in all_weeks:
+        rows = db.execute("""
+            SELECT p.id, p.name, p.meat_type, p.package_weight_g,
+                   s.name as store, s.id as store_id,
+                   ph.price, ph.unit_price, ph.unit_type,
+                   ph.valid_to, ph.merchant_name, ph.image_url
+            FROM products p
+            JOIN stores s ON s.id = p.store_id
+            JOIN price_history ph ON ph.product_id = p.id
+            WHERE ph.week_start = ? AND ph.price IS NOT NULL AND p.meat_type IS NOT NULL
+            ORDER BY ph.price ASC
+        """, (week,)).fetchall()
+        
+        seen_products = set()
+        category_counts = defaultdict(int)
+        store_set = set()
+        deals = []
+        
+        for r in rows:
+            if is_excluded(r["name"]):
+                continue
+            pk = (r["name"], r["merchant_name"])
+            if pk in seen_products:
+                continue
+            seen_products.add(pk)
 
-        mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
-        store_set.add(r["merchant_name"])
-        category_counts[mt] += 1
+            mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
+            store_set.add(r["merchant_name"])
+            category_counts[mt] += 1
 
-        # $/kg
-        per_kg = None
-        source = None
-        weight_kg = None
+            # $/kg
+            per_kg = None
+            source = None
+            weight_kg = None
+            
+            if r["package_weight_g"] and r["price"]:
+                weight_kg = r["package_weight_g"] / 1000
+                per_kg = round(r["price"] / weight_kg, 2)
+                source = "reel"
+            elif r["unit_price"]:
+                ut = r["unit_type"] or ""
+                if "/kg" in ut:
+                    per_kg = round(r["unit_price"], 2)
+                    source = "image"
+                elif "/100g" in ut:
+                    per_kg = round(r["unit_price"] * 10, 2)
+                    source = "image"
+            if per_kg is None:
+                w = extract_weight_kg(r["name"])
+                if w and r["price"]:
+                    per_kg = round(r["price"] / w, 2)
+                    weight_kg = w
+                    source = "nom"
+            if per_kg is None:
+                w = find_default_weight(r["name"])
+                if w and r["price"]:
+                    per_kg = round(r["price"] / w, 2)
+                    weight_kg = w
+                    source = "estime"
+            
+            per_lb = round(per_kg / 2.20462, 2) if per_kg else None
+            
+            # Protéines
+            protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson"] else None
+            protein_per_dollar = None
+            if protein_per_100g and per_kg:
+                protein_per_dollar = round((protein_per_100g * 10) / per_kg, 1)
+            
+            # Recette liée (traduite en français)
+            recipe = None
+            if mt in recipes_by_meat:
+                recipe = get_recipe_link(mt, recipes_by_meat)
+            
+            # Nom du produit nettoyé et traduit
+            store_name = r["merchant_name"]
+            clean_name = clean_french_name(r["name"])
+            
+            deals.append({
+                "id": r["id"],
+                "name": clean_name,
+                "name_short": short_name(clean_name, 40),
+                "category": mt,
+                "store": store_name,
+                "store_id": r["store_id"],
+                "store_emoji": store_emoji(store_name),
+                "price": round(r["price"], 2) if r["price"] else None,
+                "per_kg": per_kg,
+                "per_lb": per_lb,
+                "weight_kg": weight_kg,
+                "source": source,
+                "valid_to": r["valid_to"],
+                "image_url": r["image_url"],
+                "protein_per_100g": protein_per_100g,
+                "protein_per_dollar": protein_per_dollar,
+                "recipe": recipe,
+            })
         
-        if r["package_weight_g"] and r["price"]:
-            weight_kg = r["package_weight_g"] / 1000
-            per_kg = round(r["price"] / weight_kg, 2)
-            source = "reel"
-        elif r["unit_price"]:
-            ut = r["unit_type"] or ""
-            if "/kg" in ut:
-                per_kg = round(r["unit_price"], 2)
-                source = "image"
-            elif "/100g" in ut:
-                per_kg = round(r["unit_price"] * 10, 2)
-                source = "image"
-        if per_kg is None:
-            w = extract_weight_kg(r["name"])
-            if w and r["price"]:
-                per_kg = round(r["price"] / w, 2)
-                weight_kg = w
-                source = "nom"
-        if per_kg is None:
-            w = find_default_weight(r["name"])
-            if w and r["price"]:
-                per_kg = round(r["price"] / w, 2)
-                weight_kg = w
-                source = "estime"
+        deals_with_kg = [d for d in deals if d["per_kg"]]
+        deals_with_kg.sort(key=lambda x: (x["per_kg"] if x["per_kg"] and x["per_kg"] > 0 else 99999, x["price"] or 0))
+        deals_wo_kg = [d for d in deals if not d["per_kg"]]
+        deals_wo_kg.sort(key=lambda x: x["price"] or 0)
         
-        per_lb = round(per_kg / 2.20462, 2) if per_kg else None
+        deals_by_week[week] = {
+            "deals_with_kg": deals_with_kg,
+            "deals_wo_kg": deals_wo_kg,
+        }
         
-        # Protéines
-        protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson"] else None
-        protein_per_dollar = None
-        if protein_per_100g and per_kg:
-            protein_per_dollar = round((protein_per_100g * 10) / per_kg, 1)
-        
-        # Recette liée (traduite en français)
-        recipe = None
-        if mt in recipes_by_meat:
-            recipe = get_recipe_link(mt, recipes_by_meat)
-        
-        # Nom du produit nettoyé et traduit
-        store_name = r["merchant_name"]
-        clean_name = clean_french_name(r["name"])
-        
-        deals.append({
-            "id": r["id"],
-            "name": clean_name,
-            "name_short": short_name(clean_name, 40),
-            "category": mt,
-            "store": store_name,
-            "store_id": r["store_id"],
-            "store_emoji": store_emoji(store_name),
-            "price": round(r["price"], 2) if r["price"] else None,
-            "per_kg": per_kg,
-            "per_lb": per_lb,
-            "weight_kg": weight_kg,
-            "source": source,
-            "valid_to": r["valid_to"],
-            "image_url": r["image_url"],
-            "protein_per_100g": protein_per_100g,
-            "protein_per_dollar": protein_per_dollar,
-            "recipe": recipe,
-        })
-    
-    db.close()
-    
-    deals_with_kg = [d for d in deals if d["per_kg"]]
-    deals_with_kg.sort(key=lambda x: (x["per_kg"] if x["per_kg"] and x["per_kg"] > 0 else 99999, x["price"] or 0))
-    deals_wo_kg = [d for d in deals if not d["per_kg"]]
-    deals_wo_kg.sort(key=lambda x: x["price"] or 0)
-    
-    return {
-        "deals_with_kg": deals_with_kg,
-        "deals_wo_kg": deals_wo_kg,
-        "stats": {
+        week_stats[week] = {
             "total": len(deals),
             "by_category": dict(category_counts),
             "stores": sorted(store_set),
-            "week": max_week,
+        }
+    
+    db.close()
+    
+    # Fusionner tous les deals de la semaine courante en un seul tableau pour backward compat
+    cw = deals_by_week.get(current_week, {"deals_with_kg": [], "deals_wo_kg": []})
+    all_deals_current = cw["deals_with_kg"] + cw["deals_wo_kg"]
+    
+    return {
+        "weeks": all_weeks,  # Liste des semaines dispo
+        "current_week": current_week,
+        "deals": {
+            "deals_with_kg": all_deals_current,
+            "deals_wo_kg": cw["deals_wo_kg"],
+        },
+        "deals_by_week": deals_by_week,  # Toutes les semaines
+        "stats": {
+            "total": week_stats.get(current_week, {}).get("total", 0),
+            "by_category": week_stats.get(current_week, {}).get("by_category", {}),
+            "stores": week_stats.get(current_week, {}).get("stores", []),
+            "week": current_week,
+            "weeks": all_weeks,
             "generated_at": datetime.now().isoformat(),
         },
         "recipes_available": {mt: len(recs) for mt, recs in recipes_by_meat.items() if recs},
