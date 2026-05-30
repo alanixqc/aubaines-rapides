@@ -361,11 +361,20 @@ body {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
   position: relative;
 }
 .deal-card:hover {
   border-color: #c9942e;
+}
+@media (min-width: 900px) {
+  .deal-card {
+    box-shadow: 0 1px 3px rgba(61,44,30,0.06);
+  }
+  .deal-card:hover {
+    box-shadow: 0 2px 8px rgba(61,44,30,0.10);
+    transform: translateY(-1px);
+  }
 }
 .deal-card.top-deal {
   border-color: #c9942e;
@@ -412,10 +421,15 @@ body {
   color: #3d2c1e;
 }
 .deal-store {
-  font-size: 12px;
-  color: #5a4a34;
-  margin-bottom: 4px;
-  font-weight: 600;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  border: 1px solid;
+  white-space: nowrap;
 }
 /* ===== PRODUCT TYPE BADGE ===== */
 .deal-type-badge {
@@ -840,8 +854,8 @@ body {
     padding: 0 32px 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px 18px;
-    align-items: start;
+    gap: 12px 20px;
+    align-items: stretch;
   }
   .cat-section.active > h2 { 
     font-size: 26px; 
@@ -850,21 +864,35 @@ body {
   }
   .cat-stats { font-size: 15px; }
   
-  /* Grille 2 colonnes pour les cartes */
+  /* Sous-titres */
   .sub-header { 
     font-size: 22px; 
-    margin: 20px 0 6px; 
+    margin: 20px 0 8px; 
     grid-column: 1 / -1;
   }
   
   /* Viande: sous-catégories en ligne */
+  #section-viande.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
+    align-items: start;
+  }
+  #section-viande.active > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
   #section-viande .sub-header {
     font-size: 20px;
     margin: 0 0 8px;
     grid-column: 1 / -1;
   }
   
-  .deal-card { padding: 16px 20px; margin-bottom: 0; }
+  .deal-card { 
+    padding: 16px 20px; 
+    margin-bottom: 0; 
+    min-height: 120px;
+  }
   .deal-rank { font-size: 26px; min-width: 36px; }
   .deal-name { font-size: 16px; }
   .deal-price { font-size: 24px; }
@@ -915,10 +943,10 @@ body {
     max-width: 1400px; 
     padding: 0 48px 100px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px 22px;
+    gap: 16px 24px;
   }
 
-  /* Viande: sous-catégories côte à côte en 3 colonnes */
+  /* Viande: sous-catégories en 3 colonnes */
   #section-viande.active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -933,7 +961,7 @@ body {
     margin-top: 0;
   }
   
-  .deal-card { padding: 18px 22px; margin-bottom: 10px; }
+  .deal-card { padding: 18px 22px; margin-bottom: 0; min-height: 130px; }
   .deal-rank { font-size: 28px; min-width: 40px; }
   .deal-name { font-size: 17px; }
   .deal-price { font-size: 26px; }
@@ -1070,6 +1098,32 @@ const CAT_MERGE = {
   panier: new Set(["panier"]),
 };
 const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Porc", viande: "🥩 Viande", veau: "🥩 Veau" };
+
+// ─── COULEURS DES ÉPICERIES ───
+const STORE_COLORS = {
+  "Maxi":              { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
+  "Super C":           { bg: "#f5dcdc", border: "#e0b8b8", text: "#8c2a2a" },
+  "IGA":               { bg: "#dcf0dc", border: "#b8dcb8", text: "#2a7a2a" },
+  "Metro":             { bg: "#f5eadc", border: "#e0d0b8", text: "#8c6a2a" },
+  "Tigre Géant":       { bg: "#e8dcf5", border: "#d0b8e0", text: "#6a2a8c" },
+  "Walmart":           { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
+  "Provigo":           { bg: "#e8f0dc", border: "#cce0b8", text: "#4a7a2a" },
+  "Costco":            { bg: "#f5dce8", border: "#e0b8cc", text: "#8c2a5a" },
+  "Mayrand":           { bg: "#f5f0dc", border: "#e0dcc0", text: "#7a6a2a" },
+  "Rachelle Béry":     { bg: "#dcf0e8", border: "#b8e0d0", text: "#2a7a5a" },
+  "Boulangerie Pom":   { bg: "#f5e4dc", border: "#e0c8b8", text: "#8c5a2a" },
+  "Les aliments M&M":  { bg: "#e8dcdc", border: "#d4c0c0", text: "#7a4040" },
+  "Les Marchés Tradition": { bg: "#ece4dc", border: "#d8ccc0", text: "#7a6040" },
+  "L'Inter-Marché":    { bg: "#dcf0f0", border: "#b8dcdc", text: "#2a6a6a" },
+  "Fruiterie Potager": { bg: "#e0f5dc", border: "#c0e0b8", text: "#3a7a2a" },
+  "Supermarché Aurès": { bg: "#f0e4dc", border: "#d8ccc0", text: "#7a5a40" },
+  "le Choix du Président": { bg: "#e8e0f0", border: "#ccc0d8", text: "#5a3a7a" },
+  "5 Saveurs":         { bg: "#f0dce8", border: "#d8c0d0", text: "#7a2a5a" },
+};
+function storeStyle(store) {
+  const c = STORE_COLORS[store] || { bg: "#f0ece4", border: "#d8d0c4", text: "#6a5a44" };
+  return `background:${c.bg};border-color:${c.border};color:${c.text}`;
+}
 
 let dealsAll = [], recipesAll = [], stats = {};
 let currentCat = "viande";
@@ -1255,7 +1309,7 @@ function renderDealCard(d, rank) {
     <div class="deal-rank">#${rank}</div>
     <div class="deal-info">
       <div class="deal-name">${d.name_short || d.name}${d.product_type ? `<span class="deal-type-badge ${d.product_type === 'frais' ? 'frais' : 'transforme'}">${d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.'}</span>` : ""}</div>
-      <div class="deal-store">${d.store_emoji || "🏪"} ${d.store}</div>
+      <div class="deal-store" style="${storeStyle(d.store)}">${d.store_emoji || "🏪"} ${d.store}</div>
       <div class="deal-prices">
         <span class="deal-price">${d.price ? d.price.toFixed(2) + "$" : ""}</span>
         ${d.per_kg ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : ""}
