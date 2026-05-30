@@ -980,11 +980,13 @@ function showDealDetail(id) {
   
   document.getElementById("modalDetails").innerHTML = details;
   
+  // Recette — affichage seulement (pas de lien externe)
   const recipeBtn = document.getElementById("modalRecipeBtn");
-  if (d.recipe && d.recipe.url) {
-    recipeBtn.href = d.recipe.url;
-    recipeBtn.textContent = `🍳 ${d.recipe.title}`;
+  if (d.recipe && d.recipe.title) {
+    recipeBtn.textContent = `🍳 ${d.recipe.title}` + (d.recipe.rating ? ` ⭐${d.recipe.rating}` : "");
     recipeBtn.style.display = "block";
+    recipeBtn.removeAttribute("href");
+    recipeBtn.style.cursor = "default";
   } else {
     recipeBtn.style.display = "none";
   }
