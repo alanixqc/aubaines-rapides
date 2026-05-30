@@ -1,12 +1,14 @@
 {
   "total": 379,
-  "by_type": {
-    "legume": 84,
-    "porc": 91,
-    "poulet": 126,
-    "boeuf": 72,
-    "poisson": 1,
-    "viande": 5
+  "by_category": {
+    "legume": 54,
+    "porc": 79,
+    "panier": 99,
+    "poulet": 108,
+    "fruit": 8,
+    "boeuf": 23,
+    "poisson": 6,
+    "viande": 2
   },
   "stores": [
     "5 Saveurs",
@@ -28,7 +30,8 @@
     "le Choix du Président"
   ],
   "week": "2026-05-30",
-  "generated_at": "2026-05-30T10:15:26.937992",
+  "generated_at": "2026-05-30T10:41:42.860663",
   "stores_count": 21,
-  "trends_count": 34
+  "trends_count": 34,
+  "recipes_count": 30
 }

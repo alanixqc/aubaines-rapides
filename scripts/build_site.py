@@ -1,11 +1,13 @@
 """build_site.py — Exporte la DB → JSON pour le site Aubaines Rapides
-Exécuté après chaque scrape (cron) pour mettre à jour le site statique.
+Version 2: catégories enrichies (viande, poisson, fruits, légumes, panier)
+             + recettes liées aux deals
+             + protéines/$ calculées
 """
-
 import json
 import sqlite3
 import os
 import sys
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 
@@ -13,9 +15,83 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from scripts.query import strip_accents, is_excluded, extract_weight_kg, find_default_weight, store_emoji, short_name
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "aubaines.db")
+RECIPE_DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "recipes.db")
 WEB_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
-
 os.makedirs(WEB_DIR, exist_ok=True)
+
+# ─── Catégories améliorées ───
+POISSON_KW = ['saumon','crevette','poisson','thon','truite','morue','cabillaud','sole','tilapia',
+              'espadon','flétan','maquereau','sardine','anchois','hareng','éperlan','dorade',
+              'moule','palourde','crabe','homard','calmar','poulpe','crevettes','pétoncle',
+              'fruits de mer','fish','shrimp','salmon','cod','tuna','seafood','sushi']
+FRUIT_KW = ['pomme','banane','orange','raisin','bleuet','fraise','framboise','mûre','mure',
+            'melon','pastèque','ananas','mangue','kiwi','pêche','poire','prune','cerise',
+            'abricot','nectarine','clémentine','mandarine','pamplemousse','citron','lime',
+            'limon','canneberge','airelle','fruit','apple','banana','orange','grape',
+            'blueberry','strawberry','raspberry','mango','pineapple','watermelon']
+CONSERVE_KW = ['conserve','canne','boîte','tin','lentille','pois chiche','haricot rouge',
+               'haricot noir','soupe','tomate en','sauce tomate','pâtes alimentaires','riz ',
+               'farine','sucre','huile','beurre d\'arachide','beurre de peanut','café',
+               'thon en','maïs en','crevette en','compote','ketchup','moutarde','mayonnaise',
+               'vinaigre','bouillon','cubes','épices','sel','poivre','gruau','céréale',
+               'lait','beurre','œuf','oeuf','fromage','yogourt','yaourt','crème','pain']
+
+PROTEIN_PER_100G = {
+    "boeuf": {"haché maigre": 20, "haché": 17, "steak": 23, "rôti": 22, "cube": 20, "generic": 20},
+    "poulet": {"poitrine": 25, "cuisse": 20, "aile": 18, "entier": 20, "haché": 20, "generic": 20},
+    "porc": {"longe": 22, "côtelette": 20, "haché": 17, "rôti": 22, "generic": 20},
+    "veau": {"haché": 18, "generic": 18},
+    "poisson": {"saumon": 20, "thon": 23, "crevette": 20, "morue": 18, "generic": 18},
+}
+
+
+def classify_meat_type(name, current_mt):
+    """Améliore la classification des types de viande/aliments."""
+    name_lower = name.lower()
+    
+    # Poisson & fruits de mer
+    for kw in POISSON_KW:
+        if kw in name_lower:
+            return "poisson"
+    
+    # Fruits
+    for kw in FRUIT_KW:
+        if kw in name_lower:
+            return "fruit"
+    
+    # Conserves / panier
+    for kw in CONSERVE_KW:
+        if kw in name_lower:
+            return "panier"
+    
+    # Si déjà classifié comme légume (via Flipp), garder
+    if current_mt in ("legume", "légume"):
+        return "legume"
+    
+    return current_mt or "autre"
+
+
+def estimate_protein_per_100g(name, meat_type):
+    """Estime les protéines par 100g pour un produit."""
+    name_lower = name.lower()
+    if meat_type in PROTEIN_PER_100G:
+        variants = PROTEIN_PER_100G[meat_type]
+        for kw, val in variants.items():
+            if kw in name_lower or kw in meat_type:
+                return val
+        return variants["generic"]
+    return None
+
+
+def get_recipe_link(meat_type, all_recipes):
+    """Trouve une recette qui correspond au type de viande."""
+    if meat_type not in all_recipes:
+        return None
+    mt_recipes = all_recipes[meat_type]
+    if not mt_recipes:
+        return None
+    # Prendre la plus populaire ou une au hasard
+    return mt_recipes[0]
 
 
 def get_db():
@@ -24,11 +100,59 @@ def get_db():
     return db
 
 
+def load_recipes():
+    """Charge les recettes de la DB et les groupe par type de viande."""
+    if not os.path.exists(RECIPE_DB_PATH):
+        return {}
+    conn = sqlite3.connect(RECIPE_DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("""
+        SELECT title, meat_type, source_name, source_url, rating_count, 
+               rating, prep_time, cook_time, total_time, servings,
+               ingredients_raw
+        FROM recipes 
+        WHERE ingredients_raw IS NOT NULL AND ingredients_raw != '[]'
+        ORDER BY rating_count DESC
+    """).fetchall()
+    conn.close()
+    
+    by_meat = defaultdict(list)
+    for r in rows:
+        mt = r["meat_type"] or "mixte"
+        try:
+            ings = json.loads(r["ingredients_raw"])
+            ing_count = len(ings)
+        except:
+            ings = []
+            ing_count = 0
+        
+        by_meat[mt].append({
+            "title": r["title"],
+            "source": r["source_name"],
+            "url": r["source_url"],
+            "rating_count": r["rating_count"] or 0,
+            "rating": r["rating"],
+            "prep_time": r["prep_time"],
+            "cook_time": r["cook_time"],
+            "total_time": r["total_time"],
+            "servings": r["servings"],
+            "ingredient_count": ing_count,
+        })
+    
+    # Limiter à top 5 par type
+    for mt in by_meat:
+        by_meat[mt] = sorted(by_meat[mt], key=lambda x: -x["rating_count"])[:5]
+    
+    return dict(by_meat)
+
+
 def export_deals():
-    """Exporte tous les deals de la semaine courante."""
+    """Exporte tous les deals avec classification enrichie + recettes."""
     db = get_db()
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
-
+    
+    recipes_by_meat = load_recipes()
+    
     rows = db.execute("""
         SELECT p.id, p.name, p.meat_type, p.package_weight_g,
                s.name as store, s.id as store_id,
@@ -40,13 +164,12 @@ def export_deals():
         WHERE ph.week_start = ? AND ph.price IS NOT NULL AND p.meat_type IS NOT NULL
         ORDER BY ph.price ASC
     """, (max_week,)).fetchall()
-
-    # Stats
+    
     seen_products = set()
-    meat_counts = defaultdict(int)
+    category_counts = defaultdict(int)
     store_set = set()
     deals = []
-
+    
     for r in rows:
         if is_excluded(r["name"]):
             continue
@@ -55,15 +178,15 @@ def export_deals():
             continue
         seen_products.add(pk)
 
-        mt = r["meat_type"] or "autre"
+        mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
         store_set.add(r["merchant_name"])
-        meat_counts[mt] += 1
+        category_counts[mt] += 1
 
-        # Calculer $/kg
+        # $/kg
         per_kg = None
         source = None
         weight_kg = None
-
+        
         if r["package_weight_g"] and r["price"]:
             weight_kg = r["package_weight_g"] / 1000
             per_kg = round(r["price"] / weight_kg, 2)
@@ -88,14 +211,25 @@ def export_deals():
                 per_kg = round(r["price"] / w, 2)
                 weight_kg = w
                 source = "estime"
-
+        
         per_lb = round(per_kg / 2.20462, 2) if per_kg else None
-
+        
+        # Protéines
+        protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson"] else None
+        protein_per_dollar = None
+        if protein_per_100g and per_kg:
+            protein_per_dollar = round((protein_per_100g * 10) / per_kg, 1)
+        
+        # Recette liée
+        recipe = None
+        if mt in recipes_by_meat:
+            recipe = get_recipe_link(mt, recipes_by_meat)
+        
         deals.append({
             "id": r["id"],
             "name": r["name"],
             "name_short": short_name(r["name"], 40),
-            "meat_type": mt,
+            "category": mt,
             "store": r["merchant_name"],
             "store_id": r["store_id"],
             "store_emoji": store_emoji(r["merchant_name"]),
@@ -106,33 +240,33 @@ def export_deals():
             "source": source,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
-            "flipp_item_id": r["flipp_item_id"],
+            "protein_per_100g": protein_per_100g,
+            "protein_per_dollar": protein_per_dollar,
+            "recipe": recipe,
         })
-
+    
     db.close()
-
-    # Trier par $/kg
+    
     deals_with_kg = [d for d in deals if d["per_kg"]]
     deals_with_kg.sort(key=lambda x: (x["per_kg"] if x["per_kg"] and x["per_kg"] > 0 else 99999, x["price"] or 0))
-
     deals_wo_kg = [d for d in deals if not d["per_kg"]]
     deals_wo_kg.sort(key=lambda x: x["price"] or 0)
-
+    
     return {
         "deals_with_kg": deals_with_kg,
         "deals_wo_kg": deals_wo_kg,
         "stats": {
             "total": len(deals),
-            "by_type": dict(meat_counts),
+            "by_category": dict(category_counts),
             "stores": sorted(store_set),
             "week": max_week,
             "generated_at": datetime.now().isoformat(),
-        }
+        },
+        "recipes_available": {mt: len(recs) for mt, recs in recipes_by_meat.items() if recs},
     }
 
 
 def export_trends():
-    """Exporte les tendances historiques StatCan."""
     db = get_db()
     rows = db.execute("""
         SELECT product, ref_date, value, uom
@@ -140,7 +274,6 @@ def export_trends():
         ORDER BY product, ref_date ASC
     """).fetchall()
     db.close()
-
     trends = defaultdict(list)
     for r in rows:
         trends[r["product"]].append({
@@ -148,15 +281,12 @@ def export_trends():
             "price": round(r["value"], 2),
             "unit": r["uom"],
         })
-
     return [{"product": p, "data": d} for p, d in sorted(trends.items())]
 
 
 def export_products():
-    """Exporte la liste de tous les produits pour la recherche."""
     db = get_db()
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
-
     rows = db.execute("""
         SELECT DISTINCT p.name, p.meat_type, s.name as store,
                ph.price, ph.merchant_name, ph.valid_to, ph.image_url
@@ -167,7 +297,6 @@ def export_products():
         ORDER BY p.name ASC
     """, (max_week,)).fetchall()
     db.close()
-
     products = []
     seen = set()
     for r in rows:
@@ -177,66 +306,111 @@ def export_products():
         if k in seen:
             continue
         seen.add(k)
+        mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
         products.append({
             "name": r["name"],
             "name_short": short_name(r["name"], 50),
-            "meat_type": r["meat_type"] or "autre",
+            "category": mt,
             "store": r["merchant_name"],
             "store_emoji": store_emoji(r["merchant_name"]),
             "price": round(r["price"], 2) if r["price"] else None,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
         })
-
     return products
 
 
 def export_stores():
-    """Exporte la liste des magasins."""
     db = get_db()
     rows = db.execute("SELECT id, name, slug FROM stores ORDER BY name").fetchall()
     db.close()
-    return [{
-        "id": r["id"],
-        "name": r["name"],
-        "emoji": store_emoji(r["name"]),
-        "slug": r["slug"],
-    } for r in rows]
+    return [{"id": r["id"], "name": r["name"], "emoji": store_emoji(r["name"]), "slug": r["slug"]} for r in rows]
+
+
+def export_recipes_top():
+    """Exporte les meilleures recettes pour les afficher sur le site."""
+    if not os.path.exists(RECIPE_DB_PATH):
+        return []
+    conn = sqlite3.connect(RECIPE_DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("""
+        SELECT title, meat_type, source_name, source_url, image_url, 
+               rating, rating_count, prep_time, cook_time, total_time,
+               servings, ingredients_raw, steps_raw
+        FROM recipes 
+        WHERE ingredients_raw IS NOT NULL AND ingredients_raw != '[]'
+        ORDER BY rating_count DESC
+        LIMIT 30
+    """).fetchall()
+    conn.close()
+    recipes = []
+    for r in rows:
+        try:
+            ings = len(json.loads(r["ingredients_raw"]))
+        except:
+            ings = 0
+        try:
+            steps = len(json.loads(r["steps_raw"]))
+        except:
+            steps = 0
+        recipes.append({
+            "title": r["title"],
+            "meat_type": r["meat_type"],
+            "source": r["source_name"],
+            "url": r["source_url"],
+            "image_url": r["image_url"],
+            "rating": r["rating"],
+            "rating_count": r["rating_count"] or 0,
+            "prep_time": r["prep_time"],
+            "cook_time": r["cook_time"],
+            "total_time": r["total_time"],
+            "servings": r["servings"],
+            "ingredients_count": ings,
+            "steps_count": steps,
+        })
+    return recipes
 
 
 def main():
-    print("📦 Exportation des données pour le site...")
-
+    print("📦 Exportation v2 des données pour le site...")
+    
     deals = export_deals()
     with open(os.path.join(WEB_DIR, "deals.json"), "w", encoding="utf-8") as f:
         json.dump(deals, f, ensure_ascii=False, indent=2)
-    print(f"  ✅ deals.json — {deals['stats']['total']} deals, {len(deals['deals_with_kg'])} avec $/kg")
-
+    cats = deals['stats']['by_category']
+    print(f"  ✅ deals.json — {deals['stats']['total']} deals")
+    print(f"     Catégories: {', '.join(f'{k}: {v}' for k, v in sorted(cats.items()))}")
+    
     trends = export_trends()
     with open(os.path.join(WEB_DIR, "trends.json"), "w", encoding="utf-8") as f:
         json.dump(trends, f, ensure_ascii=False, indent=2)
     print(f"  ✅ trends.json — {len(trends)} produits")
-
+    
     products = export_products()
     with open(os.path.join(WEB_DIR, "products.json"), "w", encoding="utf-8") as f:
         json.dump(products, f, ensure_ascii=False, indent=2)
     print(f"  ✅ products.json — {len(products)} produits")
-
+    
     stores = export_stores()
     with open(os.path.join(WEB_DIR, "stores.json"), "w", encoding="utf-8") as f:
         json.dump(stores, f, ensure_ascii=False, indent=2)
     print(f"  ✅ stores.json — {len(stores)} magasins")
-
-    # Stats pour affichage rapide
+    
+    top_recipes = export_recipes_top()
+    with open(os.path.join(WEB_DIR, "recipes.json"), "w", encoding="utf-8") as f:
+        json.dump(top_recipes, f, ensure_ascii=False, indent=2)
+    print(f"  ✅ recipes.json — {len(top_recipes)} meilleures recettes")
+    
     stats = deals["stats"]
     stats["stores_count"] = len(stores)
     stats["trends_count"] = len(trends)
+    stats["recipes_count"] = len(top_recipes)
     with open(os.path.join(WEB_DIR, "stats.json"), "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
     print(f"  ✅ stats.json")
-
-    print(f"\n📊 Résumé : {stats['total']} offres · {stats['stores_count']} magasins · {len(trends)} tendances historiques")
-
+    
+    print(f"\n📊 Résumé : {stats['total']} offres · {stats['stores_count']} magasins · {stats['recipes_count']} recettes · {stats['week']}")
+    print(f"   Viande: {sum(cats.get(m,0) for m in ['boeuf','poulet','porc','veau','viande'])} · Poisson: {cats.get('poisson',0)} · Légumes: {cats.get('legume',0)} · Fruits: {cats.get('fruit',0)} · Panier: {cats.get('panier',0)}")
 
 if __name__ == "__main__":
     main()

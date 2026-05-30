@@ -2,149 +2,363 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aubaines Rapides — Meilleurs Deals de la Semaine</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/location.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Aubaines Rapides — Les spéciaux de la semaine en 30 secondes</title>
+<style>
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; background: #0a0c10; color: #e8eaed; min-height: 100vh; }
+
+/* ─── HEADER ─── */
+.header { background: linear-gradient(135deg, #ff6b35 0%, #e85d2c 50%, #1a1d23 100%); padding: 20px 16px 16px; position: sticky; top: 0; z-index: 100; }
+.header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.5px; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.logo span { font-weight: 300; }
+.week-badge { font-size: 11px; color: rgba(255,255,255,0.85); background: rgba(0,0,0,0.25); padding: 5px 12px; border-radius: 20px; white-space: nowrap; backdrop-filter: blur(8px); font-weight: 500; }
+.search-bar { display: flex; gap: 8px; }
+.search-bar input { flex: 1; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); border-radius: 24px; padding: 11px 16px; color: #fff; font-size: 14px; outline: none; backdrop-filter: blur(8px); }
+.search-bar input:focus { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.18); }
+.search-bar input::placeholder { color: rgba(255,255,255,0.5); }
+.search-bar button { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.15); border-radius: 24px; padding: 11px 16px; color: #fff; font-size: 16px; cursor: pointer; backdrop-filter: blur(8px); }
+
+/* ─── HERO BANNER ─── */
+.hero-banner { background: linear-gradient(135deg, #1a1d23 0%, #0a0c10 100%); padding: 20px 16px; text-align: center; border-bottom: 1px solid #2a2d35; }
+.hero-banner h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.hero-banner h1 span { color: #ff6b35; }
+.hero-banner p { font-size: 13px; color: #9aa0a6; max-width: 400px; margin: 0 auto; }
+.hero-cta { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+.hero-cta a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 24px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.cta-primary { background: #ff6b35; color: #fff; }
+.cta-primary:hover { background: #e85d2c; transform: translateY(-1px); }
+.cta-secondary { background: #1e2128; color: #e8eaed; border: 1px solid #2a2d35; }
+.cta-secondary:hover { border-color: #ff6b35; color: #ff6b35; }
+
+/* ─── SAVINGS TICKER ─── */
+.savings-ticker { display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 10px 16px; background: #0d0f14; border-bottom: 1px solid #1e2128; }
+.savings-ticker::-webkit-scrollbar { display: none; }
+.ticker-item { flex-shrink: 0; padding: 6px 14px; margin-right: 8px; background: #1a1d23; border-radius: 20px; font-size: 12px; white-space: nowrap; border: 1px solid #2a2d35; }
+.ticker-item .num { color: #ff6b35; font-weight: 700; }
+.ticker-item .label { color: #9aa0a6; }
+
+/* ─── CATEGORY TABS ─── */
+.cat-tabs { display: flex; gap: 6px; padding: 12px 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; background: #0a0c10; position: sticky; top: 80px; z-index: 99; }
+.cat-tabs::-webkit-scrollbar { display: none; }
+.cat-tab { flex-shrink: 0; padding: 9px 18px; border-radius: 24px; font-size: 13px; font-weight: 600; background: #1a1d23; color: #9aa0a6; border: 1px solid #2a2d35; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.cat-tab.active { background: #ff6b35; color: #fff; border-color: #ff6b35; transform: scale(1.03); }
+.cat-tab .count { font-weight: 400; opacity: 0.7; font-size: 11px; margin-left: 3px; }
+
+/* ─── CATEGORY SECTIONS ─── */
+.cat-section { display: none; padding: 0 16px 100px; }
+.cat-section.active { display: block; }
+.cat-section h2 { font-size: 17px; font-weight: 700; margin: 16px 0 10px; display: flex; align-items: center; gap: 8px; }
+.cat-stats { font-size: 12px; color: #5f6368; font-weight: 400; }
+
+/* ─── DEAL CARDS ─── */
+.deal-card { background: #14161c; border-radius: 14px; padding: 14px 16px; margin-bottom: 8px; border: 1px solid #2a2d35; display: flex; gap: 12px; align-items: flex-start; transition: all 0.15s; }
+.deal-card:hover { border-color: #ff6b3544; transform: translateX(2px); }
+.deal-card.top-deal { border-color: #ffd54f44; background: linear-gradient(135deg, #1a1d23 0%, #1a1d23 100%); }
+.deal-card.top-deal .deal-rank { color: #ffd54f; }
+.deal-rank { font-size: 18px; font-weight: 800; color: #ff6b35; min-width: 24px; line-height: 1.2; }
+.deal-info { flex: 1; min-width: 0; }
+.deal-name { font-size: 13px; font-weight: 600; line-height: 1.35; margin-bottom: 3px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.deal-store { font-size: 11px; color: #5f6368; margin-bottom: 5px; }
+.deal-prices { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.deal-price { font-size: 18px; font-weight: 800; color: #ff6b35; }
+.deal-per-kg { font-size: 12px; color: #5f6368; }
+.deal-protein { font-size: 11px; color: #66bb6a; font-weight: 700; background: rgba(102,187,106,0.1); padding: 2px 8px; border-radius: 12px; }
+.deal-recipe { margin-top: 6px; padding-top: 6px; border-top: 1px solid #1e2128; }
+.deal-recipe a { color: #4fc3f7; text-decoration: none; font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 4px; }
+.deal-recipe a:hover { color: #81d4fa; }
+
+/* ─── SUBCATEGORY HEADERS ─── */
+.sub-header { font-size: 12px; font-weight: 600; margin: 16px 0 8px; padding: 4px 0; border-bottom: 1px solid #1e2128; letter-spacing: 0.3px; }
+
+/* ─── SHARE BAR ─── */
+.share-bar { display: flex; gap: 8px; padding: 16px; justify-content: center; flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 24px; font-size: 13px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+.share-btn:hover { transform: translateY(-1px); }
+.share-btn.discord { background: #5865F2; color: #fff; }
+.share-btn.whatsapp { background: #25D366; color: #fff; }
+.share-btn.email { background: #1e2128; color: #e8eaed; border: 1px solid #2a2d35; }
+.share-btn.copy { background: #1e2128; color: #e8eaed; border: 1px solid #2a2d35; font-size: 12px; }
+
+/* ─── STORE BADGES ─── */
+.stores-bar { padding: 12px 16px; display: flex; gap: 5px; flex-wrap: wrap; border-top: 1px solid #1e2128; }
+.store-badge { font-size: 10px; color: #5f6368; padding: 3px 8px; background: #14161c; border-radius: 10px; }
+
+/* ─── FOOTER ─── */
+.footer { text-align: center; padding: 24px 16px; font-size: 11px; color: #3c4043; border-top: 1px solid #1e2128; }
+
+/* ─── LOADING ─── */
+.loading { text-align: center; padding: 80px 20px; color: #5f6368; }
+.loading .spinner { display: inline-block; width: 36px; height: 36px; border: 3px solid #1e2128; border-top-color: #ff6b35; border-radius: 50%; animation: spin 0.7s linear infinite; margin-bottom: 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── SAVED BADGE ─── */
+.saved-badge { display: inline-flex; align-items: center; gap: 4px; background: #1e2128; padding: 6px 12px; border-radius: 20px; font-size: 11px; color: #9aa0a6; margin: 8px 16px 0; }
+.saved-badge span { color: #ff6b35; font-weight: 700; }
+
+/* ─── RESPONSIVE ─── */
+@media (min-width: 600px) {
+    .cat-section { max-width: 600px; margin: 0 auto; }
+    .cat-tabs { justify-content: center; }
+    .hero-banner h1 { font-size: 24px; }
+    .header { padding: 20px 24px 16px; }
+}
+</style>
 </head>
 <body>
 
-<!-- Nav -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
-    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
-    <div class="nav-links">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="viande.html">🥩 Viande</a>
-      <a href="legumes.html">🥦 Légumes</a>
-      <a href="recherche.html">🔍 Recherche</a>
-      <a href="tendances.html">📈 Tendances</a>
-    </div>
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <a href="/" class="logo">⚡ Aubaines <span>Rapides</span></a>
+    <span class="week-badge" id="weekBadge">📅 Chargement...</span>
   </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">📍 Saint-Jérôme, Québec</div>
-    <h1>Les meilleurs deals d'épicerie de la semaine</h1>
-    <p>Scan automatique des circulaires — prix au kg, comparaisons, tendances historiques</p>
-    <div class="hero-search">
-      <input type="text" id="heroSearch" placeholder="Chercher un produit (ex: poulet, boeuf haché, brocoli...)">
-      <button onclick="doSearch()">🔍</button>
-    </div>
-    <div class="hero-metrics" id="heroMetrics">
-      <div class="metric"><div class="num" id="statTotal">—</div><div class="label">Offres cette semaine</div></div>
-      <div class="metric"><div class="num" id="statMeat">—</div><div class="label">Viande</div></div>
-      <div class="metric"><div class="num" id="statVeg">—</div><div class="label">Légumes</div></div>
-      <div class="metric"><div class="num" id="statStores">—</div><div class="label">Magasins</div></div>
-    </div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 Chercher un produit, une marque..." autocomplete="off">
+    <button onclick="doSearch()">OK</button>
   </div>
-</section>
-
-<div class="page">
-
-  <!-- Top 3 Viande -->
-  <div class="section-header">
-    <h2>🥩 Top deals viande</h2>
-    <span class="count" id="meatCount">—</span>
-  </div>
-  <div class="deals-grid" id="topMeat"></div>
-
-  <!-- Top 3 Légumes -->
-  <div class="section-header">
-    <h2>🥦 Top deals légumes</h2>
-    <span class="count" id="vegCount">—</span>
-  </div>
-  <div class="deals-grid" id="topVeg"></div>
-
-  <!-- Stats -->
-  <div class="section-header">
-    <h2>📊 Aperçu de la semaine</h2>
-  </div>
-  <div class="stats-grid" id="statsGrid"></div>
-
-  <!-- Magasins -->
-  <div class="section-header">
-    <h2>🏪 Magasins scannés</h2>
-  </div>
-  <div class="store-tags" id="storeTags"></div>
-
 </div>
 
-<footer class="footer">
-  <div class="update-badge" id="updateBadge">Mise à jour hebdomadaire</div>
+<!-- HERO BANNER -->
+<div class="hero-banner">
+  <h1>Les <span>meilleurs prix</span> de la semaine</h1>
+  <p>Scan automatique des circulaires — trouve tes spéciaux en 30 secondes, pas 30 minutes ⚡</p>
+</div>
+
+<!-- SAVINGS TICKER -->
+<div class="savings-ticker" id="savingsTicker">
+  <div class="ticker-item"><span class="num">—</span> <span class="label">offres</span></div>
+  <div class="ticker-item"><span class="num">—</span> <span class="label">magasins</span></div>
+</div>
+
+<!-- CATEGORY TABS -->
+<div class="cat-tabs" id="catTabs"></div>
+
+<!-- MAIN CONTENT -->
+<div id="app">
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Scan des circulaires en cours...</p>
+  </div>
+</div>
+
+<!-- SHARE / CTA -->
+<div class="share-bar" id="shareBar">
+  <a class="share-btn whatsapp" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20aubainesrapides.ca" target="_blank">💬 WhatsApp</a>
+  <a class="share-btn discord" href="#" onclick="shareDiscord();return false">🎮 Discord</a>
+  <a class="share-btn email" href="#" onclick="showSubscribe();return false">📬 Recevoir par courriel</a>
+  <button class="share-btn copy" onclick="copyLink()">🔗 Copier lien</button>
+</div>
+
+<div id="subscribeForm" style="display:none;padding:0 16px 20px;max-width:400px;margin:0 auto;text-align:center">
+  <div style="background:#14161c;border-radius:14px;padding:16px;border:1px solid #2a2d35">
+    <p style="font-size:13px;margin-bottom:8px;color:#e8eaed">📬 Reçois les <strong>top deals</strong> chaque mardi directement</p>
+    <div style="display:flex;gap:6px">
+      <input type="email" id="emailInput" placeholder="ton@courriel.com" style="flex:1;background:#1a1d23;border:1px solid #2a2d35;border-radius:24px;padding:10px 14px;color:#e8eaed;font-size:13px;outline:none">
+      <button onclick="subscribeEmail()" style="background:#ff6b35;border:none;border-radius:24px;padding:10px 16px;color:#fff;font-size:13px;font-weight:600;cursor:pointer">Je veux ça!</button>
+    </div>
+    <p style="font-size:11px;color:#5f6368;margin-top:6px">Pas de spam. Seulement les spéciaux de la semaine.</p>
+  </div>
+</div>
+
+<!-- STORES BAR -->
+<div class="stores-bar" id="storesBar"></div>
+
+<!-- FOOTER -->
+<div class="footer">
   <p>Aubaines Rapides &copy; 2026 — Données provenant des circulaires en ligne</p>
-</footer>
+  <p style="margin-top:4px">⚡ Trouve tes spéciaux en 30 secondes · Mis à jour chaque mardi</p>
+</div>
 
-<script src="js/main.js"></script>
 <script>
-async function init() {
-  const ok = await loadAllData();
-  if (!ok) {
-    document.body.innerHTML = '<div class="page" style="padding-top:100px"><h1>❌ Erreur de chargement</h1><p>Impossible de charger les données. Vérifie que build_site.py a été exécuté.</p></div>';
-    return;
+// ─── DATA ───
+const CAT_ORDER = ["viande", "poisson", "fruit", "legume", "panier"];
+const CAT_NAMES = { viande: "🥩 Viande", poisson: "🐟 Poisson", fruit: "🍎 Fruits", legume: "🥦 Légumes", panier: "📦 Panier" };
+const CAT_MERGE = {
+  viande: new Set(["boeuf", "poulet", "porc", "viande", "veau"]),
+  poisson: new Set(["poisson"]),
+  fruit: new Set(["fruit"]),
+  legume: new Set(["legume", "légume"]),
+  panier: new Set(["panier"]),
+};
+const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Porc", viande: "🥩 Viande", veau: "🥩 Veau" };
+
+let dealsAll = [], recipesAll = [], stats = {};
+let currentCat = "viande";
+
+// ─── LOAD ───
+async function loadData() {
+  try {
+    const [dealsRes, recipesRes, statsRes] = await Promise.all([
+      fetch("data/deals.json"),
+      fetch("data/recipes.json"),
+      fetch("data/stats.json"),
+    ]);
+    const dealsData = await dealsRes.json();
+    recipesAll = await recipesRes.json();
+    stats = await statsRes.json();
+    dealsAll = (dealsData.deals_with_kg || []).concat(dealsData.deals_wo_kg || []);
+    return true;
+  } catch (e) {
+    console.error("Erreur chargement:", e);
+    return false;
   }
+}
 
-  const { deals_with_kg, deals_wo_kg, stats } = dealsData;
-  const allDeals = [...deals_with_kg, ...deals_wo_kg];
+function byCategory(cat) {
+  const accepted = CAT_MERGE[cat];
+  if (!accepted) return dealsAll.filter(d => d.category === cat);
+  return dealsAll.filter(d => accepted.has(d.category));
+}
 
-  // Hero metrics
-  document.getElementById('statTotal').textContent = stats.total;
-  document.getElementById('statMeat').textContent = (stats.by_type.boeuf || 0) + (stats.by_type.poulet || 0) + (stats.by_type.porc || 0) + (stats.by_type.viande || 0);
-  document.getElementById('statVeg').textContent = stats.by_type.legume || 0;
-  document.getElementById('statStores').textContent = stats.stores_count;
-
-  // Top 3 meat (with $/kg)
-  const meatDeals = deals_with_kg.filter(d => d.meat_type !== 'legume').slice(0, 3);
-  renderDeals(document.getElementById('topMeat'), meatDeals);
-  document.getElementById('meatCount').textContent = stats.by_type.boeuf + stats.by_type.poulet + stats.by_type.porc + (stats.by_type.viande||0) + ' offres';
-
-  // Top 3 veg (with $/kg)
-  const vegDeals = deals_with_kg.filter(d => d.meat_type === 'legume').slice(0, 3);
-  renderDeals(document.getElementById('topVeg'), vegDeals);
-  document.getElementById('vegCount').textContent = (stats.by_type.legume || 0) + ' offres';
-
-  // Stats grid
-  const statsGrid = document.getElementById('statsGrid');
-  const emojis = { boeuf: '🥩', poulet: '🍗', porc: '🥓', legume: '🥦' };
-  for (const [type, count] of Object.entries(stats.by_type)) {
-    if (type === 'poisson' && count < 2) continue;
-    const div = document.createElement('div');
-    div.className = 'stat-card';
-    div.innerHTML = `<div class="num ${type}">${count}</div><div class="label">${emojis[type] || ''} ${type}</div>`;
-    statsGrid.appendChild(div);
-  }
-
-  // Store tags
-  const storeTags = document.getElementById('storeTags');
-  stats.stores.forEach(s => {
-    const tag = document.createElement('span');
-    tag.className = 'store-tag';
-    tag.textContent = `${storeEmoji(s)} ${s}`;
-    storeTags.appendChild(tag);
+function topDeals(cat, n = 5) {
+  const items = byCategory(cat);
+  items.sort((a, b) => {
+    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+    if (a.per_kg) return -1; if (b.per_kg) return 1;
+    return (a.price || 0) - (b.price || 0);
   });
+  return items.slice(0, n);
+}
 
-  // Update badge
-  if (stats.week) {
-    document.getElementById('updateBadge').textContent = `🔄 Semaine du ${stats.week}`;
+// ─── RENDER ───
+function renderCatTabs() {
+  document.getElementById("catTabs").innerHTML = CAT_ORDER.map(cat => {
+    const count = byCategory(cat).length;
+    return `<div class="cat-tab${cat === currentCat ? " active" : ""}" data-cat="${cat}" onclick="switchCat('${cat}')">${CAT_NAMES[cat]} <span class="count">${count}</span></div>`;
+  }).join("");
+}
+
+function renderDealCard(d, rank) {
+  const hasProtein = d.protein_per_dollar && d.protein_per_100g;
+  const recipe = d.recipe;
+  const isTop = rank === 1;
+
+  return `<div class="deal-card${isTop ? " top-deal" : ""}">
+    <div class="deal-rank">#${rank}</div>
+    <div class="deal-info">
+      <div class="deal-name">${d.name_short || d.name}</div>
+      <div class="deal-store">${d.store_emoji || "🏪"} ${d.store}</div>
+      <div class="deal-prices">
+        <span class="deal-price">${d.price ? d.price.toFixed(2) + "$" : ""}</span>
+        ${d.per_kg ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : ""}
+        ${d.per_lb ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : ""}
+        ${hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : ""}
+      </div>
+      ${recipe ? `<div class="deal-recipe"><a href="${recipe.url}" target="_blank">🍳 ${recipe.title.substring(0, 55)}${recipe.title.length > 55 ? "…" : ""}</a></div>` : ""}
+    </div>
+  </div>`;
+}
+
+function renderCategory(cat) {
+  const deals = topDeals(cat, 12);
+  if (deals.length === 0) return `<div class="deal-card"><div class="deal-info"><div class="deal-name" style="color:#3c4043;text-align:center;padding:20px">Aucun deal cette semaine</div></div></div>`;
+
+  if (cat === "viande") {
+    const subOrder = ["boeuf", "poulet", "porc"];
+    let html = "";
+    for (const sub of subOrder) {
+      const subDeals = deals.filter(d => d.category === sub).slice(0, 4);
+      if (subDeals.length === 0) continue;
+      html += `<div class="sub-header" style="color:#ff6b35">${MEAT_NAMES[sub] || sub}</div>`;
+      html += subDeals.map((d, i) => renderDealCard(d, i + 1)).join("");
+    }
+    return html;
   }
+
+  return deals.slice(0, 8).map((d, i) => renderDealCard(d, i + 1)).join("");
+}
+
+function renderAll() {
+  // Week badge
+  document.getElementById("weekBadge").textContent = `📅 ${stats.week || "Chargement..."}`;
+
+  // Savings ticker
+  const ticker = document.getElementById("savingsTicker");
+  const byCat = stats.by_category || {};
+  const totalMeat = (byCat.boeuf||0) + (byCat.poulet||0) + (byCat.porc||0) + (byCat.viande||0);
+  ticker.innerHTML = `
+    <div class="ticker-item"><span class="num">${stats.total || "—"}</span> <span class="label">offres</span></div>
+    <div class="ticker-item"><span class="num">${totalMeat}</span> <span class="label">viandes</span></div>
+    <div class="ticker-item"><span class="num">${byCat.legume || 0}</span> <span class="label">légumes</span></div>
+    <div class="ticker-item"><span class="num">${byCat.fruit || 0}</span> <span class="label">fruits</span></div>
+    <div class="ticker-item"><span class="num">${stats.stores ? stats.stores.length : "—"}</span> <span class="label">magasins</span></div>
+  `;
+
+  // Stores bar
+  if (stats.stores) {
+    document.getElementById("storesBar").innerHTML = stats.stores.map(s => `<span class="store-badge">${s}</span>`).join("");
+  }
+
+  // Tabs
+  renderCatTabs();
+
+  // Content
+  const app = document.getElementById("app");
+  app.innerHTML = CAT_ORDER.map(cat => {
+    const count = byCategory(cat).length;
+    return `<div class="cat-section${cat === currentCat ? " active" : ""}" id="section-${cat}">
+      <h2>${CAT_NAMES[cat]} <span class="cat-stats">${count} offres</span></h2>
+      ${renderCategory(cat)}
+    </div>`;
+  }).join("");
+}
+
+function switchCat(cat) {
+  currentCat = cat;
+  document.querySelectorAll(".cat-tab").forEach(t => t.classList.toggle("active", t.dataset.cat === cat));
+  document.querySelectorAll(".cat-section").forEach(s => s.classList.toggle("active", s.id === `section-${cat}`));
 }
 
 function doSearch() {
-  const q = document.getElementById('heroSearch').value.trim();
-  if (q) {
-    window.location.href = `recherche.html?q=${encodeURIComponent(q)}`;
-  }
+  const q = document.getElementById("searchInput").value.trim();
+  if (!q) return;
+  const results = dealsAll.filter(d => d.name && d.name.toLowerCase().includes(q.toLowerCase())).slice(0, 6);
+  const section = document.getElementById(`section-${currentCat}`);
+  const existing = section.querySelector(".search-results");
+  if (existing) existing.remove();
+  if (results.length === 0) return;
+  const div = document.createElement("div");
+  div.className = "search-results";
+  div.innerHTML = `<div class="sub-header" style="color:#4fc3f7">🔍 "${q}" — ${results.length} résultat(s)</div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
+  section.insertBefore(div, section.firstChild.nextSibling);
 }
 
-document.getElementById('heroSearch').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') doSearch();
-});
+// ─── CTA ───
+function showSubscribe() {
+  const f = document.getElementById("subscribeForm");
+  f.style.display = f.style.display === "none" ? "block" : "none";
+}
+function subscribeEmail() {
+  const email = document.getElementById("emailInput").value.trim();
+  if (email) alert("📬 Merci! On t'a ajouté à la liste (fonctionnalité à venir — check Discord en attendant!)");
+  else alert("Entre ton courriel!");
+}
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target; btn.textContent = "✅ Copié!"; setTimeout(() => btn.textContent = "🔗 Copier lien", 2000);
+  });
+}
+function shareDiscord() {
+  alert("🎮 Rejoins notre Discord! (lien à venir — t'inquiète, ça s'en vient)");
+}
+
+// ─── INIT ───
+document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+
+async function init() {
+  const ok = await loadData();
+  if (!ok) {
+    document.getElementById("app").innerHTML = `<div class="loading"><h2 style="margin-bottom:8px">❌</h2><p>Exécute d'abord le pipeline de scraping.</p></div>`;
+    return;
+  }
+  renderAll();
+}
 
 init();
 </script>
-<script src="js/location.js"></script>
 </body>
 </html>

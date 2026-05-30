@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Recettes Populaires</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/location.css">
+<style>
+/* ─── Recipe Page Styles ─── */
+
+/* Override the compact deals-grid for recipe cards */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.recipe-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.recipe-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: var(--text-dim);
+  overflow: hidden;
+}
+
+.recipe-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipe-card-title {
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.recipe-card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Stars */
+.stars {
+  color: #f1c40f;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.stars-empty {
+  color: var(--text-dim);
+  opacity: 0.3;
+}
+
+.recipe-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 14px;
+  font-size: 0.75em;
+  color: var(--text-dim);
+}
+
+.recipe-card-footer .source {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.recipe-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.recipe-badge.boeuf { background: rgba(231,76,60,0.15); color: var(--red); }
+.recipe-badge.poulet { background: rgba(243,156,18,0.15); color: var(--orange); }
+.recipe-badge.porc { background: rgba(233,69,96,0.15); color: var(--accent); }
+.recipe-badge.veau { background: rgba(155,89,182,0.15); color: var(--purple); }
+.recipe-badge.mixte { background: rgba(52,152,219,0.15); color: var(--blue); }
+
+/* Ingredient search highlight */
+.ingredient-preview {
+  font-size: 0.75em;
+  color: var(--text-dim);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ingredient-preview mark {
+  background: rgba(233,69,96,0.3);
+  color: var(--accent-hover);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-dim);
+}
+
+.no-results .emoji {
+  font-size: 3em;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  .recipe-card-img {
+    height: 150px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="viande.html">🥩 Viande</a>
+      <a href="legumes.html">🥦 Légumes</a>
+      <a href="recherche.html">🔍 Recherche</a>
+      <a href="tendances.html">📈 Tendances</a>
+      <a href="recipes.html" class="active">📖 Recettes</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">📖 Recettes populaires</h1>
+  <p class="page-subtitle">Les meilleures recettes liées aux ingrédients en spécial cette semaine — trouvées sur Ricardo et Recettes Québécoises</p>
+
+  <!-- Filters -->
+  <div class="filters" id="recipeFilters">
+    <button class="filter-btn active" data-filter="all">Toutes</button>
+    <button class="filter-btn" data-filter="boeuf">🥩 Boeuf</button>
+    <button class="filter-btn" data-filter="poulet">🍗 Poulet</button>
+    <button class="filter-btn" data-filter="porc">🥓 Porc</button>
+    <button class="filter-btn" data-filter="veau">🐄 Veau</button>
+  </div>
+
+  <!-- Search -->
+  <div class="search-input-wrap">
+    <input type="text" id="recipeSearch" placeholder="Chercher par ingrédient (ex: fromage, champignons, patates...)" autocomplete="off">
+  </div>
+
+  <div class="search-count" id="resultCount">Chargement...</div>
+  <div class="recipe-grid" id="recipeGrid"></div>
+</div>
+
+<footer class="footer">
+  <div class="update-badge">📖 Recettes de la semaine</div>
+  <p>Aubaines Rapides &copy; 2026 — Recettes provenant de Ricardo et Recettes Québécoises</p>
+</footer>
+
+<script>
+// ─── Recipe Data ───
+const MEAT_EMOJI = { boeuf: '🥩', poulet: '🍗', porc: '🥓', veau: '🐄', mixte: '🍖' };
+const MEAT_LABEL = { boeuf: 'Boeuf', poulet: 'Poulet', porc: 'Porc', veau: 'Veau', mixte: 'Mixte' };
+
+let allRecipes = [];
+let filteredRecipes = [];
+
+function starHTML(rating) {
+  if (!rating) return '<span class="stars-empty">☆☆☆☆☆</span>';
+  const full = Math.round(rating);
+  let s = '';
+  for (let i = 0; i < 5; i++) {
+    s += i < full ? '★' : '<span class="stars-empty">☆</span>';
+  }
+  return s;
+}
+
+function fixImageUrl(url) {
+  if (!url) return '';
+  // Replace Ricardo's {width}x{height} placeholder with actual dimensions
+  return url.replace('{width}x{height}', '300x200');
+}
+
+function createRecipeCard(recipe) {
+  const card = document.createElement('a');
+  card.className = 'recipe-card';
+  card.href = recipe.source_url || '#';
+  card.target = '_blank';
+  card.rel = 'noopener';
+
+  // Image
+  const imgWrap = document.createElement('div');
+  imgWrap.className = 'recipe-card-img';
+  if (recipe.image_url) {
+    const img = document.createElement('img');
+    img.src = fixImageUrl(recipe.image_url);
+    img.alt = recipe.title;
+    img.loading = 'lazy';
+    img.onerror = function() {
+      imgWrap.innerHTML = MEAT_EMOJI[recipe.meat_type] || '🍽️';
+    };
+    imgWrap.appendChild(img);
+  } else {
+    imgWrap.textContent = MEAT_EMOJI[recipe.meat_type] || '🍽️';
+  }
+  card.appendChild(imgWrap);
+
+  // Body
+  const body = document.createElement('div');
+  body.className = 'recipe-card-body';
+
+  const title = document.createElement('div');
+  title.className = 'recipe-card-title';
+  title.textContent = recipe.title;
+  body.appendChild(title);
+
+  // Meta row
+  const meta = document.createElement('div');
+  meta.className = 'recipe-card-meta';
+
+  // Badge
+  const badge = document.createElement('span');
+  badge.className = `recipe-badge ${recipe.meat_type}`;
+  badge.textContent = `${MEAT_EMOJI[recipe.meat_type] || '🍖'} ${MEAT_LABEL[recipe.meat_type] || recipe.meat_type}`;
+  meta.appendChild(badge);
+
+  // Stars
+  const starsSpan = document.createElement('span');
+  starsSpan.innerHTML = `${starHTML(recipe.rating)} <span style="color:var(--text-dim);font-size:0.85em">(${recipe.rating_count || 0})</span>`;
+  meta.appendChild(starsSpan);
+
+  // Prep time
+  if (recipe.prep_time) {
+    const prep = document.createElement('span');
+    prep.textContent = `⏱ ${recipe.prep_time}`;
+    meta.appendChild(prep);
+  }
+
+  body.appendChild(meta);
+
+  // Ingredient preview
+  if (recipe.ingredients) {
+    const ing = document.createElement('div');
+    ing.className = 'ingredient-preview';
+    ing.textContent = recipe.ingredients;
+    body.appendChild(ing);
+  }
+
+  card.appendChild(body);
+
+  // Footer
+  const footer = document.createElement('div');
+  footer.className = 'recipe-card-footer';
+  const src = document.createElement('span');
+  src.className = 'source';
+  src.textContent = `📖 ${recipe.source_name || 'Recette'}`;
+  footer.appendChild(src);
+  if (recipe.rating_count > 0) {
+    const votes = document.createElement('span');
+    votes.textContent = `${recipe.rating_count} vote${recipe.rating_count > 1 ? 's' : ''}`;
+    footer.appendChild(votes);
+  }
+  card.appendChild(footer);
+
+  return card;
+}
+
+function renderGrid(recipes) {
+  const grid = document.getElementById('recipeGrid');
+  grid.innerHTML = '';
+  if (!recipes || recipes.length === 0) {
+    grid.innerHTML = '<div class="no-results"><div class="emoji">🔍</div><p>Aucune recette trouvée. Essaie un autre ingrédient!</p></div>';
+    return;
+  }
+  recipes.forEach(r => grid.appendChild(createRecipeCard(r)));
+}
+
+function applyFilters() {
+  const activeFilter = document.querySelector('#recipeFilters .filter-btn.active');
+  const meatType = activeFilter ? activeFilter.dataset.filter : 'all';
+  const query = document.getElementById('recipeSearch').value.trim().toLowerCase();
+
+  let results = allRecipes;
+
+  // Filter by meat type
+  if (meatType !== 'all') {
+    results = results.filter(r => r.meat_type === meatType);
+  }
+
+  // Filter by ingredient search
+  if (query) {
+    results = results.filter(r => {
+      if (!r.ingredients) return false;
+      return r.ingredients.toLowerCase().includes(query);
+    });
+  }
+
+  filteredRecipes = results;
+  document.getElementById('resultCount').textContent = `${filteredRecipes.length} recette${filteredRecipes.length > 1 ? 's' : ''} trouvée${filteredRecipes.length > 1 ? 's' : ''}`;
+  renderGrid(filteredRecipes);
+}
+
+async function init() {
+  try {
+    const res = await fetch('data/recipes.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    allRecipes = await res.json();
+    applyFilters();
+  } catch (e) {
+    console.error('Failed to load recipes:', e);
+    document.getElementById('recipeGrid').innerHTML = '<div class="no-results"><div class="emoji">❌</div><p>Impossible de charger les recettes.</p></div>';
+    document.getElementById('resultCount').textContent = 'Erreur de chargement';
+  }
+
+  // Filter buttons
+  document.querySelectorAll('#recipeFilters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#recipeFilters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  // Search input with debounce
+  const searchInput = document.getElementById('recipeSearch');
+  let debounceTimer;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(applyFilters, 200);
+  });
+}
+
+init();
+</script>
+<script src="js/location.js"></script>
+</body>
+</html>

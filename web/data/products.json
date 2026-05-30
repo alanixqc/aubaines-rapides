@@ -2,7 +2,7 @@
   {
     "name": "AILES DE POULET",
     "name_short": "AILES DE POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 3.17,
@@ -12,7 +12,7 @@
   {
     "name": "AILES DE POULET ASSAISONNÉES OU MARINÉES | SEASONED OR MARINATED CHICKEN WINGS",
     "name_short": "AILES DE POULET ASSAISONNÉES OU MARINÉES | SEASONE…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 8.5,
@@ -22,7 +22,7 @@
   {
     "name": "AILES DE POULET OU CÔTES DE DOS DE PORC PC | FROZEN CHICKEN WINGS OR PORK BACK RIBS, 680 - 907 G",
     "name_short": "AILES DE POULET OU CÔTES DE DOS DE PORC PC | FROZE…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 15.99,
@@ -32,7 +32,7 @@
   {
     "name": "AILES DE POULET PINTY'S | PINTY'S CHICKEN WINGS",
     "name_short": "AILES DE POULET PINTY'S | PINTY'S CHICKEN WINGS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 11.99,
@@ -42,7 +42,7 @@
   {
     "name": "AILES DE POULET ST-HUBERT, 575 G | ST-HUBERT CHICKEN WINGS",
     "name_short": "AILES DE POULET ST-HUBERT, 575 G | ST-HUBERT CHICK…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 14.0,
@@ -52,7 +52,7 @@
   {
     "name": "AILES DE POULET ST‑HUBERT | ST-HUBERT FROZEN CHICKEN WINGS",
     "name_short": "AILES DE POULET ST‑HUBERT | ST-HUBERT FROZEN CHICK…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -62,7 +62,7 @@
   {
     "name": "AILES DE POULET SURGELÉES LA CAGE",
     "name_short": "AILES DE POULET SURGELÉES LA CAGE",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -72,7 +72,7 @@
   {
     "name": "AILES DE POULET | CHICKEN WINGS",
     "name_short": "AILES DE POULET | CHICKEN WINGS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 4.99,
@@ -82,7 +82,7 @@
   {
     "name": "AILES DE POULET, CROQUETTES OU LANIÈRES DE POITRINE DE POULET PANÉES SURGELÉES ST-HUBERT",
     "name_short": "AILES DE POULET, CROQUETTES OU LANIÈRES DE POITRIN…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 13.99,
@@ -92,7 +92,7 @@
   {
     "name": "AILES DE POULET, CROQUETTES ST-HUBERT",
     "name_short": "AILES DE POULET, CROQUETTES ST-HUBERT",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 13.99,
@@ -102,7 +102,7 @@
   {
     "name": "ASPERGES | ASPARAGUS",
     "name_short": "ASPERGES | ASPARAGUS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.99,
@@ -112,7 +112,7 @@
   {
     "name": "ASPERGES | ASPARAGUS",
     "name_short": "ASPERGES | ASPARAGUS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 4.99,
@@ -122,7 +122,7 @@
   {
     "name": "ASPERGES | ASPARAGUS",
     "name_short": "ASPERGES | ASPARAGUS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 4.5,
@@ -132,7 +132,7 @@
   {
     "name": "AVOCAT",
     "name_short": "AVOCAT",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 1.99,
@@ -142,7 +142,7 @@
   {
     "name": "AVOCAT │ AVOCADO",
     "name_short": "AVOCAT │ AVOCADO",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 1.44,
@@ -152,7 +152,7 @@
   {
     "name": "Ailes de poulet La Cage",
     "name_short": "Ailes de poulet La Cage",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 9.94,
@@ -162,7 +162,7 @@
   {
     "name": "Ailes de poulet entièrement cuites",
     "name_short": "Ailes de poulet entièrement cuites",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -172,7 +172,7 @@
   {
     "name": "Ailes de poulet entièrement cuites Barbecue",
     "name_short": "Ailes de poulet entièrement cuites Barbecue",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -182,7 +182,7 @@
   {
     "name": "Anneaux de maïs soufflés cuits au four à saveur de crème sure et oignons PC À base de plantes Biologique",
     "name_short": "Anneaux de maïs soufflés cuits au four à saveur de…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 3.5,
@@ -192,7 +192,7 @@
   {
     "name": "Aqua Star Frozen Quick-Peel Argentine Wild Shrimp, 908-g",
     "name_short": "Aqua Star Frozen Quick-Peel Argentine Wild Shrimp,…",
-    "meat_type": "viande",
+    "category": "poisson",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.98,
@@ -202,7 +202,7 @@
   {
     "name": "Aqua Star Pacific White Shrimp - 340g",
     "name_short": "Aqua Star Pacific White Shrimp - 340g",
-    "meat_type": "viande",
+    "category": "poisson",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.98,
@@ -212,7 +212,7 @@
   {
     "name": "Aqua Star White Pacific Shrimp - 340g",
     "name_short": "Aqua Star White Pacific Shrimp - 340g",
-    "meat_type": "viande",
+    "category": "poisson",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.98,
@@ -222,7 +222,7 @@
   {
     "name": "Aubergine chinoise",
     "name_short": "Aubergine chinoise",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 1.97,
@@ -232,7 +232,7 @@
   {
     "name": "BACON DOUBLE FUMÉ FUMOIRS GOSSELIN",
     "name_short": "BACON DOUBLE FUMÉ FUMOIRS GOSSELIN",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 9.99,
@@ -242,7 +242,7 @@
   {
     "name": "BACON FRAIS OU BACON TOUT CUIT LAFLEUR 65 - 500 G OU SAUCISSES FUMÉES | BACON OR WIENERS, 1 KG",
     "name_short": "BACON FRAIS OU BACON TOUT CUIT LAFLEUR 65 - 500 G …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -252,7 +252,7 @@
   {
     "name": "BACON HORMEL | HORMEL REAL BACON BITES",
     "name_short": "BACON HORMEL | HORMEL REAL BACON BITES",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 6.49,
@@ -262,7 +262,7 @@
   {
     "name": "BACON LAFLEUR | LAFLEUR BACON",
     "name_short": "BACON LAFLEUR | LAFLEUR BACON",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -272,7 +272,7 @@
   {
     "name": "BACON LAFLEUR, 65-500 g",
     "name_short": "BACON LAFLEUR, 65-500 g",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 5.99,
@@ -282,7 +282,7 @@
   {
     "name": "BACON OLYMEL",
     "name_short": "BACON OLYMEL",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 7.99,
@@ -292,7 +292,7 @@
   {
     "name": "BACON SELECTION | SELECTION BACON",
     "name_short": "BACON SELECTION | SELECTION BACON",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 4.99,
@@ -302,7 +302,7 @@
   {
     "name": "BAVETTE D'ÉPAULE DE PORC ASSAISONNÉE TOP GOURMET",
     "name_short": "BAVETTE D'ÉPAULE DE PORC ASSAISONNÉE TOP GOURMET",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 7.99,
@@ -312,7 +312,7 @@
   {
     "name": "BAVETTE DE BOEUF IRRÉSISTIBLE | IRRÉSISTIBLE BEEF BAVETTE",
     "name_short": "BAVETTE DE BOEUF IRRÉSISTIBLE | IRRÉSISTIBLE BEEF …",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 8.99,
@@ -322,7 +322,7 @@
   {
     "name": "BAVETTE DE PORC ÉRABLE ET CHIPOTLE ROSE | ROSE MAPLE CHIPOTLE PORK FLAP",
     "name_short": "BAVETTE DE PORC ÉRABLE ET CHIPOTLE ROSE | ROSE MAP…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -332,7 +332,7 @@
   {
     "name": "BIFTECK ATTENDRI OU SANDWICH",
     "name_short": "BIFTECK ATTENDRI OU SANDWICH",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 11.99,
@@ -342,7 +342,7 @@
   {
     "name": "BIFTECK D'ALOYAU",
     "name_short": "BIFTECK D'ALOYAU",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 9.88,
@@ -352,7 +352,7 @@
   {
     "name": "BIFTECK D'ALOYAU DE VEAU DE LAIT | MILK-FED VEAL T-BONE-STEAK",
     "name_short": "BIFTECK D'ALOYAU DE VEAU DE LAIT | MILK-FED VEAL T…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 19.99,
@@ -362,7 +362,7 @@
   {
     "name": "BIFTECK D'ALOYAU STERLING SILVER",
     "name_short": "BIFTECK D'ALOYAU STERLING SILVER",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 25.99,
@@ -372,7 +372,7 @@
   {
     "name": "BIFTECK D'INTÉRIEUR DE RONDE OU RÔTI | INSIDE ROUND STEAK OR ROAST",
     "name_short": "BIFTECK D'INTÉRIEUR DE RONDE OU RÔTI | INSIDE ROUN…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 7.99,
@@ -382,7 +382,7 @@
   {
     "name": "BIFTECK DE CÔTES DÉSOSSÉ PC BŒUF ANGUS CERTIFIÉ | PC® CERTIFIED ANGUS BONELESS RIB STEAK",
     "name_short": "BIFTECK DE CÔTES DÉSOSSÉ PC BŒUF ANGUS CERTIFIÉ | …",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 31.0,
@@ -392,7 +392,7 @@
   {
     "name": "BIFTECK FRANÇAIS",
     "name_short": "BIFTECK FRANÇAIS",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -402,7 +402,7 @@
   {
     "name": "BIFTECK MARINÉE 5 POIVRES",
     "name_short": "BIFTECK MARINÉE 5 POIVRES",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 15.99,
@@ -412,7 +412,7 @@
   {
     "name": "BIFTECK OUOU RÔTI FRANÇAIS D'INTÉRIEUR DE RONDE BARDÉ OUOU NON BARDÉ DE GRAS DE PORC* | FRENCH STEAK OR BEEF ROAST FROM INSIDE ROUND WITH OR WITHOUT PORK FAT*",
     "name_short": "BIFTECK OUOU RÔTI FRANÇAIS D'INTÉRIEUR DE RONDE BA…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 7.49,
@@ -422,7 +422,7 @@
   {
     "name": "BISON HACHÉ MAIGRE NORTHFORK",
     "name_short": "BISON HACHÉ MAIGRE NORTHFORK",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 9.49,
@@ -432,7 +432,7 @@
   {
     "name": "BOEUF HACHÉ EXTRA-MAIGRE | EXTRA LEAN GROUND BEEF",
     "name_short": "BOEUF HACHÉ EXTRA-MAIGRE | EXTRA LEAN GROUND BEEF",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -442,7 +442,7 @@
   {
     "name": "BOEUF HACHÉ MAIGRE MIEUX-ÊTRE NATURALIA | LIFE SMART NATURALIA LEAN GROUND BEEF",
     "name_short": "BOEUF HACHÉ MAIGRE MIEUX-ÊTRE NATURALIA | LIFE SMA…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 10.99,
@@ -452,7 +452,7 @@
   {
     "name": "BOEUF HACHÉ MAIGRE | LEAN GROUND BEEF, 450 G",
     "name_short": "BOEUF HACHÉ MAIGRE | LEAN GROUND BEEF, 450 G",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 7.99,
@@ -462,7 +462,7 @@
   {
     "name": "BOEUF HACHÉ MI-MAIGRE | MEDIUM GROUND BEEF",
     "name_short": "BOEUF HACHÉ MI-MAIGRE | MEDIUM GROUND BEEF",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 4.73,
@@ -472,7 +472,7 @@
   {
     "name": "BONO HARICOT BLANC",
     "name_short": "BONO HARICOT BLANC",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -482,7 +482,7 @@
   {
     "name": "BONO POIS CHICHE",
     "name_short": "BONO POIS CHICHE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -492,7 +492,7 @@
   {
     "name": "BOUCHÉES DE POITRINE DE POULET FRAIS MARCANGELO",
     "name_short": "BOUCHÉES DE POITRINE DE POULET FRAIS MARCANGELO",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.99,
@@ -502,7 +502,7 @@
   {
     "name": "BOVRIL BASE SOUPE POULET",
     "name_short": "BOVRIL BASE SOUPE POULET",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 6.99,
@@ -512,7 +512,7 @@
   {
     "name": "BROCHETTES DE BŒUF FRAÎCHES, NATURE OU MARINÉES | FRESH BEEF KEBABS PLAIN OR MARINATED",
     "name_short": "BROCHETTES DE BŒUF FRAÎCHES, NATURE OU MARINÉES | …",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 9.99,
@@ -522,7 +522,7 @@
   {
     "name": "BROCHETTES DE MINI SAUCISSES ITALIENNES DOUCES ROMA | ROMA MINI ITALIAN SAUSAGE SKEWERS",
     "name_short": "BROCHETTES DE MINI SAUCISSES ITALIENNES DOUCES ROM…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 8.99,
@@ -532,7 +532,7 @@
   {
     "name": "BROCHETTES DE POITRINE DE POULET FRAIS AVEC LÉGUMES",
     "name_short": "BROCHETTES DE POITRINE DE POULET FRAIS AVEC LÉGUME…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 12.99,
@@ -542,7 +542,7 @@
   {
     "name": "BROCHETTES DE POITRINE DE POULET OLYMEL | OLYMEL SHISH TAOUK CHICKEN BREAST SKEWERS",
     "name_short": "BROCHETTES DE POITRINE DE POULET OLYMEL | OLYMEL S…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -552,7 +552,7 @@
   {
     "name": "BROCHETTES DE PORC MIEL ET DIJON ROSE | ROSE HONEY DIJON PORK SKEWERS",
     "name_short": "BROCHETTES DE PORC MIEL ET DIJON ROSE | ROSE HONEY…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 7.99,
@@ -562,7 +562,7 @@
   {
     "name": "BROCHETTES DE POULET FRAIS ASSAISONNÉES PRIX CLUB",
     "name_short": "BROCHETTES DE POULET FRAIS ASSAISONNÉES PRIX CLUB",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 23.0,
@@ -572,7 +572,7 @@
   {
     "name": "BROCHETTES DE POULET FRAIS ASSAISONNÉES PRIX CLUB",
     "name_short": "BROCHETTES DE POULET FRAIS ASSAISONNÉES PRIX CLUB",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 23.0,
@@ -582,7 +582,7 @@
   {
     "name": "BURGERS DE BŒUF SURGELÉS 8 ACRES",
     "name_short": "BURGERS DE BŒUF SURGELÉS 8 ACRES",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Rachelle Béry",
     "store_emoji": "🏪",
     "price": 13.49,
@@ -592,7 +592,7 @@
   {
     "name": "BURGERS DE POULET OU BURGERS DE DINDE MENU BLEU | FROZEN BURGERS, 1,13 KG",
     "name_short": "BURGERS DE POULET OU BURGERS DE DINDE MENU BLEU | …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 15.99,
@@ -602,7 +602,7 @@
   {
     "name": "Bacon Great Value",
     "name_short": "Bacon Great Value",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 5.28,
@@ -612,7 +612,7 @@
   {
     "name": "Bavette de bœuf dénudée",
     "name_short": "Bavette de bœuf dénudée",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 15.49,
@@ -622,7 +622,7 @@
   {
     "name": "Bifteck de contre-filet de bœuf frais Mon marché fraîcheur",
     "name_short": "Bifteck de contre-filet de bœuf frais Mon marché f…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 22.67,
@@ -632,7 +632,7 @@
   {
     "name": "Bifteck de côte de bœuf AA désossé",
     "name_short": "Bifteck de côte de bœuf AA désossé",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 26.3,
@@ -642,7 +642,7 @@
   {
     "name": "Bifteck sandwich d'intérieur de ronde",
     "name_short": "Bifteck sandwich d'intérieur de ronde",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 7.79,
@@ -652,7 +652,7 @@
   {
     "name": "Biscuits au jambon et la truffe ou jujubes Fuloon",
     "name_short": "Biscuits au jambon et la truffe ou jujubes Fuloon",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 6.98,
@@ -662,7 +662,7 @@
   {
     "name": "Boeuf salé Hereford",
     "name_short": "Boeuf salé Hereford",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 2.97,
@@ -672,7 +672,7 @@
   {
     "name": "Bol de burrito au poulet",
     "name_short": "Bol de burrito au poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -682,7 +682,7 @@
   {
     "name": "Boston Market Beef Pot Roast, 425 g",
     "name_short": "Boston Market Beef Pot Roast, 425 g",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.88,
@@ -692,7 +692,7 @@
   {
     "name": "Boston Market Sweet & Sour Chicken, 397-g",
     "name_short": "Boston Market Sweet & Sour Chicken, 397-g",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.88,
@@ -702,7 +702,7 @@
   {
     "name": "Boston Market Turkey Breast Cutlettes, 369 g",
     "name_short": "Boston Market Turkey Breast Cutlettes, 369 g",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.88,
@@ -712,7 +712,7 @@
   {
     "name": "Bouchées d'empanadas au bœuf 12 UNITÉS",
     "name_short": "Bouchées d'empanadas au bœuf 12 UNITÉS",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 6.99,
@@ -722,7 +722,7 @@
   {
     "name": "Bouchées de chou-fleur",
     "name_short": "Bouchées de chou-fleur",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 11.99,
@@ -732,7 +732,7 @@
   {
     "name": "Bouchées de poitrine de poulet PC",
     "name_short": "Bouchées de poitrine de poulet PC",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -742,7 +742,7 @@
   {
     "name": "Boulettes de surlonge de bœuf",
     "name_short": "Boulettes de surlonge de bœuf",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 18.99,
@@ -752,7 +752,7 @@
   {
     "name": "Brandt Polish Sausage, 500-g",
     "name_short": "Brandt Polish Sausage, 500-g",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 7.97,
@@ -762,7 +762,7 @@
   {
     "name": "Brandt Sausage Kolbassa, 500 g",
     "name_short": "Brandt Sausage Kolbassa, 500 g",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 7.97,
@@ -772,7 +772,7 @@
   {
     "name": "Brochettes de bœuf et de bacon",
     "name_short": "Brochettes de bœuf et de bacon",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 24.99,
@@ -782,7 +782,7 @@
   {
     "name": "Brochettes de poulet à la grecque Skoulakis",
     "name_short": "Brochettes de poulet à la grecque Skoulakis",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 14.99,
@@ -792,7 +792,7 @@
   {
     "name": "Brocoli et cheddar",
     "name_short": "Brocoli et cheddar",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 5.99,
@@ -802,7 +802,7 @@
   {
     "name": "Burgers de boeuf ou de poulet ou burgers entièrement cuits Great Value",
     "name_short": "Burgers de boeuf ou de poulet ou burgers entièreme…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 9.96,
@@ -812,7 +812,7 @@
   {
     "name": "Burgers de boeuf surgelés Giant Value",
     "name_short": "Burgers de boeuf surgelés Giant Value",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -822,7 +822,7 @@
   {
     "name": "Burgers de bœuf Angus SmashHouse",
     "name_short": "Burgers de bœuf Angus SmashHouse",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -832,7 +832,7 @@
   {
     "name": "Burgers de bœuf au cheddar et jalapeño L'intrépide PC",
     "name_short": "Burgers de bœuf au cheddar et jalapeño L'intrépide…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 18.0,
@@ -842,7 +842,7 @@
   {
     "name": "Burgers de bœuf ou de poulet ou burgers entièrement cuits Great Value",
     "name_short": "Burgers de bœuf ou de poulet ou burgers entièremen…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 9.96,
@@ -852,7 +852,7 @@
   {
     "name": "Burgers de bœuf surgelés Giant Value",
     "name_short": "Burgers de bœuf surgelés Giant Value",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 9.0,
@@ -862,7 +862,7 @@
   {
     "name": "Burgers de poulet gourmet",
     "name_short": "Burgers de poulet gourmet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -872,7 +872,7 @@
   {
     "name": "Burgers de poulet jerk PC",
     "name_short": "Burgers de poulet jerk PC",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -882,7 +882,7 @@
   {
     "name": "BŒUF HACHÉ MAIGRE",
     "name_short": "BŒUF HACHÉ MAIGRE",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.99,
@@ -892,7 +892,7 @@
   {
     "name": "BŒUF HACHÉ MAIGRE | LEAN GROUND BEEF, 2 UN., 900 G",
     "name_short": "BŒUF HACHÉ MAIGRE | LEAN GROUND BEEF, 2 UN., 900 G",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 14.0,
@@ -902,7 +902,7 @@
   {
     "name": "BŒUF POUR FONDUE CHINOISE SURGELÉ COMPLIMENTS",
     "name_short": "BŒUF POUR FONDUE CHINOISE SURGELÉ COMPLIMENTS",
-    "meat_type": "boeuf",
+    "category": "fruit",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -912,7 +912,7 @@
   {
     "name": "Bœuf salé Hereford",
     "name_short": "Bœuf salé Hereford",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 2.97,
@@ -922,7 +922,7 @@
   {
     "name": "CAFÉ EN GRAINS LAVAZZA | LAVAZZA COFFEE BEANS",
     "name_short": "CAFÉ EN GRAINS LAVAZZA | LAVAZZA COFFEE BEANS",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 34.99,
@@ -932,7 +932,7 @@
   {
     "name": "CAPICOLLO ÉPICÉ À L'ANCIENNE OU JAMBON BLANC ÉMINCÉ PANACHE",
     "name_short": "CAPICOLLO ÉPICÉ À L'ANCIENNE OU JAMBON BLANC ÉMINC…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.99,
@@ -942,7 +942,7 @@
   {
     "name": "CELERI RAVE | CELERY ROOT",
     "name_short": "CELERI RAVE | CELERY ROOT",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 1.99,
@@ -952,7 +952,7 @@
   {
     "name": "CHOU FLEUR BIOLOGIQUE",
     "name_short": "CHOU FLEUR BIOLOGIQUE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.99,
@@ -962,7 +962,7 @@
   {
     "name": "CHOU FRISÉ VERT (KALE) | GREEN KALE",
     "name_short": "CHOU FRISÉ VERT (KALE) | GREEN KALE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.99,
@@ -972,7 +972,7 @@
   {
     "name": "CHOU VERT",
     "name_short": "CHOU VERT",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 0.85,
@@ -982,7 +982,7 @@
   {
     "name": "CHOU VERT OU ROUGE | GREEN OR RED CABBAGE",
     "name_short": "CHOU VERT OU ROUGE | GREEN OR RED CABBAGE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 0.99,
@@ -992,7 +992,7 @@
   {
     "name": "CHOU-FLEUR",
     "name_short": "CHOU-FLEUR",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 5.0,
@@ -1002,7 +1002,7 @@
   {
     "name": "COCKTAIL DE LÉGUMES GARDEN COCKTAIL | GARDEN COCKTAIL VEGETABLE COCKTAIL",
     "name_short": "COCKTAIL DE LÉGUMES GARDEN COCKTAIL | GARDEN COCKT…",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.49,
@@ -1012,7 +1012,7 @@
   {
     "name": "COCKTAIL DE TOMATE ET DE PALOURDES MOTT'S",
     "name_short": "COCKTAIL DE TOMATE ET DE PALOURDES MOTT'S",
-    "meat_type": "legume",
+    "category": "poisson",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.49,
@@ -1022,7 +1022,7 @@
   {
     "name": "COMBO DE PORTION INDIVIDUELLE DE POULET ET POMMES DE TERRE EN QUARTIERS, 361-530 G | INDIVIDUAL CHICKEN COMBO WITH WEDGES",
     "name_short": "COMBO DE PORTION INDIVIDUELLE DE POULET ET POMMES …",
-    "meat_type": "poulet",
+    "category": "fruit",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 9.0,
@@ -1032,7 +1032,7 @@
   {
     "name": "COMPLIMENTS FROZEN BEEF FOR CHINESE FONDUE",
     "name_short": "COMPLIMENTS FROZEN BEEF FOR CHINESE FONDUE",
-    "meat_type": "boeuf",
+    "category": "fruit",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -1042,7 +1042,7 @@
   {
     "name": "CONCOMBRE ANGLAIS",
     "name_short": "CONCOMBRE ANGLAIS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 0.99,
@@ -1052,7 +1052,7 @@
   {
     "name": "CONCOMBRE SANS PÉPINS",
     "name_short": "CONCOMBRE SANS PÉPINS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 3.0,
@@ -1062,7 +1062,7 @@
   {
     "name": "CONCOMBRE SANS PÉPINS | SEEDLESS CUCUMBER",
     "name_short": "CONCOMBRE SANS PÉPINS | SEEDLESS CUCUMBER",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 1.99,
@@ -1072,7 +1072,7 @@
   {
     "name": "CONCOMBRES ANGLAIS NATURELLEMENT IMPARFAITS SANS NOM®, SAC DE 3 LB OU MAÏS SUCRÉ DÉLICES DU MARCHÉ, 1, 4 UN.",
     "name_short": "CONCOMBRES ANGLAIS NATURELLEMENT IMPARFAITS SANS N…",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 5.0,
@@ -1082,7 +1082,7 @@
   {
     "name": "CONTRE-FILET DE BŒUF NÉO-ZÉLANDAIS*, 300 G | STRIP LOIN STEAK*",
     "name_short": "CONTRE-FILET DE BŒUF NÉO-ZÉLANDAIS*, 300 G | STRIP…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 15.99,
@@ -1092,7 +1092,7 @@
   {
     "name": "COURGETTE VERTE | GREEN ZUCCHINI",
     "name_short": "COURGETTE VERTE | GREEN ZUCCHINI",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 2.49,
@@ -1102,7 +1102,7 @@
   {
     "name": "COURGETTE VERTE │ GREEN ZUCCHINI",
     "name_short": "COURGETTE VERTE │ GREEN ZUCCHINI",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 2.5,
@@ -1112,7 +1112,7 @@
   {
     "name": "CUISSE DE POULET",
     "name_short": "CUISSE DE POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 2.49,
@@ -1122,7 +1122,7 @@
   {
     "name": "CUISSES DE POULET FRAIS",
     "name_short": "CUISSES DE POULET FRAIS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.99,
@@ -1132,7 +1132,7 @@
   {
     "name": "CUISSES DE POULET MAPLE LEAF PRIME | CHICKEN LEGS BACK ATTACHED, 1,4 KG",
     "name_short": "CUISSES DE POULET MAPLE LEAF PRIME | CHICKEN LEGS …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 13.0,
@@ -1142,7 +1142,7 @@
   {
     "name": "Chou napa",
     "name_short": "Chou napa",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 1.28,
@@ -1152,7 +1152,7 @@
   {
     "name": "Chou plat",
     "name_short": "Chou plat",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 1.28,
@@ -1162,7 +1162,7 @@
   {
     "name": "Chou-fleur",
     "name_short": "Chou-fleur",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 4.44,
@@ -1172,7 +1172,7 @@
   {
     "name": "Cigares au chou",
     "name_short": "Cigares au chou",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -1182,7 +1182,7 @@
   {
     "name": "Cigares au chou Notre Excellence au porc et au bœuf",
     "name_short": "Cigares au chou Notre Excellence au porc et au bœu…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 9.97,
@@ -1192,7 +1192,7 @@
   {
     "name": "Contenant à salade Verdure et grains PC",
     "name_short": "Contenant à salade Verdure et grains PC",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 15.0,
@@ -1202,7 +1202,7 @@
   {
     "name": "Cornets de crème glacée Drumstick Les préférés de Nestlé",
     "name_short": "Cornets de crème glacée Drumstick Les préférés de …",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 15.99,
@@ -1212,7 +1212,7 @@
   {
     "name": "Cornets glacés Drumstick ou dessert glacé La vraie crème de Nestlé",
     "name_short": "Cornets glacés Drumstick ou dessert glacé La vraie…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 5.48,
@@ -1222,7 +1222,7 @@
   {
     "name": "Cotes de dos de porc Great Value entièrement cuites",
     "name_short": "Cotes de dos de porc Great Value entièrement cuite…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 7.57,
@@ -1232,7 +1232,7 @@
   {
     "name": "Croquettes de poulet",
     "name_short": "Croquettes de poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 19.99,
@@ -1242,7 +1242,7 @@
   {
     "name": "CÔTELETTES DE LONGE DE PORC FRAIS",
     "name_short": "CÔTELETTES DE LONGE DE PORC FRAIS",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 4.99,
@@ -1252,7 +1252,7 @@
   {
     "name": "CÔTELETTES DE LONGE DE PORC FRAIS PORC NAGANO",
     "name_short": "CÔTELETTES DE LONGE DE PORC FRAIS PORC NAGANO",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 12.99,
@@ -1262,7 +1262,7 @@
   {
     "name": "CÔTELETTES DE LONGE DE PORC MARINÉES MARCANGELO │ MARINATED PORK LOIN CHOPS, 380 g",
     "name_short": "CÔTELETTES DE LONGE DE PORC MARINÉES MARCANGELO │ …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 9.49,
@@ -1272,7 +1272,7 @@
   {
     "name": "CÔTELETTES DE LONGE DE PORC, COMBINAISON DE COUPES, PORTIONS SURLONGE ET BOUT DE CÔTES | PORKLOIN COMBINATION CHOPS SIRLOIN AND RIB PORTION",
     "name_short": "CÔTELETTES DE LONGE DE PORC, COMBINAISON DE COUPES…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 3.0,
@@ -1282,7 +1282,7 @@
   {
     "name": "CÔTELETTES DE PORC BBQ | BONELESS BBQ SEASONED PORK CHOPS",
     "name_short": "CÔTELETTES DE PORC BBQ | BONELESS BBQ SEASONED POR…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 3.99,
@@ -1292,7 +1292,7 @@
   {
     "name": "CÔTELETTES DE PORC FRAIS DÉSOSSÉES | FRESH BONELESS PORK CHOPS, ECONOMIC PACK",
     "name_short": "CÔTELETTES DE PORC FRAIS DÉSOSSÉES | FRESH BONELES…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.99,
@@ -1302,7 +1302,7 @@
   {
     "name": "CÔTELETTES OU RÔTI DE PORC DÉSOSSÉES, COUPE DU CENTRE EMBALLAGE FAMILIAL | BONELESS PORK CHOPS OR ROAST, CENTER CUT",
     "name_short": "CÔTELETTES OU RÔTI DE PORC DÉSOSSÉES, COUPE DU CEN…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 4.49,
@@ -1312,7 +1312,7 @@
   {
     "name": "CÔTES DE DOS DE PORC CUITES BBQ BÂTON ROUGE | BÂTON ROUGE BBQ COOKED PORK BACK RIBS",
     "name_short": "CÔTES DE DOS DE PORC CUITES BBQ BÂTON ROUGE | BÂTO…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 17.99,
@@ -1322,7 +1322,7 @@
   {
     "name": "CÔTES DE DOS DE PORC FRAIS OU FILETS DE POITRINE DE POULET SURGELÉS ST-HUBERT",
     "name_short": "CÔTES DE DOS DE PORC FRAIS OU FILETS DE POITRINE D…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 14.99,
@@ -1332,7 +1332,7 @@
   {
     "name": "CÔTES DE DOS DE PORC FRAIS ST-HUBERT",
     "name_short": "CÔTES DE DOS DE PORC FRAIS ST-HUBERT",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -1342,7 +1342,7 @@
   {
     "name": "CÔTES DE DOS DE PORC FRAIS | FRESH PORK BACK RIBS",
     "name_short": "CÔTES DE DOS DE PORC FRAIS | FRESH PORK BACK RIBS",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 6.99,
@@ -1352,7 +1352,7 @@
   {
     "name": "CÔTES DE FLANC DE PORC FRAIS PORC NAGANO",
     "name_short": "CÔTES DE FLANC DE PORC FRAIS PORC NAGANO",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 6.99,
@@ -1362,7 +1362,7 @@
   {
     "name": "Côtelettes de porc Legacy",
     "name_short": "Côtelettes de porc Legacy",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.97,
@@ -1372,7 +1372,7 @@
   {
     "name": "Côtelettes de porc au beurre d'érable",
     "name_short": "Côtelettes de porc au beurre d'érable",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 11.99,
@@ -1382,7 +1382,7 @@
   {
     "name": "Côtelettes de porc avec os",
     "name_short": "Côtelettes de porc avec os",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 2.49,
@@ -1392,7 +1392,7 @@
   {
     "name": "Côtes de dos de porc Great Value entièrement cuites",
     "name_short": "Côtes de dos de porc Great Value entièrement cuite…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 7.57,
@@ -1402,7 +1402,7 @@
   {
     "name": "DEMI-LONGE DE PORC FRAIS DÉSOSSÉE | FRESH BONELESS HALF PORK LOIN ROAST",
     "name_short": "DEMI-LONGE DE PORC FRAIS DÉSOSSÉE | FRESH BONELESS…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 1.75,
@@ -1412,7 +1412,7 @@
   {
     "name": "Drumstick ou friandises glacées 4-10 un. ou dessert glacé 1,5 L Nestlé",
     "name_short": "Drumstick ou friandises glacées 4-10 un. ou desser…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 4.0,
@@ -1422,7 +1422,7 @@
   {
     "name": "Dumplings au poulet et nouilles",
     "name_short": "Dumplings au poulet et nouilles",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -1432,7 +1432,7 @@
   {
     "name": "ESCALOPES DE POITRINES DE POULET FARCIES ET PANÉES SANS NOM®, 284 g",
     "name_short": "ESCALOPES DE POITRINES DE POULET FARCIES ET PANÉES…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 3.0,
@@ -1442,7 +1442,7 @@
   {
     "name": "ESCALOPES DE POULET ASSAISONNÉES",
     "name_short": "ESCALOPES DE POULET ASSAISONNÉES",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -1452,7 +1452,7 @@
   {
     "name": "Emb. économique de biftecks de pointe de surlonge frais Mon marche fraîcheur",
     "name_short": "Emb. économique de biftecks de pointe de surlonge …",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 12.54,
@@ -1462,7 +1462,7 @@
   {
     "name": "Ensemble de salade Taylor Farms",
     "name_short": "Ensemble de salade Taylor Farms",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.97,
@@ -1472,7 +1472,7 @@
   {
     "name": "Escalopettes de porc désossées style côte levée 6 UNITÉS",
     "name_short": "Escalopettes de porc désossées style côte levée 6 …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -1482,7 +1482,7 @@
   {
     "name": "FILET D'ÉPAULE DE BŒUF STERLING SILVER",
     "name_short": "FILET D'ÉPAULE DE BŒUF STERLING SILVER",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 24.99,
@@ -1492,7 +1492,7 @@
   {
     "name": "FILET DE PORC",
     "name_short": "FILET DE PORC",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 3.99,
@@ -1502,7 +1502,7 @@
   {
     "name": "FILET DE PORC CUIT MAPLE LEAF | MAPLE LEAF COOKED PORK TENDERLOIN",
     "name_short": "FILET DE PORC CUIT MAPLE LEAF | MAPLE LEAF COOKED …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 13.99,
@@ -1512,7 +1512,7 @@
   {
     "name": "FILETS DE POITRINE DE POULET | CHICKEN BREAST FILLETS",
     "name_short": "FILETS DE POITRINE DE POULET | CHICKEN BREAST FILL…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -1522,7 +1522,7 @@
   {
     "name": "FILETS DE PORC FRAIS",
     "name_short": "FILETS DE PORC FRAIS",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 6.99,
@@ -1532,7 +1532,7 @@
   {
     "name": "FILETS DE PORC FRAIS ASSAISONNÉS | FRESH SEASONED PORK TENDERLOINS",
     "name_short": "FILETS DE PORC FRAIS ASSAISONNÉS | FRESH SEASONED …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 5.99,
@@ -1542,7 +1542,7 @@
   {
     "name": "FILETS DE POULET PANÉS | BREADED CHICKEN FILLETS",
     "name_short": "FILETS DE POULET PANÉS | BREADED CHICKEN FILLETS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 9.99,
@@ -1552,7 +1552,7 @@
   {
     "name": "FRESH PORK TENDERLOINS",
     "name_short": "FRESH PORK TENDERLOINS",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 6.99,
@@ -1562,7 +1562,7 @@
   {
     "name": "FÈVES À TABLE! | BEANS, 450 ML",
     "name_short": "FÈVES À TABLE! | BEANS, 450 ML",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 3.5,
@@ -1572,7 +1572,7 @@
   {
     "name": "GEN V GREENHOUSE LIVING BUTTER LETTUCE",
     "name_short": "GEN V GREENHOUSE LIVING BUTTER LETTUCE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -1582,7 +1582,7 @@
   {
     "name": "Giant Value Angus & Cheddar Beef Burger, 6-Pack, 142 g",
     "name_short": "Giant Value Angus & Cheddar Beef Burger, 6-Pack, 1…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -1592,7 +1592,7 @@
   {
     "name": "Giant Value Beef & Cheddar Smashed Burger, 6-Pack, 113 g",
     "name_short": "Giant Value Beef & Cheddar Smashed Burger, 6-Pack,…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -1602,7 +1602,7 @@
   {
     "name": "Giant Value Beef Burgers, 8-Pack, 907 g",
     "name_short": "Giant Value Beef Burgers, 8-Pack, 907 g",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 9.0,
@@ -1612,7 +1612,7 @@
   {
     "name": "Giant Value Korean BBQ Style Beef Burger, 6-Pack, 142 g",
     "name_short": "Giant Value Korean BBQ Style Beef Burger, 6-Pack, …",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -1622,7 +1622,7 @@
   {
     "name": "Giant Value Maple Bourbon Flavour Beef Burger, 6-Pack, 142 g",
     "name_short": "Giant Value Maple Bourbon Flavour Beef Burger, 6-P…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -1632,7 +1632,7 @@
   {
     "name": "Gold Label Original Sausage Strips, 300 g",
     "name_short": "Gold Label Original Sausage Strips, 300 g",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.97,
@@ -1642,7 +1642,7 @@
   {
     "name": "Gold Label Smoke House Bacon - 375g",
     "name_short": "Gold Label Smoke House Bacon - 375g",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.97,
@@ -1652,7 +1652,7 @@
   {
     "name": "Gratin de pâtes au poulet et au brocoli",
     "name_short": "Gratin de pâtes au poulet et au brocoli",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -1662,7 +1662,7 @@
   {
     "name": "Grignotines au maïs cuites au four PC Cheddar À base de plantes Biologique",
     "name_short": "Grignotines au maïs cuites au four PC Cheddar À ba…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 3.5,
@@ -1672,7 +1672,7 @@
   {
     "name": "HARICOTS VERTS FRANÇAIS | FRENCH GREEN BEANS, 400 G",
     "name_short": "HARICOTS VERTS FRANÇAIS | FRENCH GREEN BEANS, 400 …",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 2.69,
@@ -1682,7 +1682,7 @@
   {
     "name": "HARICOTS VERTS | GREEN BEANS",
     "name_short": "HARICOTS VERTS | GREEN BEANS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 3.99,
@@ -1692,7 +1692,7 @@
   {
     "name": "HAUTS DE CUISSE DE POULET FRAIS DÉSOSSÉES",
     "name_short": "HAUTS DE CUISSE DE POULET FRAIS DÉSOSSÉES",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 25.0,
@@ -1702,7 +1702,7 @@
   {
     "name": "HAUTS DE CUISSES DE POULET MIEUX-ÊTRE NATURALIA | LIFE SMART NATURALIA CHICKEN THIGHS",
     "name_short": "HAUTS DE CUISSES DE POULET MIEUX-ÊTRE NATURALIA | …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -1712,7 +1712,7 @@
   {
     "name": "HUILE VÉGÉTALE SELECTION | SELECTION VEGETABLE OIL",
     "name_short": "HUILE VÉGÉTALE SELECTION | SELECTION VEGETABLE OIL",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 3.69,
@@ -1722,7 +1722,7 @@
   {
     "name": "High Liner Beer Battered Fillets, 500 g",
     "name_short": "High Liner Beer Battered Fillets, 500 g",
-    "meat_type": "viande",
+    "category": "viande",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.97,
@@ -1732,7 +1732,7 @@
   {
     "name": "High Liner English Style Fillets, 500 g",
     "name_short": "High Liner English Style Fillets, 500 g",
-    "meat_type": "viande",
+    "category": "viande",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.97,
@@ -1742,7 +1742,7 @@
   {
     "name": "High Liner Market Cuts Wild Pacific Salmon Boned, 227 g",
     "name_short": "High Liner Market Cuts Wild Pacific Salmon Boned, …",
-    "meat_type": "poisson",
+    "category": "poisson",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.97,
@@ -1752,7 +1752,7 @@
   {
     "name": "Hummus de pois chiches PC",
     "name_short": "Hummus de pois chiches PC",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 5.0,
@@ -1762,7 +1762,7 @@
   {
     "name": "JAMBON BLANC PARISIEN",
     "name_short": "JAMBON BLANC PARISIEN",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -1772,7 +1772,7 @@
   {
     "name": "JAMBON CUIT SELECTION | SELECTION COOKED HAM",
     "name_short": "JAMBON CUIT SELECTION | SELECTION COOKED HAM",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 1.99,
@@ -1782,7 +1782,7 @@
   {
     "name": "JAMBON FORÊT NOIRE",
     "name_short": "JAMBON FORÊT NOIRE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 1.29,
@@ -1792,7 +1792,7 @@
   {
     "name": "JAMBON FORÊT NOIRE",
     "name_short": "JAMBON FORÊT NOIRE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.69,
@@ -1802,7 +1802,7 @@
   {
     "name": "JAMBON FORÊT NOIRE OU FUMÉ À L'ANCIENNE GASPÉSIEN | BLACK FOREST OR OLD FASHIONED SMOKED HAM",
     "name_short": "JAMBON FORÊT NOIRE OU FUMÉ À L'ANCIENNE GASPÉSIEN …",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -1812,7 +1812,7 @@
   {
     "name": "JAMBON FORÊT-NOIRE",
     "name_short": "JAMBON FORÊT-NOIRE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 2.79,
@@ -1822,7 +1822,7 @@
   {
     "name": "JAMBON FUMÉ COMPLIMENTS",
     "name_short": "JAMBON FUMÉ COMPLIMENTS",
-    "meat_type": "porc",
+    "category": "fruit",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.59,
@@ -1832,7 +1832,7 @@
   {
     "name": "JAMBON FUMÉ LAFLEUR",
     "name_short": "JAMBON FUMÉ LAFLEUR",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 5.49,
@@ -1842,7 +1842,7 @@
   {
     "name": "JAMBON FUMÉ LAFLEUR P'TIT CAPRICE",
     "name_short": "JAMBON FUMÉ LAFLEUR P'TIT CAPRICE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 5.49,
@@ -1852,7 +1852,7 @@
   {
     "name": "JAMBON FUMÉ OLYMEL",
     "name_short": "JAMBON FUMÉ OLYMEL",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 3.19,
@@ -1862,7 +1862,7 @@
   {
     "name": "JAMBON FUMÉ OU CUIT SELECTION | SELECTION SMOKED OR COOKED HAM",
     "name_short": "JAMBON FUMÉ OU CUIT SELECTION | SELECTION SMOKED O…",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 5.99,
@@ -1872,7 +1872,7 @@
   {
     "name": "JAMBON FUMÉ SELECTION | SELECTION SMOKED HAM",
     "name_short": "JAMBON FUMÉ SELECTION | SELECTION SMOKED HAM",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 7.99,
@@ -1882,7 +1882,7 @@
   {
     "name": "JAMBON FUMÉ À L'ANCIENNE THÉBERGE",
     "name_short": "JAMBON FUMÉ À L'ANCIENNE THÉBERGE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.99,
@@ -1892,7 +1892,7 @@
   {
     "name": "JAMBON PROSCIUTTO TRANCHÉ SAN DANIELE | SAN DANIELE SLICED PROSCIUTTO HAM",
     "name_short": "JAMBON PROSCIUTTO TRANCHÉ SAN DANIELE | SAN DANIEL…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 6.99,
@@ -1902,7 +1902,7 @@
   {
     "name": "JAMBON ROMARIN",
     "name_short": "JAMBON ROMARIN",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 2.29,
@@ -1912,7 +1912,7 @@
   {
     "name": "JAMBON TRANCHÉ COMPLIMENTS",
     "name_short": "JAMBON TRANCHÉ COMPLIMENTS",
-    "meat_type": "porc",
+    "category": "fruit",
     "store": "Rachelle Béry",
     "store_emoji": "🏪",
     "price": 5.99,
@@ -1922,7 +1922,7 @@
   {
     "name": "JAMBON TRANCHÉ GASPÉSIEN, 175/200 G | GASPESIEN SLICED HAM",
     "name_short": "JAMBON TRANCHÉ GASPÉSIEN, 175/200 G | GASPESIEN SL…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 7.0,
@@ -1932,7 +1932,7 @@
   {
     "name": "JARRET DE BOEUF SANS OS",
     "name_short": "JARRET DE BOEUF SANS OS",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -1942,7 +1942,7 @@
   {
     "name": "Jambon fume Maple Leaf ou Schneiders",
     "name_short": "Jambon fume Maple Leaf ou Schneiders",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 10.97,
@@ -1952,7 +1952,7 @@
   {
     "name": "Jambon fumé Schneiders",
     "name_short": "Jambon fumé Schneiders",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 10.97,
@@ -1962,7 +1962,7 @@
   {
     "name": "KEFTAS DE PORC FRAIS ASSAISONNÉS C'EST PRÊT À CUIRE",
     "name_short": "KEFTAS DE PORC FRAIS ASSAISONNÉS C'EST PRÊT À CUIR…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 7.99,
@@ -1972,7 +1972,7 @@
   {
     "name": "KEFTAS DE PORC FRAIS ASSAISONNÉS C'EST PRÊT! À CUIRE",
     "name_short": "KEFTAS DE PORC FRAIS ASSAISONNÉS C'EST PRÊT! À CUI…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 7.99,
@@ -1982,7 +1982,7 @@
   {
     "name": "KEFTAS DE PORC FRAIS ASSAISONNÉS PRIX CLUB",
     "name_short": "KEFTAS DE PORC FRAIS ASSAISONNÉS PRIX CLUB",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 20.0,
@@ -1992,7 +1992,7 @@
   {
     "name": "KETCHUP AUX TOMATES HEINZ | HEINZ TOMATO KETCHUP",
     "name_short": "KETCHUP AUX TOMATES HEINZ | HEINZ TOMATO KETCHUP",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 4.97,
@@ -2002,7 +2002,7 @@
   {
     "name": "KETCHUP AUX TOMATES | TOMATO KETCHUP, 1 L",
     "name_short": "KETCHUP AUX TOMATES | TOMATO KETCHUP, 1 L",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 3.49,
@@ -2012,7 +2012,7 @@
   {
     "name": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
     "name_short": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Rachelle Béry",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -2022,7 +2022,7 @@
   {
     "name": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
     "name_short": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.99,
@@ -2032,7 +2032,7 @@
   {
     "name": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
     "name_short": "LAITUE BOSTON VIVANTE DE SERRE GEN V",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -2042,7 +2042,7 @@
   {
     "name": "LAITUE BOSTON, CROQUANTE OU SALANOVA VERTE ET ROUGE DE SERRE",
     "name_short": "LAITUE BOSTON, CROQUANTE OU SALANOVA VERTE ET ROUG…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.0,
@@ -2052,7 +2052,7 @@
   {
     "name": "LAITUE FRISÉE ROUGE OU VERTE",
     "name_short": "LAITUE FRISÉE ROUGE OU VERTE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.99,
@@ -2062,7 +2062,7 @@
   {
     "name": "LAITUE FRISÉE VERTE",
     "name_short": "LAITUE FRISÉE VERTE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.99,
@@ -2072,7 +2072,7 @@
   {
     "name": "LAITUE ICEBERG OU OIGNONS JAUNES DÉLICES DU MARCHÉ, SAC DE 3 LB",
     "name_short": "LAITUE ICEBERG OU OIGNONS JAUNES DÉLICES DU MARCHÉ…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 3.0,
@@ -2082,7 +2082,7 @@
   {
     "name": "LAITUE ICEBERG | ICEBERG LETTUCE",
     "name_short": "LAITUE ICEBERG | ICEBERG LETTUCE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 2.89,
@@ -2092,7 +2092,7 @@
   {
     "name": "LAITUE OU MÉLANGE DE LAITUES AQUAVERTI",
     "name_short": "LAITUE OU MÉLANGE DE LAITUES AQUAVERTI",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 3.99,
@@ -2102,7 +2102,7 @@
   {
     "name": "LAITUE ROMAINE",
     "name_short": "LAITUE ROMAINE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -2112,7 +2112,7 @@
   {
     "name": "LANIÈRES DE BŒUF, DE PORC OU DE POULET FRAIS MARINÉES C'EST PRÊT! À CUIRE",
     "name_short": "LANIÈRES DE BŒUF, DE PORC OU DE POULET FRAIS MARIN…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 12.99,
@@ -2122,7 +2122,7 @@
   {
     "name": "LANIÈRES DE POITRINE DE POULET CUITES OLYMEL | OLYMEL COOKED CHICKEN BREAST STRIPS",
     "name_short": "LANIÈRES DE POITRINE DE POULET CUITES OLYMEL | OLY…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -2132,7 +2132,7 @@
   {
     "name": "LANIÈRES DE POULET GRILLÉES SURGELÉES MARC ANGELO | MARC ANGELO FROZEN CHICKEN BREAST STRIPS",
     "name_short": "LANIÈRES DE POULET GRILLÉES SURGELÉES MARC ANGELO …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 15.0,
@@ -2142,7 +2142,7 @@
   {
     "name": "LANIÈRES, PÉPITES, LANGUETTES, BURGERS OU FRITES DE POITRINE DE POULET OU POULET POPCORN PANÉS, MÉDAILLONS OU BURGERS NON PANÉS SURGELÉS FLAMINGO",
     "name_short": "LANIÈRES, PÉPITES, LANGUETTES, BURGERS OU FRITES D…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 7.99,
@@ -2152,7 +2152,7 @@
   {
     "name": "LE SIEUR POIS VERT EN CONSERVE",
     "name_short": "LE SIEUR POIS VERT EN CONSERVE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 1.49,
@@ -2162,7 +2162,7 @@
   {
     "name": "La Cage Regular Chicken Nuggets, 550 g",
     "name_short": "La Cage Regular Chicken Nuggets, 550 g",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 7.97,
@@ -2172,7 +2172,7 @@
   {
     "name": "La Cage Regular Chicken Strips, 550 g",
     "name_short": "La Cage Regular Chicken Strips, 550 g",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 7.97,
@@ -2182,7 +2182,7 @@
   {
     "name": "La Prudencia Jambon Ibérico Bellota avec Os 48 Mois, 8-10 kg",
     "name_short": "La Prudencia Jambon Ibérico Bellota avec Os 48 Moi…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 849.99,
@@ -2192,7 +2192,7 @@
   {
     "name": "Languettes de poulet",
     "name_short": "Languettes de poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 14.99,
@@ -2202,7 +2202,7 @@
   {
     "name": "Languettes de poulet au fromage nacho",
     "name_short": "Languettes de poulet au fromage nacho",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 14.99,
@@ -2212,7 +2212,7 @@
   {
     "name": "Lanières de bœuf frais Mon marché fraîcheur pour sauté",
     "name_short": "Lanières de bœuf frais Mon marché fraîcheur pour s…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 15.39,
@@ -2222,7 +2222,7 @@
   {
     "name": "Lanières de poitrine de poulet assaisonnées Shawarma PC",
     "name_short": "Lanières de poitrine de poulet assaisonnées Shawar…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 12.0,
@@ -2232,7 +2232,7 @@
   {
     "name": "Lasagne au poulet crémeuse",
     "name_short": "Lasagne au poulet crémeuse",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2242,7 +2242,7 @@
   {
     "name": "Legacy Frenched Pork Loin Chop, Maple Chipotle, 440 g",
     "name_short": "Legacy Frenched Pork Loin Chop, Maple Chipotle, 44…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 6.97,
@@ -2252,7 +2252,7 @@
   {
     "name": "Les débuts de notre passion jerk Ailes de poulet jerk PC",
     "name_short": "Les débuts de notre passion jerk Ailes de poulet j…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 17.0,
@@ -2262,7 +2262,7 @@
   {
     "name": "Levitt's Old Fashioned Montreal Smoked Meat 2-Pack, 400 g",
     "name_short": "Levitt's Old Fashioned Montreal Smoked Meat 2-Pack…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 10.97,
@@ -2272,7 +2272,7 @@
   {
     "name": "MAIS EN CONSERVE GÉANT VERT",
     "name_short": "MAIS EN CONSERVE GÉANT VERT",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 1.49,
@@ -2282,7 +2282,7 @@
   {
     "name": "MAPLE LODGE FARMS ORIGINALE SAUCISSES FUMÉES DE POULET, (450 G)",
     "name_short": "MAPLE LODGE FARMS ORIGINALE SAUCISSES FUMÉES DE PO…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 3.5,
@@ -2292,7 +2292,7 @@
   {
     "name": "MAÏS 7 UN. OU CHAMPIGNONS BLANCS OU BRUNS ENTIERS 680 G NATURELLEMENT IMPARFAITS | CORN OR MUSHROOMS",
     "name_short": "MAÏS 7 UN. OU CHAMPIGNONS BLANCS OU BRUNS ENTIERS …",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 4.99,
@@ -2302,7 +2302,7 @@
   {
     "name": "MAÏS DÉLICES DU MARCHÉ, 4 UN. OU POIVRONS DE SERRE DÉLICES DU MARCHÉ, 3 UN. | FARMER'S MARKET™ CORN OR FARMER'S MARKET™ GREENHOUSE PEPPERS",
     "name_short": "MAÏS DÉLICES DU MARCHÉ, 4 UN. OU POIVRONS DE SERRE…",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 3.5,
@@ -2312,7 +2312,7 @@
   {
     "name": "MAÏS EN ÉPIS 2 COULEURS | SWEET BICOLOR CORN",
     "name_short": "MAÏS EN ÉPIS 2 COULEURS | SWEET BICOLOR CORN",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 2.95,
@@ -2322,7 +2322,7 @@
   {
     "name": "MAÏS SOUFFLÉ ORVILLE | ORVILLE POPCORN",
     "name_short": "MAÏS SOUFFLÉ ORVILLE | ORVILLE POPCORN",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 3.79,
@@ -2332,7 +2332,7 @@
   {
     "name": "MERGUEZ DE BOEUF BEEF",
     "name_short": "MERGUEZ DE BOEUF BEEF",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 7.25,
@@ -2342,7 +2342,7 @@
   {
     "name": "Macaroni au cheddar blanc avec bacon",
     "name_short": "Macaroni au cheddar blanc avec bacon",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2352,7 +2352,7 @@
   {
     "name": "Mais souffle Orville Redenbacher",
     "name_short": "Mais souffle Orville Redenbacher",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 2.97,
@@ -2362,7 +2362,7 @@
   {
     "name": "Maïs soufflé Orville Redenbacher",
     "name_short": "Maïs soufflé Orville Redenbacher",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 2.97,
@@ -2372,7 +2372,7 @@
   {
     "name": "Mini-brochettes de poulet et d'ananas",
     "name_short": "Mini-brochettes de poulet et d'ananas",
-    "meat_type": "poulet",
+    "category": "fruit",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -2382,7 +2382,7 @@
   {
     "name": "Miniburgers de cote de bœuf Notre Excellence",
     "name_short": "Miniburgers de cote de bœuf Notre Excellence",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 12.97,
@@ -2392,7 +2392,7 @@
   {
     "name": "Minitaquitos mexicains Great Value au poulet et au fromage",
     "name_short": "Minitaquitos mexicains Great Value au poulet et au…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 9.98,
@@ -2402,7 +2402,7 @@
   {
     "name": "MÉDAILLONS DE HAUT DE SURLONGE | TOP SIRLOIN MEDALLIONS, BASEBALL CUT",
     "name_short": "MÉDAILLONS DE HAUT DE SURLONGE | TOP SIRLOIN MEDAL…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 19.99,
@@ -2412,7 +2412,7 @@
   {
     "name": "NANDO'S PERI-WING SAUCE SAUCE PERI-AILES, 355 mL",
     "name_short": "NANDO'S PERI-WING SAUCE SAUCE PERI-AILES, 355 mL",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 6.99,
@@ -2422,7 +2422,7 @@
   {
     "name": "Near North Life - Rôtis de côte de bœuf AAA, 10 kg",
     "name_short": "Near North Life - Rôtis de côte de bœuf AAA, 10 kg",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 439.99,
@@ -2432,7 +2432,7 @@
   {
     "name": "Northfork - Kangourou haché 454 g (1 lb) paquet de 8",
     "name_short": "Northfork - Kangourou haché 454 g (1 lb) paquet de…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 89.99,
@@ -2442,7 +2442,7 @@
   {
     "name": "Nouilles au bœuf à la coréenne",
     "name_short": "Nouilles au bœuf à la coréenne",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -2452,7 +2452,7 @@
   {
     "name": "Nouilles sautées au bœuf d'inspiration coréenne Pulmuone",
     "name_short": "Nouilles sautées au bœuf d'inspiration coréenne Pu…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 14.99,
@@ -2462,7 +2462,7 @@
   {
     "name": "OIGNON DOUX VIDALIA | SWEET ONION",
     "name_short": "OIGNON DOUX VIDALIA | SWEET ONION",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 1.59,
@@ -2472,7 +2472,7 @@
   {
     "name": "Oignons rouges ou jaunes Concombre anglais",
     "name_short": "Oignons rouges ou jaunes Concombre anglais",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 0.99,
@@ -2482,7 +2482,7 @@
   {
     "name": "PILONS DE POULET ASSAISONNÉS FRAIS | FRESH SEASONED CHICKEN DRUMSTICKS",
     "name_short": "PILONS DE POULET ASSAISONNÉS FRAIS | FRESH SEASONE…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 3.99,
@@ -2492,7 +2492,7 @@
   {
     "name": "PILONS DE POULET FRAIS",
     "name_short": "PILONS DE POULET FRAIS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -2502,7 +2502,7 @@
   {
     "name": "PILONS DE POULET FRAIS PRIX CLUB",
     "name_short": "PILONS DE POULET FRAIS PRIX CLUB",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 18.0,
@@ -2512,7 +2512,7 @@
   {
     "name": "PLANT DE TOMATES EN CAGE | TOMATO PLANT IN CAGE",
     "name_short": "PLANT DE TOMATES EN CAGE | TOMATO PLANT IN CAGE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 17.99,
@@ -2522,7 +2522,7 @@
   {
     "name": "POIJRINE DE POULET",
     "name_short": "POIJRINE DE POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 6.79,
@@ -2532,7 +2532,7 @@
   {
     "name": "POITRINE DE DINDE RÔTIE",
     "name_short": "POITRINE DE DINDE RÔTIE",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -2542,7 +2542,7 @@
   {
     "name": "POITRINE DE POULET MARINÉE IRRÉSISTIBLE | IRRÉSISTIBLE MARINATED CHICKEN BREAST",
     "name_short": "POITRINE DE POULET MARINÉE IRRÉSISTIBLE | IRRÉSIST…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 5.99,
@@ -2552,7 +2552,7 @@
   {
     "name": "POITRINES DE POULET FRAIS DÉSOSSÉES",
     "name_short": "POITRINES DE POULET FRAIS DÉSOSSÉES",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 5.44,
@@ -2562,7 +2562,7 @@
   {
     "name": "POITRINES DE POULET FRAIS DÉSOSSÉES ASSAISONNÉES OU FARCIES C'EST PRÊT! À CUIRE",
     "name_short": "POITRINES DE POULET FRAIS DÉSOSSÉES ASSAISONNÉES O…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 10.99,
@@ -2572,7 +2572,7 @@
   {
     "name": "POITRINES DE POULET FRAIS DÉSOSSÉES PRIX CLUB",
     "name_short": "POITRINES DE POULET FRAIS DÉSOSSÉES PRIX CLUB",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 35.0,
@@ -2582,7 +2582,7 @@
   {
     "name": "POITRINES DE POULET FRAÎCHES DÉSOSSÉES | FRESH BONELESS CHICKEN BREASTS",
     "name_short": "POITRINES DE POULET FRAÎCHES DÉSOSSÉES | FRESH BON…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 8.99,
@@ -2592,7 +2592,7 @@
   {
     "name": "POITRINES DE POULET | CHICKEN BREASTS",
     "name_short": "POITRINES DE POULET | CHICKEN BREASTS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 5.0,
@@ -2602,7 +2602,7 @@
   {
     "name": "POIVRON ROUGE",
     "name_short": "POIVRON ROUGE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 0.99,
@@ -2612,7 +2612,7 @@
   {
     "name": "PORC EFFILOCHÉ PLAISIRS GASTRONOMIQUES",
     "name_short": "PORC EFFILOCHÉ PLAISIRS GASTRONOMIQUES",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 7.99,
@@ -2622,7 +2622,7 @@
   {
     "name": "PORC HACHÉ MAIGRE",
     "name_short": "PORC HACHÉ MAIGRE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.49,
@@ -2632,7 +2632,7 @@
   {
     "name": "POULET CUIT BARBECUE C'EST PRÊT!",
     "name_short": "POULET CUIT BARBECUE C'EST PRÊT!",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2642,7 +2642,7 @@
   {
     "name": "POULET DE GRAIN MIEUX-ÊTRE BIOLOGIQUE | LIFE SMART ORGANIC GRAIN-FED CHICKEN",
     "name_short": "POULET DE GRAIN MIEUX-ÊTRE BIOLOGIQUE | LIFE SMART…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 6.99,
@@ -2652,7 +2652,7 @@
   {
     "name": "POULET ENTIER BIOLOGIQUE FERME DES VOLTIGEURS",
     "name_short": "POULET ENTIER BIOLOGIQUE FERME DES VOLTIGEURS",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Rachelle Béry",
     "store_emoji": "🏪",
     "price": 4.79,
@@ -2662,7 +2662,7 @@
   {
     "name": "POULET ENTIER FRAIS CATÉGORIE A, MOINS DE, 2 KG | FRESH WHOLE CHICKEN",
     "name_short": "POULET ENTIER FRAIS CATÉGORIE A, MOINS DE, 2 KG | …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 2.79,
@@ -2672,7 +2672,7 @@
   {
     "name": "POULET HACHÉ 454 G OU PORC HACHÉ MAIGRE 450 G FRAIS",
     "name_short": "POULET HACHÉ 454 G OU PORC HACHÉ MAIGRE 450 G FRAI…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 2.5,
@@ -2682,7 +2682,7 @@
   {
     "name": "POULET HACHÉ OU HACHIS DE DINDE PC MENU BLEU, 454 G | PC® BLUE MENU® GROUND CHICKEN OR MINCED TURKEY",
     "name_short": "POULET HACHÉ OU HACHIS DE DINDE PC MENU BLEU, 454 …",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 9.0,
@@ -2692,7 +2692,7 @@
   {
     "name": "POULET OU DINDE HACHÉ EXTRA MAIGRE MIEUX-ÊTRE | LIFE SMART EXTRA LEAN GROUND CHICKEN OR TURKEY",
     "name_short": "POULET OU DINDE HACHÉ EXTRA MAIGRE MIEUX-ÊTRE | LI…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 7.99,
@@ -2702,7 +2702,7 @@
   {
     "name": "POULET PANÉ STYLE PUB JANES, 700 G | JANES PUB STYLE BREADED CHICKEN",
     "name_short": "POULET PANÉ STYLE PUB JANES, 700 G | JANES PUB STY…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 10.0,
@@ -2712,7 +2712,7 @@
   {
     "name": "POULET POPCORN",
     "name_short": "POULET POPCORN",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 11.99,
@@ -2722,7 +2722,7 @@
   {
     "name": "Pad see ew au poulet",
     "name_short": "Pad see ew au poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 9.99,
@@ -2732,7 +2732,7 @@
   {
     "name": "Pad thaï au poulet",
     "name_short": "Pad thaï au poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2742,7 +2742,7 @@
   {
     "name": "Paq. de 12 hauts de cuisse de poulet Olymel",
     "name_short": "Paq. de 12 hauts de cuisse de poulet Olymel",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 3.62,
@@ -2752,7 +2752,7 @@
   {
     "name": "Paq. de 3 tranches de flanc de porc désossé Maple Leaf",
     "name_short": "Paq. de 3 tranches de flanc de porc désossé Maple …",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 8.47,
@@ -2762,7 +2762,7 @@
   {
     "name": "Poitrines de poulet désossées et sans peau",
     "name_short": "Poitrines de poulet désossées et sans peau",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -2772,7 +2772,7 @@
   {
     "name": "Poitrines de poulet à la campagnarde",
     "name_short": "Poitrines de poulet à la campagnarde",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 29.99,
@@ -2782,7 +2782,7 @@
   {
     "name": "Poulet au beurre",
     "name_short": "Poulet au beurre",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2792,7 +2792,7 @@
   {
     "name": "Poulet au sésame épicé et riz",
     "name_short": "Poulet au sésame épicé et riz",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2802,7 +2802,7 @@
   {
     "name": "Poulet carbonara",
     "name_short": "Poulet carbonara",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -2812,7 +2812,7 @@
   {
     "name": "Poulet des Caraïbes PC",
     "name_short": "Poulet des Caraïbes PC",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 4.0,
@@ -2822,7 +2822,7 @@
   {
     "name": "Poulet entier sans antibiotique Volailles des Cantons",
     "name_short": "Poulet entier sans antibiotique Volailles des Cant…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -2832,7 +2832,7 @@
   {
     "name": "Poulet et riz à la méditerranéenne",
     "name_short": "Poulet et riz à la méditerranéenne",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -2842,7 +2842,7 @@
   {
     "name": "Poulet frais entier Olymel",
     "name_short": "Poulet frais entier Olymel",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 3.62,
@@ -2852,7 +2852,7 @@
   {
     "name": "Poulet pané Flamingo",
     "name_short": "Poulet pané Flamingo",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 8.98,
@@ -2862,7 +2862,7 @@
   {
     "name": "Poulet pané Flamingon",
     "name_short": "Poulet pané Flamingon",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 8.98,
@@ -2872,7 +2872,7 @@
   {
     "name": "Poulet pané surgelé La Cage",
     "name_short": "Poulet pané surgelé La Cage",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 7.97,
@@ -2882,7 +2882,7 @@
   {
     "name": "Poulet teriyaki",
     "name_short": "Poulet teriyaki",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2892,7 +2892,7 @@
   {
     "name": "Prêt-à-cuisiner Poulet au parmesan et spaghetti",
     "name_short": "Prêt-à-cuisiner Poulet au parmesan et spaghetti",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 14.99,
@@ -2902,7 +2902,7 @@
   {
     "name": "PÂTÉ AU POULET ST-HUBERT | ST-HUBERT FROZEN CHICKEN PIE",
     "name_short": "PÂTÉ AU POULET ST-HUBERT | ST-HUBERT FROZEN CHICKE…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 11.99,
@@ -2912,7 +2912,7 @@
   {
     "name": "Pâtes crémeuses au poulet",
     "name_short": "Pâtes crémeuses au poulet",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 13.99,
@@ -2922,7 +2922,7 @@
   {
     "name": "Pâté au bœuf et aux légumes campagnard",
     "name_short": "Pâté au bœuf et aux légumes campagnard",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -2932,7 +2932,7 @@
   {
     "name": "Pâté au poulet campagnard",
     "name_short": "Pâté au poulet campagnard",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 12.99,
@@ -2942,7 +2942,7 @@
   {
     "name": "QUART DE JAMBON FUMÉ GASPÉSIEN | QUARTER SMOKED HAM, 750 G",
     "name_short": "QUART DE JAMBON FUMÉ GASPÉSIEN | QUARTER SMOKED HA…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 9.99,
@@ -2952,7 +2952,7 @@
   {
     "name": "QUART DE LONGE DE PORC DÉSOSSÉ PORC NAGANO",
     "name_short": "QUART DE LONGE DE PORC DÉSOSSÉ PORC NAGANO",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.49,
@@ -2962,7 +2962,7 @@
   {
     "name": "RADIS EN FEUILLES | RADISHES",
     "name_short": "RADIS EN FEUILLES | RADISHES",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 0.99,
@@ -2972,7 +2972,7 @@
   {
     "name": "RADIS FRAIS",
     "name_short": "RADIS FRAIS",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 3.0,
@@ -2982,7 +2982,7 @@
   {
     "name": "RADIS ROUGES OU MULTICOLORES EN FEUILLES",
     "name_short": "RADIS ROUGES OU MULTICOLORES EN FEUILLES",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.0,
@@ -2992,7 +2992,7 @@
   {
     "name": "REPAS DE POULET FRIT C'EST PRÊT!",
     "name_short": "REPAS DE POULET FRIT C'EST PRÊT!",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 9.99,
@@ -3002,7 +3002,7 @@
   {
     "name": "REPAS DE POULET FRIT C'EST PRÊT!",
     "name_short": "REPAS DE POULET FRIT C'EST PRÊT!",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 9.49,
@@ -3012,7 +3012,7 @@
   {
     "name": "ROSETTES DE BŒUF | BEEF PINWHEELS",
     "name_short": "ROSETTES DE BŒUF | BEEF PINWHEELS",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 10.99,
@@ -3022,7 +3022,7 @@
   {
     "name": "ROULADES DE PORC OU DE BŒUF FARCIES FRAIS C'EST PRÊT! À CUIRE",
     "name_short": "ROULADES DE PORC OU DE BŒUF FARCIES FRAIS C'EST PR…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 11.99,
@@ -3032,7 +3032,7 @@
   {
     "name": "Raisins rouges Ananas Laitue iceberg",
     "name_short": "Raisins rouges Ananas Laitue iceberg",
-    "meat_type": "legume",
+    "category": "fruit",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -3042,7 +3042,7 @@
   {
     "name": "Raviolis mandu au bœuf bulgogi Bibigo",
     "name_short": "Raviolis mandu au bœuf bulgogi Bibigo",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 15.99,
@@ -3052,7 +3052,7 @@
   {
     "name": "Repas de picadillo de bœuf en sauce sur tortillas en étages PC",
     "name_short": "Repas de picadillo de bœuf en sauce sur tortillas …",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 5.0,
@@ -3062,7 +3062,7 @@
   {
     "name": "Repas de poulet chili verde en sauce sur tortillas en étages PC",
     "name_short": "Repas de poulet chili verde en sauce sur tortillas…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 5.0,
@@ -3072,7 +3072,7 @@
   {
     "name": "Repas de poulet mole en sauce sur tortillas en étages PC",
     "name_short": "Repas de poulet mole en sauce sur tortillas en éta…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 5.0,
@@ -3082,7 +3082,7 @@
   {
     "name": "Repas de poulet à l'orange PC",
     "name_short": "Repas de poulet à l'orange PC",
-    "meat_type": "poulet",
+    "category": "fruit",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 4.0,
@@ -3092,7 +3092,7 @@
   {
     "name": "RÔTI DE POITRINE DE DINDON CUIT OLYMEL",
     "name_short": "RÔTI DE POITRINE DE DINDON CUIT OLYMEL",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.49,
@@ -3102,7 +3102,7 @@
   {
     "name": "RÔTÍ DE POITRINE DE DINDE",
     "name_short": "RÔTÍ DE POITRINE DE DINDE",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.99,
@@ -3112,7 +3112,7 @@
   {
     "name": "Rôti de bœuf braisé cuit lentement",
     "name_short": "Rôti de bœuf braisé cuit lentement",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 22.99,
@@ -3122,7 +3122,7 @@
   {
     "name": "Rôti de porc braisé",
     "name_short": "Rôti de porc braisé",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 16.99,
@@ -3132,7 +3132,7 @@
   {
     "name": "SALADE C'EST PRÊT!",
     "name_short": "SALADE C'EST PRÊT!",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 4.49,
@@ -3142,7 +3142,7 @@
   {
     "name": "SALAMI TOUT BŒUF LESTERS",
     "name_short": "SALAMI TOUT BŒUF LESTERS",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 2.49,
@@ -3152,7 +3152,7 @@
   {
     "name": "SASHLIK DE PORC AIL & MIEL",
     "name_short": "SASHLIK DE PORC AIL & MIEL",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 9.99,
@@ -3162,7 +3162,7 @@
   {
     "name": "SAUCE TOMATE",
     "name_short": "SAUCE TOMATE",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 5.49,
@@ -3172,7 +3172,7 @@
   {
     "name": "SAUCISSE VÉGANE GUSTA | VEGAN SAUSAGE, 350 G",
     "name_short": "SAUCISSE VÉGANE GUSTA | VEGAN SAUSAGE, 350 G",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 6.0,
@@ -3182,7 +3182,7 @@
   {
     "name": "SAUCISSES DE PORC FRAIS PRIX CLUB",
     "name_short": "SAUCISSES DE PORC FRAIS PRIX CLUB",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les Marchés Tradition",
     "store_emoji": "🏪",
     "price": 15.0,
@@ -3192,7 +3192,7 @@
   {
     "name": "SAUCISSES DE PORC PC, 375-500 G | PC® PORK SAUSAGE",
     "name_short": "SAUCISSES DE PORC PC, 375-500 G | PC® PORK SAUSAGE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 7.0,
@@ -3202,7 +3202,7 @@
   {
     "name": "SAUCISSES DE PORC | PORK SAUSAGES",
     "name_short": "SAUCISSES DE PORC | PORK SAUSAGES",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 7.0,
@@ -3212,7 +3212,7 @@
   {
     "name": "SAUCISSES DE PORC | PORK SAUSAGES, 500 G",
     "name_short": "SAUCISSES DE PORC | PORK SAUSAGES, 500 G",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "L'Inter-Marché",
     "store_emoji": "🏪",
     "price": 5.99,
@@ -3222,7 +3222,7 @@
   {
     "name": "SAUCISSES FUMÉES OU BACON À BASE DE PLANTES LIGHTLIFE",
     "name_short": "SAUCISSES FUMÉES OU BACON À BASE DE PLANTES LIGHTL…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 3.99,
@@ -3232,7 +3232,7 @@
   {
     "name": "SAUCISSES GÉANTES MARCANGELO | JUMBO SAUSAGE, 500/675 g",
     "name_short": "SAUCISSES GÉANTES MARCANGELO | JUMBO SAUSAGE, 500/…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 7.0,
@@ -3242,7 +3242,7 @@
   {
     "name": "SHISH TAOUK DE POULET",
     "name_short": "SHISH TAOUK DE POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 6.79,
@@ -3252,7 +3252,7 @@
   {
     "name": "SIMILI POULET GASPÉSIEN",
     "name_short": "SIMILI POULET GASPÉSIEN",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 7.9,
@@ -3262,7 +3262,7 @@
   {
     "name": "SIMILI POULET GASPÉSIEN | GASPÉSIEN MOCK CHICKEN",
     "name_short": "SIMILI POULET GASPÉSIEN | GASPÉSIEN MOCK CHICKEN",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 1.59,
@@ -3272,7 +3272,7 @@
   {
     "name": "SOUPE À L'OIGNON GRATINÉE CUISINE ADVENTURES | CUISINE ADVENTURES FRENCH ONION SOUP",
     "name_short": "SOUPE À L'OIGNON GRATINÉE CUISINE ADVENTURES | CUI…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 7.99,
@@ -3282,7 +3282,7 @@
   {
     "name": "SOUVLAKI AU PORC ET BURGER AU POULET",
     "name_short": "SOUVLAKI AU PORC ET BURGER AU POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Fruiterie Potager",
     "store_emoji": "🏪",
     "price": 10.99,
@@ -3292,7 +3292,7 @@
   {
     "name": "SOUVLAKI DE POULET BBQ",
     "name_short": "SOUVLAKI DE POULET BBQ",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -3302,7 +3302,7 @@
   {
     "name": "STEAK DE BŒUF",
     "name_short": "STEAK DE BŒUF",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 10.42,
@@ -3312,7 +3312,7 @@
   {
     "name": "STEAK DE CAPICOLLE DE PORC AUX 3 POIVRES ROSE | ROSE THREE PEPPER CAPICOLA PORK STEAK",
     "name_short": "STEAK DE CAPICOLLE DE PORC AUX 3 POIVRES ROSE | RO…",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 9.99,
@@ -3322,7 +3322,7 @@
   {
     "name": "SUPER PREMIUM CHAPMAN'S, 500 ML OU DRUMSTICK, 4 UN. OU DESSERT GLACÉ DE CONFISERIE, 1,5 L OU BARRES, 1,5 L NESTLÉ | CHAPMAN'S SUPER PREMIUM OR NESTLÉ DRUMSTICK OR CONFECTIONERY FROZEN DESSERT OR BARS",
     "name_short": "SUPER PREMIUM CHAPMAN'S, 500 ML OU DRUMSTICK, 4 UN…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 4.0,
@@ -3332,7 +3332,7 @@
   {
     "name": "Satay de poulet avec sauce aux arachides",
     "name_short": "Satay de poulet avec sauce aux arachides",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -3342,7 +3342,7 @@
   {
     "name": "Sauce pour burger ou a trempette pour poulet Giant Value",
     "name_short": "Sauce pour burger ou a trempette pour poulet Giant…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.47,
@@ -3352,7 +3352,7 @@
   {
     "name": "Sauce pour burger ou à trempette pour poulet Giant Value",
     "name_short": "Sauce pour burger ou à trempette pour poulet Giant…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 3.47,
@@ -3362,7 +3362,7 @@
   {
     "name": "Saucisse à l'italienne et penne",
     "name_short": "Saucisse à l'italienne et penne",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 8.99,
@@ -3372,7 +3372,7 @@
   {
     "name": "Saucisses de poulet fumées PC",
     "name_short": "Saucisses de poulet fumées PC",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 6.5,
@@ -3382,7 +3382,7 @@
   {
     "name": "Saucisses porc et boeuf Lafleur | Lafleur pork and beef sausages",
     "name_short": "Saucisses porc et boeuf Lafleur | Lafleur pork and…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 11.99,
@@ -3392,7 +3392,7 @@
   {
     "name": "Selection pâté au poulet | chicken pie",
     "name_short": "Selection pâté au poulet | chicken pie",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 6.49,
@@ -3402,7 +3402,7 @@
   {
     "name": "Serviettes hygiéniques de nuit avec ailes Ultra-mince de Always",
     "name_short": "Serviettes hygiéniques de nuit avec ailes Ultra-mi…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Costco",
     "store_emoji": "⭕",
     "price": 15.49,
@@ -3412,7 +3412,7 @@
   {
     "name": "Smokehouse Boneless Ham Steak, 375-g",
     "name_short": "Smokehouse Boneless Ham Steak, 375-g",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 4.47,
@@ -3422,7 +3422,7 @@
   {
     "name": "TABASCO® PEPPER SAUCE SAUCE AUX PIMENTS, 57 ML",
     "name_short": "TABASCO® PEPPER SAUCE SAUCE AUX PIMENTS, 57 ML",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 3.49,
@@ -3432,7 +3432,7 @@
   {
     "name": "TABASCO® SAUCE AUX PIMENTS, 256 ML | PEPPER SAUCE",
     "name_short": "TABASCO® SAUCE AUX PIMENTS, 256 ML | PEPPER SAUCE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 5.5,
@@ -3442,7 +3442,7 @@
   {
     "name": "TOMATE VIGNE",
     "name_short": "TOMATE VIGNE",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 1.99,
@@ -3452,7 +3452,7 @@
   {
     "name": "TOURNEDOS DE BOEUF DIJONNAISE BACON",
     "name_short": "TOURNEDOS DE BOEUF DIJONNAISE BACON",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "5 Saveurs",
     "store_emoji": "🏪",
     "price": 14.99,
@@ -3462,7 +3462,7 @@
   {
     "name": "TOURNEDOS DE SAUMON | SALMON TOURNEDOS",
     "name_short": "TOURNEDOS DE SAUMON | SALMON TOURNEDOS",
-    "meat_type": "boeuf",
+    "category": "poisson",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 10.99,
@@ -3472,7 +3472,7 @@
   {
     "name": "Trempette au maïs de rue Elote PC",
     "name_short": "Trempette au maïs de rue Elote PC",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "le Choix du Président",
     "store_emoji": "🏪",
     "price": 3.5,
@@ -3482,7 +3482,7 @@
   {
     "name": "Triangles de bas de surlonge de bœuf Mon marche fraîcheur",
     "name_short": "Triangles de bas de surlonge de bœuf Mon marche fr…",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 15.86,
@@ -3492,7 +3492,7 @@
   {
     "name": "VEAU HACHÉ MAIGRE FAMILLE FONTAINE",
     "name_short": "VEAU HACHÉ MAIGRE FAMILLE FONTAINE",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Rachelle Béry",
     "store_emoji": "🏪",
     "price": 11.99,
@@ -3502,7 +3502,7 @@
   {
     "name": "VIANDE FUMÉE DE PORC FUMOIRS GOSSELIN",
     "name_short": "VIANDE FUMÉE DE PORC FUMOIRS GOSSELIN",
-    "meat_type": "porc",
+    "category": "panier",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 10.99,
@@ -3512,7 +3512,7 @@
   {
     "name": "VINAIGRETTE IRRÉSISTIBLE | IRRÉSISTIBLE SALAD DRESSING",
     "name_short": "VINAIGRETTE IRRÉSISTIBLE | IRRÉSISTIBLE SALAD DRES…",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 2.99,
@@ -3522,7 +3522,7 @@
   {
     "name": "VINAIGRETTE MANDY'S | MANDY'S SALAD",
     "name_short": "VINAIGRETTE MANDY'S | MANDY'S SALAD",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 8.99,
@@ -3532,7 +3532,7 @@
   {
     "name": "ZABIHA BOLOGNE DE POULET",
     "name_short": "ZABIHA BOLOGNE DE POULET",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Supermarché Aurès",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -3542,7 +3542,7 @@
   {
     "name": "ZABIHA HALAL SAUCISSES DE FRANCFORT DE POULET, 900 G | JUICY SUPREME™",
     "name_short": "ZABIHA HALAL SAUCISSES DE FRANCFORT DE POULET, 900…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Provigo",
     "store_emoji": "🟣",
     "price": 8.0,
@@ -3552,7 +3552,7 @@
   {
     "name": "bifteck d'intérieur de ronde Famille Fontaine | inside round steak",
     "name_short": "bifteck d'intérieur de ronde Famille Fontaine | in…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 6.99,
@@ -3562,7 +3562,7 @@
   {
     "name": "brochettes de boeuf, de poulet ou de porc | beef, chicken, or pork brochettes",
     "name_short": "brochettes de boeuf, de poulet ou de porc | beef, …",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 9.99,
@@ -3572,7 +3572,7 @@
   {
     "name": "bœuf Angus Burger",
     "name_short": "bœuf Angus Burger",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -3582,7 +3582,7 @@
   {
     "name": "cocktail de légumes V8 | V8 vegetable cocktail",
     "name_short": "cocktail de légumes V8 | V8 vegetable cocktail",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 3.29,
@@ -3592,7 +3592,7 @@
   {
     "name": "couronne de brocoli | broccoli crown",
     "name_short": "couronne de brocoli | broccoli crown",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 2.79,
@@ -3602,7 +3602,7 @@
   {
     "name": "côte de bœuf BURGERS",
     "name_short": "côte de bœuf BURGERS",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -3612,7 +3612,7 @@
   {
     "name": "côtelettes de porc frais | pork loin centre chops",
     "name_short": "côtelettes de porc frais | pork loin centre chops",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 4.99,
@@ -3622,7 +3622,7 @@
   {
     "name": "côtes de dos de porc cuites Irrésistible | Irrésistible cooked pork back ribs",
     "name_short": "côtes de dos de porc cuites Irrésistible | Irrésis…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 12.99,
@@ -3632,7 +3632,7 @@
   {
     "name": "côtes de flanc de porc frais | fresh pork side ribs",
     "name_short": "côtes de flanc de porc frais | fresh pork side rib…",
-    "meat_type": "boeuf",
+    "category": "boeuf",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 2.75,
@@ -3642,7 +3642,7 @@
   {
     "name": "filets de porc frais | fresh pork tenderloin",
     "name_short": "filets de porc frais | fresh pork tenderloin",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 6.99,
@@ -3652,7 +3652,7 @@
   {
     "name": "haricots verts | green beans",
     "name_short": "haricots verts | green beans",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 1.99,
@@ -3662,7 +3662,7 @@
   {
     "name": "jambon fumé Le Petit Charcutier smoked | choix varié The Deli-Shop smoked ham",
     "name_short": "jambon fumé Le Petit Charcutier smoked | choix var…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 8.0,
@@ -3672,7 +3672,7 @@
   {
     "name": "laitues Attitude | Attitude lettuce",
     "name_short": "laitues Attitude | Attitude lettuce",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 5.99,
@@ -3682,7 +3682,7 @@
   {
     "name": "laitues Boston Céleri ou chou-fleur poivrons",
     "name_short": "laitues Boston Céleri ou chou-fleur poivrons",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Mayrand",
     "store_emoji": "🏪",
     "price": 2.99,
@@ -3692,7 +3692,7 @@
   {
     "name": "maïs sucré deux couleurs | sweet bicolour corn",
     "name_short": "maïs sucré deux couleurs | sweet bicolour corn",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Maxi",
     "store_emoji": "🟠",
     "price": 0.5,
@@ -3702,7 +3702,7 @@
   {
     "name": "poitrines de poulet frais désossées | fresh boneless chicken breasts",
     "name_short": "poitrines de poulet frais désossées | fresh bonele…",
-    "meat_type": "poulet",
+    "category": "poulet",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 6.99,
@@ -3712,7 +3712,7 @@
   {
     "name": "surlonge de bœuf",
     "name_short": "surlonge de bœuf",
-    "meat_type": "boeuf",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 17.99,
@@ -3722,7 +3722,7 @@
   {
     "name": "tranche de jambon désossé Gold Label Smokehouse",
     "name_short": "tranche de jambon désossé Gold Label Smokehouse",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Tigre Géant",
     "store_emoji": "🏪",
     "price": 4.47,
@@ -3732,7 +3732,7 @@
   {
     "name": "À l'oignon gratinée",
     "name_short": "À l'oignon gratinée",
-    "meat_type": "legume",
+    "category": "panier",
     "store": "Les aliments M&M",
     "store_emoji": "🏪",
     "price": 5.99,
@@ -3742,7 +3742,7 @@
   {
     "name": "ÉMINCÉ DE POITRINE DE DINDE MAPLE LEAF NATURAL SELECTIONS | MAPLE LEAF NATURAL SELECTIONS SHAVED TURKEY BREAST",
     "name_short": "ÉMINCÉ DE POITRINE DE DINDE MAPLE LEAF NATURAL SEL…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 7.99,
@@ -3752,7 +3752,7 @@
   {
     "name": "ÉMINCÉ DE POITRINE DE DINDE MAPLE LEAF NATURAL SELECTIONS | MAPLE LEAF NATURAL SELECTIONS SHAVED TURKEY BREAST",
     "name_short": "ÉMINCÉ DE POITRINE DE DINDE MAPLE LEAF NATURAL SEL…",
-    "meat_type": "poulet",
+    "category": "panier",
     "store": "Metro",
     "store_emoji": "🔴",
     "price": 7.99,
@@ -3762,7 +3762,7 @@
   {
     "name": "ÉPAULE DE PORC SOC DÉSOSSÉE CAPICOLLE",
     "name_short": "ÉPAULE DE PORC SOC DÉSOSSÉE CAPICOLLE",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "IGA",
     "store_emoji": "🟢",
     "price": 4.99,
@@ -3772,7 +3772,7 @@
   {
     "name": "Épi de mais",
     "name_short": "Épi de mais",
-    "meat_type": "legume",
+    "category": "legume",
     "store": "Walmart",
     "store_emoji": "🔵",
     "price": 0.44,
@@ -3782,7 +3782,7 @@
   {
     "name": "épaule picnic de porc frais | fresh pork picnic shoulder",
     "name_short": "épaule picnic de porc frais | fresh pork picnic sh…",
-    "meat_type": "porc",
+    "category": "porc",
     "store": "Super C",
     "store_emoji": "🟡",
     "price": 3.49,
