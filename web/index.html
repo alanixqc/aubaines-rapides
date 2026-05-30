@@ -1187,17 +1187,33 @@ let currentWeekIdx = 0;
 let weeks = [];
 let weekDealsMap = {};
 
-// ─── LOAD ───
+// ─── LOAD AVEC TIMEOUT ───
+function fetchWithTimeout(url, ms = 8000) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("Timeout")), ms);
+    fetch(url).then(r => { clearTimeout(timer); resolve(r); }, err => { clearTimeout(timer); reject(err); });
+  });
+}
+
 async function loadData() {
   try {
     const [dealsRes, recipesRes, statsRes] = await Promise.all([
-      fetch("data/deals.json"),
-      fetch("data/recipes.json"),
-      fetch("data/stats.json"),
+      fetchWithTimeout("data/deals.json"),
+      fetchWithTimeout("data/recipes.json"),
+      fetchWithTimeout("data/stats.json"),
     ]);
+    
+    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) {
+      throw new Error("Un des fichiers est introuvable (HTTP " + dealsRes.status + ")");
+    }
+    
     const dealsData = await dealsRes.json();
     recipesAll = await recipesRes.json();
     stats = await statsRes.json();
+    
+    if (!dealsData.weeks || dealsData.weeks.length === 0) {
+      throw new Error("Aucune semaine trouvée dans les données");
+    }
     
     weeks = dealsData.weeks || [];
     weekDealsMap = dealsData.deals_by_week || {};
@@ -1569,7 +1585,12 @@ document.getElementById("searchInput").addEventListener("keydown", e => { if (e.
 async function init() {
   const ok = await loadData();
   if (!ok) {
-    document.getElementById("app").innerHTML = `<div class="error-state"><h2>❌</h2><p>Exécute d'abord le pipeline de scraping.</p></div>`;
+    document.getElementById("app").innerHTML = `<div class="error-state">
+      <h2>😕 Données temporairement indisponibles</h2>
+      <p>Les spéciaux de la semaine n'ont pas pu être chargés.</p>
+      <p style="margin-top:12px;color:#7a6b55;font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
+      <button type="button" class="cta-primary" style="margin-top:16px;border:none;cursor:pointer" onclick="location.reload()">🔄 Réessayer</button>
+    </div>`;
     return;
   }
   renderAll();
