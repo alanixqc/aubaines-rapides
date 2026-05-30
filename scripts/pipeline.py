@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Pipeline Aubanes Rapides — version complète
-Exécute tous les scrapers custom + Flipp + dédup + rapport
+Pipeline Aubanes Rapides — version INDÉPENDANTE (sans Flipp)
+=============================================================
+Exécute les scrapers directs (Shopify, Playwright) + dédup + build site.
+Aucune dépendance à Flipp/flippback/wishabi.
 Exécuté par cron chaque mardi 8h30
 """
 import sys
@@ -13,7 +15,6 @@ from datetime import datetime, date
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from scraper.flipp_scraper import FlippScraper
 from scripts.generate_report import generate_html
 from db.schema import get_db
 
@@ -39,11 +40,7 @@ def setup_logging():
 
 
 def save_status(status_data):
-    # Seuil d'alerte : si moins de 50 deals viande, marquer un avertissement
-    total_meat = (
-        status_data.get("stats", {}).get("flipp_scrape", {}).get("meat_items", 0)
-        or status_data.get("stats", {}).get("total_meat", 0)
-    )
+    total_meat = status_data.get("stats", {}).get("total_meat", 0)
     if status_data["success"] and total_meat < 50:
         status_data["warning"] = f"Seulement {total_meat} items viande (seuil: 50)"
     status_data["last_run"] = datetime.now().isoformat()
@@ -140,10 +137,8 @@ def get_weekly_summary():
     lines = ["🏆  TOP 3 DEALS DE LA SEMAINE  🏆"]
     for i, e in enumerate(top3):
         r = e["r"]
-        store_emoji = {"Super C": "🟡", "Metro": "🔴", "IGA": "🟢", "Maxi": "🟠",
-                       "Provigo": "🟣", "Walmart": "🔵", "Costco": "⭕",
-                       "Tigre Géant": "🐯", "Les Marchés Tradition": "🟤"}.get(r["merchant_name"], "🏪")
-        meat_emoji = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓", "legume": "🥦", "légume": "🥦"}.get(r["meat_type"], "")
+        store_emoji = {"Super C": "🟡", "Metro": "🔴", "Tigre Géant": "🐯"}.get(r["merchant_name"], "🏪")
+        meat_emoji = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓"}.get(r["meat_type"], "")
         per_lb = round(e["per_kg"] / 2.20462, 2)
         line = f"\n{medals[i]} {store_emoji} **{r['merchant_name']}** {meat_emoji}"
         line += f"\n   {r['name'][:40]}"
@@ -153,7 +148,7 @@ def get_weekly_summary():
     total_meat = len(enriched)
     stores = set(e["r"]["merchant_name"] for e in enriched)
     lines.append(f"\n📊 {total_meat} offres · {len(stores)} épiceries")
-    lines.append("📍 Saint-Jérôme · !deal [codepostal] pour filtrer")
+    lines.append("📍 Données indépendantes · pas de Flipp")
     return "\n".join(lines)
 
 
@@ -162,48 +157,34 @@ def run_pipeline():
     start_time = datetime.now()
 
     logger.info("=" * 60)
-    logger.info("🔄 PIPELINE AUBANES RAPIDES — COMPLET")
+    logger.info("🔄 PIPELINE AUBANES RAPIDES — INDÉPENDANT")
+    logger.info("   Sans Flipp · Scrapers directs uniquement")
     logger.info("=" * 60)
 
     status = {"success": False, "error": None, "stats": {}, "started_at": start_time.isoformat()}
-    all_stats = {"custom_scrapers": {}, "total_meat": 0, "total_products": 0, "total_prices": 0}
+    scrapers_stats = {}
 
     try:
-        # ── Phase 0: Custom scrapers (via Flipp API — HTTP rapide) ──
-        logger.info("\n🔧 Phase 0: Scrapers custom (HTTP, indépendants)...")
-
-        custom_scrapers = [
+        # ── Phase 0: Scrapers API directes (Shopify, etc.) ──
+        logger.info("\n🔧 Phase 0: Scrapers API directes...")
+        api_scrapers = [
             ("tigregeant", ["--db"], 120),
-            ("maxi", ["--db"], 120),
-            ("marchestradition", ["--db"], 120),
-            ("walmart", ["--db"], 120),
         ]
-
-        for name, args, tout in custom_scrapers:
+        for name, args, tout in api_scrapers:
             ok, err = run_scraper(name, args, timeout=tout)
-            all_stats["custom_scrapers"][name] = {"success": ok, "error": err if not ok else None}
+            scrapers_stats[name] = {"success": ok, "error": err if not ok else None}
             logger.info(f"   {'✅' if ok else '❌'} {name}")
 
-        # ── Phase 0b: Playwright scrapers (plus lents, optionnels) ──
-        logger.info("\n🌐 Phase 0b: Scrapers Playwright (browser)...")
-        playwright_scrapers = ["superc", "metro"]
+        # ── Phase 0b: Playwright scrapers ──
+        logger.info("\n🌐 Phase 0b: Scrapers Playwright...")
+        playwright_scrapers = ["superc"]
         for name in playwright_scrapers:
             ok, err = run_scraper(name, ["--db", "--headless", "true"], timeout=180)
-            all_stats["custom_scrapers"][name] = {"success": ok, "error": err if not ok else None}
+            scrapers_stats[name] = {"success": ok, "error": err if not ok else None}
             logger.info(f"   {'✅' if ok else '❌'} {name}")
 
-        # ── Phase 1: Flipp scraper (tous les autres stores) ──
-        logger.info("\n📡 Phase 1: Scraping Flipp (tous les stores restants)...")
-        scraper = FlippScraper()
-        stats = scraper.run()
-
-        logger.info(f"   Items scrapés:   {stats.get('items_scraped', 0)}")
-        logger.info(f"   Items viande:    {stats.get('meat_items', 0)}")
-        logger.info(f"   Nouvelles entrées: {stats.get('new_entries', 0)}")
-        all_stats["flipp"] = stats
-
-        # ── Phase 2: Déduplication ──
-        logger.info("\n🧹 Phase 2: Nettoyage des doublons (MAX(id) par groupe)...")
+        # ── Phase 1: Déduplication ──
+        logger.info("\n🧹 Phase 1: Nettoyage des doublons...")
         db = get_db()
         db.execute("""
             DELETE FROM price_history WHERE id NOT IN (
@@ -216,12 +197,12 @@ def run_pipeline():
         db.close()
         logger.info(f"   ✅ {dedup_count} doublons nettoyés")
 
-        # ── Phase 3: Rapport HTML ──
-        logger.info("\n📊 Phase 3: Génération du rapport HTML...")
+        # ── Phase 2: Rapport HTML ──
+        logger.info("\n📊 Phase 2: Génération du rapport HTML...")
         html_content = generate_html()
         logger.info("   ✅ Rapport généré")
 
-        # ── Phase 4: Stats ──
+        # ── Phase 3: Stats ──
         db = get_db()
         total_products = db.execute("SELECT COUNT(*) FROM products").fetchone()[0]
         total_prices = db.execute("SELECT COUNT(*) FROM price_history").fetchone()[0]
@@ -236,6 +217,8 @@ def run_pipeline():
               AND p.meat_type IS NOT NULL
             GROUP BY ph.merchant_name ORDER BY cnt DESC
         """).fetchall()
+        
+        total_meat_current = sum(r["cnt"] for r in meat_by_store)
         db.close()
 
         logger.info(f"\n📈 Base de données:")
@@ -243,26 +226,27 @@ def run_pipeline():
         logger.info(f"   Prix: {total_prices}")
         logger.info(f"   Semaines: {', '.join(weeks) if weeks else 'aucune'}")
         for row in meat_by_store:
-            logger.info(f"   {row['merchant_name']:25s}  {row['cnt']:3d} viandes")
+            logger.info(f"   {row['merchant_name']:25s}  {row['cnt']:3d} items")
 
         # ── Résumé ──
         elapsed = (datetime.now() - start_time).total_seconds()
         logger.info(f"\n✅ Pipeline terminé en {elapsed:.1f}s")
-        logger.info(f"   Items viande totaux:  {stats.get('meat_items', 0)}")
+        logger.info(f"   Items viande semaine courante: {total_meat_current}")
 
         status["success"] = True
         status["stats"] = {
-            "custom_scrapers": {k: {"success": v["success"]} for k, v in all_stats["custom_scrapers"].items()},
-            "flipp_scrape": all_stats.get("flipp", {}),
+            "scrapers": {k: {"success": v["success"]} for k, v in scrapers_stats.items()},
+            "total_meat": total_meat_current,
             "total_products": total_products,
             "total_prices": total_prices,
             "weeks": weeks,
             "meat_by_store": {r["merchant_name"]: r["cnt"] for r in meat_by_store},
             "elapsed_seconds": round(elapsed, 1),
+            "source": "indépendant (aucun Flipp)",
         }
         save_status(status)
 
-        # ── Summary pour Discord ──
+        # ── Summary ──
         summary = get_weekly_summary()
         if summary:
             print(f"\n{'=' * 60}")
