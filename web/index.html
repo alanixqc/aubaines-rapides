@@ -998,11 +998,6 @@ function showDealDetail(id) {
   if (d.image_url) {
     modalImg.src = d.image_url;
     imgWrap.style.display = "block";
-  } else if (d.flyer_url) {
-    // Si pas d'image individuelle, montrer la circulaire du magasin
-    modalImg.src = d.flyer_url;
-    imgWrap.style.display = "block";
-    imgWrap.title = "Circulaire Tigre Géant — cliquez pour agrandir";
   } else {
     imgWrap.style.display = "none";
   }

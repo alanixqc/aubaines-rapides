@@ -653,7 +653,6 @@ def export_deals():
             "source": source,
             "valid_to": r["valid_to"],
             "image_url": r["image_url"],
-            "flyer_url": "images/tigregeant-flyer.png" if store_name == "Tigre Géant" else "",
             "protein_per_100g": protein_per_100g,
             "protein_per_dollar": protein_per_dollar,
             "recipe": recipe,
