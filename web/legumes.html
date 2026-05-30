@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Deals Légumes</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="viande.html">🥩 Viande</a>
+      <a href="legumes.html" class="active">🥦 Légumes</a>
+      <a href="recherche.html">🔍 Recherche</a>
+      <a href="tendances.html">📈 Tendances</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">🥦 Deals légumes</h1>
+  <p class="page-subtitle">Tous les spéciaux légumes et fruits de la semaine</p>
+
+  <div class="search-count" id="resultCount"></div>
+  <div class="deals-grid" id="dealsList"></div>
+</div>
+
+<footer class="footer">
+  <div class="update-badge" id="updateBadge">Mise à jour hebdomadaire</div>
+  <p>Aubaines Rapides &copy; 2026 — Données provenant des circulaires en ligne</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+async function init() {
+  const ok = await loadAllData();
+  if (!ok) return;
+
+  const { deals_with_kg, deals_wo_kg, stats } = dealsData;
+  const vegDeals = [...deals_with_kg, ...deals_wo_kg].filter(d => d.meat_type === 'legume');
+
+  // Sort: with $/kg first
+  vegDeals.sort((a, b) => {
+    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+    if (a.per_kg && !b.per_kg) return -1;
+    if (!a.per_kg && b.per_kg) return 1;
+    return (a.price || 0) - (b.price || 0);
+  });
+
+  document.getElementById('resultCount').textContent = `${vegDeals.length} deals trouvés`;
+  renderDeals(document.getElementById('dealsList'), vegDeals);
+  document.getElementById('updateBadge').textContent = `🔄 Semaine du ${stats.week}`;
+}
+
+init();
+</script>
+</body>
+</html>

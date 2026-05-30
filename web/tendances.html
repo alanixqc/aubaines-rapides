@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Tendances</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="viande.html">🥩 Viande</a>
+      <a href="legumes.html">🥦 Légumes</a>
+      <a href="recherche.html">🔍 Recherche</a>
+      <a href="tendances.html" class="active">📈 Tendances</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">📈 Tendances historiques</h1>
+  <p class="page-subtitle">Prix moyens au Québec (Statistique Canada — 18-10-0245-01)</p>
+
+  <select class="trend-select" id="productSelect"></select>
+
+  <div class="trend-canvas-wrap">
+    <canvas id="trendChart"></canvas>
+  </div>
+
+  <div class="trend-data" id="trendStats"></div>
+</div>
+
+<footer class="footer">
+  <div class="update-badge">📊 Source: Statistique Canada · 2017–2026</div>
+  <p>Aubaines Rapides &copy; 2026</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+let chart = null;
+let allTrends = [];
+
+async function init() {
+  try {
+    allTrends = await loadTrends();
+  } catch (e) {
+    document.querySelector('.page').innerHTML = '<h1>❌ Erreur</h1><p>Impossible de charger les données de tendances.</p>';
+    return;
+  }
+
+  const select = document.getElementById('productSelect');
+  allTrends.forEach((t, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = t.product;
+    select.appendChild(opt);
+  });
+
+  select.addEventListener('change', () => renderTrend(parseInt(select.value)));
+  
+  // Select first product
+  if (allTrends.length > 0) {
+    renderTrend(0);
+  }
+}
+
+function renderTrend(index) {
+  const trend = allTrends[index];
+  if (!trend) return;
+
+  const data = trend.data;
+  const dates = data.map(d => d.date);
+  const prices = data.map(d => d.price);
+
+  // Stats
+  const current = prices[prices.length - 1];
+  const prev = prices.length > 12 ? prices[prices.length - 13] : prices[0];
+  const change = current - prev;
+  const changePct = prev ? ((change / prev) * 100).toFixed(1) : 0;
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  const avg = prices.reduce((a, b) => a + b, 0) / prices.length;
+
+  document.getElementById('trendStats').innerHTML = `
+    <div class="trend-stat">
+      <div class="val ${change > 0 ? 'up' : 'down'}">${current.toFixed(2)}$</div>
+      <div class="lbl">Prix actuel</div>
+    </div>
+    <div class="trend-stat">
+      <div class="val ${change > 0 ? 'up' : 'down'}">${change > 0 ? '+' : ''}${change.toFixed(2)}$ (${changePct}%)</div>
+      <div class="lbl">vs 12 mois</div>
+    </div>
+    <div class="trend-stat">
+      <div class="val">${avg.toFixed(2)}$</div>
+      <div class="lbl">Moyenne 9 ans</div>
+    </div>
+    <div class="trend-stat">
+      <div class="val" style="color:var(--green)">${min.toFixed(2)}$</div>
+      <div class="lbl">Plus bas</div>
+    </div>
+    <div class="trend-stat">
+      <div class="val" style="color:var(--accent)">${max.toFixed(2)}$</div>
+      <div class="lbl">Plus haut</div>
+    </div>
+  `;
+
+  // Chart
+  const ctx = document.getElementById('trendChart').getContext('2d');
+
+  if (chart) chart.destroy();
+
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: trend.product,
+        data: prices,
+        borderColor: '#e94560',
+        backgroundColor: 'rgba(233,69,96,0.1)',
+        fill: true,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        tension: 0.2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#111118',
+          titleColor: '#fff',
+          bodyColor: '#e0e0e0',
+          borderColor: '#1a1a2e',
+          borderWidth: 1,
+          padding: 12,
+          callbacks: {
+            label: ctx => `${ctx.parsed.y.toFixed(2)}$`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.03)' },
+          ticks: { 
+            color: '#666', 
+            maxTicksLimit: 12,
+            callback: function(val, idx) {
+              const label = this.getLabelForValue(val);
+              // Show only year labels
+              return label ? label.substring(0, 7) : '';
+            }
+          }
+        },
+        y: {
+          grid: { color: 'rgba(255,255,255,0.05)' },
+          ticks: { 
+            color: '#666',
+            callback: val => val.toFixed(2) + '$'
+          }
+        }
+      },
+      interaction: {
+        intersect: false,
+        mode: 'index',
+      }
+    }
+  });
+}
+
+init();
+</script>
+</body>
+</html>

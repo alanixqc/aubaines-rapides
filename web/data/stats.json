@@ -1,0 +1,34 @@
+{
+  "total": 379,
+  "by_type": {
+    "legume": 84,
+    "porc": 91,
+    "poulet": 126,
+    "boeuf": 72,
+    "poisson": 1,
+    "viande": 5
+  },
+  "stores": [
+    "5 Saveurs",
+    "Costco",
+    "Fruiterie Potager",
+    "IGA",
+    "L'Inter-Marché",
+    "Les Marchés Tradition",
+    "Les aliments M&M",
+    "Maxi",
+    "Mayrand",
+    "Metro",
+    "Provigo",
+    "Rachelle Béry",
+    "Super C",
+    "Supermarché Aurès",
+    "Tigre Géant",
+    "Walmart",
+    "le Choix du Président"
+  ],
+  "week": "2026-05-30",
+  "generated_at": "2026-05-30T10:01:28.099940",
+  "stores_count": 21,
+  "trends_count": 34
+}

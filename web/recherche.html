@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Recherche</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="viande.html">🥩 Viande</a>
+      <a href="legumes.html">🥦 Légumes</a>
+      <a href="recherche.html" class="active">🔍 Recherche</a>
+      <a href="tendances.html">📈 Tendances</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">🔍 Recherche</h1>
+  <p class="page-subtitle">Trouve le meilleur deal pour n'importe quel produit</p>
+
+  <div class="search-input-wrap">
+    <input type="text" id="searchInput" placeholder="Ex: poulet, boeuf haché, brocoli, bacon, poitrine..." autofocus>
+  </div>
+
+  <div class="search-count" id="resultCount"></div>
+  <div class="deals-grid" id="results"></div>
+
+  <div id="noResults" style="display:none; text-align:center; padding:40px; color:var(--text-dim);">
+    <div style="font-size:3em; margin-bottom:12px;">🔍</div>
+    <p>Aucun résultat pour cette recherche.</p>
+    <p style="font-size:0.85em;">Essaie: poulet, boeuf, porc, bacon, steak, poitrine, brocoli, carotte...</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Aubaines Rapides &copy; 2026 — Données provenant des circulaires en ligne</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+let allProducts = [];
+
+async function init() {
+  const ok = await loadAllData();
+  if (!ok) return;
+
+  allProducts = productsData;
+
+  // Check URL param
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) {
+    document.getElementById('searchInput').value = q;
+    doSearch(q);
+  }
+
+  // Live search on input
+  let debounceTimer;
+  document.getElementById('searchInput').addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const val = document.getElementById('searchInput').value.trim();
+      if (val.length >= 2) {
+        doSearch(val);
+      } else {
+        document.getElementById('results').innerHTML = '';
+        document.getElementById('resultCount').textContent = '';
+        document.getElementById('noResults').style.display = 'none';
+      }
+    }, 300);
+  });
+}
+
+function doSearch(query) {
+  if (!query || query.length < 2) return;
+
+  const q = query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  
+  const filtered = allProducts.filter(p => {
+    const name = (p.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return name.includes(q);
+  });
+
+  // Deduplicate + enrich with deals data
+  const seen = new Set();
+  const results = [];
+  for (const p of filtered) {
+    const key = p.name + '|' + p.store;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    results.push(p);
+  }
+
+  // Limit to 100
+  const limited = results.slice(0, 100);
+
+  document.getElementById('resultCount').textContent = `${results.length} produits trouvés${results.length > 100 ? ' (affichage des 100 premiers)' : ''}`;
+
+  const container = document.getElementById('results');
+  container.innerHTML = '';
+
+  if (limited.length === 0) {
+    document.getElementById('noResults').style.display = 'block';
+    return;
+  }
+  document.getElementById('noResults').style.display = 'none';
+
+  limited.forEach((p, i) => {
+    container.appendChild(createDealCard(p, i + 1));
+  });
+}
+
+// Support from hero search
+window.doSearch = doSearch;
+
+init();
+</script>
+</body>
+</html>

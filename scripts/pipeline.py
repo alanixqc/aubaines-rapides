@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Pipeline Aubanes Rapides — version robuste avec statut
+Pipeline Aubanes Rapides — version complète
+Exécute tous les scrapers custom + Flipp + dédup + rapport
 Exécuté par cron chaque mardi 8h30
 """
 import sys
 import os
 import json
 import logging
+import subprocess
 from datetime import datetime, date
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -19,10 +21,11 @@ from db.schema import get_db
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 STATUS_FILE = os.path.join(PROJECT_ROOT, "data", "pipeline_status.json")
 LOG_FILE = os.path.join(PROJECT_ROOT, "data", "pipeline.log")
+SCRIPTERS_DIR = os.path.join(PROJECT_ROOT, "scrapers")
+PYTHON = sys.executable
 
 
 def setup_logging():
-    """Configure logging to file and stdout."""
     log_format = "%(asctime)s [%(levelname)s] %(message)s"
     logging.basicConfig(
         level=logging.INFO,
@@ -36,7 +39,6 @@ def setup_logging():
 
 
 def save_status(status_data):
-    """Saves pipeline run status to JSON file for monitoring."""
     status_data["last_run"] = datetime.now().isoformat()
     os.makedirs(os.path.dirname(STATUS_FILE), exist_ok=True)
     with open(STATUS_FILE, "w", encoding="utf-8") as f:
@@ -44,9 +46,40 @@ def save_status(status_data):
     logging.info(f"📝 Statut sauvegardé dans {STATUS_FILE}")
 
 
+def run_scraper(name, args=None, timeout=120):
+    """Run a scraper subprocess and return (success, output)."""
+    path = os.path.join(SCRIPTERS_DIR, f"scraper_{name}.py")
+    if not os.path.exists(path):
+        logging.warning(f"   ⚠️ Scraper {name} introuvable: {path}")
+        return False, ""
+
+    cmd = [PYTHON, path, "--db"]
+    if args:
+        cmd.extend(args)
+
+    logging.info(f"   ▶️ python scraper_{name}.py {' '.join(args or ['--db'])}")
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        for line in result.stderr.strip().split("\n"):
+            if line.strip():
+                logging.info(f"   {line.strip()}")
+        if result.stdout.strip():
+            logging.info(f"   stdout: {result.stdout.strip()[:200]}")
+        if result.returncode != 0:
+            logging.error(f"   ❌ {name} échec (code {result.returncode})")
+            return False, result.stderr
+        return True, ""
+    except subprocess.TimeoutExpired:
+        logging.error(f"   ❌ {name} timeout ({timeout}s)")
+        return False, "timeout"
+    except Exception as e:
+        logging.error(f"   ❌ {name} exception: {e}")
+        return False, str(e)
+
+
 def get_weekly_summary():
-    """Récupère les top deals pour les afficher dans le résumé."""
-    from scripts.deal import enrich, is_excluded, format_price_line, format_protein_line
+    """Récupère le top 3 deals pour le résumé final."""
+    from scripts.deal import enrich, is_excluded
 
     db = get_db()
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
@@ -64,7 +97,6 @@ def get_weekly_summary():
     ).fetchall()
     db.close()
 
-    # Enrich + dedup + exclude
     enriched = []
     seen = set()
     for r in rows:
@@ -82,30 +114,27 @@ def get_weekly_summary():
         return None
 
     enriched.sort(key=lambda x: x["per_kg"] if x["per_kg"] and x["per_kg"] > 0 else 99999)
-
-    # Take top 3
     top3 = enriched[:3]
-    summary_lines = ["🏆  TOP 3 DEALS DE LA SEMAINE  🏆"]
     medals = ["🥇", "🥈", "🥉"]
+
+    lines = ["🏆  TOP 3 DEALS DE LA SEMAINE  🏆"]
     for i, e in enumerate(top3):
         r = e["r"]
         store_emoji = {"Super C": "🟡", "Metro": "🔴", "IGA": "🟢", "Maxi": "🟠",
                        "Provigo": "🟣", "Walmart": "🔵", "Costco": "⭕",
                        "Tigre Géant": "🐯", "Les Marchés Tradition": "🟤"}.get(r["merchant_name"], "🏪")
-        meat_emoji = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓"}.get(r["meat_type"], "")
+        meat_emoji = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓", "legume": "🥦", "légume": "🥦"}.get(r["meat_type"], "")
         per_lb = round(e["per_kg"] / 2.20462, 2)
         line = f"\n{medals[i]} {store_emoji} **{r['merchant_name']}** {meat_emoji}"
         line += f"\n   {r['name'][:40]}"
         line += f"\n   💰 {r['price']:.2f}$  ·  {e['per_kg']:.2f}$/kg  ·  {per_lb:.2f}$/lb"
-        summary_lines.append(line)
+        lines.append(line)
 
-    # Stats
     total_meat = len(enriched)
     stores = set(e["r"]["merchant_name"] for e in enriched)
-    summary_lines.append(f"\n📊 {total_meat} offres · {len(stores)} épiceries")
-    summary_lines.append("📍 Saint-Jérôme · !deal [codepostal] pour filtrer")
-
-    return "\n".join(summary_lines)
+    lines.append(f"\n📊 {total_meat} offres · {len(stores)} épiceries")
+    lines.append("📍 Saint-Jérôme · !deal [codepostal] pour filtrer")
+    return "\n".join(lines)
 
 
 def run_pipeline():
@@ -113,24 +142,48 @@ def run_pipeline():
     start_time = datetime.now()
 
     logger.info("=" * 60)
-    logger.info("🔄 PIPELINE AUBANES RAPIDES")
+    logger.info("🔄 PIPELINE AUBANES RAPIDES — COMPLET")
     logger.info("=" * 60)
 
     status = {"success": False, "error": None, "stats": {}, "started_at": start_time.isoformat()}
+    all_stats = {"custom_scrapers": {}, "total_meat": 0, "total_products": 0, "total_prices": 0}
 
     try:
-        # ── Phase 1: Scraper ──
-        logger.info("\n📡 Phase 1: Scraping Flipp...")
+        # ── Phase 0: Custom scrapers (via Flipp API — HTTP rapide) ──
+        logger.info("\n🔧 Phase 0: Scrapers custom (HTTP, indépendants)...")
+
+        custom_scrapers = [
+            ("tigregeant", ["--db"], 120),
+            ("maxi", ["--db"], 120),
+            ("marchestradition", ["--db"], 120),
+            ("walmart", ["--db"], 120),
+        ]
+
+        for name, args, tout in custom_scrapers:
+            ok, err = run_scraper(name, args, timeout=tout)
+            all_stats["custom_scrapers"][name] = {"success": ok, "error": err if not ok else None}
+            logger.info(f"   {'✅' if ok else '❌'} {name}")
+
+        # ── Phase 0b: Playwright scrapers (plus lents, optionnels) ──
+        logger.info("\n🌐 Phase 0b: Scrapers Playwright (browser)...")
+        playwright_scrapers = ["superc", "metro"]
+        for name in playwright_scrapers:
+            ok, err = run_scraper(name, ["--db", "--headless", "true"], timeout=180)
+            all_stats["custom_scrapers"][name] = {"success": ok, "error": err if not ok else None}
+            logger.info(f"   {'✅' if ok else '❌'} {name}")
+
+        # ── Phase 1: Flipp scraper (tous les autres stores) ──
+        logger.info("\n📡 Phase 1: Scraping Flipp (tous les stores restants)...")
         scraper = FlippScraper()
         stats = scraper.run()
 
         logger.info(f"   Items scrapés:   {stats.get('items_scraped', 0)}")
         logger.info(f"   Items viande:    {stats.get('meat_items', 0)}")
         logger.info(f"   Nouvelles entrées: {stats.get('new_entries', 0)}")
-        status["stats"]["scrape"] = stats
+        all_stats["flipp"] = stats
 
         # ── Phase 2: Déduplication ──
-        logger.info("\n🧹 Phase 2: Nettoyage des doublons...")
+        logger.info("\n🧹 Phase 2: Nettoyage des doublons (MAX(id) par groupe)...")
         db = get_db()
         db.execute("""
             DELETE FROM price_history WHERE id NOT IN (
@@ -144,42 +197,94 @@ def run_pipeline():
         logger.info(f"   ✅ {dedup_count} doublons nettoyés")
 
         # ── Phase 3: Rapport HTML ──
-        logger.info("\n📊 Phase 3: Génération du rapport...")
+        logger.info("\n📊 Phase 3: Génération du rapport HTML...")
         html_content = generate_html()
         logger.info("   ✅ Rapport généré")
 
-        # ── Phase 4: Statut des données ──
+        # ── Phase 4: Stats ──
         db = get_db()
         total_products = db.execute("SELECT COUNT(*) FROM products").fetchone()[0]
         total_prices = db.execute("SELECT COUNT(*) FROM price_history").fetchone()[0]
         weeks = [r["week_start"] for r in
                  db.execute("SELECT DISTINCT week_start FROM price_history ORDER BY week_start").fetchall()]
+
+        meat_by_store = db.execute("""
+            SELECT ph.merchant_name, COUNT(DISTINCT ph.product_id) as cnt
+            FROM price_history ph
+            JOIN products p ON p.id = ph.product_id
+            WHERE ph.week_start = (SELECT MAX(week_start) FROM price_history)
+              AND p.meat_type IS NOT NULL
+            GROUP BY ph.merchant_name ORDER BY cnt DESC
+        """).fetchall()
         db.close()
 
         logger.info(f"\n📈 Base de données:")
         logger.info(f"   Produits: {total_products}")
-        logger.info(f"   Prix historiques: {total_prices}")
+        logger.info(f"   Prix: {total_prices}")
         logger.info(f"   Semaines: {', '.join(weeks) if weeks else 'aucune'}")
+        for row in meat_by_store:
+            logger.info(f"   {row['merchant_name']:25s}  {row['cnt']:3d} viandes")
 
         # ── Résumé ──
         elapsed = (datetime.now() - start_time).total_seconds()
         logger.info(f"\n✅ Pipeline terminé en {elapsed:.1f}s")
-        logger.info(f"   Items scrapés:   {stats.get('items_scraped', 0)}")
-        logger.info(f"   Items viande:    {stats.get('meat_items', 0)}")
+        logger.info(f"   Items viande totaux:  {stats.get('meat_items', 0)}")
 
         status["success"] = True
-        status["stats"]["total_products"] = total_products
-        status["stats"]["total_prices"] = total_prices
-        status["stats"]["weeks"] = weeks
-        status["stats"]["elapsed_seconds"] = round(elapsed, 1)
+        status["stats"] = {
+            "custom_scrapers": {k: {"success": v["success"]} for k, v in all_stats["custom_scrapers"].items()},
+            "flipp_scrape": all_stats.get("flipp", {}),
+            "total_products": total_products,
+            "total_prices": total_prices,
+            "weeks": weeks,
+            "meat_by_store": {r["merchant_name"]: r["cnt"] for r in meat_by_store},
+            "elapsed_seconds": round(elapsed, 1),
+        }
         save_status(status)
 
-        # ── Summary for Discord ──
+        # ── Summary pour Discord ──
         summary = get_weekly_summary()
         if summary:
             print(f"\n{'=' * 60}")
             print(summary)
             print(f"\n{'=' * 60}")
+
+        # ── Build site (JSON data) ──
+        logger.info("\n📦 Génération des données pour le site...")
+        try:
+            subprocess.run(
+                [PYTHON, os.path.join(PROJECT_ROOT, "scripts", "build_site.py")],
+                check=True, cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=60
+            )
+            logger.info("   ✅ Site data généré")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"   ⚠️ build_site: {e.stderr}")
+
+        # ── Commit & push site data ──
+        logger.info("\n📤 Push vers GitHub Pages...")
+        try:
+            subprocess.run(
+                ["git", "add", "web/data/"],
+                check=True, cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=30
+            )
+            result = subprocess.run(
+                ["git", "diff", "--cached", "--quiet"],
+                cwd=PROJECT_ROOT, capture_output=True, timeout=15
+            )
+            if result.returncode == 1:
+                subprocess.run(
+                    ["git", "commit", "-m", f"auto: site data {datetime.now().strftime('%Y-%m-%d')}"],
+                    check=True, cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=30
+                )
+                subprocess.run(
+                    ["git", "push"],
+                    check=True, cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=60
+                )
+                logger.info("   ✅ Pushé sur GitHub")
+            else:
+                logger.info("   Rien à commit (pas de changements)")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"   ⚠️ Git push: {e.stderr}")
 
         return status
 

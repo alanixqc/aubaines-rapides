@@ -1,0 +1,128 @@
+[
+  {
+    "id": 36848,
+    "name": "5 Saveurs",
+    "emoji": "🏪",
+    "slug": "5-saveurs"
+  },
+  {
+    "id": 44977,
+    "name": "Adonis",
+    "emoji": "🏪",
+    "slug": "adonis"
+  },
+  {
+    "id": 37030,
+    "name": "Costco",
+    "emoji": "⭕",
+    "slug": "costco"
+  },
+  {
+    "id": 36808,
+    "name": "Fruiterie Potager",
+    "emoji": "🏪",
+    "slug": "fruiterie-potager"
+  },
+  {
+    "id": 37937,
+    "name": "IGA",
+    "emoji": "🟢",
+    "slug": "iga"
+  },
+  {
+    "id": 44979,
+    "name": "Kim Phat",
+    "emoji": "🏪",
+    "slug": "kim-phat"
+  },
+  {
+    "id": 36918,
+    "name": "L'Inter-Marché",
+    "emoji": "🏪",
+    "slug": "l'inter-marché"
+  },
+  {
+    "id": 38622,
+    "name": "Les Marchés Tradition",
+    "emoji": "🏪",
+    "slug": "les-marchés-tradition"
+  },
+  {
+    "id": 40051,
+    "name": "Les aliments M&M",
+    "emoji": "🏪",
+    "slug": "les-aliments-m&m"
+  },
+  {
+    "id": 38591,
+    "name": "Marche C & T",
+    "emoji": "🏪",
+    "slug": "marche-c-&-t"
+  },
+  {
+    "id": 44978,
+    "name": "Marché Tau",
+    "emoji": "🏪",
+    "slug": "marche-tau"
+  },
+  {
+    "id": 40525,
+    "name": "Maxi",
+    "emoji": "🟠",
+    "slug": "maxi"
+  },
+  {
+    "id": 38798,
+    "name": "Mayrand",
+    "emoji": "🏪",
+    "slug": "mayrand"
+  },
+  {
+    "id": 37470,
+    "name": "Metro",
+    "emoji": "🔴",
+    "slug": "metro"
+  },
+  {
+    "id": 39250,
+    "name": "Provigo",
+    "emoji": "🟣",
+    "slug": "provigo"
+  },
+  {
+    "id": 37869,
+    "name": "Rachelle Béry",
+    "emoji": "🏪",
+    "slug": "rachelle-béry"
+  },
+  {
+    "id": 38325,
+    "name": "Super C",
+    "emoji": "🟡",
+    "slug": "super-c"
+  },
+  {
+    "id": 37374,
+    "name": "Supermarché Aurès",
+    "emoji": "🏪",
+    "slug": "supermarché-aurès"
+  },
+  {
+    "id": 39116,
+    "name": "Tigre Géant",
+    "emoji": "🏪",
+    "slug": "tigre-géant"
+  },
+  {
+    "id": 38989,
+    "name": "Walmart",
+    "emoji": "🔵",
+    "slug": "walmart"
+  },
+  {
+    "id": 37215,
+    "name": "le Choix du Président",
+    "emoji": "🏪",
+    "slug": "le-choix-du-président"
+  }
+]

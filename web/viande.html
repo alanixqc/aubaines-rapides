@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Deals Viande</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="viande.html" class="active">🥩 Viande</a>
+      <a href="legumes.html">🥦 Légumes</a>
+      <a href="recherche.html">🔍 Recherche</a>
+      <a href="tendances.html">📈 Tendances</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">🥩 Deals viande</h1>
+  <p class="page-subtitle">Tous les spéciaux boeuf, poulet et porc de la semaine</p>
+
+  <div class="filters" id="meatFilters">
+    <button class="filter-btn active" data-filter="all">Tout</button>
+    <button class="filter-btn" data-filter="boeuf">🥩 Boeuf</button>
+    <button class="filter-btn" data-filter="poulet">🍗 Poulet</button>
+    <button class="filter-btn" data-filter="porc">🥓 Porc</button>
+  </div>
+
+  <div class="search-count" id="resultCount"></div>
+  <div class="deals-grid" id="dealsList"></div>
+</div>
+
+<footer class="footer">
+  <div class="update-badge" id="updateBadge">Mise à jour hebdomadaire</div>
+  <p>Aubaines Rapides &copy; 2026 — Données provenant des circulaires en ligne</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+let allMeatDeals = [];
+
+async function init() {
+  const ok = await loadAllData();
+  if (!ok) return;
+
+  const { deals_with_kg, deals_wo_kg, stats } = dealsData;
+  allMeatDeals = [...deals_with_kg, ...deals_wo_kg].filter(d => d.meat_type !== 'legume');
+
+  document.getElementById('updateBadge').textContent = `🔄 Semaine du ${stats.week}`;
+  applyFilter('all');
+
+  // Filter buttons
+  document.querySelectorAll('#meatFilters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#meatFilters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+}
+
+function applyFilter(type) {
+  let filtered;
+  if (type === 'all') {
+    filtered = allMeatDeals;
+  } else {
+    filtered = allMeatDeals.filter(d => d.meat_type === type);
+  }
+
+  // Sort: with $/kg first
+  filtered.sort((a, b) => {
+    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+    if (a.per_kg && !b.per_kg) return -1;
+    if (!a.per_kg && b.per_kg) return 1;
+    return (a.price || 0) - (b.price || 0);
+  });
+
+  document.getElementById('resultCount').textContent = `${filtered.length} deals trouvés`;
+  renderDeals(document.getElementById('dealsList'), filtered);
+}
+
+init();
+</script>
+</body>
+</html>
