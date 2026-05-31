@@ -9,9 +9,11 @@
 <meta property="og:description" content="Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alanixqc.github.io/aubaines-rapides/web/">
+<meta property="og:image" content="https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aubaines Rapides — Spéciaux d'épicerie QC">
 <meta name="twitter:description" content="Les meilleurs spéciaux de la semaine au Québec, comparés rapidement.">
+<meta name="twitter:image" content="https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png">
 <meta name="theme-color" content="#b8492e">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 <title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
@@ -1524,6 +1526,7 @@ function renderAll() {
     <div class="ticker-item"><span class="num">${stats.total || "—"}</span> <span class="label">offres</span></div>
     <div class="ticker-item"><span class="num">${totalMeat}</span> <span class="label">viandes</span></div>
     <div class="ticker-item"><span class="num">${byCat.legume || 0}</span> <span class="label">légumes</span></div>
+    <div class="ticker-item"><span class="num">${byCat.poisson || 0}</span> <span class="label">poissons</span></div>
     <div class="ticker-item"><span class="num">${byCat.fruit || 0}</span> <span class="label">fruits</span></div>
     <div class="ticker-item"><span class="num">${byCat.sauce || 0}</span> <span class="label">sauces</span></div>
     <div class="ticker-item"><span class="num">${byCat.yogourt || 0}</span> <span class="label">yogourts</span></div>

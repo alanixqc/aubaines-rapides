@@ -643,9 +643,18 @@ STORE_URLS = {
 def classify_meat_type(name, current_mt):
     """Améliore la classification des types de viande/aliments."""
     name_lower = name.lower()
+
+    # Mots-clés prioritaires (match mot entier)
     for kw in POISSON_KW:
         if kw in name_lower:
             return "poisson"
+
+    # Si déjà classé comme viande, ne pas surclasser par fruit/sauce/yogourt
+    # (ex: "Saucisses aux pommes" reste porc, pas fruit)
+    MEAT_TYPES = frozenset(["boeuf", "poulet", "porc", "viande", "veau", "dinde"])
+    if current_mt in MEAT_TYPES:
+        return current_mt
+
     for kw in FRUIT_KW:
         if kw in name_lower:
             return "fruit"
