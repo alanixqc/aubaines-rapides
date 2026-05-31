@@ -790,6 +790,11 @@ body {
 }
 .modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:var(--text-main); margin-bottom:4px; padding-right:40px; }
 .modal-store { font-size:14px; color:var(--text-muted); margin-bottom:16px; }
+.modal-store-link {
+  display:inline-block; font-size:13px; color:var(--deal-red);
+  text-decoration:none; margin-bottom:16px; font-weight:600;
+}
+.modal-store-link:hover { text-decoration:underline; }
 .modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
 .modal-details { margin:16px 0; }
 .modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
@@ -1124,6 +1129,7 @@ body {
   <button type="button" class="modal-close" onclick="closeDealDetail()" aria-label="Fermer">✕</button>
   <h3 id="modalTitle"></h3>
   <div class="modal-store" id="modalStore"></div>
+  <a id="modalStoreLink" href="" target="_blank" rel="noopener" class="modal-store-link" style="display:none">🌐 Voir le site</a>
   <!-- Image cliquable → plein écran -->
   <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
     <img id="modalImg" src="" alt="Photo du produit">
@@ -1620,6 +1626,15 @@ function showDealDetail(id) {
   
   document.getElementById("modalTitle").textContent = d.name_short || d.name;
   document.getElementById("modalStore").textContent = `${d.store_emoji || "🏪"} ${d.store}`;
+  
+  // Lien vers le site de l'épicerie
+  const storeLink = document.getElementById("modalStoreLink");
+  if (d.store_url) {
+    storeLink.href = d.store_url;
+    storeLink.style.display = "inline";
+  } else {
+    storeLink.style.display = "none";
+  }
   document.getElementById("modalPrice").textContent = d.price ? `${d.price.toFixed(2)}$` : "";
   
   let details = "";

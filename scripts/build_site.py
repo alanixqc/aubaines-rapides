@@ -626,6 +626,19 @@ PROTEIN_PER_100G = {
     "yogourt": {"grec": 9, "grecque": 9, "nature": 4, "generic": 5},
 }
 
+# ─── URLs des épiceries ───
+STORE_URLS = {
+    "Super C": "https://www.superc.ca/",
+    "Tigre Géant": "https://www.tigregeant.ca/",
+    "Maxi": "https://www.maxi.ca/",
+    "Provigo": "https://www.provigo.ca/",
+    "Loblaws": "https://www.loblaws.ca/",
+    "IGA": "https://www.iga.net/",
+    "Metro": "https://www.metro.ca/",
+    "Walmart": "https://www.walmart.ca/",
+    "Costco": "https://www.costco.ca/",
+}
+
 
 def classify_meat_type(name, current_mt):
     """Améliore la classification des types de viande/aliments."""
@@ -1060,6 +1073,9 @@ def export_deals():
             store_name = r["merchant_name"]
             clean_name = clean_french_name(r["name"])
             
+            # URL du site de l'épicerie
+            store_url = STORE_URLS.get(store_name, "")
+            
             deals.append({
                 "id": r["id"],
                 "name": clean_name,
@@ -1068,6 +1084,7 @@ def export_deals():
                 "store": store_name,
                 "store_id": r["store_id"],
                 "store_emoji": store_emoji(store_name),
+                "store_url": store_url,
                 "price": round(r["price"], 2) if r["price"] else None,
                 "per_kg": per_kg,
                 "per_lb": per_lb,
