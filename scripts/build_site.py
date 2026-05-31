@@ -176,6 +176,223 @@ EN_TO_FR_TRANSLATIONS = {
     "white": "blanc",
     "pacific": "du Pacifique",
     "wild": "sauvage",
+    # Plus de termes manquants (Super C)
+    "marrow": "moelle",
+    "soup": "soupe",
+    "bones": "os",
+    "grain fed": "nourri au grain",
+    "grain-fed": "nourri au grain",
+    "fed": "nourri au grain",
+    "liver": "foie",
+    "slices": "tranches",
+    "quarter": "quartier",
+    "quarters": "quartiers",
+    "hocks": "jarrets",
+    "belly": "poitrine",
+    "rack of": "râble de",
+    "shank": "jarret",
+    "tenderized": "attendri",
+    "tenderized": "attendri",
+    "seasonned": "assaisonné",
+    "seasoned": "assaisonné",
+    "french steak": "steak français",
+    "french": "français",
+    "inside round": "intérieur de ronde",
+    "sandwich": "sandwich",
+    "setwich": "sandwich",
+    "osso buco": "osso buco",
+    "giant value": "Géant Valeur",
+    "lean": "maigre",
+    "medium": "moyen",
+    "diced": "en dés",
+    "cubes": "cubes",
+    "prepared": "préparé",
+    "strips": "lanières",
+    "frenched": "paré",
+    "marinated": "mariné",
+    "seasoned": "assaisonné",
+    "seasoning": "assaisonnement",
+    "garlic": "ail",
+    "herb": "herbes",
+    "herbs": "herbes",
+    "spices": "épices",
+    "pepper": "poivre",
+    "butter": "beurre",
+    "cream": "crème",
+    "onion": "oignon",
+    "hot dog": "hot dog",
+    "weiners": "saucisses",
+    "smokies": "saucisses fumées",
+    "kolbassa": "kolbassa",
+    "kielbassa": "kielbassa",
+    "pepperoni": "pepperoni",
+    "salami": "salami",
+    "prosciutto": "prosciutto",
+    "curd": "grains",
+    "cheese curds": "fromage en grains",
+    "3-pepper": "3 poivres",
+    "three-pepper": "3 poivres",
+    "peppered": "aux poivres",
+    "portuguese": "portugais",
+    "bbq": "BBQ",
+    "bbq cut": "coupe BBQ",
+    "bbq style": "style BBQ",
+    "bone-in": "avec os",
+    "boneless": "désossé",
+    "skinless": "sans peau",
+    "without skin": "sans peau",
+    "loin": "longe",
+    "sirloin": "surlonge",
+    "rib": "côte",
+    "ribeye": "entre-côte",
+    "picanha": "picanha",
+    "t-bone": "T-bone",
+    "porterhouse": "porterhouse",
+    "chuck": "paleron",
+    "flank": "flanc",
+    "round": "rondelle",
+    "rump": "cuisse",
+    "blade": "palette",
+    "shoulder": "épaule",
+    "knuckle": "gîte",
+    "cutlet": "escalope",
+    "stewing": "à ragoût",
+    "stir fry": "pour sauté",
+    "saute": "pour sauté",
+    "stir": "pour sauté",
+    "ground": "haché",
+    "mince": "haché",
+    "sausage": "saucisse",
+    "sausages": "saucisses",
+    "stew": "ragoût",
+    "roast": "rôti",
+    "basted": "brossé",
+    "crispy": "croustillant",
+    "breaded": "pané",
+    "battered": "enrobe",
+    "broiled": "grillé au four",
+    "grilled": "grillé",
+    "pan": "à la poêle",
+    "deep": "frite",
+    "shallow": "frite légère",
+    "charcoal": "au charbon",
+    "stovetop": "sur la cuisinière",
+    "baked": "au four",
+    "roasted": "rôti",
+    "cooked": "cuit",
+    "raw": "cru",
+    "fresh": "frais",
+    "frozen": "surgelé",
+    "smoked": "fumé",
+    "boneless": "désossé",
+    "boneless": "désossé",
+    "regular": "régulier",
+    "original": "original",
+    "gold label": "Étiquette Or",
+    "giant value": "Géant Valeur",
+    "great value": "Grande Valeur",
+    "value pack": "paquet de valeur",
+    "combo pack": "combo",
+    "family size": "format familial",
+    "party size": "format fête",
+    "twin pack": "double paquet",
+    "3-pack": "3 unités",
+    "4-pack": "4 unités",
+    "5-pack": "5 unités",
+    "6-pack": "6 unités",
+    "8-pack": "8 unités",
+    "10-pack": "10 unités",
+    "12-pack": "12 unités",
+    "with": "avec",
+    "without": "sans",
+    "for": "pour",
+    # NOTE: "and", "in", "of", "at" etc. (mots ≤3 lettres) NE DOIVENT PAS être ici —
+    # ils matchent à l'intérieur de mots plus longs ("in" dans "grain" → "graen", "and" dans "grand" → "gret")
+    # Termes manquants (juin 2026) — ajoutés après avoir trouvé 81 noms encore en anglais sur le site
+    "kidneys": "rognons",
+    "kidney": "rognon",
+    "hearts": "cœurs",
+    "heart": "cœur",
+    "tongue": "langue",
+    "tripe": "tripes",
+    "gizzards": "gésiers",
+    "gizzard": "gésier",
+    "sliced": "tranché",
+    "slice": "tranche",
+    "chops": "côtelettes",
+    "chop": "côtelette",
+    "hotel cut": "coupe hôtel",
+    "hotel style": "style hôtel",
+    "honey": "miel",
+    "honey garlic": "miel et ail",
+    "lemon pepper": "citron poivre",
+    "lemon herb": "citron et herbes",
+    "knife cut": "coupe au couteau",
+    "cook from": "à cuire",
+    "legs": "cuisses",
+    "leg": "cuisse",
+    "back attached": "dos attaché",
+    "tip": "pointe",
+    "spice": "épices",
+    "montreal spice": "épices Montréal",
+    "montreal steak spice": "épices à steak Montréal",
+    "montreal smoked meat": "viande fumée Montréal",
+    "smoked meat": "viande fumée",
+    "corned beef": "bœuf salé",
+    "pastrami": "pastrami",
+    "kielbasa": "kielbasa",
+    "smokies": "saucisses fumées",
+    "bangers": "bangers",
+    "maple": "érable",
+    "apple": "pomme",
+    "cherry": "cerise",
+    "peach": "pêche",
+    "mango": "mangue",
+    "pineapple": "ananas",
+    "orange": "orange",
+    "lemon": "citron",
+    "lime": "lime",
+    "veal liver": "foie de veau",
+    "beef liver": "foie de bœuf",
+    "pork liver": "foie de porc",
+    "chicken liver": "foie de poulet",
+    "attached": "attaché",
+    "seared": "saisi",
+    "sautéed": "sauté",
+    "sauté": "sauté",
+    "glazed": "glaçé",
+    "marinated": "mariné",
+    "stuffed": "farcie",
+    "organic": "bio",
+    "halal": "halal",
+    "kosher": "kasher",
+    "free range": "plein air",
+    "free-range": "plein air",
+    "grain fed": "nourri au grain",
+    "grain-fed": "nourri au grain",
+    "grass fed": "nourri à l'herbe",
+    "grass-fed": "nourri à l'herbe",
+    "air chilled": "refroidi à l'air",
+    "air-chilled": "refroidi à l'air",
+    "never frozen": "jamais surgelé",
+    "fresh never frozen": "frais jamais surgelé",
+    "hotel-style": "style hôtel",
+    "hotel cut": "coupe hôtel",
+    "bbq sauce": "sauce BBQ",
+    "blood pudding": "boudin",
+    "shaved": "émincé",
+    "shaved steak": "steak émincé",
+    "top sirloin": "haut de surlonge",
+    "three pepper": "3 poivres",
+    "three-pepper": "3 poivres",
+    "wine": "vin",
+    "shallots": "échalotes",
+    "steakhouse": "steakhouse",
+    "striploin": "contre-filet",
+    "striplonge": "contre-filet",
+    "inside": "intérieur",
+    # Corrections de traductions erronées
+    "nourri au grain": "nourri au grain",  # verrou: empêche le re-remplacement par erreur
 }
 
 # Recettes — traduction français + URL française
@@ -455,6 +672,14 @@ def translate_product_name(name):
     # Nettoyer les espaces multiples
     name_lower = re.sub(r'\s+', ' ', name_lower).strip()
     
+    # Post-processing: mots courts avec word-boundary (trop risqués en substring)
+    # Ces mots sont SÉCURITAIRES en \b car ils n'apparaissent pas à l'intérieur 
+    # de mots français dans le contexte des produits d'épicerie
+    name_lower = re.sub(r'\band\b', 'et', name_lower, flags=re.IGNORECASE)
+    name_lower = re.sub(r'\bwine\b', 'vin', name_lower, flags=re.IGNORECASE)
+    name_lower = re.sub(r'\bshallots\b', 'échalotes', name_lower, flags=re.IGNORECASE)
+    name_lower = re.sub(r'\bshallot\b', 'échalote', name_lower, flags=re.IGNORECASE)
+    
     return name_lower
 
 
@@ -477,20 +702,11 @@ def clean_french_name(name):
     name = name[0].upper() + name[1:] if len(name) > 1 else name
     
     # Vérifier si le nom contient encore des mots anglais
-    name_lower = name.lower()
-    english_terms = {'beef','pork','chicken','turkey','ham','bacon','sausage','steak','roast',
-                     'grill','fried','frozen','fresh','boneless','breast','thigh','wings',
-                     'ground','whole','smoked','loin','chops','strips','nuggets','fillets',
-                     'shrimp','salmon','value','original','regular','smokehouse','tenderloin',
-                     'burger','burgers','boston','market','gold','label','smoke','house',
-                     'giant','pack','butcher','strip','recipe','dinner','meal','kit','house',
-                     'style','bbq','grill','aged','lean'}
-    
-    words = set(re.findall(r'[a-zA-Z]+', name_lower))
-    eng_word_count = sum(1 for w in words if w in english_terms)
-    
-    if eng_word_count >= 2:
-        name = translate_product_name(name)
+    # On traduit TOUJOURS — la fonction translate_product_name est idempotente
+    # pour le texte déjà en français (aucun terme EN→FR ne matchera).
+    # L'ancien gate `eng_word_count >= 1` manquait des mots absents du set
+    # (ex: 'sliced', 'blood', 'pudding', 'hotel' — pas dans english_terms → pas traduit)
+    name = translate_product_name(name)
     
     # Nettoyage final: enlever les mots anglais redondants après du français
     # ex: "MERGUEZ DE BOEUF BEEF" → "Merguez de bœuf"
@@ -667,18 +883,26 @@ def export_deals():
             ORDER BY ph.price ASC
         """, (week,)).fetchall()
         
-        seen_products = set()
+        seen_products = {}  # dict: pk -> row (pour préférer les entrées avec image)
         category_counts = defaultdict(int)
         store_set = set()
         deals = []
         
+        # Première passe: garder la meilleure entrée par produit (avec image prioritaire)
         for r in rows:
             if is_excluded(r["name"]):
                 continue
             pk = (r["name"], r["merchant_name"])
             if pk in seen_products:
+                existing = seen_products[pk]
+                # Remplacer si l'entrée courante a une image et pas l'existante
+                if r["image_url"] and not existing["image_url"]:
+                    seen_products[pk] = r
                 continue
-            seen_products.add(pk)
+            seen_products[pk] = r
+        
+        # Deuxième passe: traiter les entrées retenues
+        for r in seen_products.values():
 
             mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
             store_set.add(r["merchant_name"])
