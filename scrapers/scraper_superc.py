@@ -680,8 +680,8 @@ class SuperCScraper:
                 db.execute(
                     """INSERT INTO price_history
                        (product_id, price, regular_price, unit_price, unit_type,
-                        sale_text, valid_from, valid_to, week_start, merchant_name)
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        sale_text, valid_from, valid_to, week_start, merchant_name, image_url)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     (
                         product_id,
                         p.get("price"),
@@ -693,6 +693,7 @@ class SuperCScraper:
                         p.get("valid_to"),
                         week_start,
                         merchant,
+                        p.get("image_url", ""),
                     ),
                 )
                 inserted += 1
