@@ -1547,12 +1547,27 @@ function doSearch() {
     return;
   }
   const ql = q.toLowerCase();
-  const results = dealsAll.filter(d => {
+  // Étape 1: trouver les items qui matchent le mot-clé
+  const exactMatches = dealsAll.filter(d => {
     const name = (d.name || "").toLowerCase();
     const store = (d.store || "").toLowerCase();
     const cat = (d.category || "").toLowerCase();
     return name.includes(ql) || store.includes(ql) || cat.includes(ql);
-  }).slice(0, 15);
+  });
+  
+  // Étape 2: collecter tous les prix des items matchés
+  const prices = new Set();
+  exactMatches.forEach(d => { if (d.price) prices.add(d.price); });
+  
+  // Étape 3: trouver TOUS les items qui ont ces mêmes prix
+  const results = exactMatches.slice(0, 15);
+  if (results.length > 0 && prices.size > 0) {
+    const seen = new Set(results.map(d => d.id));
+    const samePrice = dealsAll.filter(d => 
+      d.price && prices.has(d.price) && !seen.has(d.id)
+    ).slice(0, 15 - results.length);
+    samePrice.forEach(d => results.push(d));
+  }
   
   // Show results in dedicated search overlay (not inside current tab)
   let container = document.getElementById("searchResultsContainer");
