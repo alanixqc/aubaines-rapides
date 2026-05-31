@@ -9,7 +9,7 @@ from datetime import date, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from db.schema import get_db, DB_PATH
 
-OUTPUT_PATH = os.path.join(os.path.dirname(DB_PATH), "..", "web", "index.html")
+OUTPUT_PATH = os.path.join(os.path.dirname(DB_PATH), "..", "web", "rapport.html")
 
 MEAT_EMOJI = {"boeuf": "🥩", "poulet": "🍗", "porc": "🥓"}
 MEAT_COLORS = {"boeuf": "#e74c3c", "poulet": "#f39c12", "porc": "#e67e22"}
