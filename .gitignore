@@ -8,12 +8,18 @@ __pycache__/
 venv/
 
 # Data (SQLite DB stays local, not committed)
+data/*.csv
 data/*.db
-data/*.log
 data/*.json
+data/*.log
+data/*.zip
 
 # Sauf web/data/ (pour le site GitHub Pages)
 !web/data/*.json
+
+# Experimental / work-in-progress scripts
+scripts/tiktok_scraper_apify.py
+scripts/youtube_recipes.py
 
 # Environment
 .env
@@ -30,3 +36,5 @@ Thumbs.db
 # Cache temporaire (screenshots auto-générés)
 cache/tigregeant/section_*.png
 cache/tigregeant/circulaire_*.png
+cache/marchestradition/page_*.jpg
+cache/marchestradition/page_*.png

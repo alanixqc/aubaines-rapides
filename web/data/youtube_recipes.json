@@ -1,0 +1,435 @@
+{
+  "fetched_at": "2026-05-31T13:46:51.192168",
+  "week": "2026-05-31",
+  "categories": {
+    "boeuf": {
+      "deal": {
+        "name": "Nourri au grain foie de veau tranches",
+        "price": 9.92,
+        "per_kg": 1.98,
+        "store": "Super C"
+      },
+      "videos": [
+        {
+          "title": "the secret to a homemade ground beef so tender and juicy",
+          "url": "https://www.youtube.com/watch?v=Q7GHvo1nKEc",
+          "video_id": "Q7GHvo1nKEc",
+          "channel": "Recettes marocaines de France ",
+          "views": 292184,
+          "duration": "3:32",
+          "thumbnail": "https://i.ytimg.com/vi/Q7GHvo1nKEc/hqdefault.jpg"
+        },
+        {
+          "title": "Comment cuire un STEAK HACHÉ",
+          "url": "https://www.youtube.com/watch?v=ez_0WlrOqqA",
+          "video_id": "ez_0WlrOqqA",
+          "channel": "Daniel Homechef",
+          "views": 203613,
+          "duration": "3:15",
+          "thumbnail": "https://i.ytimg.com/vi/ez_0WlrOqqA/hqdefault.jpg"
+        },
+        {
+          "title": "THE PERFECT BEEF STEW -- FOOD IS LOVE",
+          "url": "https://www.youtube.com/watch?v=jyzl4BLcMq4",
+          "video_id": "jyzl4BLcMq4",
+          "channel": "Food is Love",
+          "views": 151390,
+          "duration": "8:26",
+          "thumbnail": "https://i.ytimg.com/vi/jyzl4BLcMq4/hqdefault.jpg"
+        },
+        {
+          "title": "How to cook a basic stew",
+          "url": "https://www.youtube.com/watch?v=1IWA8CIvggg",
+          "video_id": "1IWA8CIvggg",
+          "channel": "Ricardo Cuisine",
+          "views": 67253,
+          "duration": "2:54",
+          "thumbnail": "https://i.ytimg.com/vi/1IWA8CIvggg/hqdefault.jpg"
+        },
+        {
+          "title": "Got ground beef and eggs at home? Make this delicious recipe.",
+          "url": "https://www.youtube.com/watch?v=OnClsHSOca4",
+          "video_id": "OnClsHSOca4",
+          "channel": "Recettes d'Aurora",
+          "views": 6638,
+          "duration": "2:41",
+          "thumbnail": "https://i.ytimg.com/vi/OnClsHSOca4/hqdefault.jpg"
+        },
+        {
+          "title": "Recette de boeuf haché facile à faire.",
+          "url": "https://www.youtube.com/watch?v=gC8Y7gVrCM8",
+          "video_id": "gC8Y7gVrCM8",
+          "channel": "Cuisine Facile Avec Phil!",
+          "views": 5378,
+          "duration": "12:57",
+          "thumbnail": "https://i.ytimg.com/vi/gC8Y7gVrCM8/hqdefault.jpg"
+        }
+      ]
+    },
+    "poulet": {
+      "deal": {
+        "name": "Entier dinde, à cuire surgelé",
+        "price": 30.76,
+        "per_kg": 6.15,
+        "store": "Super C"
+      },
+      "videos": [
+        {
+          "title": "Je n'ai jamais mangé de poitrine de poulet aussi délicieuse ! Recette très rapide et facile !",
+          "url": "https://www.youtube.com/watch?v=jrDjMhQRwDM",
+          "video_id": "jrDjMhQRwDM",
+          "channel": "Dozus Cook",
+          "views": 7224934,
+          "duration": "3:09",
+          "thumbnail": "https://i.ytimg.com/vi/jrDjMhQRwDM/hqdefault.jpg"
+        },
+        {
+          "title": "🍗 Le poulet basquaise du sud-ouest",
+          "url": "https://www.youtube.com/watch?v=IpHxA-bK18E",
+          "video_id": "IpHxA-bK18E",
+          "channel": "Philippe Etchebest",
+          "views": 813998,
+          "duration": "7:39",
+          "thumbnail": "https://i.ytimg.com/vi/IpHxA-bK18E/hqdefault.jpg"
+        },
+        {
+          "title": "Poulet Mayo || Une Delicieuse Recette du Poulet Mayonnaise || Recette Congolaise",
+          "url": "https://www.youtube.com/watch?v=BDqiBBBVNz0",
+          "video_id": "BDqiBBBVNz0",
+          "channel": "Noelia's Cooking",
+          "views": 504562,
+          "duration": "3:55",
+          "thumbnail": "https://i.ytimg.com/vi/BDqiBBBVNz0/hqdefault.jpg"
+        },
+        {
+          "title": "ESCALOPE DE POULET À LA SAUCE MOUTARDE -- FACILE & RAPIDE",
+          "url": "https://www.youtube.com/watch?v=bGsTcs2tICQ",
+          "video_id": "bGsTcs2tICQ",
+          "channel": "Food is Love",
+          "views": 382358,
+          "duration": "5:51",
+          "thumbnail": "https://i.ytimg.com/vi/bGsTcs2tICQ/hqdefault.jpg"
+        },
+        {
+          "title": "⏱️ Poulet et légumes au four - Rapide et Facile",
+          "url": "https://www.youtube.com/watch?v=Ku5aj50iFYs",
+          "video_id": "Ku5aj50iFYs",
+          "channel": "Philippe Etchebest",
+          "views": 198340,
+          "duration": "6:16",
+          "thumbnail": "https://i.ytimg.com/vi/Ku5aj50iFYs/hqdefault.jpg"
+        },
+        {
+          "title": "La recette de poitrine de poulet la plus savoureuse que j’ai jamais mangé! Fatigué et juteux!",
+          "url": "https://www.youtube.com/watch?v=rjqfxbKji58",
+          "video_id": "rjqfxbKji58",
+          "channel": "Recettes Apprenez",
+          "views": 2630,
+          "duration": "3:01",
+          "thumbnail": "https://i.ytimg.com/vi/rjqfxbKji58/hqdefault.jpg"
+        }
+      ]
+    },
+    "porc": {
+      "deal": {
+        "name": "Désossé half porc côte end longe, paquet de valeur",
+        "price": 9.61,
+        "per_kg": 5.49,
+        "store": "Metro"
+      },
+      "videos": [
+        {
+          "title": "Caramelized pork: the simplest of my recipes!",
+          "url": "https://www.youtube.com/watch?v=9FS3dpXsr2Q",
+          "video_id": "9FS3dpXsr2Q",
+          "channel": "Cooking With Morgane",
+          "views": 303908,
+          "duration": "3:11",
+          "thumbnail": "https://i.ytimg.com/vi/9FS3dpXsr2Q/hqdefault.jpg"
+        },
+        {
+          "title": "Côtelettes de porc rôties dans les règles de l’art",
+          "url": "https://www.youtube.com/watch?v=vg0dAuh0UrA",
+          "video_id": "vg0dAuh0UrA",
+          "channel": "Viande Suisse",
+          "views": 140609,
+          "duration": "2:56",
+          "thumbnail": "https://i.ytimg.com/vi/vg0dAuh0UrA/hqdefault.jpg"
+        },
+        {
+          "title": "CÔTES de PORC SAUCE CHARCUTIÈRE (Tous en cuisine avec Seb)",
+          "url": "https://www.youtube.com/watch?v=bbMapWPb3J0",
+          "video_id": "bbMapWPb3J0",
+          "channel": "Tous en Cuisine avec Seb",
+          "views": 99832,
+          "duration": "7:23",
+          "thumbnail": "https://i.ytimg.com/vi/bbMapWPb3J0/hqdefault.jpg"
+        },
+        {
+          "title": "Cuisiner avec moi les Sautée DE PORC sans moutarde très simple et très delicieux",
+          "url": "https://www.youtube.com/watch?v=y4qsqA54WNk",
+          "video_id": "y4qsqA54WNk",
+          "channel": "La cuisine de Mwenge",
+          "views": 68161,
+          "duration": "4:57",
+          "thumbnail": "https://i.ytimg.com/vi/y4qsqA54WNk/hqdefault.jpg"
+        },
+        {
+          "title": "ROAST PORK WITH YELLOW POTATOES",
+          "url": "https://www.youtube.com/watch?v=F69kc-uuZLY",
+          "video_id": "F69kc-uuZLY",
+          "channel": "Signé Gourmand",
+          "views": 11593,
+          "duration": "6:47",
+          "thumbnail": "https://i.ytimg.com/vi/F69kc-uuZLY/hqdefault.jpg"
+        },
+        {
+          "title": "My best roast pork ever…🤩🤤🤤🤤 #easyrecipe #pork #recipe",
+          "url": "https://www.youtube.com/watch?v=rp1H0Ja6xxI",
+          "video_id": "rp1H0Ja6xxI",
+          "channel": "Donald Robitaille",
+          "views": 2174,
+          "duration": "9:41",
+          "thumbnail": "https://i.ytimg.com/vi/rp1H0Ja6xxI/hqdefault.jpg"
+        }
+      ]
+    },
+    "legume": {
+      "deal": {
+        "name": "Oignons jaunes, 2 lb,",
+        "price": 1.95,
+        "per_kg": 2.15,
+        "store": "Tigre Géant"
+      },
+      "videos": [
+        {
+          "title": "Grilled Vegetables Recipe - 750g",
+          "url": "https://www.youtube.com/watch?v=5Hs_7jODVn4",
+          "video_id": "5Hs_7jODVn4",
+          "channel": "750g",
+          "views": 501838,
+          "duration": "3:10",
+          "thumbnail": "https://i.ytimg.com/vi/5Hs_7jODVn4/hqdefault.jpg"
+        },
+        {
+          "title": "3 perfectly balanced meal or starter salads for summer",
+          "url": "https://www.youtube.com/watch?v=do2u-4H7Ce4",
+          "video_id": "do2u-4H7Ce4",
+          "channel": "Food is Love",
+          "views": 195215,
+          "duration": "5:04",
+          "thumbnail": "https://i.ytimg.com/vi/do2u-4H7Ce4/hqdefault.jpg"
+        },
+        {
+          "title": "SAUTÉ DE CHOU NAPPA ET LÉGUMES VARIÉS (AVEC BEAUCOUP DE SAUCE) COMME AU BUFFET - HOP DANS LE WOK",
+          "url": "https://www.youtube.com/watch?v=Zo39lkBWonk",
+          "video_id": "Zo39lkBWonk",
+          "channel": "Hop dans le wok",
+          "views": 136306,
+          "duration": "13:17",
+          "thumbnail": "https://i.ytimg.com/vi/Zo39lkBWonk/hqdefault.jpg"
+        },
+        {
+          "title": "Recette légumes facile",
+          "url": "https://www.youtube.com/watch?v=5h2ux-eDxyk",
+          "video_id": "5h2ux-eDxyk",
+          "channel": "A table Juju",
+          "views": 46493,
+          "duration": "5:23",
+          "thumbnail": "https://i.ytimg.com/vi/5h2ux-eDxyk/hqdefault.jpg"
+        },
+        {
+          "title": "SALADE 1905 🥗 La meilleure Salade Repas La petite bette",
+          "url": "https://www.youtube.com/watch?v=lq-fJsKsYZs",
+          "video_id": "lq-fJsKsYZs",
+          "channel": "la petite bette",
+          "views": 30441,
+          "duration": "10:24",
+          "thumbnail": "https://i.ytimg.com/vi/lq-fJsKsYZs/hqdefault.jpg"
+        }
+      ]
+    },
+    "fruit": {
+      "deal": {
+        "name": "Citrons, 2 lb,",
+        "price": 3.97,
+        "per_kg": 4.38,
+        "store": "Tigre Géant"
+      },
+      "videos": [
+        {
+          "title": "Que du lait et des fruits ! Dessert délicieux et sain sans gélatine et cuit en 5 minutes",
+          "url": "https://www.youtube.com/watch?v=DEESnVx8Qmo",
+          "video_id": "DEESnVx8Qmo",
+          "channel": "Leckere Minute",
+          "views": 12056177,
+          "duration": "8:01",
+          "thumbnail": "https://i.ytimg.com/vi/DEESnVx8Qmo/hqdefault.jpg"
+        },
+        {
+          "title": "WITH 3 LEMONS, MAKE THESE DELICIOUS DESSERTS WITHOUT COOKING 🍋 Easy and fast",
+          "url": "https://www.youtube.com/watch?v=B3kD69Cu0YQ",
+          "video_id": "B3kD69Cu0YQ",
+          "channel": "Deli Cuisine",
+          "views": 189212,
+          "duration": "4:01",
+          "thumbnail": "https://i.ytimg.com/vi/B3kD69Cu0YQ/hqdefault.jpg"
+        },
+        {
+          "title": "10 ASTUCES pour une SALADE DE FRUITS PARFAITE 🍓🫐🍍",
+          "url": "https://www.youtube.com/watch?v=zS2qEsOFvD4",
+          "video_id": "zS2qEsOFvD4",
+          "channel": "Massa Délices Cuisine",
+          "views": 73919,
+          "duration": "6:28",
+          "thumbnail": "https://i.ytimg.com/vi/zS2qEsOFvD4/hqdefault.jpg"
+        },
+        {
+          "title": "Salade de Fruits Ultra Fraîche 🍓🥝 La Recette Légère et Colorée à Tester !",
+          "url": "https://www.youtube.com/watch?v=UXighXflAjg",
+          "video_id": "UXighXflAjg",
+          "channel": "Cuisine actuelle",
+          "views": 33010,
+          "duration": "55",
+          "thumbnail": "https://i.ytimg.com/vi/UXighXflAjg/hqdefault.jpg"
+        },
+        {
+          "title": "Un dessert aux fruits vraiment délicieux",
+          "url": "https://www.youtube.com/watch?v=J0CMPkD9XX0",
+          "video_id": "J0CMPkD9XX0",
+          "channel": "Manger pour Changer",
+          "views": 1781,
+          "duration": "7:50",
+          "thumbnail": "https://i.ytimg.com/vi/J0CMPkD9XX0/hqdefault.jpg"
+        },
+        {
+          "title": "This fruit dessert surprised everyone: an easy and quick recipe",
+          "url": "https://www.youtube.com/watch?v=nppigErkhE4",
+          "video_id": "nppigErkhE4",
+          "channel": "la meilleure recette de cuisine",
+          "views": 524,
+          "duration": "3:02",
+          "thumbnail": "https://i.ytimg.com/vi/nppigErkhE4/hqdefault.jpg"
+        }
+      ]
+    },
+    "poisson": {
+      "deal": null,
+      "videos": [
+        {
+          "title": "Comment préparer des filets de poisson au beurre, à l'ail et au thym",
+          "url": "https://www.youtube.com/watch?v=sPzBPj5mOls",
+          "video_id": "sPzBPj5mOls",
+          "channel": "America's Test Kitchen",
+          "views": 2854106,
+          "duration": "8:54",
+          "thumbnail": "https://i.ytimg.com/vi/sPzBPj5mOls/hqdefault.jpg"
+        },
+        {
+          "title": "Fish soup the easiest and most delicious recipe",
+          "url": "https://www.youtube.com/watch?v=B4ZqOuoGj2c",
+          "video_id": "B4ZqOuoGj2c",
+          "channel": "Yao Raissa",
+          "views": 1256228,
+          "duration": "2:24",
+          "thumbnail": "https://i.ytimg.com/vi/B4ZqOuoGj2c/hqdefault.jpg"
+        },
+        {
+          "title": "La Recette la Plus Savoureuse et la Plus Facile que j'ai Jamais Mangée ! Saumon à la Toscane !",
+          "url": "https://www.youtube.com/watch?v=kaex24cztIU",
+          "video_id": "kaex24cztIU",
+          "channel": "Gourmandises by Nora",
+          "views": 954858,
+          "duration": "4:48",
+          "thumbnail": "https://i.ytimg.com/vi/kaex24cztIU/hqdefault.jpg"
+        },
+        {
+          "title": "filet de poisson meunière",
+          "url": "https://www.youtube.com/watch?v=CHK1NUrTpnA",
+          "video_id": "CHK1NUrTpnA",
+          "channel": "Chef Michel Dumas",
+          "views": 94650,
+          "duration": "4:53",
+          "thumbnail": "https://i.ytimg.com/vi/CHK1NUrTpnA/hqdefault.jpg"
+        },
+        {
+          "title": "Je cuisine le poisson le moins cher selon une recette sovietique. Il est parfait!",
+          "url": "https://www.youtube.com/watch?v=pZyB29QsFJc",
+          "video_id": "pZyB29QsFJc",
+          "channel": "Savoureux.tv",
+          "views": 7735,
+          "duration": "3:19",
+          "thumbnail": "https://i.ytimg.com/vi/pZyB29QsFJc/hqdefault.jpg"
+        },
+        {
+          "title": "Ecologique et pas cher, découvrez ces poissons méconnus et bon marché",
+          "url": "https://www.youtube.com/watch?v=nYOaw8zI8us",
+          "video_id": "nYOaw8zI8us",
+          "channel": "Reportage Express",
+          "views": 1132,
+          "duration": "6:42",
+          "thumbnail": "https://i.ytimg.com/vi/nYOaw8zI8us/hqdefault.jpg"
+        }
+      ]
+    },
+    "yogourt": {
+      "deal": null,
+      "videos": [
+        {
+          "title": "Gâteau au yaourt en 1 minute . Bon et moelleux. Recette facile et rapide",
+          "url": "https://www.youtube.com/watch?v=iRllcn3Zg-E",
+          "video_id": "iRllcn3Zg-E",
+          "channel": "Les délices de Maha",
+          "views": 5631468,
+          "duration": "4:33",
+          "thumbnail": "https://i.ytimg.com/vi/iRllcn3Zg-E/hqdefault.jpg"
+        },
+        {
+          "title": "🥛 GATEAU AU YAOURT ULTRA MOELLEUX 🥛",
+          "url": "https://www.youtube.com/watch?v=ZofY_rJ48zc",
+          "video_id": "ZofY_rJ48zc",
+          "channel": "Il était une fois la pâtisserie",
+          "views": 2865841,
+          "duration": "3:15",
+          "thumbnail": "https://i.ytimg.com/vi/ZofY_rJ48zc/hqdefault.jpg"
+        },
+        {
+          "title": "Make ANY Smoothie with this Simple Formula! (+ 5 Quick Recipes)",
+          "url": "https://www.youtube.com/watch?v=iWAuLYhDrC0",
+          "video_id": "iWAuLYhDrC0",
+          "channel": "Evolving Table",
+          "views": 906354,
+          "duration": "9:32",
+          "thumbnail": "https://i.ytimg.com/vi/iWAuLYhDrC0/hqdefault.jpg"
+        },
+        {
+          "title": "Delicious Banana Yogurt Smoothie",
+          "url": "https://www.youtube.com/watch?v=TQXuahlLggo",
+          "video_id": "TQXuahlLggo",
+          "channel": "Cooking Perfected",
+          "views": 229594,
+          "duration": "49",
+          "thumbnail": "https://i.ytimg.com/vi/TQXuahlLggo/hqdefault.jpg"
+        },
+        {
+          "title": "Comment faire du yogourt glacé sans sorbetière | Ricardo Cuisine",
+          "url": "https://www.youtube.com/watch?v=3BFqlyuOxOA",
+          "video_id": "3BFqlyuOxOA",
+          "channel": "Ricardo Cuisine",
+          "views": 29324,
+          "duration": "1:21",
+          "thumbnail": "https://i.ytimg.com/vi/3BFqlyuOxOA/hqdefault.jpg"
+        },
+        {
+          "title": "Recette de Yogourt glacé à l'érable",
+          "url": "https://www.youtube.com/watch?v=slJUYKpQ0mI",
+          "video_id": "slJUYKpQ0mI",
+          "channel": "Goûtez le Québec",
+          "views": 269,
+          "duration": "5:38",
+          "thumbnail": "https://i.ytimg.com/vi/slJUYKpQ0mI/hqdefault.jpg"
+        }
+      ]
+    }
+  }
+}
