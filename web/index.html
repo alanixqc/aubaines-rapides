@@ -1474,7 +1474,7 @@ function renderCategory(cat) {
     return items.slice(0, n);
   };
   
-  const deals = getTop(cat, 12);
+  const deals = getTop(cat, cat === "viande" ? 100 : 12);
   if (deals.length === 0) {
     return `<div class="empty-state"><div class="icon">🔍</div><p>Aucun résultat pour cette catégorie cette semaine</p></div>`;
   }
