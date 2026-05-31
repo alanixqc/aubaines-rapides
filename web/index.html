@@ -794,7 +794,15 @@ body {
   display:inline-block; font-size:13px; color:var(--deal-red);
   text-decoration:none; margin-bottom:16px; font-weight:600;
 }
-.modal-store-link:hover { text-decoration:underline; }
+.modal-store-link:hover { text-decoration: underline; }
+.modal-flyer-btn {
+  display:inline-block; margin-left:8px; padding:4px 10px;
+  background:var(--bg-surface); border:2px solid var(--deal-red);
+  border-radius:6px; font-size:13px; font-weight:600;
+  color:var(--deal-red); cursor:pointer;
+  transition:all 0.15s;
+}
+.modal-flyer-btn:hover { background:var(--deal-red); color:var(--bg-surface); }
 .modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
 .modal-details { margin:16px 0; }
 .modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
@@ -1130,6 +1138,7 @@ body {
   <h3 id="modalTitle"></h3>
   <div class="modal-store" id="modalStore"></div>
   <a id="modalStoreLink" href="" target="_blank" rel="noopener" class="modal-store-link" style="display:none">🌐 Voir le site</a>
+  <button type="button" id="modalFlyerBtn" class="modal-flyer-btn" style="display:none">📰 Circulaire</button>
   <!-- Image cliquable → plein écran -->
   <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
     <img id="modalImg" src="" alt="Photo du produit">
@@ -1634,6 +1643,17 @@ function showDealDetail(id) {
     storeLink.style.display = "inline";
   } else {
     storeLink.style.display = "none";
+  }
+  
+  // Bouton circulaire
+  const flyerBtn = document.getElementById("modalFlyerBtn");
+  const flyerMap = {"Super C":"superc","Metro":"metro","Maxi":"maxi","Provigo":"provigo","Loblaws":"loblaws","IGA":"iga","Tigre Géant":"tigregeant"};
+  const flyerKey = flyerMap[d.store];
+  if (flyerKey) {
+    flyerBtn.style.display = "inline";
+    flyerBtn.onclick = () => openFullscreenImg("flyers/" + flyerKey + "-flyer.png");
+  } else {
+    flyerBtn.style.display = "none";
   }
   document.getElementById("modalPrice").textContent = d.price ? `${d.price.toFixed(2)}$` : "";
   
