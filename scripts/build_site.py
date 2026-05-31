@@ -600,9 +600,19 @@ FRUIT_KW = ['pomme','banane','orange','raisin','bleuet','fraise','framboise','m�
 CONSERVE_KW = ['conserve','canne','boîte','tin','lentille','pois chiche','haricot rouge',
                'haricot noir','soupe','tomate en','sauce tomate','pâtes alimentaires','riz ',
                'farine','sucre','huile','beurre d\'arachide','beurre de peanut','café',
-               'thon en','maïs en','crevette en','compote','ketchup','moutarde','mayonnaise',
+               'thon en','maïs en','crevette en','compote',
                'vinaigre','bouillon','cubes','épices','sel','poivre','gruau','céréale',
                'lait','beurre','œuf','oeuf','fromage','crème','pain']
+
+SAUCE_KW = ['ketchup','moutarde','mayonnaise','mayo',
+            'sauce barbecue','sauce bbq','sauce algérienne',
+            'sauce cocktail','sauce soya','sauce soja','sauce chili',
+            'sauce hoisin','sauce teriyaki','sauce st-hubert',
+            'sauce à','sauce pour',
+            'mélange à sauce','mélange sauce',
+            'vinaigrette','salsa','guacamole',
+            'sriracha','tabasco','worcestershire',
+            'tartare']
 
 YOGOURT_KW = ['yogourt','yaourt','yogurt','kéfir','kefir','skyr',
               'yogourt grec','yaourt grec','greek yogurt','yogourt grecque']
@@ -629,6 +639,9 @@ def classify_meat_type(name, current_mt):
     for kw in YOGOURT_KW:
         if kw in name_lower:
             return "yogourt"
+    for kw in SAUCE_KW:
+        if kw in name_lower:
+            return "sauce"
     for kw in CONSERVE_KW:
         if kw in name_lower:
             return "panier"
