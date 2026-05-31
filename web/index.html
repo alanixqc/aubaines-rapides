@@ -3,1747 +3,550 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes et paniers, comparés rapidement par prix.">
-<link rel="canonical" href="https://alanixqc.github.io/aubaines-rapides/web/">
-<meta property="og:title" content="Aubaines Rapides — Les spéciaux d'épicerie de la semaine">
-<meta property="og:description" content="Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://alanixqc.github.io/aubaines-rapides/web/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aubaines Rapides — Spéciaux d'épicerie QC">
-<meta name="twitter:description" content="Les meilleurs spéciaux de la semaine au Québec, comparés rapidement.">
-<meta name="theme-color" content="#b8492e">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-<title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<title>Aubaines Rapides — Meilleurs Deals Viande</title>
 <style>
-/* ===== CSS CUSTOM PROPERTIES — Aubaines Rapides Design System ===== */
-:root {
-  --bg-paper: #f7f1e7;
-  --bg-surface: #fffaf2;
-  --bg-card: #fffdf7;
-  --text-main: #2f251c;
-  --text-muted: #7a6b55;
-  --deal-red: #b8492e;
-  --deal-red-dark: #8f3422;
-  --saving-yellow: #ffc857;
-  --saving-gold: #c9942e;
-  --fresh-green: #2f7d46;
-  --fresh-green-soft: #e7f3e8;
-  --verified-blue: #1f6f9f;
-  --verified-blue-soft: #e4f0f7;
-  --border-soft: #d8c7aa;
-  --border-strong: #c6ad83;
-  --badge-beige: #f0e8da;
-  --badge-beige-text: #7a5c2e;
-  --badge-beige-border: #dcccb0;
-}
-/* ===== RESET ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; -webkit-text-size-adjust: 100%; }
-
-/* ===== SCREEN READER ONLY ===== */
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-}
-
-/* ===== PAPER TEXTURE BACKGROUND ===== */
-body {
-  font-family: 'Inter', 'Source Sans 3', Arial, sans-serif;
-  background-color: var(--bg-paper);
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b79b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  color: var(--text-main);
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* ===== HEADER — CIRCA / FLYER STYLE ===== */
-.header {
-  background: var(--bg-surface);
-  border-bottom: 3px solid var(--border-soft);
-  padding: 18px 16px 14px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
-}
-/* ===== WEEK NAVIGATION ===== */
-.week-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--border-soft);
-}
-.week-nav-btn {
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 6px 14px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.week-nav-btn:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-.week-nav-btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-  border-color: var(--border-soft);
-  color: #c4b79b;
-}
-.week-nav-btn:disabled:hover {
-  border-color: var(--border-soft);
-  color: #c4b79b;
-}
-.week-nav-label {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  min-width: 120px;
-  text-align: center;
-}
-.header-top {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.logo {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--deal-red);
-  text-decoration: none;
-  letter-spacing: -0.3px;
-  line-height: 1.1;
-}
-.logo-sub {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--text-muted);
-  display: block;
-  margin-top: -2px;
-}
-.week-badge {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-paper);
-  padding: 4px 12px;
-  border: 2px dashed var(--border-soft);
-  white-space: nowrap;
-}
-.search-bar {
-  display: flex;
-  gap: 6px;
-}
-.search-bar input {
-  flex: 1;
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 10px 14px;
-  color: var(--text-main);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-.search-bar input:focus {
-  border-color: var(--deal-red);
-}
-.search-bar input::placeholder {
-  color: var(--text-muted);
-}
-.search-bar button {
-  background: var(--deal-red);
-  border: none;
-  padding: 10px 16px;
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.search-bar button:hover {
-  background: var(--deal-red-dark);
-}
-
-/* ===== HERO BANNER ===== */
-.hero-banner {
-  background: var(--bg-surface);
-  padding: 22px 16px 18px;
-  text-align: center;
-  border-bottom: 2px solid var(--border-soft);
-}
-.hero-banner h1 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 4px;
-  line-height: 1.2;
-}
-.hero-banner h1 span {
-  color: var(--deal-red);
-  display: inline;
-}
-.hero-banner p {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin-top: 4px;
-  max-width: 400px;
-  margin: 0 auto;
-  font-style: italic;
-}
-.hero-cta {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 14px;
-  flex-wrap: wrap;
-}
-.hero-cta a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 20px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.15s;
-  line-height: 1.3;
-}
-.cta-primary {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border: 2px solid var(--deal-red);
-}
-.cta-primary:hover {
-  background: var(--deal-red-dark);
-  border-color: var(--deal-red-dark);
-}
-.cta-secondary {
-  background: var(--bg-card);
-  color: var(--text-main);
-  border: 2px solid var(--border-soft);
-}
-.cta-secondary:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-
-/* ===== SAVINGS TICKER ===== */
-.savings-ticker {
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 10px 16px;
-  background: var(--bg-surface);
-  border-bottom: 2px solid #e8dccb;
-}
-.savings-ticker::-webkit-scrollbar { display: none; }
-.ticker-item {
-  flex-shrink: 0;
-  padding: 5px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--deal-red);
-  white-space: nowrap;
-}
-.ticker-item .num {
-  font-weight: 700;
-  font-size: 15px;
-}
-.ticker-item .label {
-  color: var(--text-muted);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-}
-
-/* ===== CATEGORY TABS ===== */
-.cat-tabs {
-  display: flex;
-  gap: 6px;
-  padding: 12px 16px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  background: var(--bg-surface);
-  position: sticky;
-  top: 85px;
-  z-index: 99;
-  border-bottom: 2px solid #e8dccb;
-}
-.cat-tabs::-webkit-scrollbar { display: none; }
-.cat-tab {
-  flex-shrink: 0;
-  padding: 8px 18px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 2px solid var(--border-soft);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.15s;
-  text-align: center;
-}
-.cat-tab.active {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border-color: var(--deal-red);
-}
-.cat-tab .count {
-  font-weight: 400;
-  font-size: 11px;
-  opacity: 0.7;
-  margin-left: 3px;
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-/* ===== CATEGORY SECTIONS ===== */
-.cat-section {
-  display: none;
-  padding: 0 16px 100px;
-  max-width: 640px;
-  margin: 0 auto;
-}
-.cat-section.active {
-  display: block;
-}
-.cat-section h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 18px 0 2px;
-  color: var(--text-main);
-  line-height: 1.2;
-}
-.cat-stats {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 13px;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-/* ===== TYPE FILTER BAR ===== */
-.type-filter-bar {
-  display: flex;
-  gap: 4px;
-  margin: 6px 0 10px;
-  flex-wrap: wrap;
-}
-.type-filter-btn {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 12px;
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 2px solid var(--border-soft);
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-.type-filter-btn:hover {
-  border-color: var(--saving-gold);
-  color: var(--saving-gold);
-}
-.type-filter-btn.active {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border-color: var(--deal-red);
-}
-.type-filter-btn .count {
-  font-weight: 400;
-  font-size: 10px;
-  opacity: 0.7;
-  font-family: 'Source Serif 4', Georgia, serif;
-  margin-left: 2px;
-}
-.type-filter-btn.active .count {
-  opacity: 0.8;
-}
-
-/* ===== DEAL CARDS — FLYER/LIST STYLE ===== */
-.deal-card {
-  background: var(--bg-card);
-  border: 2px double var(--border-soft);
-  padding: 12px 14px;
-  margin-bottom: 8px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  position: relative;
-}
-.deal-card:hover {
-  border-color: var(--saving-gold);
-}
-@media (min-width: 900px) {
-  .deal-card {
-    box-shadow: 0 1px 3px rgba(47,37,28,0.06);
-  }
-  .deal-card:hover {
-    box-shadow: 0 2px 8px rgba(47,37,28,0.10);
-    transform: translateY(-1px);
-  }
-}
-.deal-card.top-deal {
-  border-color: var(--saving-gold);
-  background: #fffbf0;
-  margin-top: 4px;
-}
-.deal-card.top-deal::before {
-  content: "⭐ TOP";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 10px;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-}
-.deal-rank {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--border-soft);
-  min-width: 28px;
-  line-height: 1.2;
-  text-align: center;
-  padding-top: 2px;
-}
-.deal-card.top-deal .deal-rank {
-  color: var(--saving-gold);
-}
-.deal-info {
-  flex: 1;
-  min-width: 0;
-}
-.deal-name {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 2px;
-  color: var(--text-main);
-}
-.deal-store {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  margin-bottom: 6px;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
-  border: 1px solid;
-  white-space: nowrap;
-}
-/* ===== PRODUCT TYPE BADGE ===== */
-.deal-type-badge {
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 2px 6px;
-  display: inline-block;
-  margin-left: 6px;
-  line-height: 1.2;
-  vertical-align: middle;
-}
-.deal-type-badge.frais {
-  background: var(--fresh-green-soft);
-  color: var(--fresh-green);
-  border: 1px solid #c4dbbc;
-}
-.deal-type-badge.transforme {
-  background: var(--badge-beige);
-  color: var(--badge-beige-text);
-  border: 1px solid var(--badge-beige-border);
-}
-.deal-prices {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-.deal-price {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--deal-red);
-  line-height: 1.1;
-}
-.deal-per-kg {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-.deal-protein {
-  font-size: 11px;
-  color: var(--fresh-green);
-  font-weight: 600;
-  background: var(--fresh-green-soft);
-  padding: 2px 8px;
-  border: 1px solid #d4dfc8;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.deal-detail {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-weight: 500;
-  padding: 2px 8px;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.deal-recipe {
-  margin-top: 6px;
-  padding-top: 5px;
-  border-top: 1px dashed var(--border-soft);
-}
-.deal-recipe a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: color 0.15s;
-}
-.deal-recipe a:hover {
-  color: var(--deal-red);
-}
-
-/* ===== SUBCATEGORY HEADERS ===== */
-.sub-header {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 18px 0 6px;
-  padding-bottom: 4px;
-  border-bottom: 2px dashed var(--border-soft);
-  color: var(--text-muted);
-}
-
-/* ===== SHARE BAR ===== */
-.share-bar {
-  display: flex;
-  gap: 6px;
-  padding: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 640px;
-  margin: 0 auto;
-}
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 16px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid;
-  cursor: pointer;
-  transition: all 0.15s;
-  line-height: 1.3;
-}
-.share-btn:hover {
-  transform: translateY(-1px);
-}
-.share-btn.discord {
-  background: var(--bg-card);
-  color: #5865F2;
-  border-color: var(--border-soft);
-}
-.share-btn.discord:hover {
-  border-color: #5865F2;
-}
-.share-btn.whatsapp {
-  background: var(--bg-card);
-  color: #25D366;
-  border-color: var(--border-soft);
-}
-.share-btn.whatsapp:hover {
-  border-color: #25D366;
-}
-.share-btn.email {
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border-color: var(--border-soft);
-}
-.share-btn.email:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-.share-btn.copy {
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border-color: var(--border-soft);
-  font-size: 12px;
-}
-.share-btn.copy:hover {
-  border-color: var(--text-muted);
-}
-
-/* ===== SUBSCRIBE FORM ===== */
-.subscribe-wrap {
-  display: none;
-  padding: 0 16px 20px;
-  max-width: 480px;
-  margin: 0 auto;
-}
-.subscribe-inner {
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 16px;
-  text-align: center;
-}
-.subscribe-inner p {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--text-main);
-}
-.subscribe-inner p strong {
-  font-family: 'Fraunces', Georgia, serif;
-}
-.subscribe-row {
-  display: flex;
-  gap: 6px;
-}
-.subscribe-row input {
-  flex: 1;
-  background: var(--bg-surface);
-  border: 2px solid var(--border-soft);
-  padding: 10px 14px;
-  color: var(--text-main);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 14px;
-  outline: none;
-}
-.subscribe-row input:focus {
-  border-color: var(--deal-red);
-}
-.subscribe-row button {
-  background: var(--deal-red);
-  border: none;
-  padding: 10px 18px;
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-}
-.subscribe-note {
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
-/* ===== STORES BAR ===== */
-.stores-bar {
-  padding: 10px 16px;
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  border-top: 2px solid #e8dccb;
-  max-width: 640px;
-  margin: 0 auto;
-  justify-content: center;
-}
-.store-badge {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 11px;
-  color: var(--text-muted);
-  padding: 3px 10px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-}
-
-/* ===== TOAST ===== */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text-main);
-  color: var(--bg-surface);
-  padding: 12px 24px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  z-index: 300;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-}
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 24px 16px;
-  font-size: 12px;
-  color: var(--text-muted);
-  border-top: 2px solid #e8dccb;
-  margin-top: 8px;
-}
-.footer p {
-  font-style: italic;
-}
-
-/* ===== LOADING ===== */
-.loading {
-  text-align: center;
-  padding: 80px 20px;
-  color: var(--text-muted);
-}
-.loading .spinner {
-  display: inline-block;
-  width: 32px; height: 32px;
-  border: 3px solid var(--border-soft);
-  border-top-color: var(--deal-red);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-bottom: 12px;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ===== ERROR ===== */
-.error-state {
-  text-align: center;
-  padding: 60px 20px;
-}
-.error-state h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 28px;
-  margin-bottom: 8px;
-  color: var(--deal-red);
-}
-.error-state p {
-  color: var(--text-muted);
-}
-
-/* ===== EMPTY STATE ===== */
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-muted);
-  font-style: italic;
-  background: var(--bg-card);
-  border: 2px dashed var(--border-soft);
-}
-.empty-state .icon {
-  font-size: 40px;
-  margin-bottom: 8px;
-}
-
-/* ===== MODAL DÉTAIL PRODUIT ===== */
-.modal-overlay { display:none; position:fixed; inset:0; background:rgba(47,37,28,0.5); z-index:200; }
-.modal-overlay.open { display:block; }
-.modal-panel {
-  display:none; position:fixed; bottom:0; left:0; right:0;
-  background:var(--bg-surface); border-top:4px solid var(--deal-red);
-  padding:20px 24px 28px; z-index:201;
-  animation: modalUp 0.25s ease-out;
-  max-width:600px; margin:0 auto;
-}
-.modal-panel.open { display:block; }
-@keyframes modalUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
-.modal-close {
-  float:right; background:none; border:none;
-  font-size:28px;
-  color:var(--text-muted); cursor:pointer; line-height:1;
-}
-.modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:var(--text-main); margin-bottom:4px; padding-right:40px; }
-.modal-store { font-size:14px; color:var(--text-muted); margin-bottom:16px; }
-.modal-store-link {
-  display:inline-block; font-size:13px; color:var(--deal-red);
-  text-decoration:none; margin-bottom:16px; font-weight:600;
-}
-.modal-store-link:hover { text-decoration:underline; }
-.modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
-.modal-details { margin:16px 0; }
-.modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
-.modal-row .lbl { color:var(--text-muted); }
-.modal-row .val { font-weight:600; color:var(--text-main); }
-.modal-recipe-btn {
-  display:block; margin-top:16px; padding:12px; background:var(--deal-red); color:var(--bg-surface);
-  text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
-  font-size:15px; font-weight:700; cursor:pointer;
-  text-decoration:none; transition:background 0.15s;
-}
-.modal-recipe-btn:hover { background:var(--deal-red-dark); }
-
-/* Image dans le modal — cliquable pour plein écran */
-.modal-img-wrap {
-  margin: 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  border: 1px solid #e8dccb;
-  background: #f5eee0;
-  text-align: center;
-}
-.modal-img-wrap img {
-  display: block;
-  width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  transition: opacity 0.15s;
-}
-.modal-img-wrap:hover img {
-  opacity: 0.85;
-}
-
-/* Plein écran image (comme Discord) */
-.img-fullscreen-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  z-index: 999;
-  cursor: zoom-out;
-  align-items: center;
-  justify-content: center;
-}
-.img-fullscreen-overlay.open { display: flex; }
-.img-fullscreen-overlay img {
-  max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
-}
-.img-fullscreen-close {
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  background: rgba(255,255,255,0.15);
-  border: none;
-  color: #fff;
-  font-size: 32px;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  z-index: 1000;
-}
-.img-fullscreen-close:hover { background: rgba(255,255,255,0.3); }
-
-/* ===== SEARCH RESULTS CONTAINER ===== */
-#searchResultsContainer {
-  background: var(--bg-card);
-  border: 2px solid var(--saving-gold);
-  margin-bottom: 12px;
-  padding: 0;
-}
-#searchResultsContainer .deals-container {
-  display: block;
-  padding: 0 14px 12px;
-}
-#searchResultsContainer .deal-card:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== RESPONSIVE — ADAPTATIF ===== */
-/* Base = mobile (par défaut) — tout en colonne, compact */
-
-/* Tablette 600px+ */
-@media (min-width: 600px) {
-  .header { padding: 20px 24px 16px; }
-  .header-top { margin-bottom: 12px; }
-  .logo { font-size: 30px; }
-  .logo-sub { font-size: 16px; }
-  .hero-banner { padding: 32px 24px 24px; }
-  .hero-banner h1 { font-size: 30px; max-width: 600px; margin: 0 auto; }
-  .hero-banner p { font-size: 15px; }
-  .cat-tabs { justify-content: center; padding: 14px 24px; gap: 8px; }
-  .cat-tab { font-size: 15px; padding: 10px 24px; }
-  .cat-section { padding: 0 24px 100px; max-width: 720px; }
-  .deal-card { padding: 14px 18px; }
-  .deal-name { font-size: 15px; }
-  .deal-price { font-size: 22px; }
-  .savings-ticker { justify-content: center; padding: 12px 24px; gap: 10px; }
-  .ticker-item { padding: 6px 18px; font-size: 14px; }
-  .ticker-item .num { font-size: 16px; }
-  .week-nav { gap: 12px; }
-  .week-nav-btn { padding: 7px 18px; font-size: 13px; }
-  .week-nav-label { font-size: 17px; min-width: 140px; }
-  .modal-panel { padding: 28px 24px 36px; }
-}
-
-/* Desktop 900px+ — deux colonnes */
-@media (min-width: 900px) {
-  body { padding: 0; }
-  .header { padding: 24px 32px 18px; }
-  .header-top { margin-bottom: 14px; }
-  .logo { font-size: 34px; }
-  .logo-sub { font-size: 17px; display: inline; margin-top: 0; margin-left: 6px; }
-  .week-badge { font-size: 16px; padding: 5px 16px; }
-  .search-bar { max-width: 500px; }
-  .search-bar input { font-size: 15px; padding: 12px 16px; }
-  .search-bar button { font-size: 14px; padding: 12px 20px; }
-  
-  .hero-banner { padding: 40px 32px 28px; }
-  .hero-banner h1 { font-size: 36px; max-width: 700px; }
-  .hero-banner p { font-size: 16px; }
-  .hero-cta { gap: 12px; margin-top: 18px; }
-  .hero-cta a { font-size: 14px; padding: 10px 28px; }
-  
-  .savings-ticker { padding: 14px 32px; gap: 12px; }
-  .ticker-item { padding: 7px 20px; font-size: 14px; }
-  .ticker-item .num { font-size: 16px; }
-  
-  .week-nav { gap: 14px; margin-top: 12px; padding-top: 12px; }
-  .week-nav-btn { padding: 8px 22px; font-size: 14px; }
-  .week-nav-label { font-size: 18px; min-width: 180px; }
-  
-  .cat-tabs { padding: 16px 32px; gap: 10px; position: sticky; top: 78px; }
-  .cat-tab { font-size: 16px; padding: 11px 28px; }
-  
-  .cat-section.active { 
-    max-width: 1200px; 
-    padding: 0 32px 100px;
-    display: block;
-  }
-  .cat-section.active > h2 { 
-    font-size: 26px; 
-    margin: 24px 0 4px;
-  }
-  .cat-stats { font-size: 15px; }
-  
-  /* ✅ Grille 2 colonnes pour les cartes dans le conteneur */
-  .cat-section.active .deals-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    align-items: stretch;
-  }
-  
-  /* Sous-titres — pleine largeur dans la grille */
-  .cat-section.active .sub-header { 
-    font-size: 22px; 
-    margin: 20px 0 8px; 
-    grid-column: 1 / -1;
-  }
-  
-  .deal-card { 
-    padding: 16px 20px; 
-    margin-bottom: 0; 
-    min-height: 120px;
-  }
-  .deal-rank { font-size: 26px; min-width: 36px; }
-  .deal-name { font-size: 16px; }
-  .deal-price { font-size: 24px; }
-  .deal-per-kg { font-size: 14px; }
-  .deal-protein { font-size: 12px; padding: 3px 10px; }
-  .deal-store { font-size: 11px; }
-  .deal-recipe a { font-size: 14px; }
-  
-  .share-bar { max-width: 1200px; padding: 20px 32px; gap: 10px; }
-  .share-btn { font-size: 14px; padding: 10px 22px; }
-  
-  .subscribe-wrap { max-width: 600px; }
-  .subscribe-inner { padding: 24px; }
-  .subscribe-inner p { font-size: 15px; }
-  .subscribe-row input { padding: 12px 16px; font-size: 15px; }
-  .subscribe-row button { padding: 12px 24px; font-size: 14px; }
-  
-  .stores-bar { max-width: 1200px; padding: 14px 32px; gap: 6px; }
-  .store-badge { font-size: 12px; padding: 4px 14px; }
-  
-  .footer { padding: 32px 32px; font-size: 13px; }
-  
-  /* Modal plus large sur desktop */
-  .modal-overlay.open { display:block; }
-  .modal-panel.open { display:block; max-width: 680px; bottom: auto; top: 10vh; }
-  .modal-panel h3 { font-size: 24px; }
-  .modal-price-lg { font-size: 38px; }
-  .modal-row { font-size: 15px; padding: 12px 0; }
-  .modal-img-wrap img { max-height: 400px; }
-}
-
-/* Grand écran 1200px+ — trois colonnes */
-@media (min-width: 1200px) {
-  .header { padding: 28px 48px 20px; }
-  .header-top { margin-bottom: 16px; }
-  .logo { font-size: 38px; }
-  .logo-sub { font-size: 18px; }
-  .search-bar { max-width: 600px; }
-  
-  .hero-banner { padding: 48px 48px 32px; }
-  .hero-banner h1 { font-size: 42px; max-width: 800px; }
-  
-  .cat-tabs { padding: 18px 48px; gap: 12px; }
-  .cat-tab { font-size: 17px; padding: 12px 32px; }
-  
-  .cat-section.active { 
-    max-width: 1400px; 
-    padding: 0 48px 100px;
-  }
-
-  /* ✅ 3 colonnes sur grand écran */
-  .cat-section.active .deals-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px 24px;
-  }
-  
-  .deal-card { padding: 18px 22px; margin-bottom: 0; min-height: 130px; }
-  .deal-rank { font-size: 28px; min-width: 40px; }
-  .deal-name { font-size: 17px; }
-  .deal-price { font-size: 26px; }
-  
-  .share-bar { padding: 24px 48px; }
-  .stores-bar { padding: 16px 48px; }
-  .footer { padding: 40px 48px; }
-  
-  .modal-panel.open { max-width: 760px; }
-}
-
-/* Très grand écran 1600px+ */
-@media (min-width: 1600px) {
-  .cat-section.active { max-width: 1600px; padding: 0 64px 100px; }
-  .cat-section.active .deals-container { gap: 20px 28px; }
-  .header { padding: 28px 64px 20px; }
-  .cat-tabs { padding: 18px 64px; }
-  .hero-banner { padding: 56px 64px 36px; }
-  .hero-banner h1 { font-size: 48px; }
-  .share-bar { padding: 24px 64px; }
-  .deal-card { padding: 20px 26px; }
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: #0f0f0f; color: #e0e0e0; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+  header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 30px 0; text-align: center; border-bottom: 3px solid #e94560; margin-bottom: 30px; }
+  header h1 { font-size: 2em; color: #fff; }
+  header p { color: #aaa; font-size: 1.1em; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px; margin-bottom: 30px; }
+  .stat-card { background: #1a1a2e; border-radius: 10px; padding: 20px; text-align: center; }
+  .stat-card .num { font-size: 2em; font-weight: bold; }
+  .stat-card .label { color: #888; font-size: 0.9em; }
+  .stat-card.boeuf .num { color: #e74c3c; }
+  .stat-card.poulet .num { color: #f39c12; }
+  .stat-card.porc .num { color: #e67e22; }
+  .store-list { background: #1a1a2e; border-radius: 10px; padding: 20px; margin-bottom: 30px; }
+  .store-list h3 { margin-bottom: 10px; color: #ccc; }
+  .store-list .tag { display: inline-block; background: #16213e; padding: 5px 12px;
+                     border-radius: 15px; margin: 3px; font-size: 0.85em; }
+  .deals-section { margin-bottom: 30px; }
+  .deals-section h2 { margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #333; }
+  .deal-card { background: #1a1a2e; border-radius: 8px; padding: 15px; margin-bottom: 8px;
+               display: flex; justify-content: space-between; align-items: center;
+               transition: transform 0.2s; }
+  .deal-card:hover { transform: translateX(5px); background: #1f1f3e; }
+  .deal-card .info { flex: 1; }
+  .deal-card .store-name { font-size: 0.8em; color: #888; }
+  .deal-card .product-name { font-size: 1em; color: #fff; }
+  .deal-card .price { font-size: 1.3em; font-weight: bold; text-align: right; }
+  .deal-card .price.sale { color: #2ecc71; }
+  .deal-card .dates { font-size: 0.75em; color: #666; text-align: right; }
+  footer { text-align: center; color: #555; padding: 20px; font-size: 0.85em; }
+  .update-badge { background: #e94560; color: #fff; font-size: 0.7em;
+                   padding: 2px 8px; border-radius: 10px; }
 </style>
 </head>
 <body>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="header-top">
-    <a href="/aubaines-rapides/web/" class="logo" aria-label="Accueil Aubaines Rapides">
-      Aubaines Rapides
-      <span class="logo-sub">— les spéciaux de la semaine —</span>
-    </a>
-    <span class="week-badge" id="weekBadge" role="status" aria-live="polite">📅 ...</span>
-  </div>
-  <!-- Navigation des semaines -->
-  <nav class="week-nav" id="weekNav" aria-label="Navigation des semaines">
-    <button type="button" class="week-nav-btn" id="prevWeek" onclick="switchWeek(-1)" title="Semaine précédente">◀ Précédente</button>
-    <span class="week-nav-label" id="weekLabel">Semaine du ...</span>
-    <button type="button" class="week-nav-btn" id="nextWeek" onclick="switchWeek(1)" title="Semaine suivante">Suivante ▶</button>
-  </nav>
-  <div class="search-bar">
-    <label for="searchInput" class="sr-only">Chercher un produit</label>
-    <input type="search" id="searchInput" placeholder="Chercher un produit, une marque..." autocomplete="off">
-    <button type="button" onclick="doSearch()" aria-label="Lancer la recherche">OK</button>
+<header>
+  <div class="container">
+    <h1>🥩 Aubaines Rapides</h1>
+    <p>Meilleurs deals viande de la semaine — 31 may 2026</p>
+    <span class="update-badge">Mise à jour hebdomadaire</span>
   </div>
 </header>
+<div class="container">
 
-<!-- HERO BANNER -->
-<section class="hero-banner" aria-label="Bannière d'accueil">
-  <h1>Les <span>meilleurs prix</span> de la semaine</h1>
-  <p>Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡</p>
-  <div class="hero-cta">
-    <a class="cta-primary" href="#" onclick="showSubscribe();return false" aria-label="S'abonner par courriel">📬 Recevoir par courriel</a>
-    <a class="cta-secondary" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/web/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 Partager</a>
+<div class="stats">
+  <div class="stat-card">
+    <div class="num" style="color:#2ecc71;">250</div>
+    <div class="label">Items viande en rabais</div>
   </div>
-</section>
-
-<!-- SAVINGS TICKER -->
-<div class="savings-ticker" id="savingsTicker" role="status" aria-live="polite">
-  <div class="ticker-item"><span class="num">—</span> <span class="label">offres</span></div>
-  <div class="ticker-item"><span class="num">—</span> <span class="label">magasins</span></div>
+  <div class="stat-card boeuf">
+    <div class="num">77</div>
+    <div class="label">🥩 Boeuf</div>
+  </div>
+  <div class="stat-card porc">
+    <div class="num">73</div>
+    <div class="label">🥓 Porc</div>
+  </div>
+  <div class="stat-card poulet">
+    <div class="num">53</div>
+    <div class="label">🍗 Poulet</div>
+  </div>
+  <div class="stat-card panier">
+    <div class="num">38</div>
+    <div class="label"> Panier</div>
+  </div>
+  <div class="stat-card legume">
+    <div class="num">9</div>
+    <div class="label"> Legume</div>
+  </div>
 </div>
-
-<!-- CATEGORY TABS -->
-<nav class="cat-tabs" id="catTabs" role="tablist" aria-label="Catégories de produits"></nav>
-
-<!-- MAIN CONTENT -->
-<main id="app">
-  <div class="loading" role="status">
-    <div class="spinner"></div>
-    <p>On fouille les circulaires...</p>
-  </div>
-</main>
-
-<!-- SUBSCRIBE FORM -->
-<div class="subscribe-wrap" id="subscribeWrap">
-  <div class="subscribe-inner">
-    <p>📬 Reçois les <strong>top deals</strong> chaque mardi direct dans ta boîte</p>
-    <div class="subscribe-row">
-      <label for="emailInput" class="sr-only">Adresse courriel</label>
-      <input type="email" id="emailInput" placeholder="ton@courriel.com">
-      <button type="button" onclick="subscribeEmail()">Je veux ça!</button>
+<div class="store-list">
+  <h3>🏪 Magasins scannés</h3>
+  <span class="tag">Super C (195)</span>
+  <span class="tag">Tigre Géant (55)</span>
+</div>
+<div class="deals-section">
+  <h2 style="border-color:#e74c3c;">🥩 Meilleurs deals — Boeuf</h2>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">Repas surgelé Boston Market</div>
     </div>
-    <p class="subscribe-note">Pas de pub. Pas de spam. Juste les spéciaux de la semaine.</p>
+    <div>
+      <div class="price sale">$1.60 -32%</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Frozen Sliced Veal Liver</div>
+    </div>
+    <div>
+      <div class="price ">$2.49</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">Sauce pour burger ou a trempette pour poulet Giant Valu</div>
+    </div>
+    <div>
+      <div class="price ">$3.47</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">Sauce pour burger ou à trempette pour poulet Giant Valu</div>
+    </div>
+    <div>
+      <div class="price ">$3.47</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Fresh Beef Livers</div>
+    </div>
+    <div>
+      <div class="price ">$4.40</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">French Beef Steak</div>
+    </div>
+    <div>
+      <div class="price ">$5.95</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Pepper Steak</div>
+    </div>
+    <div>
+      <div class="price ">$5.95</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Beef Marrow Soup Bones</div>
+    </div>
+    <div>
+      <div class="price ">$6.34</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Boudin</div>
+    </div>
+    <div>
+      <div class="price ">$6.44</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Medium Ground Beef</div>
+    </div>
+    <div>
+      <div class="price ">$6.44</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Sliced Blood Pudding</div>
+    </div>
+    <div>
+      <div class="price ">$6.44</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Inside Round Sandwich Steak</div>
+    </div>
+    <div>
+      <div class="price ">$6.89</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Lean Ground Beef, Pork, and Veal</div>
+    </div>
+    <div>
+      <div class="price ">$7.34</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Frozen Veal for Fondue</div>
+    </div>
+    <div>
+      <div class="price ">$7.99</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Beef Shank, Osso Buco</div>
+    </div>
+    <div>
+      <div class="price ">$8.48</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+</div>
+<div class="deals-section">
+  <h2 style="border-color:#f39c12;">🍗 Meilleurs deals — Poulet</h2>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Chicken Leg Quarters</div>
+    </div>
+    <div>
+      <div class="price ">$4.90</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Shish Taouk Marinated Chicken Breast</div>
+    </div>
+    <div>
+      <div class="price ">$5.37</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">Poulet pané surgelé La Cage</div>
+    </div>
+    <div>
+      <div class="price sale">$5.50 -13%</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Chicken Drumsticks</div>
+    </div>
+    <div>
+      <div class="price ">$5.83</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">BBQ Flavoured Marinated Chicken Breast</div>
+    </div>
+    <div>
+      <div class="price ">$5.99</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Souvlaki Flavoured Marinated Chicken Breast</div>
+    </div>
+    <div>
+      <div class="price ">$5.99</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">knife Cut Breaded Chicken Thighs, Value Pack</div>
+    </div>
+    <div>
+      <div class="price ">$6.60</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Chicken Brochette Cubes</div>
+    </div>
+    <div>
+      <div class="price ">$6.69</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Extra Lean Ground Chicken</div>
+    </div>
+    <div>
+      <div class="price ">$7.99</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Seasoned Extra Lean Ground Turkey</div>
+    </div>
+    <div>
+      <div class="price ">$7.99</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Grain-Fed Chicken Drumsticks, Naturalia</div>
+    </div>
+    <div>
+      <div class="price ">$8.25</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Chicken Strips</div>
+    </div>
+    <div>
+      <div class="price ">$8.56</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Back Attached  Breaded Chicken Leg, Value Pack</div>
+    </div>
+    <div>
+      <div class="price ">$8.80</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Chicken Thighs, Value Pack</div>
+    </div>
+    <div>
+      <div class="price ">$8.80</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Portuguese Chicken Legs, Value Pack</div>
+    </div>
+    <div>
+      <div class="price ">$8.80</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+</div>
+<div class="deals-section">
+  <h2 style="border-color:#e67e22;">🥓 Meilleurs deals — Porc</h2>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">tranche de jambon désossé Gold Label Smokehouse</div>
+    </div>
+    <div>
+      <div class="price sale">$1.50 -40%</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Fresh pork kidneys</div>
+    </div>
+    <div>
+      <div class="price ">$2.20</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Fresh pork livers</div>
+    </div>
+    <div>
+      <div class="price ">$3.20</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Sliced Pork Belly</div>
+    </div>
+    <div>
+      <div class="price ">$4.23</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Tenderized Pork Leg Slices</div>
+    </div>
+    <div>
+      <div class="price ">$4.29</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Pork Leg Cutlets</div>
+    </div>
+    <div>
+      <div class="price ">$4.71</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Lean Ground Pork</div>
+    </div>
+    <div>
+      <div class="price ">$5.51</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Boneless Rib End Pork Chops</div>
+    </div>
+    <div>
+      <div class="price ">$5.71</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Extra Lean Ground Pork</div>
+    </div>
+    <div>
+      <div class="price ">$6.05</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Boneless Center-Cut Pork Chops</div>
+    </div>
+    <div>
+      <div class="price ">$6.27</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Souvlaki Pork Chops</div>
+    </div>
+    <div>
+      <div class="price ">$6.61</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Pork Tenderloin</div>
+    </div>
+    <div>
+      <div class="price ">$6.93</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Tigre Géant]</div>
+      <div class="product-name">Côtelettes de porc Legacy</div>
+    </div>
+    <div>
+      <div class="price ">$6.97</div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Boneless Pork Sirloin Slices, Value Pack</div>
+    </div>
+    <div>
+      <div class="price ">$7.70</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
+  </div>
+  <div class="deal-card">
+    <div class="info">
+      <div class="store-name">[Super C]</div>
+      <div class="product-name">Rack of Pork, Vaccum Packed</div>
+    </div>
+    <div>
+      <div class="price ">$7.78</div>
+      <div class="dates">du 2026-05-31</div>
+    </div>
   </div>
 </div>
 
-<!-- SHARE / CTA -->
-<nav class="share-bar" id="shareBar" aria-label="Partager">
-  <a class="share-btn whatsapp" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/web/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 WhatsApp</a>
-  <button type="button" class="share-btn discord" onclick="shareDiscord()" aria-label="Partager sur Discord">🎮 Discord</button>
-  <button type="button" class="share-btn email" onclick="showSubscribe()" aria-label="S'abonner par courriel">📬 Courriel</button>
-  <button type="button" class="share-btn copy" onclick="copyLink()" aria-label="Copier le lien">🔗 Copier lien</button>
-</nav>
-
-<!-- MODAL DÉTAIL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeDealDetail()" role="presentation"></div>
-<div class="modal-panel" id="modalPanel" role="dialog" aria-modal="true" aria-label="Détail du produit">
-  <button type="button" class="modal-close" onclick="closeDealDetail()" aria-label="Fermer">✕</button>
-  <h3 id="modalTitle"></h3>
-  <div class="modal-store" id="modalStore"></div>
-  <a id="modalStoreLink" href="" target="_blank" rel="noopener" class="modal-store-link" style="display:none">🌐 Voir le site</a>
-  <!-- Image cliquable → plein écran -->
-  <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
-    <img id="modalImg" src="" alt="Photo du produit">
-  </div>
-  <div class="modal-price-lg" id="modalPrice"></div>
-  <div class="modal-details" id="modalDetails"></div>
-  <div class="modal-recipe-btn" id="modalRecipeBtn" role="button" style="display:none">🍳 Voir la recette suggérée</div>
-</div>
-
-<!-- PLEIN ÉCRAN IMAGE (comme Discord) -->
-<div class="img-fullscreen-overlay" id="imgFullscreen" onclick="closeFullscreenImg()" role="dialog" aria-modal="true" aria-label="Image en plein écran">
-  <button type="button" class="img-fullscreen-close" onclick="closeFullscreenImg()" aria-label="Fermer l'image">✕</button>
-  <img id="imgFullscreenContent" src="" alt="Agrandissement">
-</div>
-
-<!-- STORES BAR -->
-<div class="stores-bar" id="storesBar" role="list" aria-label="Magasins de la semaine"></div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <p>Aubaines Rapides &copy; 2026</p>
-  <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque jeudi</p>
-  <p style="margin-top:4px;font-size:10px;color:var(--text-muted)">Sources directes (aucun agrégateur tiers)</p>
-  <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
+<footer>
+  <p>Scrapé automatiquement via Flipp API · Dernière mise à jour : 2026-05-31 11:40</p>
+  <p style="margin-top:5px;">📍 Saint-Jérôme, QC · Code postal J7Y4A2</p>
 </footer>
-
-<script>
-// ─── HELPERS ───
-function escapeHTML(str) {
-  if (str == null) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
-}
-
-// ─── DATA ───
-const CAT_ORDER = ["viande", "poisson", "fruit", "legume", "sauce", "panier", "yogourt"];
-const CAT_NAMES = { viande: "🥩 Viande", poisson: "🐟 Poisson", fruit: "🍎 Fruits", legume: "🥦 Légumes", sauce: "🥫 Sauce", panier: "📦 Panier", yogourt: "🥛 Yogourt" };
-const CAT_MERGE = {
-  viande: new Set(["boeuf", "poulet", "porc", "viande", "veau"]),
-  poisson: new Set(["poisson"]),
-  fruit: new Set(["fruit"]),
-  legume: new Set(["legume", "légume"]),
-  sauce: new Set(["sauce"]),
-  panier: new Set(["panier"]),
-  yogourt: new Set(["yogourt"]),
-};
-const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Porc", viande: "🥩 Viande", veau: "🥩 Veau" };
-
-// ─── COULEURS DES ÉPICERIES ───
-const STORE_COLORS = {
-  "Maxi":              { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
-  "Super C":           { bg: "#f5dcdc", border: "#e0b8b8", text: "#8c2a2a" },
-  "IGA":               { bg: "#dcf0dc", border: "#b8dcb8", text: "#2a7a2a" },
-  "Metro":             { bg: "#f5eadc", border: "#e0d0b8", text: "#8c6a2a" },
-  "Tigre Géant":       { bg: "#e8dcf5", border: "#d0b8e0", text: "#6a2a8c" },
-  "Walmart":           { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
-  "Loblaws":           { bg: "#dce8f5", border: "#b8cce0", text: "#1a4a7c" },
-  "Provigo":           { bg: "#e8f0dc", border: "#cce0b8", text: "#4a7a2a" },
-  "Costco":            { bg: "#f5dce8", border: "#e0b8cc", text: "#8c2a5a" },
-  "Mayrand":           { bg: "#f5f0dc", border: "#e0dcc0", text: "#7a6a2a" },
-  "Rachelle Béry":     { bg: "#dcf0e8", border: "#b8e0d0", text: "#2a7a5a" },
-  "Boulangerie Pom":   { bg: "#f5e4dc", border: "#e0c8b8", text: "#8c5a2a" },
-  "Les aliments M&M":  { bg: "#e8dcdc", border: "#d4c0c0", text: "#7a4040" },
-  "Les Marchés Tradition": { bg: "#ece4dc", border: "#d8ccc0", text: "#7a6040" },
-  "L'Inter-Marché":    { bg: "#dcf0f0", border: "#b8dcdc", text: "#2a6a6a" },
-  "Fruiterie Potager": { bg: "#e0f5dc", border: "#c0e0b8", text: "#3a7a2a" },
-  "Supermarché Aurès": { bg: "#f0e4dc", border: "#d8ccc0", text: "#7a5a40" },
-  "le Choix du Président": { bg: "#e8e0f0", border: "#ccc0d8", text: "#5a3a7a" },
-  "5 Saveurs":         { bg: "#f0dce8", border: "#d8c0d0", text: "#7a2a5a" },
-};
-function storeStyle(store) {
-  const c = STORE_COLORS[store] || { bg: "#f0ece4", border: "#d8d0c4", text: "#6a5a44" };
-  return `background:${c.bg};border-color:${c.border};color:${c.text}`;
-}
-
-let dealsAll = [], recipesAll = [], stats = {};
-let currentCat = "viande";
-let currentWeekIdx = 0;
-let weeks = [];
-let weekDealsMap = {};
-
-// ─── LOAD AVEC TIMEOUT ───
-function fetchWithTimeout(url, ms = 8000) {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error("Timeout")), ms);
-    fetch(url).then(r => { clearTimeout(timer); resolve(r); }, err => { clearTimeout(timer); reject(err); });
-  });
-}
-
-async function loadData() {
-  try {
-    const [dealsRes, recipesRes, statsRes, mergedRes] = await Promise.all([
-      fetchWithTimeout("data/deals.json"),
-      fetchWithTimeout("data/recipes.json"),
-      fetchWithTimeout("data/stats.json"),
-      fetchWithTimeout("data/deals_merged.json").catch(() => null),
-    ]);
-    
-    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) {
-      throw new Error("Un des fichiers est introuvable (HTTP " + dealsRes.status + ")");
-    }
-    
-    const dealsData = await dealsRes.json();
-    recipesAll = await recipesRes.json();
-    stats = await statsRes.json();
-    
-    if (!dealsData.weeks || dealsData.weeks.length === 0) {
-      throw new Error("Aucune semaine trouvée dans les données");
-    }
-    
-    weeks = dealsData.weeks || [];
-    weekDealsMap = dealsData.deals_by_week || {};
-    currentWeekIdx = 0;
-    
-    // Try to merge supplementary data (deals_merged.json from new scrapers)
-    if (mergedRes && mergedRes.ok) {
-      try {
-        const mergedData = await mergedRes.json();
-        if (Array.isArray(mergedData) && mergedData.length > 0) {
-          // Add merged items to the current week's deals
-          const currentWeek = weeks[0];
-          if (currentWeek && weekDealsMap[currentWeek]) {
-            const existingIds = new Set(
-              (weekDealsMap[currentWeek].deals_with_kg || []).map(d => d.id)
-            );
-            // Convert merged items to deals format and append
-            const converted = mergedData.map((item, i) => ({
-              id: `merged_${Date.now()}_${i}`,
-              name: item.name,
-              name_short: item.name?.substring(0, 50),
-              category: item.category || "viande",
-              store: item.store,
-              store_emoji: "🏪",
-              price: item.price,
-              valid_to: null,
-              image_url: item.image,
-              product_type: item.on_sale ? "frais" : "transformé",
-            }));
-            weekDealsMap[currentWeek].deals_with_kg = [
-              ...(weekDealsMap[currentWeek].deals_with_kg || []),
-              ...converted.filter(d => !existingIds.has(d.id)),
-            ];
-          }
-        }
-      } catch (e) {
-        // silently ignore merge errors
-      }
-    }
-    
-    loadWeek(0, dealsData);
-    return true;
-  } catch (e) {
-    console.error("Erreur chargement:", e);
-    return false;
-  }
-}
-
-function loadWeek(idx, dealsData) {
-  if (!dealsData) return;
-  const week = weeks[idx];
-  if (!week) return;
-  
-  const wd = weekDealsMap[week];
-  if (!wd) return;
-  
-  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-  
-  const byCat = {};
-  const storesSet = new Set();
-  for (const d of dealsAll) {
-    byCat[d.category] = (byCat[d.category] || 0) + 1;
-    if (d.store) storesSet.add(d.store);
-  }
-  stats = {
-    ...stats,
-    total: dealsAll.length,
-    by_category: byCat,
-    stores: Array.from(storesSet).sort(),
-    week: week,
-    weeks: weeks,
-  };
-  
-  updateWeekNav();
-  renderAll();
-}
-
-function byCategory(cat) {
-  const accepted = CAT_MERGE[cat];
-  if (!accepted) return dealsAll.filter(d => d.category === cat);
-  return dealsAll.filter(d => accepted.has(d.category));
-}
-
-function topDeals(cat, n) {
-  const items = byCategory(cat);
-  items.sort((a, b) => {
-    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
-    if (a.per_kg) return -1; if (b.per_kg) return 1;
-    return (a.price || 0) - (b.price || 0);
-  });
-  return items.slice(0, n);
-}
-
-// ─── FILTRE FRAIS / TRANSFORMÉ ───
-let typeFilter = "tout";
-
-function renderTypeFilters(cat) {
-  const deals = byCategory(cat);
-  let f = deals.filter(d => d.product_type === 'frais').length;
-  let t = deals.filter(d => d.product_type === 'transformé').length;
-  return `
-    <div class="type-filter-bar" id="typeFilter-${cat}" role="group" aria-label="Filtrer par type">
-      <button type="button" class="type-filter-btn${typeFilter === 'tout' ? ' active' : ''}" data-type="tout" onclick="setTypeFilter('${cat}','tout')">Tout <span class="count">${deals.length}</span></button>
-      <button type="button" class="type-filter-btn${typeFilter === 'frais' ? ' active' : ''}" data-type="frais" onclick="setTypeFilter('${cat}','frais')">🌿 Frais <span class="count">${f}</span></button>
-      <button type="button" class="type-filter-btn${typeFilter === 'transformé' ? ' active' : ''}" data-type="transformé" onclick="setTypeFilter('${cat}','transformé')">🏭 Transformé <span class="count">${t}</span></button>
-    </div>`;
-}
-
-function setTypeFilter(cat, type) {
-  typeFilter = type;
-  const section = document.getElementById(`section-${cat}`);
-  if (!section) return;
-  
-  section.querySelectorAll('.type-filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.type === typeFilter);
-  });
-  
-  const dealsContainer = section.querySelector('.deals-container');
-  if (dealsContainer) {
-    dealsContainer.innerHTML = renderCategory(cat);
-  }
-}
-
-// ─── RENDER ───
-function updateWeekNav() {
-  const week = weeks[currentWeekIdx];
-  if (!week) return;
-  
-  const d = new Date(week + "T12:00:00");
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formatted = d.toLocaleDateString('fr-CA', options);
-  
-  document.getElementById("weekLabel").textContent = `Semaine du ${formatted}`;
-  document.getElementById("prevWeek").disabled = currentWeekIdx <= 0;
-  document.getElementById("nextWeek").disabled = currentWeekIdx >= weeks.length - 1;
-}
-
-function switchWeek(dir) {
-  const newIdx = currentWeekIdx + dir;
-  if (newIdx < 0 || newIdx >= weeks.length) return;
-  currentWeekIdx = newIdx;
-  
-  const week = weeks[newIdx];
-  const wd = weekDealsMap[week];
-  if (!wd) return;
-  
-  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-  
-  const byCat = {};
-  const storesSet = new Set();
-  for (const d of dealsAll) {
-    byCat[d.category] = (byCat[d.category] || 0) + 1;
-    if (d.store) storesSet.add(d.store);
-  }
-  stats = {
-    ...stats,
-    total: dealsAll.length,
-    by_category: byCat,
-    stores: Array.from(storesSet).sort(),
-    week: week,
-  };
-  
-  updateWeekNav();
-  
-  const app = document.getElementById("app");
-  app.style.opacity = "0.5";
-  
-  renderAll();
-  
-  app.style.opacity = "1";
-}
-
-function renderCatTabs() {
-  document.getElementById("catTabs").innerHTML = CAT_ORDER.map(cat => {
-    const count = byCategory(cat).length;
-    const isActive = cat === currentCat;
-    return `<button type="button" class="cat-tab${isActive ? " active" : ""}" data-cat="${cat}" onclick="switchCat('${cat}')" role="tab" aria-selected="${isActive}" aria-controls="section-${cat}">${CAT_NAMES[cat]} <span class="count">${count}</span></button>`;
-  }).join("");
-}
-
-function renderDealCard(d, rank) {
-  const hasProtein = d.protein_per_dollar && d.protein_per_100g;
-  const recipe = d.recipe;
-  const isTop = rank === 1;
-  const nameHtml = escapeHTML(d.name_short || d.name);
-  const storeHtml = escapeHTML(d.store);
-  const storeEmoji = d.store_emoji || "🏪";
-  const storeInline = storeStyle(d.store);
-  const badgeClass = d.product_type === 'frais' ? 'frais' : 'transforme';
-  const badgeText = d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.';
-  const badgeHtml = d.product_type ? `<span class="deal-type-badge ${badgeClass}">${badgeText}</span>` : "";
-  const priceHtml = d.price != null ? `${d.price.toFixed(2)}$` : "";
-  const perKgHtml = d.per_kg != null ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : "";
-  const perLbHtml = d.per_lb != null ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : "";
-    const detailHtml = d.detail ? `<span class="deal-detail">${escapeHTML(d.detail.substring(0, 35))}</span>` : "";
-    const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
-  const recipeHtml = recipe ? `<div class="deal-recipe">🍳 ${escapeHTML(recipe.title.substring(0, 55))}${recipe.title.length > 55 ? "…" : ""}</div>` : "";
-
-  return `<div class="deal-card${isTop ? " top-deal" : ""}" data-deal-id="${d.id}" role="button" tabindex="0" aria-label="${nameHtml} chez ${storeHtml}">
-    <div class="deal-rank">#${rank}</div>
-    <div class="deal-info">
-      <div class="deal-name">${nameHtml}${badgeHtml}</div>
-      <div class="deal-store" style="${storeInline}">${storeEmoji} ${storeHtml}</div>
-      <div class="deal-prices">
-        <span class="deal-price">${priceHtml}</span>
-        ${perKgHtml}${perLbHtml}${detailHtml}${proteinHtml}
-      </div>
-      ${recipeHtml}
-    </div>
-  </div>`;
-}
-
-function renderCategory(cat) {
-  let filtered;
-  if (typeFilter === "frais") {
-    filtered = dealsAll.filter(d => d.product_type === 'frais');
-  } else if (typeFilter === "transformé") {
-    filtered = dealsAll.filter(d => d.product_type === 'transformé');
-  } else {
-    filtered = dealsAll;
-  }
-  
-  const getTop = (cat, n) => {
-    const items = filtered.filter(d => {
-      const accepted = CAT_MERGE[cat];
-      return accepted ? accepted.has(d.category) : d.category === cat;
-    });
-    items.sort((a, b) => {
-      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
-      if (a.per_kg) return -1; if (b.per_kg) return 1;
-      return (a.price || 0) - (b.price || 0);
-    });
-    return items.slice(0, n);
-  };
-  
-  const deals = getTop(cat, cat === "viande" ? 100 : 12);
-  if (deals.length === 0) {
-    return `<div class="empty-state"><div class="icon">🔍</div><p>Aucun résultat pour cette catégorie cette semaine</p></div>`;
-  }
-
-  if (cat === "viande") {
-    const subOrder = ["boeuf", "poulet", "porc"];
-    let html = "";
-    for (const sub of subOrder) {
-      const subDeals = deals.filter(d => d.category === sub).slice(0, 4);
-      if (subDeals.length === 0) continue;
-      html += `<div class="sub-header">${MEAT_NAMES[sub] || sub}</div>`;
-      html += subDeals.map((d, i) => renderDealCard(d, i + 1)).join("");
-    }
-    return html;
-  }
-
-  return deals.slice(0, 8).map((d, i) => renderDealCard(d, i + 1)).join("");
-}
-
-function renderAll() {
-  document.getElementById("weekBadge").textContent = `📅 ${stats.week || "..."}`;
-
-  const ticker = document.getElementById("savingsTicker");
-  const byCat = stats.by_category || {};
-  const totalMeat = (byCat.boeuf||0) + (byCat.poulet||0) + (byCat.porc||0) + (byCat.viande||0);
-  ticker.innerHTML = `
-    <div class="ticker-item"><span class="num">${stats.total || "—"}</span> <span class="label">offres</span></div>
-    <div class="ticker-item"><span class="num">${totalMeat}</span> <span class="label">viandes</span></div>
-    <div class="ticker-item"><span class="num">${byCat.legume || 0}</span> <span class="label">légumes</span></div>
-    <div class="ticker-item"><span class="num">${byCat.fruit || 0}</span> <span class="label">fruits</span></div>
-    <div class="ticker-item"><span class="num">${byCat.sauce || 0}</span> <span class="label">sauces</span></div>
-    <div class="ticker-item"><span class="num">${byCat.yogourt || 0}</span> <span class="label">yogourts</span></div>
-    <div class="ticker-item"><span class="num">${stats.stores ? stats.stores.length : "—"}</span> <span class="label">magasins</span></div>
-  `;
-
-  if (stats.stores) {
-    document.getElementById("storesBar").innerHTML = stats.stores.map(s => `<span class="store-badge" role="listitem">${escapeHTML(s)}</span>`).join("");
-  }
-
-  renderCatTabs();
-
-  const app = document.getElementById("app");
-  app.innerHTML = CAT_ORDER.map(cat => {
-    const count = byCategory(cat).length;
-    return `<div class="cat-section${cat === currentCat ? " active" : ""}" id="section-${cat}" role="tabpanel" aria-label="${CAT_NAMES[cat]}">
-      <h2>${CAT_NAMES[cat]} <span class="cat-stats">${count} offres</span></h2>
-      ${renderTypeFilters(cat)}
-      <div class="deals-container">${renderCategory(cat)}</div>
-    </div>`;
-  }).join("");
-}
-
-function switchCat(cat) {
-  currentCat = cat;
-  typeFilter = "tout";
-  // Hide search results when switching tabs
-  const sr = document.getElementById("searchResultsContainer");
-  if (sr) sr.style.display = "none";
-  document.querySelectorAll(".cat-tab").forEach(t => {
-    const isActive = t.dataset.cat === cat;
-    t.classList.toggle("active", isActive);
-    t.setAttribute("aria-selected", isActive);
-  });
-  document.querySelectorAll(".cat-section").forEach(s => s.classList.toggle("active", s.id === `section-${cat}`));
-}
-
-function doSearch() {
-  const q = document.getElementById("searchInput").value.trim();
-  if (!q) {
-    const c = document.getElementById("searchResultsContainer");
-    if (c) c.style.display = "none";
-    return;
-  }
-  const ql = q.toLowerCase();
-  const results = dealsAll.filter(d => {
-    const name = (d.name || "").toLowerCase();
-    const store = (d.store || "").toLowerCase();
-    const cat = (d.category || "").toLowerCase();
-    return name.includes(ql) || store.includes(ql) || cat.includes(ql);
-  }).slice(0, 30);
-  
-  // Show results in dedicated search overlay (not inside current tab)
-  let container = document.getElementById("searchResultsContainer");
-  if (!container) {
-    container = document.createElement("div");
-    container.id = "searchResultsContainer";
-    container.style.cssText = "max-width:640px;margin:0 auto;padding:0 16px";
-    const app = document.getElementById("app");
-    app.insertBefore(container, app.firstChild);
-    // Add close button and show/hide
-    container.addEventListener("click", function(e) {
-      if (e.target === container || e.target.classList.contains("search-close-btn")) {
-        container.style.display = "none";
-      }
-    });
-  }
-  
-  if (results.length === 0) {
-    showToast(`🔍 Aucun résultat pour "${q}"`);
-    return;
-  }
-  
-  const catMap = {};
-  results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
-  const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
-  
-  container.style.display = "block";
-  container.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 8px">
-    <div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main)">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>
-    <button type="button" class="search-close-btn" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);line-height:1" aria-label="Fermer la recherche">✕</button>
-  </div>
-  <div class="deals-container">${results.map((d,i) => renderDealCard(d,i+1)).join("")}</div>`;
-}
-
-// ─── CTA ───
-function showSubscribe() {
-  const f = document.getElementById("subscribeWrap");
-  f.style.display = f.style.display === "none" ? "block" : "none";
-}
-function subscribeEmail() {
-  const email = document.getElementById("emailInput").value.trim();
-  if (email) showToast("📬 Merci! On t'ajoute à la liste!");
-  else showToast("Entre ton courriel!");
-}
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    showToast("🔗 Lien copié!");
-  });
-}
-function shareDiscord() {
-  showToast("🎮 Lien Discord à venir! Reviens nous voir.");
-}
-
-// ─── MODAL DÉTAIL ───
-function showDealDetail(id) {
-  const d = dealsAll.find(item => item.id == id);
-  if (!d) return;
-  
-  document.getElementById("modalTitle").textContent = d.name_short || d.name;
-  document.getElementById("modalStore").textContent = `${d.store_emoji || "🏪"} ${d.store}`;
-  
-  // Lien vers le site de l'épicerie
-  const storeLink = document.getElementById("modalStoreLink");
-  if (d.store_url) {
-    storeLink.href = d.store_url;
-    storeLink.style.display = "inline";
-  } else {
-    storeLink.style.display = "none";
-  }
-  document.getElementById("modalPrice").textContent = d.price ? `${d.price.toFixed(2)}$` : "";
-  
-  let details = "";
-  if (d.per_kg) details += `<div class="modal-row"><span class="lbl">Prix au kg</span><span class="val">${d.per_kg.toFixed(2)}$/kg</span></div>`;
-  if (d.per_lb) details += `<div class="modal-row"><span class="lbl">Prix la livre</span><span class="val">${d.per_lb.toFixed(2)}$/lb</span></div>`;
-  if (d.protein_per_dollar) details += `<div class="modal-row"><span class="lbl">Protéines</span><span class="val">💪 ${d.protein_per_dollar}g/$</span></div>`;
-  if (d.weight_kg) details += `<div class="modal-row"><span class="lbl">Poids</span><span class="val">${(d.weight_kg * 1000).toFixed(0)}g</span></div>`;
-  if (d.valid_to) details += `<div class="modal-row"><span class="lbl">Valable jusqu'au</span><span class="val">${escapeHTML(d.valid_to)}</span></div>`;
-  
-  document.getElementById("modalDetails").innerHTML = details;
-  
-  const recipeBtn = document.getElementById("modalRecipeBtn");
-  if (d.recipe && d.recipe.title) {
-    recipeBtn.textContent = `🍳 ${d.recipe.title}` + (d.recipe.rating ? ` ⭐${d.recipe.rating}` : "");
-    recipeBtn.style.display = "block";
-    recipeBtn.style.cursor = "default";
-  } else {
-    recipeBtn.style.display = "none";
-  }
-  
-  const imgWrap = document.getElementById("modalImgWrap");
-  const modalImg = document.getElementById("modalImg");
-  if (d.image_url) {
-    modalImg.src = d.image_url;
-    imgWrap.style.display = "block";
-  } else {
-    imgWrap.style.display = "none";
-  }
-  
-  document.getElementById("modalOverlay").classList.add("open");
-  document.getElementById("modalPanel").classList.add("open");
-}
-
-function closeDealDetail() {
-  document.getElementById("modalOverlay").classList.remove("open");
-  document.getElementById("modalPanel").classList.remove("open");
-}
-
-// ─── PLEIN ÉCRAN IMAGE (comme Discord) ───
-function openFullscreenImg(src) {
-  document.getElementById("imgFullscreenContent").src = src;
-  document.getElementById("imgFullscreen").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-function closeFullscreenImg() {
-  document.getElementById("imgFullscreen").classList.remove("open");
-  document.body.style.overflow = "";
-}
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") { closeFullscreenImg(); closeDealDetail(); }
-});
-
-// ─── INIT ───
-document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
-
-// Délégation d'événements : clic sur les cartes deal
-document.addEventListener("click", e => {
-  const card = e.target.closest("[data-deal-id]");
-  if (card) {
-    const id = card.dataset.dealId;
-    if (id) showDealDetail(id);
-  }
-});
-
-// Support clavier : Enter/Espace sur les cartes deal
-document.addEventListener("keydown", e => {
-  if (e.key === "Enter" || e.key === " ") {
-    const card = e.target.closest("[data-deal-id]");
-    if (card) {
-      e.preventDefault();
-      const id = card.dataset.dealId;
-      if (id) showDealDetail(id);
-    }
-  }
-});
-
-async function init() {
-  const ok = await loadData();
-  if (!ok) {
-    document.getElementById("app").innerHTML = `<div class="error-state">
-      <h2>😕 Données temporairement indisponibles</h2>
-      <p>Les spéciaux de la semaine n'ont pas pu être chargés.</p>
-      <p style="margin-top:12px;color:var(--text-muted);font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
-      <button type="button" class="cta-primary" style="margin-top:16px;border:none;cursor:pointer" onclick="location.reload()">🔄 Réessayer</button>
-    </div>`;
-    return;
-  }
-  renderAll();
-  loadPipelineStatus();
-}
-
-function loadPipelineStatus() {
-  const el = document.getElementById("pipelineStatus");
-  fetch("data/status.json")
-    .then(r => r.ok ? r.json() : null)
-    .then(s => {
-      if (!s) { el.textContent = "⚙️ Statut indisponible"; return; }
-      if (s.warning) {
-        el.innerHTML = `⚠️ ${escapeHTML(s.warning)} · ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
-      } else if (s.success) {
-        el.innerHTML = `✅ Dernière mise à jour : ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
-      } else {
-        el.innerHTML = `❌ Échec du dernier scraping (${escapeHTML(s.last_run?.substring(0, 10) || "")})`;
-      }
-    })
-    .catch(() => { el.textContent = ""; });
-}
-
-init();
-</script>
+</div>
 </body>
 </html>
