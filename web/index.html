@@ -548,14 +548,6 @@ body {
   color: var(--text-muted);
 }
 
-/* ===== SEARCH RESULTS ===== */
-.search-results {
-  margin-top: 8px;
-  padding: 10px 12px;
-  background: #fffbf0;
-  border: 2px solid var(--saving-gold);
-}
-
 /* ===== SHARE BAR ===== */
 .share-bar {
   display: flex;
@@ -866,6 +858,21 @@ body {
 }
 .img-fullscreen-close:hover { background: rgba(255,255,255,0.3); }
 
+/* ===== SEARCH RESULTS CONTAINER ===== */
+#searchResultsContainer {
+  background: var(--bg-card);
+  border: 2px solid var(--saving-gold);
+  margin-bottom: 12px;
+  padding: 0;
+}
+#searchResultsContainer .deals-container {
+  display: block;
+  padding: 0 14px 12px;
+}
+#searchResultsContainer .deal-card:last-child {
+  margin-bottom: 0;
+}
+
 /* ===== RESPONSIVE — ADAPTATIF ===== */
 /* Base = mobile (par défaut) — tout en colonne, compact */
 
@@ -982,8 +989,6 @@ body {
   .modal-price-lg { font-size: 38px; }
   .modal-row { font-size: 15px; padding: 12px 0; }
   .modal-img-wrap img { max-height: 400px; }
-  
-  .search-results { padding: 14px 18px; }
 }
 
 /* Grand écran 1200px+ — trois colonnes */
@@ -1523,6 +1528,9 @@ function renderAll() {
 function switchCat(cat) {
   currentCat = cat;
   typeFilter = "tout";
+  // Hide search results when switching tabs
+  const sr = document.getElementById("searchResultsContainer");
+  if (sr) sr.style.display = "none";
   document.querySelectorAll(".cat-tab").forEach(t => {
     const isActive = t.dataset.cat === cat;
     t.classList.toggle("active", isActive);
@@ -1533,7 +1541,11 @@ function switchCat(cat) {
 
 function doSearch() {
   const q = document.getElementById("searchInput").value.trim();
-  if (!q) return;
+  if (!q) {
+    const c = document.getElementById("searchResultsContainer");
+    if (c) c.style.display = "none";
+    return;
+  }
   const ql = q.toLowerCase();
   const results = dealsAll.filter(d => {
     const name = (d.name || "").toLowerCase();
@@ -1542,25 +1554,37 @@ function doSearch() {
     return name.includes(ql) || store.includes(ql) || cat.includes(ql);
   }).slice(0, 15);
   
-  // Remove any existing search results
-  document.querySelectorAll(".search-results").forEach(el => el.remove());
+  // Show results in dedicated search overlay (not inside current tab)
+  let container = document.getElementById("searchResultsContainer");
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "searchResultsContainer";
+    container.style.cssText = "max-width:640px;margin:0 auto;padding:0 16px";
+    const app = document.getElementById("app");
+    app.insertBefore(container, app.firstChild);
+    // Add close button and show/hide
+    container.addEventListener("click", function(e) {
+      if (e.target === container || e.target.classList.contains("search-close-btn")) {
+        container.style.display = "none";
+      }
+    });
+  }
   
   if (results.length === 0) {
     showToast(`🔍 Aucun résultat pour "${q}"`);
     return;
   }
   
-  // Show results in current section + badge count
-  const section = document.getElementById(`section-${currentCat}`);
-  if (!section) return;
-  
-  const div = document.createElement("div");
-  div.className = "search-results";
   const catMap = {};
   results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
   const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
-  div.innerHTML = `<div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main);margin-bottom:8px">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
-  section.insertBefore(div, section.querySelector(".type-filter-bar")?.nextSibling || section.firstChild.nextSibling);
+  
+  container.style.display = "block";
+  container.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 8px">
+    <div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main)">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>
+    <button type="button" class="search-close-btn" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);line-height:1" aria-label="Fermer la recherche">✕</button>
+  </div>
+  <div class="deals-container">${results.map((d,i) => renderDealCard(d,i+1)).join("")}</div>`;
 }
 
 // ─── CTA ───
