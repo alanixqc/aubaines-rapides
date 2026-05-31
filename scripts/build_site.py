@@ -393,6 +393,23 @@ EN_TO_FR_TRANSLATIONS = {
     "inside": "intérieur",
     # Corrections de traductions erronées
     "nourri au grain": "nourri au grain",  # verrou: empêche le re-remplacement par erreur
+
+    # ─── Traductions de phrases complètes (AVANT les mots atomiques) ───
+    # L'ordre des mots anglais (adj+adj+noun) diffère du français (noun+adj+adj)
+    # Ces phrases doivent matcher AVANT les mots individuels pour éviter
+    # "Moyen haché boeuf" au lieu de "Boeuf haché mi-maigre"
+    "extra lean ground beef, value pack": "boeuf haché extra maigre, paquet de valeur",
+    "extra lean ground beef": "boeuf haché extra maigre",
+    "lean ground beef, value pack": "boeuf haché maigre, paquet de valeur",
+    "lean ground beef": "boeuf haché maigre",
+    "medium ground beef, value pack": "boeuf haché mi-maigre, paquet de valeur",
+    "medium ground beef": "boeuf haché mi-maigre",
+    # Porc: même problème d'ordre des mots
+    "extra lean ground pork, value pack": "porc haché extra maigre, paquet de valeur",
+    "extra lean ground pork": "porc haché extra maigre",
+    "lean ground pork, value pack": "porc haché maigre, paquet de valeur",
+    "lean ground pork": "porc haché maigre",
+    "medium ground pork": "porc haché mi-maigre",
 }
 
 # Recettes — traduction français + URL française
