@@ -1010,6 +1010,7 @@ def export_deals():
     
     deals_by_week = {}
     week_stats = {}
+    flagged_by_week = {}
     
     for week in all_weeks:
         rows = db.execute("""\
@@ -1029,6 +1030,7 @@ def export_deals():
         category_counts = defaultdict(int)
         store_set = set()
         deals = []
+        flagged_deals = []  # Deals exclus pour prix aberrants
         
         # Première passe: garder la meilleure entrée par produit (avec image prioritaire)
         for r in rows:
@@ -1047,8 +1049,6 @@ def export_deals():
         for r in seen_products.values():
 
             mt = classify_meat_type(r["name"], r["meat_type"] or "autre")
-            store_set.add(r["merchant_name"])
-            category_counts[mt] += 1
 
             # $/kg
             per_kg = None
@@ -1081,6 +1081,24 @@ def export_deals():
                     source = "estime"
             
             per_lb = round(per_kg / 2.20462, 2) if per_kg else None
+            
+            # Validation: exclure les prix aberrants ($/kg < 0.50 ou > 100)
+            if per_kg is not None and (per_kg < 0.50 or per_kg > 100):
+                flagged_deals.append({
+                    "id": r["id"],
+                    "name": r["name"],
+                    "store": r["merchant_name"],
+                    "price": round(r["price"], 2) if r["price"] else None,
+                    "per_kg": per_kg,
+                    "weight_kg": weight_kg,
+                    "source": source,
+                    "reason": "per_kg_trop_bas" if per_kg < 0.50 else "per_kg_trop_eleve",
+                })
+                continue
+            
+            # Stats (après validation, deals valides seulement)
+            store_set.add(r["merchant_name"])
+            category_counts[mt] += 1
             
             # Protéines
             protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson","yogourt"] else None
@@ -1138,6 +1156,9 @@ def export_deals():
             "by_category": dict(category_counts),
             "stores": sorted(store_set),
         }
+        
+        if flagged_deals:
+            flagged_by_week[week] = flagged_deals
     
     db.close()
     
@@ -1162,6 +1183,7 @@ def export_deals():
             "generated_at": datetime.now().isoformat(),
         },
         "recipes_available": {mt: len(recs) for mt, recs in recipes_by_meat.items() if recs},
+        "flagged_deals": flagged_by_week,  # Deals exclus pour prix aberrants
     }
 
 
@@ -1294,6 +1316,18 @@ def main():
     with open(os.path.join(WEB_DIR, "deals.json"), "w", encoding="utf-8") as f:
         json.dump(deals, f, ensure_ascii=False, indent=2)
     print(f"    ✅ {deals['stats']['total']} deals exportés, noms en français")
+
+    # Flagged deals (prix aberrants exclus)
+    flagged = deals.get("flagged_deals", {})
+    all_flagged = []
+    for week, items in flagged.items():
+        for item in items:
+            item["week"] = week
+            all_flagged.append(item)
+    if all_flagged:
+        with open(os.path.join(WEB_DIR, "flagged.json"), "w", encoding="utf-8") as f:
+            json.dump(all_flagged, f, ensure_ascii=False, indent=2)
+        print(f"    ⚠️  {len(all_flagged)} deals exclus (prix aberrants) -> flagged.json")
     
     print("  📈 Tendances...")
     trends = export_trends()
