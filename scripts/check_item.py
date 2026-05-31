@@ -3,18 +3,31 @@ import json
 with open('web/data/deals.json') as f:
     data = json.load(f)
 
-cats = set()
+cats = {}
 for key in ['deals_with_kg', 'deals_wo_kg']:
     for item in data['deals'].get(key, []):
-        cats.add(item.get('category'))
+        c = item.get('category', '?')
+        cats[c] = cats.get(c, 0) + 1
         
-print("Categories:", sorted(cats))
+print("Categories:", json.dumps(cats, indent=2))
+print(f"Total: {sum(cats.values())}")
 
+# Show all yogurt items sorted by price
+yogurts = []
 for key in ['deals_with_kg', 'deals_wo_kg']:
     for item in data['deals'].get(key, []):
         if item.get('category') == 'yogourt':
-            print(f"✅ YOGOURT: {item['name']} — {item.get('store')} — {item.get('price')}$")
-        else:
-            name = item.get('name','').lower()
-            if any(kw in name for kw in ['yogourt','yaourt','yogurt','kéfir','kefir','skyr']):
-                print(f"❌ MANQUÉ: {item['name']} — cat={item.get('category')}")
+            yogurts.append(item)
+
+yogurts.sort(key=lambda x: (x.get('price') or 0))
+print(f"\n🥛 Yogourt deals: {len(yogurts)}")
+for y in yogurts:
+    store = y.get('store', '?')
+    price = y.get('price', 0)
+    per_kg = y.get('per_kg')
+    protein = y.get('protein_per_dollar')
+    ptype = y.get('product_type', '?')
+    name = y.get('name', '?')
+    ppkg = f"{per_kg:.2f}$/kg" if per_kg else "—"
+    pp = f"💪{protein}g/$" if protein else ""
+    print(f"  {store:20s} | {name[:50]:50s} | {price:>6.2f}$ | {ppkg:12s} | {ptype} {pp}")
