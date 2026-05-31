@@ -1,1968 +1,1969 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes et paniers, comparés rapidement par prix.">
-<link rel="canonical" href="https://alanixqc.github.io/aubaines-rapides/web/">
-<meta property="og:title" content="Aubaines Rapides — Les spéciaux d'épicerie de la semaine">
-<meta property="og:description" content="Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://alanixqc.github.io/aubaines-rapides/web/">
-<meta property="og:image" content="https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aubaines Rapides — Spéciaux d'épicerie QC">
-<meta name="twitter:description" content="Les meilleurs spéciaux de la semaine au Québec, comparés rapidement.">
-<meta name="twitter:image" content="https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png">
-<meta name="theme-color" content="#b8492e">
-<meta name="dateModified" content="">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-<title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<style>
-/* ===== CSS CUSTOM PROPERTIES — Aubaines Rapides Design System ===== */
-:root {
-  --bg-paper: #f7f1e7;
-  --bg-surface: #fffaf2;
-  --bg-card: #fffdf7;
-  --text-main: #2f251c;
-  --text-muted: #7a6b55;
-  --deal-red: #b8492e;
-  --deal-red-dark: #8f3422;
-  --saving-yellow: #ffc857;
-  --saving-gold: #c9942e;
-  --fresh-green: #2f7d46;
-  --fresh-green-soft: #e7f3e8;
-  --verified-blue: #1f6f9f;
-  --verified-blue-soft: #e4f0f7;
-  --border-soft: #d8c7aa;
-  --border-strong: #c6ad83;
-  --badge-beige: #f0e8da;
-  --badge-beige-text: #7a5c2e;
-  --badge-beige-border: #dcccb0;
-}
-/* ===== RESET ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; -webkit-text-size-adjust: 100%; }
-
-/* ===== SCREEN READER ONLY ===== */
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-}
-
-/* ===== PAPER TEXTURE BACKGROUND ===== */
-body {
-  font-family: 'Inter', 'Source Sans 3', Arial, sans-serif;
-  background-color: var(--bg-paper);
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b79b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  color: var(--text-main);
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* ===== HEADER — CIRCA / FLYER STYLE ===== */
-.header {
-  background: var(--bg-surface);
-  border-bottom: 3px solid var(--border-soft);
-  padding: 18px 16px 14px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
-}
-/* ===== WEEK NAVIGATION ===== */
-.week-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--border-soft);
-}
-.week-nav-btn {
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 6px 14px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.week-nav-btn:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-.week-nav-btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-  border-color: var(--border-soft);
-  color: #c4b79b;
-}
-.week-nav-btn:disabled:hover {
-  border-color: var(--border-soft);
-  color: #c4b79b;
-}
-.week-nav-label {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  min-width: 120px;
-  text-align: center;
-}
-.header-top {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.logo {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--deal-red);
-  text-decoration: none;
-  letter-spacing: -0.3px;
-  line-height: 1.1;
-}
-.logo-sub {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--text-muted);
-  display: block;
-  margin-top: -2px;
-}
-.week-badge {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-paper);
-  padding: 4px 12px;
-  border: 2px dashed var(--border-soft);
-  white-space: nowrap;
-}
-.search-bar {
-  display: flex;
-  gap: 6px;
-}
-.search-bar input {
-  flex: 1;
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 10px 14px;
-  color: var(--text-main);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-.search-bar input:focus {
-  border-color: var(--deal-red);
-}
-.search-bar input::placeholder {
-  color: var(--text-muted);
-}
-.search-bar button {
-  background: var(--deal-red);
-  border: none;
-  padding: 10px 16px;
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.search-bar button:hover {
-  background: var(--deal-red-dark);
-}
-
-/* ===== HERO BANNER ===== */
-.hero-banner {
-  background: var(--bg-surface);
-  padding: 22px 16px 18px;
-  text-align: center;
-  border-bottom: 2px solid var(--border-soft);
-}
-.hero-banner h1 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 4px;
-  line-height: 1.2;
-}
-.hero-banner h1 span {
-  color: var(--deal-red);
-  display: inline;
-}
-.hero-banner p {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin-top: 4px;
-  max-width: 400px;
-  margin: 0 auto;
-  font-style: italic;
-}
-.hero-cta {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 14px;
-  flex-wrap: wrap;
-}
-.hero-cta a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 20px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.15s;
-  line-height: 1.3;
-}
-.cta-primary {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border: 2px solid var(--deal-red);
-}
-.cta-primary:hover {
-  background: var(--deal-red-dark);
-  border-color: var(--deal-red-dark);
-}
-.cta-secondary {
-  background: var(--bg-card);
-  color: var(--text-main);
-  border: 2px solid var(--border-soft);
-}
-.cta-secondary:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-
-/* ===== SAVINGS TICKER ===== */
-.savings-ticker {
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 10px 16px;
-  background: var(--bg-surface);
-  border-bottom: 2px solid #e8dccb;
-}
-.savings-ticker::-webkit-scrollbar { display: none; }
-.ticker-item {
-  flex-shrink: 0;
-  padding: 5px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--deal-red);
-  white-space: nowrap;
-}
-.ticker-item .num {
-  font-weight: 700;
-  font-size: 15px;
-}
-.ticker-item .label {
-  color: var(--text-muted);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 12px;
-}
-
-/* ===== CATEGORY TABS ===== */
-.cat-tabs {
-  display: flex;
-  gap: 6px;
-  padding: 12px 16px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  background: var(--bg-surface);
-  position: sticky;
-  top: 85px;
-  z-index: 99;
-  border-bottom: 2px solid #e8dccb;
-}
-.cat-tabs::-webkit-scrollbar { display: none; }
-.cat-tab {
-  flex-shrink: 0;
-  padding: 8px 18px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 2px solid var(--border-soft);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.15s;
-  text-align: center;
-}
-.cat-tab.active {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border-color: var(--deal-red);
-}
-.cat-tab .count {
-  font-weight: 400;
-  font-size: 11px;
-  opacity: 0.7;
-  margin-left: 3px;
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-/* ===== CATEGORY SECTIONS ===== */
-.cat-section {
-  display: none;
-  padding: 0 16px 100px;
-  max-width: 640px;
-  margin: 0 auto;
-}
-.cat-section.active {
-  display: block;
-}
-.cat-section h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 18px 0 2px;
-  color: var(--text-main);
-  line-height: 1.2;
-}
-.cat-stats {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 13px;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-/* ===== TYPE FILTER BAR ===== */
-.type-filter-bar {
-  display: flex;
-  gap: 4px;
-  margin: 6px 0 10px;
-  flex-wrap: wrap;
-}
-.type-filter-btn {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 12px;
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 2px solid var(--border-soft);
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-.type-filter-btn:hover {
-  border-color: var(--saving-gold);
-  color: var(--saving-gold);
-}
-.type-filter-btn.active {
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  border-color: var(--deal-red);
-}
-.type-filter-btn .count {
-  font-weight: 400;
-  font-size: 10px;
-  opacity: 0.7;
-  font-family: 'Source Serif 4', Georgia, serif;
-  margin-left: 2px;
-}
-.type-filter-btn.active .count {
-  opacity: 0.8;
-}
-
-/* ===== DEAL CARDS — FLYER/LIST STYLE ===== */
-.deal-card {
-  background: var(--bg-card);
-  border: 2px double var(--border-soft);
-  padding: 12px 14px;
-  margin-bottom: 8px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  position: relative;
-}
-.deal-card:hover {
-  border-color: var(--saving-gold);
-}
-@media (min-width: 900px) {
-  .deal-card {
-    box-shadow: 0 1px 3px rgba(47,37,28,0.06);
-  }
-  .deal-card:hover {
-    box-shadow: 0 2px 8px rgba(47,37,28,0.10);
-    transform: translateY(-1px);
-  }
-}
-.deal-card.top-deal {
-  border-color: var(--saving-gold);
-  background: #fffbf0;
-  margin-top: 4px;
-}
-.deal-card.top-deal::before {
-  content: "⭐ TOP";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  background: var(--deal-red);
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 10px;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-}
-.deal-rank {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--border-soft);
-  min-width: 28px;
-  line-height: 1.2;
-  text-align: center;
-  padding-top: 2px;
-}
-.deal-card.top-deal .deal-rank {
-  color: var(--saving-gold);
-}
-.deal-info {
-  flex: 1;
-  min-width: 0;
-}
-.deal-name {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 2px;
-  color: var(--text-main);
-}
-.deal-store {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  margin-bottom: 6px;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
-  border: 1px solid;
-  white-space: nowrap;
-}
-/* ===== PRODUCT TYPE BADGE ===== */
-.deal-type-badge {
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 2px 6px;
-  display: inline-block;
-  margin-left: 6px;
-  line-height: 1.2;
-  vertical-align: middle;
-}
-.deal-type-badge.frais {
-  background: var(--fresh-green-soft);
-  color: var(--fresh-green);
-  border: 1px solid #c4dbbc;
-}
-.deal-type-badge.transforme {
-  background: var(--badge-beige);
-  color: var(--badge-beige-text);
-  border: 1px solid var(--badge-beige-border);
-}
-.deal-prices {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-.deal-price {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--deal-red);
-  line-height: 1.1;
-}
-.deal-per-kg {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-.deal-protein {
-  font-size: 11px;
-  color: var(--fresh-green);
-  font-weight: 600;
-  background: var(--fresh-green-soft);
-  padding: 2px 8px;
-  border: 1px solid #d4dfc8;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.deal-detail {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-weight: 500;
-  padding: 2px 8px;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.deal-recipe {
-  margin-top: 6px;
-  padding-top: 5px;
-  border-top: 1px dashed var(--border-soft);
-}
-.deal-recipe a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: color 0.15s;
-}
-.deal-recipe a:hover {
-  color: var(--deal-red);
-}
-
-/* ===== SUBCATEGORY HEADERS ===== */
-.sub-header {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 18px 0 6px;
-  padding-bottom: 4px;
-  border-bottom: 2px dashed var(--border-soft);
-  color: var(--text-muted);
-}
-
-/* ===== SHARE BAR ===== */
-.share-bar {
-  display: flex;
-  gap: 6px;
-  padding: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 640px;
-  margin: 0 auto;
-}
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 16px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid;
-  cursor: pointer;
-  transition: all 0.15s;
-  line-height: 1.3;
-}
-.share-btn:hover {
-  transform: translateY(-1px);
-}
-.share-btn.discord {
-  background: var(--bg-card);
-  color: #5865F2;
-  border-color: var(--border-soft);
-}
-.share-btn.discord:hover {
-  border-color: #5865F2;
-}
-.share-btn.whatsapp {
-  background: var(--bg-card);
-  color: #25D366;
-  border-color: var(--border-soft);
-}
-.share-btn.whatsapp:hover {
-  border-color: #25D366;
-}
-.share-btn.email {
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border-color: var(--border-soft);
-}
-.share-btn.email:hover {
-  border-color: var(--deal-red);
-  color: var(--deal-red);
-}
-.share-btn.copy {
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border-color: var(--border-soft);
-  font-size: 12px;
-}
-.share-btn.copy:hover {
-  border-color: var(--text-muted);
-}
-
-/* ===== SUBSCRIBE FORM ===== */
-.subscribe-wrap {
-  display: none;
-  padding: 0 16px 20px;
-  max-width: 480px;
-  margin: 0 auto;
-}
-.subscribe-inner {
-  background: var(--bg-card);
-  border: 2px solid var(--border-soft);
-  padding: 16px;
-  text-align: center;
-}
-.subscribe-inner p {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--text-main);
-}
-.subscribe-inner p strong {
-  font-family: 'Fraunces', Georgia, serif;
-}
-.subscribe-row {
-  display: flex;
-  gap: 6px;
-}
-.subscribe-row input {
-  flex: 1;
-  background: var(--bg-surface);
-  border: 2px solid var(--border-soft);
-  padding: 10px 14px;
-  color: var(--text-main);
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 14px;
-  outline: none;
-}
-.subscribe-row input:focus {
-  border-color: var(--deal-red);
-}
-.subscribe-row button {
-  background: var(--deal-red);
-  border: none;
-  padding: 10px 18px;
-  color: var(--bg-surface);
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-}
-.subscribe-note {
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
-/* ===== STORES BAR ===== */
-.stores-bar {
-  padding: 10px 16px;
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  border-top: 2px solid #e8dccb;
-  max-width: 640px;
-  margin: 0 auto;
-  justify-content: center;
-}
-.store-badge {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 11px;
-  color: var(--text-muted);
-  padding: 3px 10px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-}
-
-/* ===== TOAST ===== */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text-main);
-  color: var(--bg-surface);
-  padding: 12px 24px;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  z-index: 300;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-}
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 24px 16px;
-  font-size: 12px;
-  color: var(--text-muted);
-  border-top: 2px solid #e8dccb;
-  margin-top: 8px;
-}
-.footer p {
-  font-style: italic;
-}
-
-/* ===== LOADING ===== */
-.loading {
-  text-align: center;
-  padding: 80px 20px;
-  color: var(--text-muted);
-}
-.loading .spinner {
-  display: inline-block;
-  width: 32px; height: 32px;
-  border: 3px solid var(--border-soft);
-  border-top-color: var(--deal-red);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-bottom: 12px;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ===== ERROR ===== */
-.error-state {
-  text-align: center;
-  padding: 60px 20px;
-}
-.error-state h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 28px;
-  margin-bottom: 8px;
-  color: var(--deal-red);
-}
-.error-state p {
-  color: var(--text-muted);
-}
-
-/* ===== EMPTY STATE ===== */
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-muted);
-  font-style: italic;
-  background: var(--bg-card);
-  border: 2px dashed var(--border-soft);
-}
-.empty-state .icon {
-  font-size: 40px;
-  margin-bottom: 8px;
-}
-
-/* ===== MODAL DÉTAIL PRODUIT ===== */
-.modal-overlay { display:none; position:fixed; inset:0; background:rgba(47,37,28,0.5); z-index:200; }
-.modal-overlay.open { display:block; }
-.modal-panel {
-  display:none; position:fixed; bottom:0; left:0; right:0;
-  background:var(--bg-surface); border-top:4px solid var(--deal-red);
-  padding:20px 24px 28px; z-index:201;
-  animation: modalUp 0.25s ease-out;
-  max-width:600px; margin:0 auto;
-}
-.modal-panel.open { display:block; }
-@keyframes modalUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
-.modal-close {
-  float:right; background:none; border:none;
-  font-size:28px;
-  color:var(--text-muted); cursor:pointer; line-height:1;
-}
-.modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:var(--text-main); margin-bottom:4px; padding-right:40px; }
-.modal-store { font-size:14px; color:var(--text-muted); margin-bottom:16px; }
-.modal-store-link {
-  display:inline-block; font-size:13px; color:var(--deal-red);
-  text-decoration:none; margin-bottom:16px; font-weight:600;
-}
-.modal-store-link:hover { text-decoration: underline; }
-.modal-flyer-btn {
-  display:inline-block; margin-left:8px; padding:4px 10px;
-  background:var(--bg-surface); border:2px solid var(--deal-red);
-  border-radius:6px; font-size:13px; font-weight:600;
-  color:var(--deal-red); cursor:pointer;
-  transition:all 0.15s;
-}
-.modal-flyer-btn:hover { background:var(--deal-red); color:var(--bg-surface); }
-.modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
-.modal-details { margin:16px 0; }
-.modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
-.modal-row .lbl { color:var(--text-muted); }
-.modal-row .val { font-weight:600; color:var(--text-main); }
-.modal-recipe-btn {
-  display:block; margin-top:16px; padding:12px; background:var(--deal-red); color:var(--bg-surface);
-  text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
-  font-size:15px; font-weight:700; cursor:pointer;
-  text-decoration:none; transition:background 0.15s;
-}
-.modal-recipe-btn:hover { background:var(--deal-red-dark); }
-
-/* Image dans le modal — cliquable pour plein écran */
-.modal-img-wrap {
-  margin: 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  border: 1px solid #e8dccb;
-  background: #f5eee0;
-  text-align: center;
-}
-.modal-img-wrap img {
-  display: block;
-  width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  transition: opacity 0.15s;
-}
-.modal-img-wrap:hover img {
-  opacity: 0.85;
-}
-
-/* Plein écran image (comme Discord) */
-.img-fullscreen-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  z-index: 999;
-  cursor: zoom-out;
-  align-items: center;
-  justify-content: center;
-}
-.img-fullscreen-overlay.open { display: flex; }
-.img-fullscreen-overlay img {
-  max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
-}
-.img-fullscreen-close {
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  background: rgba(255,255,255,0.15);
-  border: none;
-  color: #fff;
-  font-size: 32px;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  z-index: 1000;
-}
-.img-fullscreen-close:hover { background: rgba(255,255,255,0.3); }
-
-/* ===== SEARCH RESULTS CONTAINER ===== */
-#searchResultsContainer {
-  background: var(--bg-card);
-  border: 2px solid var(--saving-gold);
-  margin-bottom: 12px;
-  padding: 0;
-}
-#searchResultsContainer .deals-container {
-  display: block;
-  padding: 0 14px 12px;
-}
-#searchResultsContainer .deal-card:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== RESPONSIVE — ADAPTATIF ===== */
-/* Base = mobile (par défaut) — tout en colonne, compact */
-
-/* Tablette 600px+ */
-@media (min-width: 600px) {
-  .header { padding: 20px 24px 16px; }
-  .header-top { margin-bottom: 12px; }
-  .logo { font-size: 30px; }
-  .logo-sub { font-size: 16px; }
-  .hero-banner { padding: 32px 24px 24px; }
-  .hero-banner h1 { font-size: 30px; max-width: 600px; margin: 0 auto; }
-  .hero-banner p { font-size: 15px; }
-  .cat-tabs { justify-content: center; padding: 14px 24px; gap: 8px; }
-  .cat-tab { font-size: 15px; padding: 10px 24px; }
-  .cat-section { padding: 0 24px 100px; max-width: 720px; }
-  .deal-card { padding: 14px 18px; }
-  .deal-name { font-size: 15px; }
-  .deal-price { font-size: 22px; }
-  .savings-ticker { justify-content: center; padding: 12px 24px; gap: 10px; }
-  .ticker-item { padding: 6px 18px; font-size: 14px; }
-  .ticker-item .num { font-size: 16px; }
-  .week-nav { gap: 12px; }
-  .week-nav-btn { padding: 7px 18px; font-size: 13px; }
-  .week-nav-label { font-size: 17px; min-width: 140px; }
-  .modal-panel { padding: 28px 24px 36px; }
-}
-
-/* Desktop 900px+ — deux colonnes */
-@media (min-width: 900px) {
-  body { padding: 0; }
-  .header { padding: 24px 32px 18px; }
-  .header-top { margin-bottom: 14px; }
-  .logo { font-size: 34px; }
-  .logo-sub { font-size: 17px; display: inline; margin-top: 0; margin-left: 6px; }
-  .week-badge { font-size: 16px; padding: 5px 16px; }
-  .search-bar { max-width: 500px; }
-  .search-bar input { font-size: 15px; padding: 12px 16px; }
-  .search-bar button { font-size: 14px; padding: 12px 20px; }
-  
-  .hero-banner { padding: 40px 32px 28px; }
-  .hero-banner h1 { font-size: 36px; max-width: 700px; }
-  .hero-banner p { font-size: 16px; }
-  .hero-cta { gap: 12px; margin-top: 18px; }
-  .hero-cta a { font-size: 14px; padding: 10px 28px; }
-  
-  .savings-ticker { padding: 14px 32px; gap: 12px; }
-  .ticker-item { padding: 7px 20px; font-size: 14px; }
-  .ticker-item .num { font-size: 16px; }
-  
-  .week-nav { gap: 14px; margin-top: 12px; padding-top: 12px; }
-  .week-nav-btn { padding: 8px 22px; font-size: 14px; }
-  .week-nav-label { font-size: 18px; min-width: 180px; }
-  
-  .cat-tabs { padding: 16px 32px; gap: 10px; position: sticky; top: 78px; }
-  .cat-tab { font-size: 16px; padding: 11px 28px; }
-  
-  .cat-section.active { 
-    max-width: 1200px; 
-    padding: 0 32px 100px;
-    display: block;
-  }
-  .cat-section.active > h2 { 
-    font-size: 26px; 
-    margin: 24px 0 4px;
-  }
-  .cat-stats { font-size: 15px; }
-  
-  /* ✅ Grille 2 colonnes pour les cartes dans le conteneur */
-  .cat-section.active .deals-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    align-items: stretch;
-  }
-  
-  /* Sous-titres — pleine largeur dans la grille */
-  .cat-section.active .sub-header { 
-    font-size: 22px; 
-    margin: 20px 0 8px; 
-    grid-column: 1 / -1;
-  }
-  
-  .deal-card { 
-    padding: 16px 20px; 
-    margin-bottom: 0; 
-    min-height: 120px;
-  }
-  .deal-rank { font-size: 26px; min-width: 36px; }
-  .deal-name { font-size: 16px; }
-  .deal-price { font-size: 24px; }
-  .deal-per-kg { font-size: 14px; }
-  .deal-protein { font-size: 12px; padding: 3px 10px; }
-  .deal-store { font-size: 11px; }
-  .deal-recipe a { font-size: 14px; }
-  
-  .share-bar { max-width: 1200px; padding: 20px 32px; gap: 10px; }
-  .share-btn { font-size: 14px; padding: 10px 22px; }
-  
-  .subscribe-wrap { max-width: 600px; }
-  .subscribe-inner { padding: 24px; }
-  .subscribe-inner p { font-size: 15px; }
-  .subscribe-row input { padding: 12px 16px; font-size: 15px; }
-  .subscribe-row button { padding: 12px 24px; font-size: 14px; }
-  
-  .stores-bar { max-width: 1200px; padding: 14px 32px; gap: 6px; }
-  .store-badge { font-size: 12px; padding: 4px 14px; }
-  
-  .footer { padding: 32px 32px; font-size: 13px; }
-  
-  /* Modal plus large sur desktop */
-  .modal-overlay.open { display:block; }
-  .modal-panel.open { display:block; max-width: 680px; bottom: auto; top: 10vh; }
-  .modal-panel h3 { font-size: 24px; }
-  .modal-price-lg { font-size: 38px; }
-  .modal-row { font-size: 15px; padding: 12px 0; }
-  .modal-img-wrap img { max-height: 400px; }
-}
-
-/* Grand écran 1200px+ — trois colonnes */
-@media (min-width: 1200px) {
-  .header { padding: 28px 48px 20px; }
-  .header-top { margin-bottom: 16px; }
-  .logo { font-size: 38px; }
-  .logo-sub { font-size: 18px; }
-  .search-bar { max-width: 600px; }
-  
-  .hero-banner { padding: 48px 48px 32px; }
-  .hero-banner h1 { font-size: 42px; max-width: 800px; }
-  
-  .cat-tabs { padding: 18px 48px; gap: 12px; }
-  .cat-tab { font-size: 17px; padding: 12px 32px; }
-  
-  .cat-section.active { 
-    max-width: 1400px; 
-    padding: 0 48px 100px;
-  }
-
-  /* ✅ 3 colonnes sur grand écran */
-  .cat-section.active .deals-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px 24px;
-  }
-  
-  .deal-card { padding: 18px 22px; margin-bottom: 0; min-height: 130px; }
-  .deal-rank { font-size: 28px; min-width: 40px; }
-  .deal-name { font-size: 17px; }
-  .deal-price { font-size: 26px; }
-  
-  .share-bar { padding: 24px 48px; }
-  .stores-bar { padding: 16px 48px; }
-  .footer { padding: 40px 48px; }
-  
-  .modal-panel.open { max-width: 760px; }
-}
-
-/* Très grand écran 1600px+ */
-@media (min-width: 1600px) {
-  .cat-section.active { max-width: 1600px; padding: 0 64px 100px; }
-  .cat-section.active .deals-container { gap: 20px 28px; }
-  .header { padding: 28px 64px 20px; }
-  .cat-tabs { padding: 18px 64px; }
-  .hero-banner { padding: 56px 64px 36px; }
-  .hero-banner h1 { font-size: 48px; }
-  .share-bar { padding: 24px 64px; }
-  .deal-card { padding: 20px 26px; }
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Aubaines Rapides",
-  "url": "https://alanixqc.github.io/aubaines-rapides/web/",
-  "description": "Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes comparés par prix.",
-  "inLanguage": "fr-CA",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://alanixqc.github.io/aubaines-rapides/web/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Aubaines Rapides — Les spéciaux d'épicerie de la semaine",
-  "description": "Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.",
-  "image": "https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png"
-}
-</script>
-</head>
-<body>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="header-top">
-    <a href="/aubaines-rapides/web/" class="logo" aria-label="Accueil Aubaines Rapides">
-      Aubaines Rapides
-      <span class="logo-sub">— les spéciaux de la semaine —</span>
-    </a>
-    <span class="week-badge" id="weekBadge" role="status" aria-live="polite">📅 ...</span>
-  </div>
-  <!-- Navigation des semaines -->
-  <nav class="week-nav" id="weekNav" aria-label="Navigation des semaines">
-    <button type="button" class="week-nav-btn" id="prevWeek" onclick="switchWeek(-1)" title="Semaine précédente">◀ Précédente</button>
-    <span class="week-nav-label" id="weekLabel">Semaine du ...</span>
-    <button type="button" class="week-nav-btn" id="nextWeek" onclick="switchWeek(1)" title="Semaine suivante">Suivante ▶</button>
-  </nav>
-  <div class="search-bar">
-    <label for="searchInput" class="sr-only">Chercher un produit</label>
-    <input type="search" id="searchInput" placeholder="Chercher un produit, une marque..." autocomplete="off">
-    <button type="button" onclick="doSearch()" aria-label="Lancer la recherche">OK</button>
-  </div>
-</header>
-
-<!-- HERO BANNER -->
-<section class="hero-banner" aria-label="Bannière d'accueil">
-  <h1>Les <span>meilleurs prix</span> de la semaine</h1>
-  <p>Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡</p>
-  <div class="hero-cta">
-    <a class="cta-primary" href="#" onclick="showSubscribe();return false" aria-label="S'abonner par courriel">📬 Recevoir par courriel</a>
-    <a class="cta-secondary" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/web/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 Partager</a>
-  </div>
-</section>
-
-<!-- SAVINGS TICKER -->
-<div class="savings-ticker" id="savingsTicker" role="status" aria-live="polite">
-  <div class="ticker-item"><span class="num">—</span> <span class="label">offres</span></div>
-  <div class="ticker-item"><span class="num">—</span> <span class="label">magasins</span></div>
-</div>
-
-<!-- CATEGORY TABS -->
-<nav class="cat-tabs" id="catTabs" role="tablist" aria-label="Catégories de produits"></nav>
-
-<!-- MAIN CONTENT -->
-<main id="app">
-  <div class="loading" role="status">
-    <div class="spinner"></div>
-    <p>On fouille les circulaires...</p>
-  </div>
-</main>
-
-<!-- SUBSCRIBE FORM -->
-<div class="subscribe-wrap" id="subscribeWrap">
-  <div class="subscribe-inner">
-    <p>📬 Reçois les <strong>top deals</strong> chaque mardi direct dans ta boîte</p>
-    <div class="subscribe-row">
-      <label for="emailInput" class="sr-only">Adresse courriel</label>
-      <input type="email" id="emailInput" placeholder="ton@courriel.com">
-      <button type="button" onclick="subscribeEmail()">Je veux ça!</button>
-    </div>
-    <p class="subscribe-note">Pas de pub. Pas de spam. Juste les spéciaux de la semaine.</p>
-  </div>
-</div>
-
-<!-- SHARE / CTA -->
-<nav class="share-bar" id="shareBar" aria-label="Partager">
-  <a class="share-btn whatsapp" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/web/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 WhatsApp</a>
-  <button type="button" class="share-btn discord" onclick="shareDiscord()" aria-label="Partager sur Discord">🎮 Discord</button>
-  <button type="button" class="share-btn email" onclick="showSubscribe()" aria-label="S'abonner par courriel">📬 Courriel</button>
-  <button type="button" class="share-btn copy" onclick="copyLink()" aria-label="Copier le lien">🔗 Copier lien</button>
-</nav>
-
-<!-- MODAL DÉTAIL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeDealDetail()" role="presentation"></div>
-<div class="modal-panel" id="modalPanel" role="dialog" aria-modal="true" aria-label="Détail du produit">
-  <button type="button" class="modal-close" onclick="closeDealDetail()" aria-label="Fermer">✕</button>
-  <h3 id="modalTitle"></h3>
-  <div class="modal-store" id="modalStore"></div>
-  <a id="modalStoreLink" href="" target="_blank" rel="noopener" class="modal-store-link" style="display:none">🌐 Voir le site</a>
-  <button type="button" id="modalFlyerBtn" class="modal-flyer-btn" style="display:none">📰 Circulaire</button>
-  <!-- Image cliquable → plein écran -->
-  <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
-    <img id="modalImg" src="" alt="Photo du produit">
-  </div>
-  <div class="modal-price-lg" id="modalPrice"></div>
-  <div class="modal-details" id="modalDetails"></div>
-  <div class="modal-recipe-btn" id="modalRecipeBtn" role="button" style="display:none">🍳 Voir la recette suggérée</div>
-</div>
-
-<!-- PLEIN ÉCRAN IMAGE (comme Discord) -->
-<div class="img-fullscreen-overlay" id="imgFullscreen" onclick="closeFullscreenImg()" role="dialog" aria-modal="true" aria-label="Image en plein écran">
-  <button type="button" class="img-fullscreen-close" onclick="closeFullscreenImg()" aria-label="Fermer l'image">✕</button>
-  <img id="imgFullscreenContent" src="" alt="Agrandissement">
-</div>
-
-<!-- STORES BAR -->
-<div class="stores-bar" id="storesBar" role="list" aria-label="Magasins de la semaine"></div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <p>Aubaines Rapides &copy; 2026</p>
-  <p style="margin-top:4px;font-size:11px"><a href="confidentialite.html" style="color:var(--text-muted);text-decoration:underline">Confidentialité</a> · <a href="conditions.html" style="color:var(--text-muted);text-decoration:underline">Conditions d'utilisation</a></p>
-  <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque jeudi</p>
-  <p style="margin-top:4px;font-size:10px;color:var(--text-muted)">Sources directes (aucun agrégateur tiers)</p>
-  <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
-</footer>
-
-<script>
-// ─── HELPERS ───
-function escapeHTML(str) {
-  if (str == null) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
-}
-
-// ─── DATA ───
-const CAT_ORDER = ["viande", "poisson", "fruit", "legume", "sauce", "panier", "yogourt"];
-const CAT_NAMES = { viande: "🥩 Viande", poisson: "🐟 Poisson", fruit: "🍎 Fruits", legume: "🥦 Légumes", sauce: "🥫 Sauce", panier: "📦 Panier", yogourt: "🥛 Yogourt" };
-const CAT_MERGE = {
-  viande: new Set(["boeuf", "poulet", "porc", "viande", "veau"]),
-  poisson: new Set(["poisson"]),
-  fruit: new Set(["fruit"]),
-  legume: new Set(["legume", "légume"]),
-  sauce: new Set(["sauce"]),
-  panier: new Set(["panier"]),
-  yogourt: new Set(["yogourt"]),
-};
-const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Porc", viande: "🥩 Viande", veau: "🥩 Veau" };
-
-// ─── COULEURS DES ÉPICERIES ───
-const STORE_COLORS = {
-  "Maxi":              { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
-  "Super C":           { bg: "#f5dcdc", border: "#e0b8b8", text: "#8c2a2a" },
-  "IGA":               { bg: "#dcf0dc", border: "#b8dcb8", text: "#2a7a2a" },
-  "Metro":             { bg: "#f5eadc", border: "#e0d0b8", text: "#8c6a2a" },
-  "Tigre Géant":       { bg: "#e8dcf5", border: "#d0b8e0", text: "#6a2a8c" },
-  "Walmart":           { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
-  "Loblaws":           { bg: "#dce8f5", border: "#b8cce0", text: "#1a4a7c" },
-  "Provigo":           { bg: "#e8f0dc", border: "#cce0b8", text: "#4a7a2a" },
-  "Costco":            { bg: "#f5dce8", border: "#e0b8cc", text: "#8c2a5a" },
-  "Mayrand":           { bg: "#f5f0dc", border: "#e0dcc0", text: "#7a6a2a" },
-  "Rachelle Béry":     { bg: "#dcf0e8", border: "#b8e0d0", text: "#2a7a5a" },
-  "Boulangerie Pom":   { bg: "#f5e4dc", border: "#e0c8b8", text: "#8c5a2a" },
-  "Les aliments M&M":  { bg: "#e8dcdc", border: "#d4c0c0", text: "#7a4040" },
-  "Les Marchés Tradition": { bg: "#ece4dc", border: "#d8ccc0", text: "#7a6040" },
-  "L'Inter-Marché":    { bg: "#dcf0f0", border: "#b8dcdc", text: "#2a6a6a" },
-  "Fruiterie Potager": { bg: "#e0f5dc", border: "#c0e0b8", text: "#3a7a2a" },
-  "Supermarché Aurès": { bg: "#f0e4dc", border: "#d8ccc0", text: "#7a5a40" },
-  "le Choix du Président": { bg: "#e8e0f0", border: "#ccc0d8", text: "#5a3a7a" },
-  "5 Saveurs":         { bg: "#f0dce8", border: "#d8c0d0", text: "#7a2a5a" },
-};
-function storeStyle(store) {
-  const c = STORE_COLORS[store] || { bg: "#f0ece4", border: "#d8d0c4", text: "#6a5a44" };
-  return `background:${c.bg};border-color:${c.border};color:${c.text}`;
-}
-
-let dealsAll = [], recipesAll = [], stats = {};
-let currentCat = "viande";
-let currentWeekIdx = 0;
-let weeks = [];
-let weekDealsMap = {};   // lazy-load cache: week -> {deals_with_kg, deals_wo_kg}
-
-// ─── LOAD AVEC TIMEOUT ───
-function fetchWithTimeout(url, ms = 8000) {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error("Timeout")), ms);
-    fetch(url).then(r => { clearTimeout(timer); resolve(r); }, err => { clearTimeout(timer); reject(err); });
-  });
-}
-
-// ─── CHARGEMENT PROGRESSIF (P1-3) ───
-async function loadData() {
-  // Try the new lazy-loading approach first (deals-index.json + per-week files)
-  let ok = await tryLazyLoad();
-  if (ok) return true;
-
-  // Fallback: load the old monolithic deals.json
-  console.warn("Lazy loading failed, trying fallback deals.json");
-  ok = await tryFallbackLoad();
-  if (ok) return true;
-
-  return false;
-}
-
-async function tryLazyLoad() {
-  try {
-    const [indexRes, recipesRes] = await Promise.all([
-      fetchWithTimeout("data/deals-index.json"),
-      fetchWithTimeout("data/recipes.json"),
-    ]);
-
-    if (!indexRes.ok || !recipesRes.ok) return false;
-
-    const indexData = await indexRes.json();
-    recipesAll = await recipesRes.json();
-
-    if (!indexData.weeks || indexData.weeks.length === 0) return false;
-
-    weeks = indexData.weeks;
-    currentWeekIdx = 0;
-    weekDealsMap = {};
-
-    // Load the current week's file
-    const currentWeek = weeks[0];
-    const weekRes = await fetchWithTimeout(`data/deals-${currentWeek}.json`);
-    if (!weekRes.ok) return false;
-
-    weekDealsMap[currentWeek] = await weekRes.json();
-
-    loadWeek(0);
-    return true;
-  } catch (e) {
-    console.warn("tryLazyLoad failed:", e);
-    return false;
-  }
-}
-
-async function tryFallbackLoad() {
-  try {
-    const [dealsRes, recipesRes, statsRes, mergedRes] = await Promise.all([
-      fetchWithTimeout("data/deals.json"),
-      fetchWithTimeout("data/recipes.json"),
-      fetchWithTimeout("data/stats.json"),
-      fetchWithTimeout("data/deals_merged.json").catch(() => null),
-    ]);
-
-    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) return false;
-
-    const dealsData = await dealsRes.json();
-    recipesAll = await recipesRes.json();
-    stats = await statsRes.json();
-
-    if (!dealsData.weeks || dealsData.weeks.length === 0) return false;
-
-    weeks = dealsData.weeks || [];
-    weekDealsMap = dealsData.deals_by_week || {};
-    currentWeekIdx = 0;
-
-    // Try to merge supplementary data (deals_merged.json from new scrapers)
-    if (mergedRes && mergedRes.ok) {
-      try {
-        const mergedData = await mergedRes.json();
-        if (Array.isArray(mergedData) && mergedData.length > 0) {
-          const currentWeek = weeks[0];
-          if (currentWeek && weekDealsMap[currentWeek]) {
-            const existingIds = new Set(
-              (weekDealsMap[currentWeek].deals_with_kg || []).map(d => d.id)
-            );
-            const converted = mergedData.map((item, i) => ({
-              id: `merged_${Date.now()}_${i}`,
-              name: item.name,
-              name_short: item.name?.substring(0, 50),
-              category: item.category || "viande",
-              store: item.store,
-              store_emoji: "🏪",
-              price: item.price,
-              valid_to: null,
-              image_url: item.image,
-              product_type: item.on_sale ? "frais" : "transformé",
-            }));
-            weekDealsMap[currentWeek].deals_with_kg = [
-              ...(weekDealsMap[currentWeek].deals_with_kg || []),
-              ...converted.filter(d => !existingIds.has(d.id)),
-            ];
-          }
-        }
-      } catch (e) { /* silently ignore merge errors */ }
-    }
-
-    loadWeek(0);
-    return true;
-  } catch (e) {
-    console.error("tryFallbackLoad failed:", e);
-    return false;
-  }
-}
-
-function loadWeek(idx) {
-  const week = weeks[idx];
-  if (!week) return;
-
-  const wd = weekDealsMap[week];
-  if (!wd) return;
-
-  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-
-  const byCat = {};
-  const storesSet = new Set();
-  for (const d of dealsAll) {
-    byCat[d.category] = (byCat[d.category] || 0) + 1;
-    if (d.store) storesSet.add(d.store);
-  }
-  stats = {
-    ...stats,
-    total: dealsAll.length,
-    by_category: byCat,
-    stores: Array.from(storesSet).sort(),
-    week: week,
-    weeks: weeks,
-  };
-
-  updateWeekNav();
-  renderAll();
-}
-
-function byCategory(cat) {
-  const accepted = CAT_MERGE[cat];
-  if (!accepted) return dealsAll.filter(d => d.category === cat);
-  return dealsAll.filter(d => accepted.has(d.category));
-}
-
-function topDeals(cat, n) {
-  const items = byCategory(cat);
-  items.sort((a, b) => {
-    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
-    if (a.per_kg) return -1; if (b.per_kg) return 1;
-    return (a.price || 0) - (b.price || 0);
-  });
-  return items.slice(0, n);
-}
-
-// ─── FILTRE FRAIS / TRANSFORMÉ ───
-let typeFilter = "tout";
-
-function renderTypeFilters(cat) {
-  const deals = byCategory(cat);
-  let f = deals.filter(d => d.product_type === 'frais').length;
-  let t = deals.filter(d => d.product_type === 'transformé').length;
-  return `
-    <div class="type-filter-bar" id="typeFilter-${cat}" role="group" aria-label="Filtrer par type">
-      <button type="button" class="type-filter-btn${typeFilter === 'tout' ? ' active' : ''}" data-type="tout" onclick="setTypeFilter('${cat}','tout')">Tout <span class="count">${deals.length}</span></button>
-      <button type="button" class="type-filter-btn${typeFilter === 'frais' ? ' active' : ''}" data-type="frais" onclick="setTypeFilter('${cat}','frais')">🌿 Frais <span class="count">${f}</span></button>
-      <button type="button" class="type-filter-btn${typeFilter === 'transformé' ? ' active' : ''}" data-type="transformé" onclick="setTypeFilter('${cat}','transformé')">🏭 Transformé <span class="count">${t}</span></button>
-    </div>`;
-}
-
-function setTypeFilter(cat, type) {
-  typeFilter = type;
-  const section = document.getElementById(`section-${cat}`);
-  if (!section) return;
-  
-  section.querySelectorAll('.type-filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.type === typeFilter);
-  });
-  
-  const dealsContainer = section.querySelector('.deals-container');
-  if (dealsContainer) {
-    dealsContainer.innerHTML = renderCategory(cat);
-  }
-}
-
-// ─── RENDER ───
-function updateWeekNav() {
-  const week = weeks[currentWeekIdx];
-  if (!week) return;
-  
-  const d = new Date(week + "T12:00:00");
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formatted = d.toLocaleDateString('fr-CA', options);
-  
-  document.getElementById("weekLabel").textContent = `Semaine du ${formatted}`;
-  document.getElementById("prevWeek").disabled = currentWeekIdx <= 0;
-  document.getElementById("nextWeek").disabled = currentWeekIdx >= weeks.length - 1;
-}
-
-async function switchWeek(dir) {
-  const newIdx = currentWeekIdx + dir;
-  if (newIdx < 0 || newIdx >= weeks.length) return;
-  currentWeekIdx = newIdx;
-
-  const week = weeks[newIdx];
-
-  // Lazy-load this week if not yet cached
-  if (!weekDealsMap[week]) {
-    const app = document.getElementById("app");
-    app.style.opacity = "0.5";
-    try {
-      const res = await fetchWithTimeout(`data/deals-${week}.json`);
-      if (res.ok) {
-        weekDealsMap[week] = await res.json();
-      } else {
-        // If per-week file not found, try fallback monolithic deals.json
-        console.warn(`deals-${week}.json not found, trying fallback...`);
-        const fallbackRes = await fetchWithTimeout("data/deals.json");
-        if (fallbackRes.ok) {
-          const fb = await fallbackRes.json();
-          if (fb.deals_by_week && fb.deals_by_week[week]) {
-            weekDealsMap[week] = fb.deals_by_week[week];
-          } else {
-            currentWeekIdx = newIdx - dir;
-            app.style.opacity = "1";
-            showToast("Données non disponibles pour cette semaine");
-            return;
-          }
-        } else {
-          currentWeekIdx = newIdx - dir;
-          app.style.opacity = "1";
-          showToast("Impossible de charger cette semaine");
-          return;
-        }
-      }
-    } catch (e) {
-      console.error("Lazy load failed for week", week, e);
-      currentWeekIdx = newIdx - dir;
-      app.style.opacity = "1";
-      return;
-    }
-  }
-
-  const wd = weekDealsMap[week];
-  if (!wd) {
-    currentWeekIdx = newIdx - dir;
-    return;
-  }
-
-  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-
-  const byCat = {};
-  const storesSet = new Set();
-  for (const d of dealsAll) {
-    byCat[d.category] = (byCat[d.category] || 0) + 1;
-    if (d.store) storesSet.add(d.store);
-  }
-  stats = {
-    ...stats,
-    total: dealsAll.length,
-    by_category: byCat,
-    stores: Array.from(storesSet).sort(),
-    week: week,
-  };
-
-  updateWeekNav();
-
-  const app = document.getElementById("app");
-  app.style.opacity = "0.5";
-
-  renderAll();
-
-  app.style.opacity = "1";
-}
-
-function renderCatTabs() {
-  document.getElementById("catTabs").innerHTML = CAT_ORDER.map(cat => {
-    const count = byCategory(cat).length;
-    const isActive = cat === currentCat;
-    return `<button type="button" class="cat-tab${isActive ? " active" : ""}" data-cat="${cat}" onclick="switchCat('${cat}')" role="tab" aria-selected="${isActive}" aria-controls="section-${cat}">${CAT_NAMES[cat]} <span class="count">${count}</span></button>`;
-  }).join("");
-}
-
-function renderDealCard(d, rank) {
-  const hasProtein = d.protein_per_dollar && d.protein_per_100g;
-  const recipe = d.recipe;
-  const isTop = rank === 1;
-  const nameHtml = escapeHTML(d.name_short || d.name);
-  const storeHtml = escapeHTML(d.store);
-  const storeEmoji = d.store_emoji || "🏪";
-  const storeInline = storeStyle(d.store);
-  const badgeClass = d.product_type === 'frais' ? 'frais' : 'transforme';
-  const badgeText = d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.';
-  const badgeHtml = d.product_type ? `<span class="deal-type-badge ${badgeClass}">${badgeText}</span>` : "";
-  const priceHtml = d.price != null ? `${d.price.toFixed(2)}$` : "";
-  const perKgHtml = d.per_kg != null ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : "";
-  const perLbHtml = d.per_lb != null ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : "";
-    const detailHtml = d.detail ? `<span class="deal-detail">${escapeHTML(d.detail.substring(0, 35))}</span>` : "";
-    const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
-  const recipeHtml = recipe ? `<div class="deal-recipe">🍳 ${escapeHTML(recipe.title.substring(0, 55))}${recipe.title.length > 55 ? "…" : ""}</div>` : "";
-
-  return `<div class="deal-card${isTop ? " top-deal" : ""}" data-deal-id="${d.id}" role="button" tabindex="0" aria-label="${nameHtml} chez ${storeHtml}">
-    <div class="deal-rank">#${rank}</div>
-    <div class="deal-info">
-      <div class="deal-name">${nameHtml}${badgeHtml}</div>
-      <div class="deal-store" style="${storeInline}">${storeEmoji} ${storeHtml}</div>
-      <div class="deal-prices">
-        <span class="deal-price">${priceHtml}</span>
-        ${perKgHtml}${perLbHtml}${detailHtml}${proteinHtml}
-      </div>
-      ${recipeHtml}
-    </div>
-  </div>`;
-}
-
-function renderCategory(cat) {
-  let filtered;
-  if (typeFilter === "frais") {
-    filtered = dealsAll.filter(d => d.product_type === 'frais');
-  } else if (typeFilter === "transformé") {
-    filtered = dealsAll.filter(d => d.product_type === 'transformé');
-  } else {
-    filtered = dealsAll;
-  }
-  
-  const getTop = (cat, n) => {
-    const items = filtered.filter(d => {
-      const accepted = CAT_MERGE[cat];
-      return accepted ? accepted.has(d.category) : d.category === cat;
-    });
-    items.sort((a, b) => {
-      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
-      if (a.per_kg) return -1; if (b.per_kg) return 1;
-      return (a.price || 0) - (b.price || 0);
-    });
-    return items.slice(0, n);
-  };
-  
-  const deals = getTop(cat, cat === "viande" ? 100 : 12);
-  if (deals.length === 0) {
-    return `<div class="empty-state"><div class="icon">🔍</div><p>Aucun résultat pour cette catégorie cette semaine</p></div>`;
-  }
-
-  if (cat === "viande") {
-    const subOrder = ["boeuf", "poulet", "porc"];
-    let html = "";
-    for (const sub of subOrder) {
-      const subDeals = deals.filter(d => d.category === sub).slice(0, 4);
-      if (subDeals.length === 0) continue;
-      html += `<div class="sub-header">${MEAT_NAMES[sub] || sub}</div>`;
-      html += subDeals.map((d, i) => renderDealCard(d, i + 1)).join("");
-    }
-    return html;
-  }
-
-  return deals.slice(0, 8).map((d, i) => renderDealCard(d, i + 1)).join("");
-}
-
-function generateJsonLd() {
-  // Remove any existing JSON-LD from previous renders
-  document.querySelectorAll('script[data-jsonld-deals]').forEach(s => s.remove());
-
-  // Collect top deals across all categories (max 10)
-  const topDeals = [];
-  for (const cat of CAT_ORDER) {
-    const filtered = dealsAll;
-    const accepted = CAT_MERGE[cat];
-    const items = filtered.filter(d => accepted ? accepted.has(d.category) : d.category === cat);
-    items.sort((a, b) => {
-      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
-      if (a.per_kg) return -1; if (b.per_kg) return 1;
-      return (a.price || 0) - (b.price || 0);
-    });
-    for (const d of items.slice(0, 3)) {
-      if (topDeals.length >= 10) break;
-      if (!topDeals.find(x => x.id === d.id)) topDeals.push(d);
-    }
-    if (topDeals.length >= 10) break;
-  }
-
-  if (topDeals.length === 0) return;
-
-  const siteUrl = 'https://alanixqc.github.io/aubaines-rapides/web/';
-  const weekDate = stats.week || '';
-
-  // Build the ItemList
-  const itemList = topDeals.map((d, i) => {
-    const offer = {
-      "@type": "Offer",
-      "price": d.price != null ? d.price.toFixed(2) : undefined,
-      "priceCurrency": "CAD",
-      "availability": "https://schema.org/InStock",
-      "seller": { "@type": "Organization", "name": d.store },
-      "url": siteUrl
-    };
-    if (d.valid_to) {
-      offer["priceValidUntil"] = d.valid_to;
-    }
-
-    const product = {
-      "@type": "Product",
-      "name": d.name_short || d.name,
-      "category": CAT_NAMES[d.category] || d.category,
-      "description": `${d.name} — ${d.price != null ? d.price.toFixed(2) + '$' : ''} chez ${d.store}` +
-        (d.per_kg != null ? ` (${d.per_kg.toFixed(2)}$/kg)` : '') +
-        (d.detail ? `. ${d.detail}` : ''),
-      "offers": offer
-    };
-    if (d.image_url) {
-      product["image"] = d.image_url;
-    }
-    if (d.protein_per_100g) {
-      product["additionalProperty"] = [
-        { "@type": "PropertyValue", "name": "Protéines par dollar", "value": d.protein_per_dollar + "g/$" }
-      ];
-    }
-
-    return {
-      "@type": "ListItem",
-      "position": i + 1,
-      "item": product
-    };
-  });
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": `Aubaines Rapides — Spéciaux de la semaine ${weekDate}`,
-    "description": `Top ${topDeals.length} spéciaux d'épicerie au Québec pour la semaine du ${weekDate}.`,
-    "numberOfItems": topDeals.length,
-    "url": siteUrl,
-    "itemListElement": itemList
-  };
-
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.setAttribute('data-jsonld-deals', 'true');
-  script.textContent = JSON.stringify(jsonLd, null, 2);
-  document.head.appendChild(script);
-
-  // Update dateModified meta tag
-  const dateMod = document.querySelector('meta[name="dateModified"]');
-  if (dateMod && weekDate) {
-    dateMod.setAttribute('content', weekDate);
-  }
-}
-
-function renderAll() {
-  document.getElementById("weekBadge").textContent = `📅 ${stats.week || "..."}`;
-
-  const ticker = document.getElementById("savingsTicker");
-  const byCat = stats.by_category || {};
-  const totalMeat = (byCat.boeuf||0) + (byCat.poulet||0) + (byCat.porc||0) + (byCat.viande||0);
-  ticker.innerHTML = `
-    <div class="ticker-item"><span class="num">${stats.total || "—"}</span> <span class="label">offres</span></div>
-    <div class="ticker-item"><span class="num">${totalMeat}</span> <span class="label">viandes</span></div>
-    <div class="ticker-item"><span class="num">${byCat.legume || 0}</span> <span class="label">légumes</span></div>
-    <div class="ticker-item"><span class="num">${byCat.poisson || 0}</span> <span class="label">poissons</span></div>
-    <div class="ticker-item"><span class="num">${byCat.fruit || 0}</span> <span class="label">fruits</span></div>
-    <div class="ticker-item"><span class="num">${byCat.sauce || 0}</span> <span class="label">sauces</span></div>
-    <div class="ticker-item"><span class="num">${byCat.yogourt || 0}</span> <span class="label">yogourts</span></div>
-    <div class="ticker-item"><span class="num">${stats.stores ? stats.stores.length : "—"}</span> <span class="label">magasins</span></div>
-  `;
-
-  if (stats.stores) {
-    document.getElementById("storesBar").innerHTML = stats.stores.map(s => `<span class="store-badge" role="listitem">${escapeHTML(s)}</span>`).join("");
-  }
-
-  renderCatTabs();
-
-  const app = document.getElementById("app");
-  app.innerHTML = CAT_ORDER.map(cat => {
-    const count = byCategory(cat).length;
-    return `<div class="cat-section${cat === currentCat ? " active" : ""}" id="section-${cat}" role="tabpanel" aria-label="${CAT_NAMES[cat]}">
-      <h2>${CAT_NAMES[cat]} <span class="cat-stats">${count} offres</span></h2>
-      ${renderTypeFilters(cat)}
-      <div class="deals-container">${renderCategory(cat)}</div>
-    </div>`;
-  }).join("");
-
-  generateJsonLd();
-}
-
-function switchCat(cat) {
-  currentCat = cat;
-  typeFilter = "tout";
-  // Hide search results when switching tabs
-  const sr = document.getElementById("searchResultsContainer");
-  if (sr) sr.style.display = "none";
-  document.querySelectorAll(".cat-tab").forEach(t => {
-    const isActive = t.dataset.cat === cat;
-    t.classList.toggle("active", isActive);
-    t.setAttribute("aria-selected", isActive);
-  });
-  document.querySelectorAll(".cat-section").forEach(s => s.classList.toggle("active", s.id === `section-${cat}`));
-}
-
-function doSearch() {
-  const q = document.getElementById("searchInput").value.trim();
-  if (!q) {
-    const c = document.getElementById("searchResultsContainer");
-    if (c) c.style.display = "none";
-    return;
-  }
-  const ql = q.toLowerCase();
-  const results = dealsAll.filter(d => {
-    const name = (d.name || "").toLowerCase();
-    const store = (d.store || "").toLowerCase();
-    const cat = (d.category || "").toLowerCase();
-    return name.includes(ql) || store.includes(ql) || cat.includes(ql);
-  }).slice(0, 30);
-  
-  // Show results in dedicated search overlay (not inside current tab)
-  let container = document.getElementById("searchResultsContainer");
-  if (!container) {
-    container = document.createElement("div");
-    container.id = "searchResultsContainer";
-    container.style.cssText = "max-width:640px;margin:0 auto;padding:0 16px";
-    const app = document.getElementById("app");
-    app.insertBefore(container, app.firstChild);
-    // Add close button and show/hide
-    container.addEventListener("click", function(e) {
-      if (e.target === container || e.target.classList.contains("search-close-btn")) {
-        container.style.display = "none";
-      }
-    });
-  }
-  
-  if (results.length === 0) {
-    showToast(`🔍 Aucun résultat pour "${q}"`);
-    return;
-  }
-  
-  const catMap = {};
-  results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
-  const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
-  
-  container.style.display = "block";
-  container.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 8px">
-    <div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main)">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>
-    <button type="button" class="search-close-btn" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);line-height:1" aria-label="Fermer la recherche">✕</button>
-  </div>
-  <div class="deals-container">${results.map((d,i) => renderDealCard(d,i+1)).join("")}</div>`;
-}
-
-// ─── CTA ───
-function showSubscribe() {
-  const f = document.getElementById("subscribeWrap");
-  f.style.display = f.style.display === "none" ? "block" : "none";
-}
-function subscribeEmail() {
-  const email = document.getElementById("emailInput").value.trim();
-  if (email) showToast("📬 Merci! On t'ajoute à la liste!");
-  else showToast("Entre ton courriel!");
-}
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    showToast("🔗 Lien copié!");
-  });
-}
-function shareDiscord() {
-  showToast("🎮 Lien Discord à venir! Reviens nous voir.");
-}
-
-// ─── MODAL DÉTAIL ───
-function showDealDetail(id) {
-  const d = dealsAll.find(item => item.id == id);
-  if (!d) return;
-  
-  document.getElementById("modalTitle").textContent = d.name_short || d.name;
-  document.getElementById("modalStore").textContent = `${d.store_emoji || "🏪"} ${d.store}`;
-  
-  // Lien vers le site de l'épicerie
-  const storeLink = document.getElementById("modalStoreLink");
-  if (d.store_url) {
-    storeLink.href = d.store_url;
-    storeLink.style.display = "inline";
-  } else {
-    storeLink.style.display = "none";
-  }
-  
-  // Bouton circulaire
-  const flyerBtn = document.getElementById("modalFlyerBtn");
-  const flyerMap = {"Super C":"superc","Metro":"metro","Maxi":"maxi","Provigo":"provigo","Loblaws":"loblaws","IGA":"iga","Tigre Géant":"tigregeant"};
-  const flyerKey = flyerMap[d.store];
-  if (flyerKey) {
-    flyerBtn.style.display = "inline";
-    flyerBtn.onclick = () => openFullscreenImg("flyers/" + flyerKey + "-flyer.png");
-  } else {
-    flyerBtn.style.display = "none";
-  }
-  document.getElementById("modalPrice").textContent = d.price ? `${d.price.toFixed(2)}$` : "";
-  
-  let details = "";
-  if (d.per_kg) details += `<div class="modal-row"><span class="lbl">Prix au kg</span><span class="val">${d.per_kg.toFixed(2)}$/kg</span></div>`;
-  if (d.per_lb) details += `<div class="modal-row"><span class="lbl">Prix la livre</span><span class="val">${d.per_lb.toFixed(2)}$/lb</span></div>`;
-  if (d.protein_per_dollar) details += `<div class="modal-row"><span class="lbl">Protéines</span><span class="val">💪 ${d.protein_per_dollar}g/$</span></div>`;
-  if (d.weight_kg) details += `<div class="modal-row"><span class="lbl">Poids</span><span class="val">${(d.weight_kg * 1000).toFixed(0)}g</span></div>`;
-  if (d.valid_to) details += `<div class="modal-row"><span class="lbl">Valable jusqu'au</span><span class="val">${escapeHTML(d.valid_to)}</span></div>`;
-  
-  document.getElementById("modalDetails").innerHTML = details;
-  
-  const recipeBtn = document.getElementById("modalRecipeBtn");
-  if (d.recipe && d.recipe.title) {
-    recipeBtn.textContent = `🍳 ${d.recipe.title}` + (d.recipe.rating ? ` ⭐${d.recipe.rating}` : "");
-    recipeBtn.style.display = "block";
-    recipeBtn.style.cursor = "default";
-  } else {
-    recipeBtn.style.display = "none";
-  }
-  
-  const imgWrap = document.getElementById("modalImgWrap");
-  const modalImg = document.getElementById("modalImg");
-  if (d.image_url) {
-    modalImg.src = d.image_url;
-    imgWrap.style.display = "block";
-  } else {
-    imgWrap.style.display = "none";
-  }
-  
-  document.getElementById("modalOverlay").classList.add("open");
-  document.getElementById("modalPanel").classList.add("open");
-}
-
-function closeDealDetail() {
-  document.getElementById("modalOverlay").classList.remove("open");
-  document.getElementById("modalPanel").classList.remove("open");
-}
-
-// ─── PLEIN ÉCRAN IMAGE (comme Discord) ───
-function openFullscreenImg(src) {
-  document.getElementById("imgFullscreenContent").src = src;
-  document.getElementById("imgFullscreen").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-function closeFullscreenImg() {
-  document.getElementById("imgFullscreen").classList.remove("open");
-  document.body.style.overflow = "";
-}
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") { closeFullscreenImg(); closeDealDetail(); }
-});
-
-// ─── INIT ───
-document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
-
-// Délégation d'événements : clic sur les cartes deal
-document.addEventListener("click", e => {
-  const card = e.target.closest("[data-deal-id]");
-  if (card) {
-    const id = card.dataset.dealId;
-    if (id) showDealDetail(id);
-  }
-});
-
-// Support clavier : Enter/Espace sur les cartes deal
-document.addEventListener("keydown", e => {
-  if (e.key === "Enter" || e.key === " ") {
-    const card = e.target.closest("[data-deal-id]");
-    if (card) {
-      e.preventDefault();
-      const id = card.dataset.dealId;
-      if (id) showDealDetail(id);
-    }
-  }
-});
-
-async function init() {
-  const ok = await loadData();
-  if (!ok) {
-    document.getElementById("app").innerHTML = `<div class="error-state">
-      <h2>😕 Données temporairement indisponibles</h2>
-      <p>Les spéciaux de la semaine n'ont pas pu être chargés.</p>
-      <p style="margin-top:12px;color:var(--text-muted);font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
-      <button type="button" class="cta-primary" style="margin-top:16px;border:none;cursor:pointer" onclick="location.reload()">🔄 Réessayer</button>
-    </div>`;
-    return;
-  }
-  renderAll();
-  loadPipelineStatus();
-}
-
-function loadPipelineStatus() {
-  const el = document.getElementById("pipelineStatus");
-  fetch("data/status.json")
-    .then(r => r.ok ? r.json() : null)
-    .then(s => {
-      if (!s) { el.textContent = "⚙️ Statut indisponible"; return; }
-      if (s.warning) {
-        el.innerHTML = `⚠️ ${escapeHTML(s.warning)} · ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
-      } else if (s.success) {
-        el.innerHTML = `✅ Dernière mise à jour : ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
-      } else {
-        el.innerHTML = `❌ Échec du dernier scraping (${escapeHTML(s.last_run?.substring(0, 10) || "")})`;
-      }
-    })
-    .catch(() => { el.textContent = ""; });
-}
-
-init();
-</script>
-</body>
-</html>
+1|<!DOCTYPE html>
+2|<html lang="fr">
+3|<head>
+4|<meta charset="UTF-8">
+5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
+6|<meta name="description" content="Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes et paniers, comparés rapidement par prix.">
+7|<link rel="canonical" href="https://alanixqc.github.io/aubaines-rapides/">
+8|<meta property="og:title" content="Aubaines Rapides — Les spéciaux d'épicerie de la semaine">
+9|<meta property="og:description" content="Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.">
+10|<meta property="og:type" content="website">
+11|<meta property="og:url" content="https://alanixqc.github.io/aubaines-rapides/">
+12|<meta property="og:image" content="https://alanixqc.github.io/aubaines-rapides/favicon-social.png">
+13|<meta name="twitter:card" content="summary_large_image">
+14|<meta name="twitter:title" content="Aubaines Rapides — Spéciaux d'épicerie QC">
+15|<meta name="twitter:description" content="Les meilleurs spéciaux de la semaine au Québec, comparés rapidement.">
+16|<meta name="twitter:image" content="https://alanixqc.github.io/aubaines-rapides/favicon-social.png">
+17|<meta name="theme-color" content="#b8492e">
+18|<meta name="dateModified" content="">
+19|<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+20|<title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
+21|<link rel="preconnect" href="https://fonts.googleapis.com">
+22|<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+23|<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+24|<style>
+25|/* ===== CSS CUSTOM PROPERTIES — Aubaines Rapides Design System ===== */
+26|:root {
+27|  --bg-paper: #f7f1e7;
+28|  --bg-surface: #fffaf2;
+29|  --bg-card: #fffdf7;
+30|  --text-main: #2f251c;
+31|  --text-muted: #7a6b55;
+32|  --deal-red: #b8492e;
+33|  --deal-red-dark: #8f3422;
+34|  --saving-yellow: #ffc857;
+35|  --saving-gold: #c9942e;
+36|  --fresh-green: #2f7d46;
+37|  --fresh-green-soft: #e7f3e8;
+38|  --verified-blue: #1f6f9f;
+39|  --verified-blue-soft: #e4f0f7;
+40|  --border-soft: #d8c7aa;
+41|  --border-strong: #c6ad83;
+42|  --badge-beige: #f0e8da;
+43|  --badge-beige-text: #7a5c2e;
+44|  --badge-beige-border: #dcccb0;
+45|}
+46|/* ===== RESET ===== */
+47|*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+48|html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+49|
+50|/* ===== SCREEN READER ONLY ===== */
+51|.sr-only {
+52|  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+53|  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+54|}
+55|
+56|/* ===== PAPER TEXTURE BACKGROUND ===== */
+57|body {
+58|  font-family: 'Inter', 'Source Sans 3', Arial, sans-serif;
+59|  background-color: var(--bg-paper);
+60|  background-image:
+61|    radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
+62|    radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%),
+63|    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b79b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+64|  color: var(--text-main);
+65|  min-height: 100vh;
+66|  line-height: 1.5;
+67|}
+68|
+69|/* ===== HEADER — CIRCA / FLYER STYLE ===== */
+70|.header {
+71|  background: var(--bg-surface);
+72|  border-bottom: 3px solid var(--border-soft);
+73|  padding: 18px 16px 14px;
+74|  position: sticky;
+75|  top: 0;
+76|  z-index: 100;
+77|  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
+78|}
+79|/* ===== WEEK NAVIGATION ===== */
+80|.week-nav {
+81|  display: flex;
+82|  align-items: center;
+83|  justify-content: center;
+84|  gap: 8px;
+85|  margin-top: 10px;
+86|  padding-top: 10px;
+87|  border-top: 1px dashed var(--border-soft);
+88|}
+89|.week-nav-btn {
+90|  background: var(--bg-card);
+91|  border: 2px solid var(--border-soft);
+92|  padding: 6px 14px;
+93|  font-family: 'Inter', Arial, sans-serif;
+94|  font-size: 12px;
+95|  font-weight: 600;
+96|  color: var(--text-muted);
+97|  cursor: pointer;
+98|  transition: all 0.15s;
+99|}
+100|.week-nav-btn:hover {
+101|  border-color: var(--deal-red);
+102|  color: var(--deal-red);
+103|}
+104|.week-nav-btn:disabled {
+105|  opacity: 0.3;
+106|  cursor: default;
+107|  border-color: var(--border-soft);
+108|  color: #c4b79b;
+109|}
+110|.week-nav-btn:disabled:hover {
+111|  border-color: var(--border-soft);
+112|  color: #c4b79b;
+113|}
+114|.week-nav-label {
+115|  font-family: 'Inter', Arial, sans-serif;
+116|  font-size: 13px;
+117|  font-weight: 500;
+118|  color: var(--text-muted);
+119|  min-width: 120px;
+120|  text-align: center;
+121|}
+122|.header-top {
+123|  display: flex;
+124|  align-items: baseline;
+125|  justify-content: space-between;
+126|  margin-bottom: 10px;
+127|}
+128|.logo {
+129|  font-family: 'Fraunces', Georgia, serif;
+130|  font-size: 26px;
+131|  font-weight: 800;
+132|  color: var(--deal-red);
+133|  text-decoration: none;
+134|  letter-spacing: -0.3px;
+135|  line-height: 1.1;
+136|}
+137|.logo-sub {
+138|  font-family: 'Inter', Arial, sans-serif;
+139|  font-size: 12px;
+140|  font-weight: 500;
+141|  color: var(--text-muted);
+142|  display: block;
+143|  margin-top: -2px;
+144|}
+145|.week-badge {
+146|  font-family: 'Inter', Arial, sans-serif;
+147|  font-size: 12px;
+148|  font-weight: 600;
+149|  color: var(--text-muted);
+150|  background: var(--bg-paper);
+151|  padding: 4px 12px;
+152|  border: 2px dashed var(--border-soft);
+153|  white-space: nowrap;
+154|}
+155|.search-bar {
+156|  display: flex;
+157|  gap: 6px;
+158|}
+159|.search-bar input {
+160|  flex: 1;
+161|  background: var(--bg-card);
+162|  border: 2px solid var(--border-soft);
+163|  padding: 10px 14px;
+164|  color: var(--text-main);
+165|  font-family: 'Inter', Arial, sans-serif;
+166|  font-size: 14px;
+167|  outline: none;
+168|  transition: border-color 0.15s;
+169|}
+170|.search-bar input:focus {
+171|  border-color: var(--deal-red);
+172|}
+173|.search-bar input::placeholder {
+174|  color: var(--text-muted);
+175|}
+176|.search-bar button {
+177|  background: var(--deal-red);
+178|  border: none;
+179|  padding: 10px 16px;
+180|  color: var(--bg-surface);
+181|  font-family: 'Fraunces', Georgia, serif;
+182|  font-weight: 700;
+183|  font-size: 13px;
+184|  cursor: pointer;
+185|  transition: background 0.15s;
+186|}
+187|.search-bar button:hover {
+188|  background: var(--deal-red-dark);
+189|}
+190|
+191|/* ===== HERO BANNER ===== */
+192|.hero-banner {
+193|  background: var(--bg-surface);
+194|  padding: 22px 16px 18px;
+195|  text-align: center;
+196|  border-bottom: 2px solid var(--border-soft);
+197|}
+198|.hero-banner h1 {
+199|  font-family: 'Fraunces', Georgia, serif;
+200|  font-size: 22px;
+201|  font-weight: 700;
+202|  color: var(--text-main);
+203|  margin-bottom: 4px;
+204|  line-height: 1.2;
+205|}
+206|.hero-banner h1 span {
+207|  color: var(--deal-red);
+208|  display: inline;
+209|}
+210|.hero-banner p {
+211|  color: var(--text-muted);
+212|  font-size: 14px;
+213|  margin-top: 4px;
+214|  max-width: 400px;
+215|  margin: 0 auto;
+216|  font-style: italic;
+217|}
+218|.hero-cta {
+219|  display: flex;
+220|  gap: 8px;
+221|  justify-content: center;
+222|  margin-top: 14px;
+223|  flex-wrap: wrap;
+224|}
+225|.hero-cta a {
+226|  display: inline-flex;
+227|  align-items: center;
+228|  gap: 6px;
+229|  padding: 8px 20px;
+230|  font-family: 'Fraunces', Georgia, serif;
+231|  font-size: 13px;
+232|  font-weight: 700;
+233|  text-decoration: none;
+234|  transition: all 0.15s;
+235|  line-height: 1.3;
+236|}
+237|.cta-primary {
+238|  background: var(--deal-red);
+239|  color: var(--bg-surface);
+240|  border: 2px solid var(--deal-red);
+241|}
+242|.cta-primary:hover {
+243|  background: var(--deal-red-dark);
+244|  border-color: var(--deal-red-dark);
+245|}
+246|.cta-secondary {
+247|  background: var(--bg-card);
+248|  color: var(--text-main);
+249|  border: 2px solid var(--border-soft);
+250|}
+251|.cta-secondary:hover {
+252|  border-color: var(--deal-red);
+253|  color: var(--deal-red);
+254|}
+255|
+256|/* ===== SAVINGS TICKER ===== */
+257|.savings-ticker {
+258|  display: flex;
+259|  gap: 6px;
+260|  overflow-x: auto;
+261|  -webkit-overflow-scrolling: touch;
+262|  scrollbar-width: none;
+263|  padding: 10px 16px;
+264|  background: var(--bg-surface);
+265|  border-bottom: 2px solid #e8dccb;
+266|}
+267|.savings-ticker::-webkit-scrollbar { display: none; }
+268|.ticker-item {
+269|  flex-shrink: 0;
+270|  padding: 5px 14px;
+271|  background: var(--bg-card);
+272|  border: 1px solid var(--border-soft);
+273|  font-family: 'Inter', Arial, sans-serif;
+274|  font-size: 12px;
+275|  font-weight: 600;
+276|  color: var(--deal-red);
+277|  white-space: nowrap;
+278|}
+279|.ticker-item .num {
+280|  font-weight: 700;
+281|  font-size: 15px;
+282|}
+283|.ticker-item .label {
+284|  color: var(--text-muted);
+285|  font-family: 'Inter', Arial, sans-serif;
+286|  font-size: 12px;
+287|}
+288|
+289|/* ===== CATEGORY TABS ===== */
+290|.cat-tabs {
+291|  display: flex;
+292|  gap: 6px;
+293|  padding: 12px 16px;
+294|  overflow-x: auto;
+295|  -webkit-overflow-scrolling: touch;
+296|  scrollbar-width: none;
+297|  background: var(--bg-surface);
+298|  position: sticky;
+299|  top: 85px;
+300|  z-index: 99;
+301|  border-bottom: 2px solid #e8dccb;
+302|}
+303|.cat-tabs::-webkit-scrollbar { display: none; }
+304|.cat-tab {
+305|  flex-shrink: 0;
+306|  padding: 8px 18px;
+307|  font-family: 'Fraunces', Georgia, serif;
+308|  font-size: 14px;
+309|  font-weight: 600;
+310|  background: var(--bg-card);
+311|  color: var(--text-muted);
+312|  border: 2px solid var(--border-soft);
+313|  cursor: pointer;
+314|  white-space: nowrap;
+315|  transition: all 0.15s;
+316|  text-align: center;
+317|}
+318|.cat-tab.active {
+319|  background: var(--deal-red);
+320|  color: var(--bg-surface);
+321|  border-color: var(--deal-red);
+322|}
+323|.cat-tab .count {
+324|  font-weight: 400;
+325|  font-size: 11px;
+326|  opacity: 0.7;
+327|  margin-left: 3px;
+328|  font-family: 'Inter', Arial, sans-serif;
+329|}
+330|
+331|/* ===== CATEGORY SECTIONS ===== */
+332|.cat-section {
+333|  display: none;
+334|  padding: 0 16px 100px;
+335|  max-width: 640px;
+336|  margin: 0 auto;
+337|}
+338|.cat-section.active {
+339|  display: block;
+340|}
+341|.cat-section h2 {
+342|  font-family: 'Fraunces', Georgia, serif;
+343|  font-size: 20px;
+344|  font-weight: 700;
+345|  margin: 18px 0 2px;
+346|  color: var(--text-main);
+347|  line-height: 1.2;
+348|}
+349|.cat-stats {
+350|  font-family: 'Inter', Arial, sans-serif;
+351|  font-size: 13px;
+352|  color: var(--text-muted);
+353|  font-weight: 400;
+354|}
+355|
+356|/* ===== TYPE FILTER BAR ===== */
+357|.type-filter-bar {
+358|  display: flex;
+359|  gap: 4px;
+360|  margin: 6px 0 10px;
+361|  flex-wrap: wrap;
+362|}
+363|.type-filter-btn {
+364|  font-family: 'Fraunces', Georgia, serif;
+365|  font-size: 11px;
+366|  font-weight: 600;
+367|  padding: 4px 12px;
+368|  background: var(--bg-card);
+369|  color: var(--text-muted);
+370|  border: 2px solid var(--border-soft);
+371|  cursor: pointer;
+372|  transition: all 0.15s;
+373|  white-space: nowrap;
+374|}
+375|.type-filter-btn:hover {
+376|  border-color: var(--saving-gold);
+377|  color: var(--saving-gold);
+378|}
+379|.type-filter-btn.active {
+380|  background: var(--deal-red);
+381|  color: var(--bg-surface);
+382|  border-color: var(--deal-red);
+383|}
+384|.type-filter-btn .count {
+385|  font-weight: 400;
+386|  font-size: 10px;
+387|  opacity: 0.7;
+388|  font-family: 'Source Serif 4', Georgia, serif;
+389|  margin-left: 2px;
+390|}
+391|.type-filter-btn.active .count {
+392|  opacity: 0.8;
+393|}
+394|
+395|/* ===== DEAL CARDS — FLYER/LIST STYLE ===== */
+396|.deal-card {
+397|  background: var(--bg-card);
+398|  border: 2px double var(--border-soft);
+399|  padding: 12px 14px;
+400|  margin-bottom: 8px;
+401|  display: flex;
+402|  gap: 10px;
+403|  align-items: flex-start;
+404|  transition: border-color 0.15s, box-shadow 0.15s;
+405|  position: relative;
+406|}
+407|.deal-card:hover {
+408|  border-color: var(--saving-gold);
+409|}
+410|@media (min-width: 900px) {
+411|  .deal-card {
+412|    box-shadow: 0 1px 3px rgba(47,37,28,0.06);
+413|  }
+414|  .deal-card:hover {
+415|    box-shadow: 0 2px 8px rgba(47,37,28,0.10);
+416|    transform: translateY(-1px);
+417|  }
+418|}
+419|.deal-card.top-deal {
+420|  border-color: var(--saving-gold);
+421|  background: #fffbf0;
+422|  margin-top: 4px;
+423|}
+424|.deal-card.top-deal::before {
+425|  content: "⭐ TOP";
+426|  position: absolute;
+427|  top: -1px;
+428|  right: -1px;
+429|  background: var(--deal-red);
+430|  color: var(--bg-surface);
+431|  font-family: 'Fraunces', Georgia, serif;
+432|  font-size: 10px;
+433|  font-weight: 700;
+434|  padding: 3px 10px;
+435|  letter-spacing: 0.5px;
+436|  line-height: 1.3;
+437|}
+438|.deal-rank {
+439|  font-family: 'Fraunces', Georgia, serif;
+440|  font-size: 22px;
+441|  font-weight: 800;
+442|  color: var(--border-soft);
+443|  min-width: 28px;
+444|  line-height: 1.2;
+445|  text-align: center;
+446|  padding-top: 2px;
+447|}
+448|.deal-card.top-deal .deal-rank {
+449|  color: var(--saving-gold);
+450|}
+451|.deal-info {
+452|  flex: 1;
+453|  min-width: 0;
+454|}
+455|.deal-name {
+456|  font-family: 'Fraunces', Georgia, serif;
+457|  font-size: 14px;
+458|  font-weight: 600;
+459|  line-height: 1.3;
+460|  margin-bottom: 2px;
+461|  color: var(--text-main);
+462|}
+463|.deal-store {
+464|  display: inline-block;
+465|  font-size: 10px;
+466|  font-weight: 700;
+467|  padding: 2px 8px;
+468|  margin-bottom: 6px;
+469|  line-height: 1.4;
+470|  letter-spacing: 0.2px;
+471|  border: 1px solid;
+472|  white-space: nowrap;
+473|}
+474|/* ===== PRODUCT TYPE BADGE ===== */
+475|.deal-type-badge {
+476|  font-size: 9px;
+477|  font-weight: 700;
+478|  text-transform: uppercase;
+479|  letter-spacing: 0.5px;
+480|  padding: 2px 6px;
+481|  display: inline-block;
+482|  margin-left: 6px;
+483|  line-height: 1.2;
+484|  vertical-align: middle;
+485|}
+486|.deal-type-badge.frais {
+487|  background: var(--fresh-green-soft);
+488|  color: var(--fresh-green);
+489|  border: 1px solid #c4dbbc;
+490|}
+491|.deal-type-badge.transforme {
+492|  background: var(--badge-beige);
+493|  color: var(--badge-beige-text);
+494|  border: 1px solid var(--badge-beige-border);
+495|}
+496|.deal-prices {
+497|  display: flex;
+498|  gap: 10px;
+499|  flex-wrap: wrap;
+500|  align-items: baseline;
+501|}
+502|.deal-price {
+503|  font-family: 'Fraunces', Georgia, serif;
+504|  font-size: 22px;
+505|  font-weight: 800;
+506|  color: var(--deal-red);
+507|  line-height: 1.1;
+508|}
+509|.deal-per-kg {
+510|  font-size: 13px;
+511|  color: var(--text-muted);
+512|}
+513|.deal-protein {
+514|  font-size: 11px;
+515|  color: var(--fresh-green);
+516|  font-weight: 600;
+517|  background: var(--fresh-green-soft);
+518|  padding: 2px 8px;
+519|  border: 1px solid #d4dfc8;
+520|  font-family: 'Inter', Arial, sans-serif;
+521|}
+522|.deal-detail {
+523|  font-size: 11px;
+524|  color: var(--text-muted);
+525|  font-weight: 500;
+526|  padding: 2px 8px;
+527|  font-family: 'Inter', Arial, sans-serif;
+528|}
+529|.deal-recipe {
+530|  margin-top: 6px;
+531|  padding-top: 5px;
+532|  border-top: 1px dashed var(--border-soft);
+533|}
+534|.deal-recipe a {
+535|  color: var(--text-muted);
+536|  text-decoration: none;
+537|  font-size: 13px;
+538|  font-weight: 500;
+539|  display: flex;
+540|  align-items: center;
+541|  gap: 4px;
+542|  transition: color 0.15s;
+543|}
+544|.deal-recipe a:hover {
+545|  color: var(--deal-red);
+546|}
+547|
+548|/* ===== SUBCATEGORY HEADERS ===== */
+549|.sub-header {
+550|  font-family: 'Fraunces', Georgia, serif;
+551|  font-size: 16px;
+552|  font-weight: 700;
+553|  margin: 18px 0 6px;
+554|  padding-bottom: 4px;
+555|  border-bottom: 2px dashed var(--border-soft);
+556|  color: var(--text-muted);
+557|}
+558|
+559|/* ===== SHARE BAR ===== */
+560|.share-bar {
+561|  display: flex;
+562|  gap: 6px;
+563|  padding: 16px;
+564|  justify-content: center;
+565|  flex-wrap: wrap;
+566|  max-width: 640px;
+567|  margin: 0 auto;
+568|}
+569|.share-btn {
+570|  display: inline-flex;
+571|  align-items: center;
+572|  gap: 5px;
+573|  padding: 8px 16px;
+574|  font-family: 'Fraunces', Georgia, serif;
+575|  font-size: 13px;
+576|  font-weight: 600;
+577|  text-decoration: none;
+578|  border: 2px solid;
+579|  cursor: pointer;
+580|  transition: all 0.15s;
+581|  line-height: 1.3;
+582|}
+583|.share-btn:hover {
+584|  transform: translateY(-1px);
+585|}
+586|.share-btn.discord {
+587|  background: var(--bg-card);
+588|  color: #5865F2;
+589|  border-color: var(--border-soft);
+590|}
+591|.share-btn.discord:hover {
+592|  border-color: #5865F2;
+593|}
+594|.share-btn.whatsapp {
+595|  background: var(--bg-card);
+596|  color: #25D366;
+597|  border-color: var(--border-soft);
+598|}
+599|.share-btn.whatsapp:hover {
+600|  border-color: #25D366;
+601|}
+602|.share-btn.email {
+603|  background: var(--bg-card);
+604|  color: var(--text-muted);
+605|  border-color: var(--border-soft);
+606|}
+607|.share-btn.email:hover {
+608|  border-color: var(--deal-red);
+609|  color: var(--deal-red);
+610|}
+611|.share-btn.copy {
+612|  background: var(--bg-card);
+613|  color: var(--text-muted);
+614|  border-color: var(--border-soft);
+615|  font-size: 12px;
+616|}
+617|.share-btn.copy:hover {
+618|  border-color: var(--text-muted);
+619|}
+620|
+621|/* ===== SUBSCRIBE FORM ===== */
+622|.subscribe-wrap {
+623|  display: none;
+624|  padding: 0 16px 20px;
+625|  max-width: 480px;
+626|  margin: 0 auto;
+627|}
+628|.subscribe-inner {
+629|  background: var(--bg-card);
+630|  border: 2px solid var(--border-soft);
+631|  padding: 16px;
+632|  text-align: center;
+633|}
+634|.subscribe-inner p {
+635|  font-size: 14px;
+636|  margin-bottom: 10px;
+637|  color: var(--text-main);
+638|}
+639|.subscribe-inner p strong {
+640|  font-family: 'Fraunces', Georgia, serif;
+641|}
+642|.subscribe-row {
+643|  display: flex;
+644|  gap: 6px;
+645|}
+646|.subscribe-row input {
+647|  flex: 1;
+648|  background: var(--bg-surface);
+649|  border: 2px solid var(--border-soft);
+650|  padding: 10px 14px;
+651|  color: var(--text-main);
+652|  font-family: 'Inter', Arial, sans-serif;
+653|  font-size: 14px;
+654|  outline: none;
+655|}
+656|.subscribe-row input:focus {
+657|  border-color: var(--deal-red);
+658|}
+659|.subscribe-row button {
+660|  background: var(--deal-red);
+661|  border: none;
+662|  padding: 10px 18px;
+663|  color: var(--bg-surface);
+664|  font-family: 'Fraunces', Georgia, serif;
+665|  font-weight: 700;
+666|  font-size: 13px;
+667|  cursor: pointer;
+668|}
+669|.subscribe-note {
+670|  font-size: 11px;
+671|  color: var(--text-muted);
+672|  margin-top: 8px;
+673|}
+674|
+675|/* ===== STORES BAR ===== */
+676|.stores-bar {
+677|  padding: 10px 16px;
+678|  display: flex;
+679|  gap: 5px;
+680|  flex-wrap: wrap;
+681|  border-top: 2px solid #e8dccb;
+682|  max-width: 640px;
+683|  margin: 0 auto;
+684|  justify-content: center;
+685|}
+686|.store-badge {
+687|  font-family: 'Inter', Arial, sans-serif;
+688|  font-size: 11px;
+689|  color: var(--text-muted);
+690|  padding: 3px 10px;
+691|  background: var(--bg-card);
+692|  border: 1px solid var(--border-soft);
+693|}
+694|
+695|/* ===== TOAST ===== */
+696|.toast {
+697|  position: fixed;
+698|  bottom: 24px;
+699|  left: 50%;
+700|  transform: translateX(-50%);
+701|  background: var(--text-main);
+702|  color: var(--bg-surface);
+703|  padding: 12px 24px;
+704|  font-family: 'Fraunces', Georgia, serif;
+705|  font-size: 14px;
+706|  font-weight: 600;
+707|  z-index: 300;
+708|  opacity: 0;
+709|  transition: opacity 0.3s, transform 0.3s;
+710|  pointer-events: none;
+711|  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+712|}
+713|.toast.show {
+714|  opacity: 1;
+715|  transform: translateX(-50%) translateY(0);
+716|}
+717|
+718|/* ===== FOOTER ===== */
+719|.footer {
+720|  text-align: center;
+721|  padding: 24px 16px;
+722|  font-size: 12px;
+723|  color: var(--text-muted);
+724|  border-top: 2px solid #e8dccb;
+725|  margin-top: 8px;
+726|}
+727|.footer p {
+728|  font-style: italic;
+729|}
+730|
+731|/* ===== LOADING ===== */
+732|.loading {
+733|  text-align: center;
+734|  padding: 80px 20px;
+735|  color: var(--text-muted);
+736|}
+737|.loading .spinner {
+738|  display: inline-block;
+739|  width: 32px; height: 32px;
+740|  border: 3px solid var(--border-soft);
+741|  border-top-color: var(--deal-red);
+742|  border-radius: 50%;
+743|  animation: spin 0.8s linear infinite;
+744|  margin-bottom: 12px;
+745|}
+746|@keyframes spin { to { transform: rotate(360deg); } }
+747|
+748|/* ===== ERROR ===== */
+749|.error-state {
+750|  text-align: center;
+751|  padding: 60px 20px;
+752|}
+753|.error-state h2 {
+754|  font-family: 'Fraunces', Georgia, serif;
+755|  font-size: 28px;
+756|  margin-bottom: 8px;
+757|  color: var(--deal-red);
+758|}
+759|.error-state p {
+760|  color: var(--text-muted);
+761|}
+762|
+763|/* ===== EMPTY STATE ===== */
+764|.empty-state {
+765|  text-align: center;
+766|  padding: 40px 20px;
+767|  color: var(--text-muted);
+768|  font-style: italic;
+769|  background: var(--bg-card);
+770|  border: 2px dashed var(--border-soft);
+771|}
+772|.empty-state .icon {
+773|  font-size: 40px;
+774|  margin-bottom: 8px;
+775|}
+776|
+777|/* ===== MODAL DÉTAIL PRODUIT ===== */
+778|.modal-overlay { display:none; position:fixed; inset:0; background:rgba(47,37,28,0.5); z-index:200; }
+779|.modal-overlay.open { display:block; }
+780|.modal-panel {
+781|  display:none; position:fixed; bottom:0; left:0; right:0;
+782|  background:var(--bg-surface); border-top:4px solid var(--deal-red);
+783|  padding:20px 24px 28px; z-index:201;
+784|  animation: modalUp 0.25s ease-out;
+785|  max-width:600px; margin:0 auto;
+786|}
+787|.modal-panel.open { display:block; }
+788|@keyframes modalUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
+789|.modal-close {
+790|  float:right; background:none; border:none;
+791|  font-size:28px;
+792|  color:var(--text-muted); cursor:pointer; line-height:1;
+793|}
+794|.modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:var(--text-main); margin-bottom:4px; padding-right:40px; }
+795|.modal-store { font-size:14px; color:var(--text-muted); margin-bottom:16px; }
+796|.modal-store-link {
+797|  display:inline-block; font-size:13px; color:var(--deal-red);
+798|  text-decoration:none; margin-bottom:16px; font-weight:600;
+799|}
+800|.modal-store-link:hover { text-decoration: underline; }
+801|.modal-flyer-btn {
+802|  display:inline-block; margin-left:8px; padding:4px 10px;
+803|  background:var(--bg-surface); border:2px solid var(--deal-red);
+804|  border-radius:6px; font-size:13px; font-weight:600;
+805|  color:var(--deal-red); cursor:pointer;
+806|  transition:all 0.15s;
+807|}
+808|.modal-flyer-btn:hover { background:var(--deal-red); color:var(--bg-surface); }
+809|.modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
+810|.modal-details { margin:16px 0; }
+811|.modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
+812|.modal-row .lbl { color:var(--text-muted); }
+813|.modal-row .val { font-weight:600; color:var(--text-main); }
+814|.modal-recipe-btn {
+815|  display:block; margin-top:16px; padding:12px; background:var(--deal-red); color:var(--bg-surface);
+816|  text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
+817|  font-size:15px; font-weight:700; cursor:pointer;
+818|  text-decoration:none; transition:background 0.15s;
+819|}
+820|.modal-recipe-btn:hover { background:var(--deal-red-dark); }
+821|
+822|/* Image dans le modal — cliquable pour plein écran */
+823|.modal-img-wrap {
+824|  margin: 12px 0;
+825|  cursor: pointer;
+826|  overflow: hidden;
+827|  border: 1px solid #e8dccb;
+828|  background: #f5eee0;
+829|  text-align: center;
+830|}
+831|.modal-img-wrap img {
+832|  display: block;
+833|  width: 100%;
+834|  max-height: 300px;
+835|  object-fit: contain;
+836|  transition: opacity 0.15s;
+837|}
+838|.modal-img-wrap:hover img {
+839|  opacity: 0.85;
+840|}
+841|
+842|/* Plein écran image (comme Discord) */
+843|.img-fullscreen-overlay {
+844|  display: none;
+845|  position: fixed;
+846|  inset: 0;
+847|  background: rgba(0,0,0,0.9);
+848|  z-index: 999;
+849|  cursor: zoom-out;
+850|  align-items: center;
+851|  justify-content: center;
+852|}
+853|.img-fullscreen-overlay.open { display: flex; }
+854|.img-fullscreen-overlay img {
+855|  max-width: 95vw;
+856|  max-height: 95vh;
+857|  object-fit: contain;
+858|}
+859|.img-fullscreen-close {
+860|  position: fixed;
+861|  top: 16px;
+862|  right: 20px;
+863|  background: rgba(255,255,255,0.15);
+864|  border: none;
+865|  color: #fff;
+866|  font-size: 32px;
+867|  cursor: pointer;
+868|  width: 44px;
+869|  height: 44px;
+870|  border-radius: 50%;
+871|  display: flex;
+872|  align-items: center;
+873|  justify-content: center;
+874|  font-family: sans-serif;
+875|  z-index: 1000;
+876|}
+877|.img-fullscreen-close:hover { background: rgba(255,255,255,0.3); }
+878|
+879|/* ===== SEARCH RESULTS CONTAINER ===== */
+880|#searchResultsContainer {
+881|  background: var(--bg-card);
+882|  border: 2px solid var(--saving-gold);
+883|  margin-bottom: 12px;
+884|  padding: 0;
+885|}
+886|#searchResultsContainer .deals-container {
+887|  display: block;
+888|  padding: 0 14px 12px;
+889|}
+890|#searchResultsContainer .deal-card:last-child {
+891|  margin-bottom: 0;
+892|}
+893|
+894|/* ===== RESPONSIVE — ADAPTATIF ===== */
+895|/* Base = mobile (par défaut) — tout en colonne, compact */
+896|
+897|/* Tablette 600px+ */
+898|@media (min-width: 600px) {
+899|  .header { padding: 20px 24px 16px; }
+900|  .header-top { margin-bottom: 12px; }
+901|  .logo { font-size: 30px; }
+902|  .logo-sub { font-size: 16px; }
+903|  .hero-banner { padding: 32px 24px 24px; }
+904|  .hero-banner h1 { font-size: 30px; max-width: 600px; margin: 0 auto; }
+905|  .hero-banner p { font-size: 15px; }
+906|  .cat-tabs { justify-content: center; padding: 14px 24px; gap: 8px; }
+907|  .cat-tab { font-size: 15px; padding: 10px 24px; }
+908|  .cat-section { padding: 0 24px 100px; max-width: 720px; }
+909|  .deal-card { padding: 14px 18px; }
+910|  .deal-name { font-size: 15px; }
+911|  .deal-price { font-size: 22px; }
+912|  .savings-ticker { justify-content: center; padding: 12px 24px; gap: 10px; }
+913|  .ticker-item { padding: 6px 18px; font-size: 14px; }
+914|  .ticker-item .num { font-size: 16px; }
+915|  .week-nav { gap: 12px; }
+916|  .week-nav-btn { padding: 7px 18px; font-size: 13px; }
+917|  .week-nav-label { font-size: 17px; min-width: 140px; }
+918|  .modal-panel { padding: 28px 24px 36px; }
+919|}
+920|
+921|/* Desktop 900px+ — deux colonnes */
+922|@media (min-width: 900px) {
+923|  body { padding: 0; }
+924|  .header { padding: 24px 32px 18px; }
+925|  .header-top { margin-bottom: 14px; }
+926|  .logo { font-size: 34px; }
+927|  .logo-sub { font-size: 17px; display: inline; margin-top: 0; margin-left: 6px; }
+928|  .week-badge { font-size: 16px; padding: 5px 16px; }
+929|  .search-bar { max-width: 500px; }
+930|  .search-bar input { font-size: 15px; padding: 12px 16px; }
+931|  .search-bar button { font-size: 14px; padding: 12px 20px; }
+932|  
+933|  .hero-banner { padding: 40px 32px 28px; }
+934|  .hero-banner h1 { font-size: 36px; max-width: 700px; }
+935|  .hero-banner p { font-size: 16px; }
+936|  .hero-cta { gap: 12px; margin-top: 18px; }
+937|  .hero-cta a { font-size: 14px; padding: 10px 28px; }
+938|  
+939|  .savings-ticker { padding: 14px 32px; gap: 12px; }
+940|  .ticker-item { padding: 7px 20px; font-size: 14px; }
+941|  .ticker-item .num { font-size: 16px; }
+942|  
+943|  .week-nav { gap: 14px; margin-top: 12px; padding-top: 12px; }
+944|  .week-nav-btn { padding: 8px 22px; font-size: 14px; }
+945|  .week-nav-label { font-size: 18px; min-width: 180px; }
+946|  
+947|  .cat-tabs { padding: 16px 32px; gap: 10px; position: sticky; top: 78px; }
+948|  .cat-tab { font-size: 16px; padding: 11px 28px; }
+949|  
+950|  .cat-section.active { 
+951|    max-width: 1200px; 
+952|    padding: 0 32px 100px;
+953|    display: block;
+954|  }
+955|  .cat-section.active > h2 { 
+956|    font-size: 26px; 
+957|    margin: 24px 0 4px;
+958|  }
+959|  .cat-stats { font-size: 15px; }
+960|  
+961|  /* ✅ Grille 2 colonnes pour les cartes dans le conteneur */
+962|  .cat-section.active .deals-container {
+963|    display: grid;
+964|    grid-template-columns: repeat(2, 1fr);
+965|    gap: 12px 20px;
+966|    align-items: stretch;
+967|  }
+968|  
+969|  /* Sous-titres — pleine largeur dans la grille */
+970|  .cat-section.active .sub-header { 
+971|    font-size: 22px; 
+972|    margin: 20px 0 8px; 
+973|    grid-column: 1 / -1;
+974|  }
+975|  
+976|  .deal-card { 
+977|    padding: 16px 20px; 
+978|    margin-bottom: 0; 
+979|    min-height: 120px;
+980|  }
+981|  .deal-rank { font-size: 26px; min-width: 36px; }
+982|  .deal-name { font-size: 16px; }
+983|  .deal-price { font-size: 24px; }
+984|  .deal-per-kg { font-size: 14px; }
+985|  .deal-protein { font-size: 12px; padding: 3px 10px; }
+986|  .deal-store { font-size: 11px; }
+987|  .deal-recipe a { font-size: 14px; }
+988|  
+989|  .share-bar { max-width: 1200px; padding: 20px 32px; gap: 10px; }
+990|  .share-btn { font-size: 14px; padding: 10px 22px; }
+991|  
+992|  .subscribe-wrap { max-width: 600px; }
+993|  .subscribe-inner { padding: 24px; }
+994|  .subscribe-inner p { font-size: 15px; }
+995|  .subscribe-row input { padding: 12px 16px; font-size: 15px; }
+996|  .subscribe-row button { padding: 12px 24px; font-size: 14px; }
+997|  
+998|  .stores-bar { max-width: 1200px; padding: 14px 32px; gap: 6px; }
+999|  .store-badge { font-size: 12px; padding: 4px 14px; }
+1000|  
+1001|  .footer { padding: 32px 32px; font-size: 13px; }
+1002|  
+1003|  /* Modal plus large sur desktop */
+1004|  .modal-overlay.open { display:block; }
+1005|  .modal-panel.open { display:block; max-width: 680px; bottom: auto; top: 10vh; }
+1006|  .modal-panel h3 { font-size: 24px; }
+1007|  .modal-price-lg { font-size: 38px; }
+1008|  .modal-row { font-size: 15px; padding: 12px 0; }
+1009|  .modal-img-wrap img { max-height: 400px; }
+1010|}
+1011|
+1012|/* Grand écran 1200px+ — trois colonnes */
+1013|@media (min-width: 1200px) {
+1014|  .header { padding: 28px 48px 20px; }
+1015|  .header-top { margin-bottom: 16px; }
+1016|  .logo { font-size: 38px; }
+1017|  .logo-sub { font-size: 18px; }
+1018|  .search-bar { max-width: 600px; }
+1019|  
+1020|  .hero-banner { padding: 48px 48px 32px; }
+1021|  .hero-banner h1 { font-size: 42px; max-width: 800px; }
+1022|  
+1023|  .cat-tabs { padding: 18px 48px; gap: 12px; }
+1024|  .cat-tab { font-size: 17px; padding: 12px 32px; }
+1025|  
+1026|  .cat-section.active { 
+1027|    max-width: 1400px; 
+1028|    padding: 0 48px 100px;
+1029|  }
+1030|
+1031|  /* ✅ 3 colonnes sur grand écran */
+1032|  .cat-section.active .deals-container {
+1033|    grid-template-columns: repeat(3, 1fr);
+1034|    gap: 16px 24px;
+1035|  }
+1036|  
+1037|  .deal-card { padding: 18px 22px; margin-bottom: 0; min-height: 130px; }
+1038|  .deal-rank { font-size: 28px; min-width: 40px; }
+1039|  .deal-name { font-size: 17px; }
+1040|  .deal-price { font-size: 26px; }
+1041|  
+1042|  .share-bar { padding: 24px 48px; }
+1043|  .stores-bar { padding: 16px 48px; }
+1044|  .footer { padding: 40px 48px; }
+1045|  
+1046|  .modal-panel.open { max-width: 760px; }
+1047|}
+1048|
+1049|/* Très grand écran 1600px+ */
+1050|@media (min-width: 1600px) {
+1051|  .cat-section.active { max-width: 1600px; padding: 0 64px 100px; }
+1052|  .cat-section.active .deals-container { gap: 20px 28px; }
+1053|  .header { padding: 28px 64px 20px; }
+1054|  .cat-tabs { padding: 18px 64px; }
+1055|  .hero-banner { padding: 56px 64px 36px; }
+1056|  .hero-banner h1 { font-size: 48px; }
+1057|  .share-bar { padding: 24px 64px; }
+1058|  .deal-card { padding: 20px 26px; }
+1059|}
+1060|</style>
+1061|<script type="application/ld+json">
+1062|{
+1063|  "@context": "https://schema.org",
+1064|  "@type": "WebSite",
+1065|  "name": "Aubaines Rapides",
+1066|  "url": "https://alanixqc.github.io/aubaines-rapides/",
+1067|  "description": "Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes comparés par prix.",
+1068|  "inLanguage": "fr-CA",
+1069|  "potentialAction": {
+1070|    "@type": "SearchAction",
+1071|    "target": "https://alanixqc.github.io/aubaines-rapides/?q={search_term_string}",
+1072|    "query-input": "required name=search_term_string"
+1073|  }
+1074|}
+1075|</script>
+1076|<script type="application/ld+json">
+1077|{
+1078|  "@context": "https://schema.org",
+1079|  "@type": "WebPage",
+1080|  "name": "Aubaines Rapides — Les spéciaux d'épicerie de la semaine",
+1081|  "description": "Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.",
+1082|  "image": "https://alanixqc.github.io/aubaines-rapides/favicon-social.png"
+1083|}
+1084|</script>
+1085|</head>
+1086|<body>
+1087|
+1088|<!-- TOAST -->
+1089|<div class="toast" id="toast"></div>
+1090|
+1091|<!-- HEADER -->
+1092|<header class="header">
+1093|  <div class="header-top">
+1094|    <a href="/aubaines-rapides/" class="logo" aria-label="Accueil Aubaines Rapides">
+1095|      Aubaines Rapides
+1096|      <span class="logo-sub">— les spéciaux de la semaine —</span>
+1097|    </a>
+1098|    <span class="week-badge" id="weekBadge" role="status" aria-live="polite">📅 ...</span>
+1099|  </div>
+1100|  <!-- Navigation des semaines -->
+1101|  <nav class="week-nav" id="weekNav" aria-label="Navigation des semaines">
+1102|    <button type="button" class="week-nav-btn" id="prevWeek" onclick="switchWeek(-1)" title="Semaine précédente">◀ Précédente</button>
+1103|    <span class="week-nav-label" id="weekLabel">Semaine du ...</span>
+1104|    <button type="button" class="week-nav-btn" id="nextWeek" onclick="switchWeek(1)" title="Semaine suivante">Suivante ▶</button>
+1105|  </nav>
+1106|  <div class="search-bar">
+1107|    <label for="searchInput" class="sr-only">Chercher un produit</label>
+1108|    <input type="search" id="searchInput" placeholder="Chercher un produit, une marque..." autocomplete="off">
+1109|    <button type="button" onclick="doSearch()" aria-label="Lancer la recherche">OK</button>
+1110|  </div>
+1111|</header>
+1112|
+1113|<!-- HERO BANNER -->
+1114|<section class="hero-banner" aria-label="Bannière d'accueil">
+1115|  <h1>Les <span>meilleurs prix</span> de la semaine</h1>
+1116|  <p>Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡</p>
+1117|  <div class="hero-cta">
+1118|    <a class="cta-primary" href="#" onclick="showSubscribe();return false" aria-label="S'abonner par courriel">📬 Recevoir par courriel</a>
+1119|    <a class="cta-secondary" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 Partager</a>
+1120|  </div>
+1121|</section>
+1122|
+1123|<!-- SAVINGS TICKER -->
+1124|<div class="savings-ticker" id="savingsTicker" role="status" aria-live="polite">
+1125|  <div class="ticker-item"><span class="num">—</span> <span class="label">offres</span></div>
+1126|  <div class="ticker-item"><span class="num">—</span> <span class="label">magasins</span></div>
+1127|</div>
+1128|
+1129|<!-- CATEGORY TABS -->
+1130|<nav class="cat-tabs" id="catTabs" role="tablist" aria-label="Catégories de produits"></nav>
+1131|
+1132|<!-- MAIN CONTENT -->
+1133|<main id="app">
+1134|  <div class="loading" role="status">
+1135|    <div class="spinner"></div>
+1136|    <p>On fouille les circulaires...</p>
+1137|  </div>
+1138|</main>
+1139|
+1140|<!-- SUBSCRIBE FORM -->
+1141|<div class="subscribe-wrap" id="subscribeWrap">
+1142|  <div class="subscribe-inner">
+1143|    <p>📬 Reçois les <strong>top deals</strong> chaque mardi direct dans ta boîte</p>
+1144|    <div class="subscribe-row">
+1145|      <label for="emailInput" class="sr-only">Adresse courriel</label>
+1146|      <input type="email" id="emailInput" placeholder="ton@courriel.com">
+1147|      <button type="button" onclick="subscribeEmail()">Je veux ça!</button>
+1148|    </div>
+1149|    <p class="subscribe-note">Pas de pub. Pas de spam. Juste les spéciaux de la semaine.</p>
+1150|  </div>
+1151|</div>
+1152|
+1153|<!-- SHARE / CTA -->
+1154|<nav class="share-bar" id="shareBar" aria-label="Partager">
+1155|  <a class="share-btn whatsapp" href="https://wa.me/?text=Les%20meilleurs%20sp%C3%A9ciaux%20de%20la%20semaine%20%E2%9A%A1%20https://alanixqc.github.io/aubaines-rapides/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp">💬 WhatsApp</a>
+1156|  <button type="button" class="share-btn discord" onclick="shareDiscord()" aria-label="Partager sur Discord">🎮 Discord</button>
+1157|  <button type="button" class="share-btn email" onclick="showSubscribe()" aria-label="S'abonner par courriel">📬 Courriel</button>
+1158|  <button type="button" class="share-btn copy" onclick="copyLink()" aria-label="Copier le lien">🔗 Copier lien</button>
+1159|</nav>
+1160|
+1161|<!-- MODAL DÉTAIL -->
+1162|<div class="modal-overlay" id="modalOverlay" onclick="closeDealDetail()" role="presentation"></div>
+1163|<div class="modal-panel" id="modalPanel" role="dialog" aria-modal="true" aria-label="Détail du produit">
+1164|  <button type="button" class="modal-close" onclick="closeDealDetail()" aria-label="Fermer">✕</button>
+1165|  <h3 id="modalTitle"></h3>
+1166|  <div class="modal-store" id="modalStore"></div>
+1167|  <a id="modalStoreLink" href="" target="_blank" rel="noopener" class="modal-store-link" style="display:none">🌐 Voir le site</a>
+1168|  <button type="button" id="modalFlyerBtn" class="modal-flyer-btn" style="display:none">📰 Circulaire</button>
+1169|  <!-- Image cliquable → plein écran -->
+1170|  <div class="modal-img-wrap" id="modalImgWrap" style="display:none" onclick="openFullscreenImg(this.querySelector('img').src)">
+1171|    <img id="modalImg" src="" alt="Photo du produit">
+1172|  </div>
+1173|  <div class="modal-price-lg" id="modalPrice"></div>
+1174|  <div class="modal-details" id="modalDetails"></div>
+1175|  <div class="modal-recipe-btn" id="modalRecipeBtn" role="button" style="display:none">🍳 Voir la recette suggérée</div>
+1176|</div>
+1177|
+1178|<!-- PLEIN ÉCRAN IMAGE (comme Discord) -->
+1179|<div class="img-fullscreen-overlay" id="imgFullscreen" onclick="closeFullscreenImg()" role="dialog" aria-modal="true" aria-label="Image en plein écran">
+1180|  <button type="button" class="img-fullscreen-close" onclick="closeFullscreenImg()" aria-label="Fermer l'image">✕</button>
+1181|  <img id="imgFullscreenContent" src="" alt="Agrandissement">
+1182|</div>
+1183|
+1184|<!-- STORES BAR -->
+1185|<div class="stores-bar" id="storesBar" role="list" aria-label="Magasins de la semaine"></div>
+1186|
+1187|<!-- FOOTER -->
+1188|<footer class="footer">
+1189|  <p>Aubaines Rapides &copy; 2026</p>
+1190|  <p style="margin-top:4px;font-size:11px"><a href="confidentialite.html" style="color:var(--text-muted);text-decoration:underline">Confidentialité</a> · <a href="conditions.html" style="color:var(--text-muted);text-decoration:underline">Conditions d'utilisation</a></p>
+1191|  <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque jeudi</p>
+1192|  <p style="margin-top:4px;font-size:10px;color:var(--text-muted)">Sources directes (aucun agrégateur tiers)</p>
+1193|  <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
+1194|</footer>
+1195|
+1196|<script>
+1197|// ─── HELPERS ───
+1198|function escapeHTML(str) {
+1199|  if (str == null) return '';
+1200|  return String(str)
+1201|    .replace(/&/g, '&amp;')
+1202|    .replace(/</g, '&lt;')
+1203|    .replace(/>/g, '&gt;')
+1204|    .replace(/"/g, '&quot;')
+1205|    .replace(/'/g, '&#039;');
+1206|}
+1207|
+1208|function showToast(msg) {
+1209|  const t = document.getElementById('toast');
+1210|  t.textContent = msg;
+1211|  t.classList.add('show');
+1212|  setTimeout(() => t.classList.remove('show'), 3000);
+1213|}
+1214|
+1215|// ─── DATA ───
+1216|const CAT_ORDER = ["viande", "poisson", "fruit", "legume", "sauce", "panier", "yogourt"];
+1217|const CAT_NAMES = { viande: "🥩 Viande", poisson: "🐟 Poisson", fruit: "🍎 Fruits", legume: "🥦 Légumes", sauce: "🥫 Sauce", panier: "📦 Panier", yogourt: "🥛 Yogourt" };
+1218|const CAT_MERGE = {
+1219|  viande: new Set(["boeuf", "poulet", "porc", "viande", "veau"]),
+1220|  poisson: new Set(["poisson"]),
+1221|  fruit: new Set(["fruit"]),
+1222|  legume: new Set(["legume", "légume"]),
+1223|  sauce: new Set(["sauce"]),
+1224|  panier: new Set(["panier"]),
+1225|  yogourt: new Set(["yogourt"]),
+1226|};
+1227|const MEAT_NAMES = { boeuf: "🐄 Bœuf", poulet: "🍗 Poulet", porc: "🥓 Porc", viande: "🥩 Viande", veau: "🥩 Veau" };
+1228|
+1229|// ─── COULEURS DES ÉPICERIES ───
+1230|const STORE_COLORS = {
+1231|  "Maxi":              { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
+1232|  "Super C":           { bg: "#f5dcdc", border: "#e0b8b8", text: "#8c2a2a" },
+1233|  "IGA":               { bg: "#dcf0dc", border: "#b8dcb8", text: "#2a7a2a" },
+1234|  "Metro":             { bg: "#f5eadc", border: "#e0d0b8", text: "#8c6a2a" },
+1235|  "Tigre Géant":       { bg: "#e8dcf5", border: "#d0b8e0", text: "#6a2a8c" },
+1236|  "Walmart":           { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
+1237|  "Loblaws":           { bg: "#dce8f5", border: "#b8cce0", text: "#1a4a7c" },
+1238|  "Provigo":           { bg: "#e8f0dc", border: "#cce0b8", text: "#4a7a2a" },
+1239|  "Costco":            { bg: "#f5dce8", border: "#e0b8cc", text: "#8c2a5a" },
+1240|  "Mayrand":           { bg: "#f5f0dc", border: "#e0dcc0", text: "#7a6a2a" },
+1241|  "Rachelle Béry":     { bg: "#dcf0e8", border: "#b8e0d0", text: "#2a7a5a" },
+1242|  "Boulangerie Pom":   { bg: "#f5e4dc", border: "#e0c8b8", text: "#8c5a2a" },
+1243|  "Les aliments M&M":  { bg: "#e8dcdc", border: "#d4c0c0", text: "#7a4040" },
+1244|  "Les Marchés Tradition": { bg: "#ece4dc", border: "#d8ccc0", text: "#7a6040" },
+1245|  "L'Inter-Marché":    { bg: "#dcf0f0", border: "#b8dcdc", text: "#2a6a6a" },
+1246|  "Fruiterie Potager": { bg: "#e0f5dc", border: "#c0e0b8", text: "#3a7a2a" },
+1247|  "Supermarché Aurès": { bg: "#f0e4dc", border: "#d8ccc0", text: "#7a5a40" },
+1248|  "le Choix du Président": { bg: "#e8e0f0", border: "#ccc0d8", text: "#5a3a7a" },
+1249|  "5 Saveurs":         { bg: "#f0dce8", border: "#d8c0d0", text: "#7a2a5a" },
+1250|};
+1251|function storeStyle(store) {
+1252|  const c = STORE_COLORS[store] || { bg: "#f0ece4", border: "#d8d0c4", text: "#6a5a44" };
+1253|  return `background:${c.bg};border-color:${c.border};color:${c.text}`;
+1254|}
+1255|
+1256|let dealsAll = [], recipesAll = [], stats = {};
+1257|let currentCat = "viande";
+1258|let currentWeekIdx = 0;
+1259|let weeks = [];
+1260|let weekDealsMap = {};   // lazy-load cache: week -> {deals_with_kg, deals_wo_kg}
+1261|
+1262|// ─── LOAD AVEC TIMEOUT ───
+1263|function fetchWithTimeout(url, ms = 8000) {
+1264|  return new Promise((resolve, reject) => {
+1265|    const timer = setTimeout(() => reject(new Error("Timeout")), ms);
+1266|    fetch(url).then(r => { clearTimeout(timer); resolve(r); }, err => { clearTimeout(timer); reject(err); });
+1267|  });
+1268|}
+1269|
+1270|// ─── CHARGEMENT PROGRESSIF (P1-3) ───
+1271|async function loadData() {
+1272|  // Try the new lazy-loading approach first (deals-index.json + per-week files)
+1273|  let ok = await tryLazyLoad();
+1274|  if (ok) return true;
+1275|
+1276|  // Fallback: load the old monolithic deals.json
+1277|  console.warn("Lazy loading failed, trying fallback deals.json");
+1278|  ok = await tryFallbackLoad();
+1279|  if (ok) return true;
+1280|
+1281|  return false;
+1282|}
+1283|
+1284|async function tryLazyLoad() {
+1285|  try {
+1286|    const [indexRes, recipesRes] = await Promise.all([
+1287|      fetchWithTimeout("data/deals-index.json"),
+1288|      fetchWithTimeout("data/recipes.json"),
+1289|    ]);
+1290|
+1291|    if (!indexRes.ok || !recipesRes.ok) return false;
+1292|
+1293|    const indexData = await indexRes.json();
+1294|    recipesAll = await recipesRes.json();
+1295|
+1296|    if (!indexData.weeks || indexData.weeks.length === 0) return false;
+1297|
+1298|    weeks = indexData.weeks;
+1299|    currentWeekIdx = 0;
+1300|    weekDealsMap = {};
+1301|
+1302|    // Load the current week's file
+1303|    const currentWeek = weeks[0];
+1304|    const weekRes = await fetchWithTimeout(`data/deals-${currentWeek}.json`);
+1305|    if (!weekRes.ok) return false;
+1306|
+1307|    weekDealsMap[currentWeek] = await weekRes.json();
+1308|
+1309|    loadWeek(0);
+1310|    return true;
+1311|  } catch (e) {
+1312|    console.warn("tryLazyLoad failed:", e);
+1313|    return false;
+1314|  }
+1315|}
+1316|
+1317|async function tryFallbackLoad() {
+1318|  try {
+1319|    const [dealsRes, recipesRes, statsRes, mergedRes] = await Promise.all([
+1320|      fetchWithTimeout("data/deals.json"),
+1321|      fetchWithTimeout("data/recipes.json"),
+1322|      fetchWithTimeout("data/stats.json"),
+1323|      fetchWithTimeout("data/deals_merged.json").catch(() => null),
+1324|    ]);
+1325|
+1326|    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) return false;
+1327|
+1328|    const dealsData = await dealsRes.json();
+1329|    recipesAll = await recipesRes.json();
+1330|    stats = await statsRes.json();
+1331|
+1332|    if (!dealsData.weeks || dealsData.weeks.length === 0) return false;
+1333|
+1334|    weeks = dealsData.weeks || [];
+1335|    weekDealsMap = dealsData.deals_by_week || {};
+1336|    currentWeekIdx = 0;
+1337|
+1338|    // Try to merge supplementary data (deals_merged.json from new scrapers)
+1339|    if (mergedRes && mergedRes.ok) {
+1340|      try {
+1341|        const mergedData = await mergedRes.json();
+1342|        if (Array.isArray(mergedData) && mergedData.length > 0) {
+1343|          const currentWeek = weeks[0];
+1344|          if (currentWeek && weekDealsMap[currentWeek]) {
+1345|            const existingIds = new Set(
+1346|              (weekDealsMap[currentWeek].deals_with_kg || []).map(d => d.id)
+1347|            );
+1348|            const converted = mergedData.map((item, i) => ({
+1349|              id: `merged_${Date.now()}_${i}`,
+1350|              name: item.name,
+1351|              name_short: item.name?.substring(0, 50),
+1352|              category: item.category || "viande",
+1353|              store: item.store,
+1354|              store_emoji: "🏪",
+1355|              price: item.price,
+1356|              valid_to: null,
+1357|              image_url: item.image,
+1358|              product_type: item.on_sale ? "frais" : "transformé",
+1359|            }));
+1360|            weekDealsMap[currentWeek].deals_with_kg = [
+1361|              ...(weekDealsMap[currentWeek].deals_with_kg || []),
+1362|              ...converted.filter(d => !existingIds.has(d.id)),
+1363|            ];
+1364|          }
+1365|        }
+1366|      } catch (e) { /* silently ignore merge errors */ }
+1367|    }
+1368|
+1369|    loadWeek(0);
+1370|    return true;
+1371|  } catch (e) {
+1372|    console.error("tryFallbackLoad failed:", e);
+1373|    return false;
+1374|  }
+1375|}
+1376|
+1377|function loadWeek(idx) {
+1378|  const week = weeks[idx];
+1379|  if (!week) return;
+1380|
+1381|  const wd = weekDealsMap[week];
+1382|  if (!wd) return;
+1383|
+1384|  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
+1385|
+1386|  const byCat = {};
+1387|  const storesSet = new Set();
+1388|  for (const d of dealsAll) {
+1389|    byCat[d.category] = (byCat[d.category] || 0) + 1;
+1390|    if (d.store) storesSet.add(d.store);
+1391|  }
+1392|  stats = {
+1393|    ...stats,
+1394|    total: dealsAll.length,
+1395|    by_category: byCat,
+1396|    stores: Array.from(storesSet).sort(),
+1397|    week: week,
+1398|    weeks: weeks,
+1399|  };
+1400|
+1401|  updateWeekNav();
+1402|  renderAll();
+1403|}
+1404|
+1405|function byCategory(cat) {
+1406|  const accepted = CAT_MERGE[cat];
+1407|  if (!accepted) return dealsAll.filter(d => d.category === cat);
+1408|  return dealsAll.filter(d => accepted.has(d.category));
+1409|}
+1410|
+1411|function topDeals(cat, n) {
+1412|  const items = byCategory(cat);
+1413|  items.sort((a, b) => {
+1414|    if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+1415|    if (a.per_kg) return -1; if (b.per_kg) return 1;
+1416|    return (a.price || 0) - (b.price || 0);
+1417|  });
+1418|  return items.slice(0, n);
+1419|}
+1420|
+1421|// ─── FILTRE FRAIS / TRANSFORMÉ ───
+1422|let typeFilter = "tout";
+1423|
+1424|function renderTypeFilters(cat) {
+1425|  const deals = byCategory(cat);
+1426|  let f = deals.filter(d => d.product_type === 'frais').length;
+1427|  let t = deals.filter(d => d.product_type === 'transformé').length;
+1428|  return `
+1429|    <div class="type-filter-bar" id="typeFilter-${cat}" role="group" aria-label="Filtrer par type">
+1430|      <button type="button" class="type-filter-btn${typeFilter === 'tout' ? ' active' : ''}" data-type="tout" onclick="setTypeFilter('${cat}','tout')">Tout <span class="count">${deals.length}</span></button>
+1431|      <button type="button" class="type-filter-btn${typeFilter === 'frais' ? ' active' : ''}" data-type="frais" onclick="setTypeFilter('${cat}','frais')">🌿 Frais <span class="count">${f}</span></button>
+1432|      <button type="button" class="type-filter-btn${typeFilter === 'transformé' ? ' active' : ''}" data-type="transformé" onclick="setTypeFilter('${cat}','transformé')">🏭 Transformé <span class="count">${t}</span></button>
+1433|    </div>`;
+1434|}
+1435|
+1436|function setTypeFilter(cat, type) {
+1437|  typeFilter = type;
+1438|  const section = document.getElementById(`section-${cat}`);
+1439|  if (!section) return;
+1440|  
+1441|  section.querySelectorAll('.type-filter-btn').forEach(b => {
+1442|    b.classList.toggle('active', b.dataset.type === typeFilter);
+1443|  });
+1444|  
+1445|  const dealsContainer = section.querySelector('.deals-container');
+1446|  if (dealsContainer) {
+1447|    dealsContainer.innerHTML = renderCategory(cat);
+1448|  }
+1449|}
+1450|
+1451|// ─── RENDER ───
+1452|function updateWeekNav() {
+1453|  const week = weeks[currentWeekIdx];
+1454|  if (!week) return;
+1455|  
+1456|  const d = new Date(week + "T12:00:00");
+1457|  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+1458|  const formatted = d.toLocaleDateString('fr-CA', options);
+1459|  
+1460|  document.getElementById("weekLabel").textContent = `Semaine du ${formatted}`;
+1461|  document.getElementById("prevWeek").disabled = currentWeekIdx <= 0;
+1462|  document.getElementById("nextWeek").disabled = currentWeekIdx >= weeks.length - 1;
+1463|}
+1464|
+1465|async function switchWeek(dir) {
+1466|  const newIdx = currentWeekIdx + dir;
+1467|  if (newIdx < 0 || newIdx >= weeks.length) return;
+1468|  currentWeekIdx = newIdx;
+1469|
+1470|  const week = weeks[newIdx];
+1471|
+1472|  // Lazy-load this week if not yet cached
+1473|  if (!weekDealsMap[week]) {
+1474|    const app = document.getElementById("app");
+1475|    app.style.opacity = "0.5";
+1476|    try {
+1477|      const res = await fetchWithTimeout(`data/deals-${week}.json`);
+1478|      if (res.ok) {
+1479|        weekDealsMap[week] = await res.json();
+1480|      } else {
+1481|        // If per-week file not found, try fallback monolithic deals.json
+1482|        console.warn(`deals-${week}.json not found, trying fallback...`);
+1483|        const fallbackRes = await fetchWithTimeout("data/deals.json");
+1484|        if (fallbackRes.ok) {
+1485|          const fb = await fallbackRes.json();
+1486|          if (fb.deals_by_week && fb.deals_by_week[week]) {
+1487|            weekDealsMap[week] = fb.deals_by_week[week];
+1488|          } else {
+1489|            currentWeekIdx = newIdx - dir;
+1490|            app.style.opacity = "1";
+1491|            showToast("Données non disponibles pour cette semaine");
+1492|            return;
+1493|          }
+1494|        } else {
+1495|          currentWeekIdx = newIdx - dir;
+1496|          app.style.opacity = "1";
+1497|          showToast("Impossible de charger cette semaine");
+1498|          return;
+1499|        }
+1500|      }
+1501|    } catch (e) {
+1502|      console.error("Lazy load failed for week", week, e);
+1503|      currentWeekIdx = newIdx - dir;
+1504|      app.style.opacity = "1";
+1505|      return;
+1506|    }
+1507|  }
+1508|
+1509|  const wd = weekDealsMap[week];
+1510|  if (!wd) {
+1511|    currentWeekIdx = newIdx - dir;
+1512|    return;
+1513|  }
+1514|
+1515|  dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
+1516|
+1517|  const byCat = {};
+1518|  const storesSet = new Set();
+1519|  for (const d of dealsAll) {
+1520|    byCat[d.category] = (byCat[d.category] || 0) + 1;
+1521|    if (d.store) storesSet.add(d.store);
+1522|  }
+1523|  stats = {
+1524|    ...stats,
+1525|    total: dealsAll.length,
+1526|    by_category: byCat,
+1527|    stores: Array.from(storesSet).sort(),
+1528|    week: week,
+1529|  };
+1530|
+1531|  updateWeekNav();
+1532|
+1533|  const app = document.getElementById("app");
+1534|  app.style.opacity = "0.5";
+1535|
+1536|  renderAll();
+1537|
+1538|  app.style.opacity = "1";
+1539|}
+1540|
+1541|function renderCatTabs() {
+1542|  document.getElementById("catTabs").innerHTML = CAT_ORDER.map(cat => {
+1543|    const count = byCategory(cat).length;
+1544|    const isActive = cat === currentCat;
+1545|    return `<button type="button" class="cat-tab${isActive ? " active" : ""}" data-cat="${cat}" onclick="switchCat('${cat}')" role="tab" aria-selected="${isActive}" aria-controls="section-${cat}">${CAT_NAMES[cat]} <span class="count">${count}</span></button>`;
+1546|  }).join("");
+1547|}
+1548|
+1549|function renderDealCard(d, rank) {
+1550|  const hasProtein = d.protein_per_dollar && d.protein_per_100g;
+1551|  const recipe = d.recipe;
+1552|  const isTop = rank === 1;
+1553|  const nameHtml = escapeHTML(d.name_short || d.name);
+1554|  const storeHtml = escapeHTML(d.store);
+1555|  const storeEmoji = d.store_emoji || "🏪";
+1556|  const storeInline = storeStyle(d.store);
+1557|  const badgeClass = d.product_type === 'frais' ? 'frais' : 'transforme';
+1558|  const badgeText = d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.';
+1559|  const badgeHtml = d.product_type ? `<span class="deal-type-badge ${badgeClass}">${badgeText}</span>` : "";
+1560|  const priceHtml = d.price != null ? `${d.price.toFixed(2)}$` : "";
+1561|  const perKgHtml = d.per_kg != null ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : "";
+1562|  const perLbHtml = d.per_lb != null ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : "";
+1563|    const detailHtml = d.detail ? `<span class="deal-detail">${escapeHTML(d.detail.substring(0, 35))}</span>` : "";
+1564|    const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
+1565|  const recipeHtml = recipe ? `<div class="deal-recipe">🍳 ${escapeHTML(recipe.title.substring(0, 55))}${recipe.title.length > 55 ? "…" : ""}</div>` : "";
+1566|
+1567|  return `<div class="deal-card${isTop ? " top-deal" : ""}" data-deal-id="${d.id}" role="button" tabindex="0" aria-label="${nameHtml} chez ${storeHtml}">
+1568|    <div class="deal-rank">#${rank}</div>
+1569|    <div class="deal-info">
+1570|      <div class="deal-name">${nameHtml}${badgeHtml}</div>
+1571|      <div class="deal-store" style="${storeInline}">${storeEmoji} ${storeHtml}</div>
+1572|      <div class="deal-prices">
+1573|        <span class="deal-price">${priceHtml}</span>
+1574|        ${perKgHtml}${perLbHtml}${detailHtml}${proteinHtml}
+1575|      </div>
+1576|      ${recipeHtml}
+1577|    </div>
+1578|  </div>`;
+1579|}
+1580|
+1581|function renderCategory(cat) {
+1582|  let filtered;
+1583|  if (typeFilter === "frais") {
+1584|    filtered = dealsAll.filter(d => d.product_type === 'frais');
+1585|  } else if (typeFilter === "transformé") {
+1586|    filtered = dealsAll.filter(d => d.product_type === 'transformé');
+1587|  } else {
+1588|    filtered = dealsAll;
+1589|  }
+1590|  
+1591|  const getTop = (cat, n) => {
+1592|    const items = filtered.filter(d => {
+1593|      const accepted = CAT_MERGE[cat];
+1594|      return accepted ? accepted.has(d.category) : d.category === cat;
+1595|    });
+1596|    items.sort((a, b) => {
+1597|      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+1598|      if (a.per_kg) return -1; if (b.per_kg) return 1;
+1599|      return (a.price || 0) - (b.price || 0);
+1600|    });
+1601|    return items.slice(0, n);
+1602|  };
+1603|  
+1604|  const deals = getTop(cat, cat === "viande" ? 100 : 12);
+1605|  if (deals.length === 0) {
+1606|    return `<div class="empty-state"><div class="icon">🔍</div><p>Aucun résultat pour cette catégorie cette semaine</p></div>`;
+1607|  }
+1608|
+1609|  if (cat === "viande") {
+1610|    const subOrder = ["boeuf", "poulet", "porc"];
+1611|    let html = "";
+1612|    for (const sub of subOrder) {
+1613|      const subDeals = deals.filter(d => d.category === sub).slice(0, 4);
+1614|      if (subDeals.length === 0) continue;
+1615|      html += `<div class="sub-header">${MEAT_NAMES[sub] || sub}</div>`;
+1616|      html += subDeals.map((d, i) => renderDealCard(d, i + 1)).join("");
+1617|    }
+1618|    return html;
+1619|  }
+1620|
+1621|  return deals.slice(0, 8).map((d, i) => renderDealCard(d, i + 1)).join("");
+1622|}
+1623|
+1624|function generateJsonLd() {
+1625|  // Remove any existing JSON-LD from previous renders
+1626|  document.querySelectorAll('script[data-jsonld-deals]').forEach(s => s.remove());
+1627|
+1628|  // Collect top deals across all categories (max 10)
+1629|  const topDeals = [];
+1630|  for (const cat of CAT_ORDER) {
+1631|    const filtered = dealsAll;
+1632|    const accepted = CAT_MERGE[cat];
+1633|    const items = filtered.filter(d => accepted ? accepted.has(d.category) : d.category === cat);
+1634|    items.sort((a, b) => {
+1635|      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+1636|      if (a.per_kg) return -1; if (b.per_kg) return 1;
+1637|      return (a.price || 0) - (b.price || 0);
+1638|    });
+1639|    for (const d of items.slice(0, 3)) {
+1640|      if (topDeals.length >= 10) break;
+1641|      if (!topDeals.find(x => x.id === d.id)) topDeals.push(d);
+1642|    }
+1643|    if (topDeals.length >= 10) break;
+1644|  }
+1645|
+1646|  if (topDeals.length === 0) return;
+1647|
+1648|  const siteUrl = 'https://alanixqc.github.io/aubaines-rapides/';
+1649|  const weekDate = stats.week || '';
+1650|
+1651|  // Build the ItemList
+1652|  const itemList = topDeals.map((d, i) => {
+1653|    const offer = {
+1654|      "@type": "Offer",
+1655|      "price": d.price != null ? d.price.toFixed(2) : undefined,
+1656|      "priceCurrency": "CAD",
+1657|      "availability": "https://schema.org/InStock",
+1658|      "seller": { "@type": "Organization", "name": d.store },
+1659|      "url": siteUrl
+1660|    };
+1661|    if (d.valid_to) {
+1662|      offer["priceValidUntil"] = d.valid_to;
+1663|    }
+1664|
+1665|    const product = {
+1666|      "@type": "Product",
+1667|      "name": d.name_short || d.name,
+1668|      "category": CAT_NAMES[d.category] || d.category,
+1669|      "description": `${d.name} — ${d.price != null ? d.price.toFixed(2) + '$' : ''} chez ${d.store}` +
+1670|        (d.per_kg != null ? ` (${d.per_kg.toFixed(2)}$/kg)` : '') +
+1671|        (d.detail ? `. ${d.detail}` : ''),
+1672|      "offers": offer
+1673|    };
+1674|    if (d.image_url) {
+1675|      product["image"] = d.image_url;
+1676|    }
+1677|    if (d.protein_per_100g) {
+1678|      product["additionalProperty"] = [
+1679|        { "@type": "PropertyValue", "name": "Protéines par dollar", "value": d.protein_per_dollar + "g/$" }
+1680|      ];
+1681|    }
+1682|
+1683|    return {
+1684|      "@type": "ListItem",
+1685|      "position": i + 1,
+1686|      "item": product
+1687|    };
+1688|  });
+1689|
+1690|  const jsonLd = {
+1691|    "@context": "https://schema.org",
+1692|    "@type": "ItemList",
+1693|    "name": `Aubaines Rapides — Spéciaux de la semaine ${weekDate}`,
+1694|    "description": `Top ${topDeals.length} spéciaux d'épicerie au Québec pour la semaine du ${weekDate}.`,
+1695|    "numberOfItems": topDeals.length,
+1696|    "url": siteUrl,
+1697|    "itemListElement": itemList
+1698|  };
+1699|
+1700|  const script = document.createElement('script');
+1701|  script.type = 'application/ld+json';
+1702|  script.setAttribute('data-jsonld-deals', 'true');
+1703|  script.textContent = JSON.stringify(jsonLd, null, 2);
+1704|  document.head.appendChild(script);
+1705|
+1706|  // Update dateModified meta tag
+1707|  const dateMod = document.querySelector('meta[name="dateModified"]');
+1708|  if (dateMod && weekDate) {
+1709|    dateMod.setAttribute('content', weekDate);
+1710|  }
+1711|}
+1712|
+1713|function renderAll() {
+1714|  document.getElementById("weekBadge").textContent = `📅 ${stats.week || "..."}`;
+1715|
+1716|  const ticker = document.getElementById("savingsTicker");
+1717|  const byCat = stats.by_category || {};
+1718|  const totalMeat = (byCat.boeuf||0) + (byCat.poulet||0) + (byCat.porc||0) + (byCat.viande||0);
+1719|  ticker.innerHTML = `
+1720|    <div class="ticker-item"><span class="num">${stats.total || "—"}</span> <span class="label">offres</span></div>
+1721|    <div class="ticker-item"><span class="num">${totalMeat}</span> <span class="label">viandes</span></div>
+1722|    <div class="ticker-item"><span class="num">${byCat.legume || 0}</span> <span class="label">légumes</span></div>
+1723|    <div class="ticker-item"><span class="num">${byCat.poisson || 0}</span> <span class="label">poissons</span></div>
+1724|    <div class="ticker-item"><span class="num">${byCat.fruit || 0}</span> <span class="label">fruits</span></div>
+1725|    <div class="ticker-item"><span class="num">${byCat.sauce || 0}</span> <span class="label">sauces</span></div>
+1726|    <div class="ticker-item"><span class="num">${byCat.yogourt || 0}</span> <span class="label">yogourts</span></div>
+1727|    <div class="ticker-item"><span class="num">${stats.stores ? stats.stores.length : "—"}</span> <span class="label">magasins</span></div>
+1728|  `;
+1729|
+1730|  if (stats.stores) {
+1731|    document.getElementById("storesBar").innerHTML = stats.stores.map(s => `<span class="store-badge" role="listitem">${escapeHTML(s)}</span>`).join("");
+1732|  }
+1733|
+1734|  renderCatTabs();
+1735|
+1736|  const app = document.getElementById("app");
+1737|  app.innerHTML = CAT_ORDER.map(cat => {
+1738|    const count = byCategory(cat).length;
+1739|    return `<div class="cat-section${cat === currentCat ? " active" : ""}" id="section-${cat}" role="tabpanel" aria-label="${CAT_NAMES[cat]}">
+1740|      <h2>${CAT_NAMES[cat]} <span class="cat-stats">${count} offres</span></h2>
+1741|      ${renderTypeFilters(cat)}
+1742|      <div class="deals-container">${renderCategory(cat)}</div>
+1743|    </div>`;
+1744|  }).join("");
+1745|
+1746|  generateJsonLd();
+1747|}
+1748|
+1749|function switchCat(cat) {
+1750|  currentCat = cat;
+1751|  typeFilter = "tout";
+1752|  // Hide search results when switching tabs
+1753|  const sr = document.getElementById("searchResultsContainer");
+1754|  if (sr) sr.style.display = "none";
+1755|  document.querySelectorAll(".cat-tab").forEach(t => {
+1756|    const isActive = t.dataset.cat === cat;
+1757|    t.classList.toggle("active", isActive);
+1758|    t.setAttribute("aria-selected", isActive);
+1759|  });
+1760|  document.querySelectorAll(".cat-section").forEach(s => s.classList.toggle("active", s.id === `section-${cat}`));
+1761|}
+1762|
+1763|function doSearch() {
+1764|  const q = document.getElementById("searchInput").value.trim();
+1765|  if (!q) {
+1766|    const c = document.getElementById("searchResultsContainer");
+1767|    if (c) c.style.display = "none";
+1768|    return;
+1769|  }
+1770|  const ql = q.toLowerCase();
+1771|  const results = dealsAll.filter(d => {
+1772|    const name = (d.name || "").toLowerCase();
+1773|    const store = (d.store || "").toLowerCase();
+1774|    const cat = (d.category || "").toLowerCase();
+1775|    return name.includes(ql) || store.includes(ql) || cat.includes(ql);
+1776|  }).slice(0, 30);
+1777|  
+1778|  // Show results in dedicated search overlay (not inside current tab)
+1779|  let container = document.getElementById("searchResultsContainer");
+1780|  if (!container) {
+1781|    container = document.createElement("div");
+1782|    container.id = "searchResultsContainer";
+1783|    container.style.cssText = "max-width:640px;margin:0 auto;padding:0 16px";
+1784|    const app = document.getElementById("app");
+1785|    app.insertBefore(container, app.firstChild);
+1786|    // Add close button and show/hide
+1787|    container.addEventListener("click", function(e) {
+1788|      if (e.target === container || e.target.classList.contains("search-close-btn")) {
+1789|        container.style.display = "none";
+1790|      }
+1791|    });
+1792|  }
+1793|  
+1794|  if (results.length === 0) {
+1795|    showToast(`🔍 Aucun résultat pour "${q}"`);
+1796|    return;
+1797|  }
+1798|  
+1799|  const catMap = {};
+1800|  results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
+1801|  const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
+1802|  
+1803|  container.style.display = "block";
+1804|  container.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 8px">
+1805|    <div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main)">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>
+1806|    <button type="button" class="search-close-btn" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);line-height:1" aria-label="Fermer la recherche">✕</button>
+1807|  </div>
+1808|  <div class="deals-container">${results.map((d,i) => renderDealCard(d,i+1)).join("")}</div>`;
+1809|}
+1810|
+1811|// ─── CTA ───
+1812|function showSubscribe() {
+1813|  const f = document.getElementById("subscribeWrap");
+1814|  f.style.display = f.style.display === "none" ? "block" : "none";
+1815|}
+1816|function subscribeEmail() {
+1817|  const email = document.getElementById("emailInput").value.trim();
+1818|  if (email) showToast("📬 Merci! On t'ajoute à la liste!");
+1819|  else showToast("Entre ton courriel!");
+1820|}
+1821|function copyLink() {
+1822|  navigator.clipboard.writeText(window.location.href).then(() => {
+1823|    showToast("🔗 Lien copié!");
+1824|  });
+1825|}
+1826|function shareDiscord() {
+1827|  showToast("🎮 Lien Discord à venir! Reviens nous voir.");
+1828|}
+1829|
+1830|// ─── MODAL DÉTAIL ───
+1831|function showDealDetail(id) {
+1832|  const d = dealsAll.find(item => item.id == id);
+1833|  if (!d) return;
+1834|  
+1835|  document.getElementById("modalTitle").textContent = d.name_short || d.name;
+1836|  document.getElementById("modalStore").textContent = `${d.store_emoji || "🏪"} ${d.store}`;
+1837|  
+1838|  // Lien vers le site de l'épicerie
+1839|  const storeLink = document.getElementById("modalStoreLink");
+1840|  if (d.store_url) {
+1841|    storeLink.href = d.store_url;
+1842|    storeLink.style.display = "inline";
+1843|  } else {
+1844|    storeLink.style.display = "none";
+1845|  }
+1846|  
+1847|  // Bouton circulaire
+1848|  const flyerBtn = document.getElementById("modalFlyerBtn");
+1849|  const flyerMap = {"Super C":"superc","Metro":"metro","Maxi":"maxi","Provigo":"provigo","Loblaws":"loblaws","IGA":"iga","Tigre Géant":"tigregeant"};
+1850|  const flyerKey = flyerMap[d.store];
+1851|  if (flyerKey) {
+1852|    flyerBtn.style.display = "inline";
+1853|    flyerBtn.onclick = () => openFullscreenImg("flyers/" + flyerKey + "-flyer.png");
+1854|  } else {
+1855|    flyerBtn.style.display = "none";
+1856|  }
+1857|  document.getElementById("modalPrice").textContent = d.price ? `${d.price.toFixed(2)}$` : "";
+1858|  
+1859|  let details = "";
+1860|  if (d.per_kg) details += `<div class="modal-row"><span class="lbl">Prix au kg</span><span class="val">${d.per_kg.toFixed(2)}$/kg</span></div>`;
+1861|  if (d.per_lb) details += `<div class="modal-row"><span class="lbl">Prix la livre</span><span class="val">${d.per_lb.toFixed(2)}$/lb</span></div>`;
+1862|  if (d.protein_per_dollar) details += `<div class="modal-row"><span class="lbl">Protéines</span><span class="val">💪 ${d.protein_per_dollar}g/$</span></div>`;
+1863|  if (d.weight_kg) details += `<div class="modal-row"><span class="lbl">Poids</span><span class="val">${(d.weight_kg * 1000).toFixed(0)}g</span></div>`;
+1864|  if (d.valid_to) details += `<div class="modal-row"><span class="lbl">Valable jusqu'au</span><span class="val">${escapeHTML(d.valid_to)}</span></div>`;
+1865|  
+1866|  document.getElementById("modalDetails").innerHTML = details;
+1867|  
+1868|  const recipeBtn = document.getElementById("modalRecipeBtn");
+1869|  if (d.recipe && d.recipe.title) {
+1870|    recipeBtn.textContent = `🍳 ${d.recipe.title}` + (d.recipe.rating ? ` ⭐${d.recipe.rating}` : "");
+1871|    recipeBtn.style.display = "block";
+1872|    recipeBtn.style.cursor = "default";
+1873|  } else {
+1874|    recipeBtn.style.display = "none";
+1875|  }
+1876|  
+1877|  const imgWrap = document.getElementById("modalImgWrap");
+1878|  const modalImg = document.getElementById("modalImg");
+1879|  if (d.image_url) {
+1880|    modalImg.src = d.image_url;
+1881|    imgWrap.style.display = "block";
+1882|  } else {
+1883|    imgWrap.style.display = "none";
+1884|  }
+1885|  
+1886|  document.getElementById("modalOverlay").classList.add("open");
+1887|  document.getElementById("modalPanel").classList.add("open");
+1888|}
+1889|
+1890|function closeDealDetail() {
+1891|  document.getElementById("modalOverlay").classList.remove("open");
+1892|  document.getElementById("modalPanel").classList.remove("open");
+1893|}
+1894|
+1895|// ─── PLEIN ÉCRAN IMAGE (comme Discord) ───
+1896|function openFullscreenImg(src) {
+1897|  document.getElementById("imgFullscreenContent").src = src;
+1898|  document.getElementById("imgFullscreen").classList.add("open");
+1899|  document.body.style.overflow = "hidden";
+1900|}
+1901|function closeFullscreenImg() {
+1902|  document.getElementById("imgFullscreen").classList.remove("open");
+1903|  document.body.style.overflow = "";
+1904|}
+1905|document.addEventListener("keydown", e => {
+1906|  if (e.key === "Escape") { closeFullscreenImg(); closeDealDetail(); }
+1907|});
+1908|
+1909|// ─── INIT ───
+1910|document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+1911|
+1912|// Délégation d'événements : clic sur les cartes deal
+1913|document.addEventListener("click", e => {
+1914|  const card = e.target.closest("[data-deal-id]");
+1915|  if (card) {
+1916|    const id = card.dataset.dealId;
+1917|    if (id) showDealDetail(id);
+1918|  }
+1919|});
+1920|
+1921|// Support clavier : Enter/Espace sur les cartes deal
+1922|document.addEventListener("keydown", e => {
+1923|  if (e.key === "Enter" || e.key === " ") {
+1924|    const card = e.target.closest("[data-deal-id]");
+1925|    if (card) {
+1926|      e.preventDefault();
+1927|      const id = card.dataset.dealId;
+1928|      if (id) showDealDetail(id);
+1929|    }
+1930|  }
+1931|});
+1932|
+1933|async function init() {
+1934|  const ok = await loadData();
+1935|  if (!ok) {
+1936|    document.getElementById("app").innerHTML = `<div class="error-state">
+1937|      <h2>😕 Données temporairement indisponibles</h2>
+1938|      <p>Les spéciaux de la semaine n'ont pas pu être chargés.</p>
+1939|      <p style="margin-top:12px;color:var(--text-muted);font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
+1940|      <button type="button" class="cta-primary" style="margin-top:16px;border:none;cursor:pointer" onclick="location.reload()">🔄 Réessayer</button>
+1941|    </div>`;
+1942|    return;
+1943|  }
+1944|  renderAll();
+1945|  loadPipelineStatus();
+1946|}
+1947|
+1948|function loadPipelineStatus() {
+1949|  const el = document.getElementById("pipelineStatus");
+1950|  fetch("data/status.json")
+1951|    .then(r => r.ok ? r.json() : null)
+1952|    .then(s => {
+1953|      if (!s) { el.textContent = "⚙️ Statut indisponible"; return; }
+1954|      if (s.warning) {
+1955|        el.innerHTML = `⚠️ ${escapeHTML(s.warning)} · ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
+1956|      } else if (s.success) {
+1957|        el.innerHTML = `✅ Dernière mise à jour : ${escapeHTML(s.last_run?.substring(0, 10) || "")}`;
+1958|      } else {
+1959|        el.innerHTML = `❌ Échec du dernier scraping (${escapeHTML(s.last_run?.substring(0, 10) || "")})`;
+1960|      }
+1961|    })
+1962|    .catch(() => { el.textContent = ""; });
+1963|}
+1964|
+1965|init();
+1966|</script>
+1967|</body>
+1968|</html>
+1969|
