@@ -655,6 +655,21 @@ def classify_meat_type(name, current_mt):
     if current_mt in MEAT_TYPES:
         return current_mt
 
+    # Certains plats préparés contiennent des mots fruit (pommes de terre, tortilla)
+    # mais ne sont pas des fruits → panier
+    NON_FRUIT_PREP_KW = ['tortilla', 'omelette', 'pommes de terre', 'pomme de terre']
+    for kw in NON_FRUIT_PREP_KW:
+        if kw in name_lower:
+            return "panier"
+
+    # Jambon/bacon/saucisse même sans meat_type en DB → viande
+    MEAT_OVERRIDE_KW = {'jambon': 'porc', 'ham': 'porc', 'bacon': 'porc', 'saucisse': 'porc',
+                         'sausage': 'porc', 'pepperoni': 'porc', 'salami': 'porc',
+                         'chorizo': 'porc'}
+    for kw, mt in MEAT_OVERRIDE_KW.items():
+        if kw in name_lower:
+            return mt
+
     for kw in FRUIT_KW:
         if kw in name_lower:
             return "fruit"
