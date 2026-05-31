@@ -506,6 +506,14 @@ RECIPE_FRENCH = {
         "title_fr": "Boulettes de poulet aigre-douces",
         "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
     },
+    "Hamburger Steak with Onions": {
+        "title_fr": "Steak hamburger aux oignons",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Hamburger Steak with Onions and Balsamic Vinegar": {
+        "title_fr": "Steak hamburger aux oignons",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
     "Stuffed Zucchini Au Gratin": {
         "title_fr": "Courgettes farcies au gratin",
         "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
@@ -514,7 +522,15 @@ RECIPE_FRENCH = {
         "title_fr": "Sauce bolognaise à la mijoteuse",
         "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
     },
-    "Pork Meatballs with Roasted Peppers and Barbe": {
+    "Braised Beef and Oka Cheese Shepherd's Pie": {
+        "title_fr": "Pâté chinois au bœuf braisé et fromage Oka",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Shepherd's Pie with Cheese Curd (Pâté Chinois)": {
+        "title_fr": "Pâté chinois au fromage en grains",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Pork Meatballs with Roasted Peppers and Barbecue Sauce": {
         "title_fr": "Boulettes de porc aux poivrons rôtis et BBQ",
         "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
     },
@@ -540,6 +556,34 @@ RECIPE_FRENCH = {
     },
     "Maple Lodge Farms Originale Saucisses Fumées De Poulet": {
         "title_fr": "Saucisses fumées de poulet originales Maple Lodge Farms",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Ground Pork and Shrimp Ramen Soup": {
+        "title_fr": "Soupe ramen au porc haché et crevettes",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Two-Bean Chili": {
+        "title_fr": "Chili aux deux haricots",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Risotto with Ground Veal, Spinach and Roasted Tomatoes": {
+        "title_fr": "Risotto au veau haché, épinards et tomates rôties",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Spaghetti Bolognese Sauce": {
+        "title_fr": "Sauce bolognaise pour spaghetti",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Indian-Spiced Chili": {
+        "title_fr": "Chili aux épices indiennes",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Bolognese Sauce": {
+        "title_fr": "Sauce bolognaise",
+        "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
+    },
+    "Veal Cocktail Meatballs": {
+        "title_fr": "Boulettes cocktail de veau",
         "url_fr": "https://www.ricardocuisine.com/fr/recettes/"
     },
 }
@@ -787,8 +831,10 @@ def translate_recipe(recipe):
         return recipe
     
     title = recipe.get("title", "")
-    if title in RECIPE_FRENCH:
-        fr = RECIPE_FRENCH[title]
+    # Normaliser les apostrophes courbes → droites pour matcher RECIPE_FRENCH
+    norm_title = title.replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"')
+    if norm_title in RECIPE_FRENCH:
+        fr = RECIPE_FRENCH[norm_title]
         return {
             **recipe,
             "title": fr["title_fr"],
@@ -1139,8 +1185,11 @@ def export_recipes_top():
         except:
             steps = 0
         
+        # Nettoyer les caractères de contrôle unicode (\\u2028 etc.) sans toucher la ponctuation
+        clean_title = re.sub(r'[\u0000-\u001f\u2028-\u202f\ufff0-\uffff]', '', r["title"]).strip()
+        
         recipe = {
-            "title": r["title"],
+            "title": clean_title,
             "meat_type": r["meat_type"],
             "source": r["source_name"],
             "url": r["source_url"],

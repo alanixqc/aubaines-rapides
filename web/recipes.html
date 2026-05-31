@@ -7,82 +7,207 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/location.css">
 <style>
-/* ─── Recipe Page Styles ─── */
+/* ─── Recipe Page Styles — matching index.html design ─── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Override the compact deals-grid for recipe cards */
+:root {
+  --bg-paper: #f7f1e7;
+  --bg-surface: #fffaf2;
+  --bg-card: #fffdf7;
+  --text-main: #2f251c;
+  --text-muted: #7a6b55;
+  --deal-red: #b8492e;
+  --deal-red-dark: #8f3422;
+  --border-soft: #d8c7aa;
+  --saving-yellow: #ffc857;
+  --saving-gold: #c9942e;
+  --fresh-green: #2f7d46;
+  --verified-blue: #1f6f9f;
+}
+
+/* Override body — paper texture from index.html */
+body {
+  font-family: 'Inter', 'Source Sans 3', Arial, sans-serif;
+  background-color: var(--bg-paper);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b79b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: var(--text-main);
+}
+
+/* Override page container */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Filters — style cat-tab from index.html */
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 2px solid var(--border-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.filter-btn:hover {
+  border-color: var(--deal-red);
+  color: var(--deal-red);
+}
+
+.filter-btn.active {
+  background: var(--deal-red);
+  color: var(--bg-surface);
+  border-color: var(--deal-red);
+}
+
+/* Search input — light theme */
+.search-input-wrap {
+  margin-bottom: 16px;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
+  padding: 10px 14px;
+  color: var(--text-main);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input-wrap input:focus {
+  border-color: var(--deal-red);
+}
+
+.search-input-wrap input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Recipe grid */
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 20px 0;
+  gap: 12px;
+  margin: 0 0 20px;
 }
 
+/* Recipe cards — like deal-cards from index.html */
 .recipe-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 2px solid var(--border-soft);
   overflow: hidden;
-  transition: all 0.25s ease;
+  transition: border-color 0.15s, box-shadow 0.15s;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 
 .recipe-card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  border-color: var(--deal-red);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(47,37,28,0.10);
 }
 
 .recipe-card-img {
   width: 100%;
   height: 180px;
-  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  background: var(--bg-paper);
 }
+
 .recipe-card-img .rc-fallback {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
   font-size: 3em;
-  color: var(--text-dim);
+  color: var(--text-muted);
 }
+
 .recipe-card-img img {
   position: relative;
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .rc-badge {
   position: absolute; top: 8px; left: 8px;
-  background: rgba(47,37,28,.82); color: #fffaf2;
+  background: var(--deal-red); color: var(--bg-surface);
   font-family: 'Fraunces', Georgia, serif;
   font-size: 10px; font-weight: 700; letter-spacing: .5px;
   text-transform: uppercase;
   padding: 3px 8px; line-height: 1.3;
   pointer-events: none;
-  border-radius: 4px;
 }
-.recipe-card:hover .rc-badge { background: var(--accent); }
 
 .recipe-card-body {
-  padding: 16px;
+  padding: 14px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .recipe-card-title {
-  font-size: 0.95em;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
+  color: var(--text-main);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -92,10 +217,11 @@
 .recipe-card-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
   font-size: 0.8em;
   color: var(--text-muted);
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .recipe-card-meta span {
@@ -112,7 +238,7 @@
 }
 
 .stars-empty {
-  color: var(--text-dim);
+  color: var(--text-muted);
   opacity: 0.3;
 }
 
@@ -120,9 +246,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px 14px;
+  padding: 0 14px 12px;
   font-size: 0.75em;
-  color: var(--text-dim);
+  color: var(--text-muted);
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .recipe-card-footer .source {
@@ -131,48 +258,65 @@
   gap: 4px;
 }
 
+/* Meat-type badges */
 .recipe-badge {
   display: inline-block;
   padding: 2px 10px;
-  border-radius: 6px;
   font-size: 0.7em;
   font-weight: 600;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
-.recipe-badge.boeuf { background: rgba(231,76,60,0.15); color: var(--red); }
-.recipe-badge.poulet { background: rgba(243,156,18,0.15); color: var(--orange); }
-.recipe-badge.porc { background: rgba(233,69,96,0.15); color: var(--accent); }
-.recipe-badge.veau { background: rgba(155,89,182,0.15); color: var(--purple); }
-.recipe-badge.mixte { background: rgba(52,152,219,0.15); color: var(--blue); }
+.recipe-badge.boeuf { background: rgba(231,76,60,0.15); color: var(--deal-red); }
+.recipe-badge.poulet { background: rgba(243,156,18,0.15); color: #c97d0e; }
+.recipe-badge.porc { background: rgba(233,69,96,0.15); color: var(--deal-red); }
+.recipe-badge.veau { background: rgba(155,89,182,0.15); color: #7d3c98; }
+.recipe-badge.mixte { background: rgba(52,152,219,0.15); color: #1f6f9f; }
 
-/* Ingredient search highlight */
+/* Ingredient preview */
 .ingredient-preview {
   font-size: 0.75em;
-  color: var(--text-dim);
+  color: var(--text-muted);
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .ingredient-preview mark {
-  background: rgba(233,69,96,0.3);
-  color: var(--accent-hover);
+  background: rgba(184,73,46,0.2);
+  color: var(--deal-red);
   padding: 0 2px;
-  border-radius: 2px;
 }
 
 /* No results */
 .no-results {
   text-align: center;
   padding: 60px 20px;
-  color: var(--text-dim);
+  color: var(--text-muted);
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .no-results .emoji {
   font-size: 3em;
   margin-bottom: 12px;
+}
+
+/* Footer — style index.html */
+.footer {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 2px solid #e8dccb;
+  margin-top: 8px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.footer p {
+  font-style: italic;
 }
 
 /* Responsive */
@@ -182,6 +326,9 @@
   }
   .recipe-card-img {
     height: 150px;
+  }
+  .page-title {
+    font-size: 18px;
   }
 }
 </style>

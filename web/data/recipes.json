@@ -75,10 +75,10 @@
     "steps_count": 0
   },
   {
-    "title": "Childhood Meatballs   ",
+    "title": "Boulettes d'enfance",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/4962-childhood-meatballs----",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_4962.jpg",
     "rating": 5.0,
     "rating_count": 125,
@@ -90,10 +90,10 @@
     "steps_count": 0
   },
   {
-    "title": "Braised Bœuf and Oka Cheese Shepherd’s Pie",
+    "title": "Pâté chinois au bœuf braisé et fromage Oka",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/6611-braised-beef-and-oka-cheese-shepherd-s-pie",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_13575899554b685272fccf.jpg",
     "rating": 5.0,
     "rating_count": 124,
@@ -105,10 +105,10 @@
     "steps_count": 0
   },
   {
-    "title": "Pâté Chinois (Shepherd’s Pie)",
+    "title": "Pâté chinois",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/5541-pate-chinois-shepherd-s-pie",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_5541.jpg",
     "rating": 5.0,
     "rating_count": 119,
@@ -120,10 +120,10 @@
     "steps_count": 0
   },
   {
-    "title": "Shepherd’s Pie with Cheese Curd (Pâté Chinois)",
+    "title": "Pâté chinois au fromage en grains",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/3680-shepherd-s-pie-with-cheese-curd-pate-chinois",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_3680.jpg",
     "rating": 5.0,
     "rating_count": 106,
@@ -255,10 +255,10 @@
     "steps_count": 0
   },
   {
-    "title": "Porc Meatballs with Roasted Peppers and Barbecue Sauce",
+    "title": "Boulettes de porc aux poivrons rôtis et BBQ",
     "meat_type": "porc",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/8432-pork-meatballs-with-roasted-peppers-and-barbecue-sauce",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_8432.jpg",
     "rating": 5.0,
     "rating_count": 50,
@@ -330,10 +330,10 @@
     "steps_count": 0
   },
   {
-    "title": "Ground Porc and Shrimp Ramen Soup",
+    "title": "Soupe ramen au porc haché et crevettes",
     "meat_type": "porc",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/6121-ground-pork-and-shrimp-ramen-soup",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_75981074752f1489fed021.jpg",
     "rating": 4.0,
     "rating_count": 38,
@@ -345,10 +345,10 @@
     "steps_count": 0
   },
   {
-    "title": "Two-Bean Chili",
+    "title": "Chili aux deux haricots",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/5277-two-bean-chili",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_5277.jpg",
     "rating": 5.0,
     "rating_count": 35,
@@ -360,10 +360,10 @@
     "steps_count": 0
   },
   {
-    "title": "Hamburger Steak with Onions",
+    "title": "Steak hamburger aux oignons",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/8952-hamburger-steak-with-onions",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_8952.jpg",
     "rating": 4.0,
     "rating_count": 33,
@@ -375,10 +375,10 @@
     "steps_count": 0
   },
   {
-    "title": "Risotto with Ground Veau, Spinach and Roasted Tomatoes",
+    "title": "Risotto au veau haché, épinards et tomates rôties",
     "meat_type": "veau",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/7723-risotto-with-ground-veal-spinach-and-roasted-tomatoes",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_7723.jpg",
     "rating": 5.0,
     "rating_count": 33,
@@ -390,10 +390,10 @@
     "steps_count": 0
   },
   {
-    "title": "Spaghetti Bolognese Sauce",
+    "title": "Sauce bolognaise pour spaghetti",
     "meat_type": "boeuf",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/577-spaghetti-bolognese-sauce",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_577-v2-1606422030.jpg",
     "rating": 4.0,
     "rating_count": 31,
@@ -405,10 +405,10 @@
     "steps_count": 0
   },
   {
-    "title": "Indian-Spiced Chili",
+    "title": "Chili aux épices indiennes",
     "meat_type": "porc",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/8813-indian-spiced-chili",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_8813.jpg",
     "rating": 5.0,
     "rating_count": 30,
@@ -420,10 +420,10 @@
     "steps_count": 0
   },
   {
-    "title": "Bolognese Sauce",
+    "title": "Sauce bolognaise",
     "meat_type": "veau",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/685-bolognese-sauce",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_685.jpg",
     "rating": 4.0,
     "rating_count": 26,
@@ -435,10 +435,10 @@
     "steps_count": 0
   },
   {
-    "title": "Veau Cocktail Meatballs",
+    "title": "Boulettes cocktail de veau",
     "meat_type": "veau",
     "source": "Ricardo",
-    "url": "https://www.ricardocuisine.com/fr/recettes/5732-veal-cocktail-meatballs",
+    "url": "https://www.ricardocuisine.com/fr/recettes/",
     "image_url": "https://images.ricardocuisine.com/services/recipes/{width}x{height}_5732.jpg",
     "rating": 5.0,
     "rating_count": 24,
