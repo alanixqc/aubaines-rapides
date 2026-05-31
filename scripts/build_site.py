@@ -851,6 +851,27 @@ def translate_recipe(recipe):
     return recipe
 
 
+def format_duration_french(duration_str):
+    """Parse ISO 8601 duration (format PT15M, PT1H30M) depuis la DB vers français.
+    Exemples: PT15M → '15 min', PT1H → '1 h', PT1H30M → '1 h 30 min'
+    """
+    if not duration_str:
+        return ""
+    # Extraire la durée ISO du texte brut (ex: 'Time": "PT15M",')
+    m = re.search(r'PT(\d+H)?(\d+M)?', duration_str)
+    if not m:
+        return ""
+    h = int(m.group(1).replace('H', '')) if m.group(1) else 0
+    m_val = int(m.group(2).replace('M', '')) if m.group(2) else 0
+
+    if h > 0 and m_val > 0:
+        return f"{h} h {m_val} min"
+    elif h > 0:
+        return f"{h} h"
+    else:
+        return f"{m_val} min"
+
+
 def get_recipe_link(meat_type, all_recipes):
     """Trouve une recette qui correspond au type de viande et la traduit."""
     if meat_type not in all_recipes:
@@ -902,7 +923,7 @@ def load_recipes():
             "url": r["source_url"],
             "rating_count": r["rating_count"] or 0,
             "rating": r["rating"],
-            "prep_time": r["prep_time"],
+            "prep_time": format_duration_french(r["prep_time"]),
             "cook_time": r["cook_time"],
             "total_time": r["total_time"],
             "servings": r["servings"],
@@ -1196,7 +1217,7 @@ def export_recipes_top():
             "image_url": r["image_url"],
             "rating": r["rating"],
             "rating_count": r["rating_count"] or 0,
-            "prep_time": r["prep_time"],
+            "prep_time": format_duration_french(r["prep_time"]),
             "cook_time": r["cook_time"],
             "total_time": r["total_time"],
             "servings": r["servings"],
