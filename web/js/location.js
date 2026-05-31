@@ -112,6 +112,7 @@ function showLocationModal() {
   overlay.id = 'locationOverlay';
   overlay.innerHTML = `
     <div class="location-modal">
+      <button class="location-close" onclick="closeLocationModal()" aria-label="Fermer">✕</button>
       <h2>📍 Entrez votre code postal</h2>
       <p>Les deals d'épicerie varient selon votre région. Donnez-nous votre code postal pour voir les spéciaux près de chez vous.</p>
       <div class="location-input-group">
@@ -124,6 +125,7 @@ function showLocationModal() {
         <button onclick="quickLocation('H2X')">Montréal</button>
         <button onclick="quickLocation('G1V')">Québec</button>
       </div>
+      <button class="location-skip" onclick="closeLocationModal()">Passer ➜</button>
     </div>
   `;
   document.body.appendChild(overlay);

@@ -36,12 +36,85 @@ body {
   color: var(--text-main);
 }
 
+/* ===== HEADER — matching index.html ===== */
+.header {
+  background: var(--bg-surface);
+  border-bottom: 3px solid var(--border-soft);
+  padding: 18px 16px 14px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.logo {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--deal-red);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+}
+.logo-sub {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: block;
+  margin-top: -2px;
+}
+.week-badge {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-paper);
+  padding: 4px 12px;
+  border: 2px dashed var(--border-soft);
+  white-space: nowrap;
+}
+/* ===== Recipe sub-nav ===== */
+.recipe-nav {
+  display: flex;
+  gap: 4px;
+  padding: 10px 16px;
+  background: var(--bg-surface);
+  border-bottom: 2px solid var(--border-soft);
+  flex-wrap: wrap;
+}
+.recipe-nav a {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 2px solid var(--border-soft);
+  transition: all 0.15s;
+  line-height: 1.3;
+}
+.recipe-nav a:hover {
+  border-color: var(--deal-red);
+  color: var(--deal-red);
+}
+.recipe-nav a.active {
+  background: var(--deal-red);
+  color: var(--bg-surface);
+  border-color: var(--deal-red);
+}
+
 /* Override page container */
 .page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 80px;
+  padding-top: 20px;
   min-height: 100vh;
 }
 
@@ -142,7 +215,7 @@ body {
 /* Recipe cards — like deal-cards from index.html */
 .recipe-card {
   background: var(--bg-card);
-  border: 2px solid var(--border-soft);
+  border: 2px double var(--border-soft);
   overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;
   display: flex;
@@ -204,7 +277,7 @@ body {
 
 .recipe-card-title {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
   color: var(--text-main);
@@ -335,21 +408,22 @@ body {
 </head>
 <body>
 
-<!-- Nav -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">⚡ Aubaines Rapides</a>
-    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
-    <div class="nav-links">
-      <a href="index.html">Accueil</a>
-      <a href="viande.html">🥩 Viande</a>
-      <a href="legumes.html">🥦 Légumes</a>
-      <a href="recherche.html">🔍 Recherche</a>
-      <a href="tendances.html">📈 Tendances</a>
-      <a href="recipes.html" class="active">📖 Recettes</a>
-    </div>
+<!-- HEADER — matching index.html -->
+<header class="header">
+  <div class="header-top">
+    <a href="index.html" class="logo" aria-label="Accueil Aubaines Rapides">
+      ⚡ Aubaines Rapides
+      <span class="logo-sub">— les spéciaux de la semaine —</span>
+    </a>
+    <span class="week-badge" id="weekBadge">📅 ...</span>
   </div>
-</nav>
+</header>
+
+<!-- Sub-nav -->
+<div class="recipe-nav">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="recipes.html" class="active">📖 Recettes</a>
+</div>
 
 <div class="page">
   <h1 class="page-title">📖 Recettes populaires</h1>
