@@ -305,9 +305,9 @@ EN_TO_FR_TRANSLATIONS = {
     "12-pack": "12 unités",
     "with": "avec",
     "without": "sans",
-    "for": "pour",
-    # NOTE: "and", "in", "of", "at" etc. (mots ≤3 lettres) NE DOIVENT PAS être ici —
-    # ils matchent à l'intérieur de mots plus longs ("in" dans "grain" → "graen", "and" dans "grand" → "gret")
+    # NOTE: "for", "and", "in", "of", "at" etc. (mots ≤3 lettres) NE DOIVENT PAS être ici —
+    # ils matchent à l'intérieur de mots plus longs ("for" dans "forêt" → "pouret", "in" dans "grain" → "graen")
+    # Utiliser le word-boundary post-processing dans translate_product_name() à la place
     # Termes manquants (juin 2026) — ajoutés après avoir trouvé 81 noms encore en anglais sur le site
     "kidneys": "rognons",
     "kidney": "rognon",
@@ -676,6 +676,7 @@ def translate_product_name(name):
     # Ces mots sont SÉCURITAIRES en \b car ils n'apparaissent pas à l'intérieur 
     # de mots français dans le contexte des produits d'épicerie
     name_lower = re.sub(r'\band\b', 'et', name_lower, flags=re.IGNORECASE)
+    name_lower = re.sub(r'\bfor\b', 'pour', name_lower, flags=re.IGNORECASE)
     name_lower = re.sub(r'\bwine\b', 'vin', name_lower, flags=re.IGNORECASE)
     name_lower = re.sub(r'\bshallots\b', 'échalotes', name_lower, flags=re.IGNORECASE)
     name_lower = re.sub(r'\bshallot\b', 'échalote', name_lower, flags=re.IGNORECASE)
