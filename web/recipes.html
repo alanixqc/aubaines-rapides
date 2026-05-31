@@ -79,6 +79,23 @@ body {
   border: 2px dashed var(--border-soft);
   white-space: nowrap;
 }
+.location-badge {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-paper);
+  padding: 4px 10px;
+  border: 2px solid var(--border-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+  margin-left: 6px;
+}
+.location-badge:hover {
+  border-color: var(--deal-red);
+  color: var(--deal-red);
+}
 /* ===== Recipe sub-nav ===== */
 .recipe-nav {
   display: flex;
@@ -416,6 +433,7 @@ body {
       <span class="logo-sub">— les spéciaux de la semaine —</span>
     </a>
     <span class="week-badge" id="weekBadge">📅 ...</span>
+    <span class="location-badge" id="locationBadge" onclick="showLocationModal()" style="display:none">📍</span>
   </div>
 </header>
 
