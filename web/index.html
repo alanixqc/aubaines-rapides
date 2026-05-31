@@ -15,6 +15,7 @@
 <meta name="twitter:description" content="Les meilleurs spéciaux de la semaine au Québec, comparés rapidement.">
 <meta name="twitter:image" content="https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png">
 <meta name="theme-color" content="#b8492e">
+<meta name="dateModified" content="">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 <title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1620,6 +1621,95 @@ function renderCategory(cat) {
   return deals.slice(0, 8).map((d, i) => renderDealCard(d, i + 1)).join("");
 }
 
+function generateJsonLd() {
+  // Remove any existing JSON-LD from previous renders
+  document.querySelectorAll('script[data-jsonld-deals]').forEach(s => s.remove());
+
+  // Collect top deals across all categories (max 10)
+  const topDeals = [];
+  for (const cat of CAT_ORDER) {
+    const filtered = dealsAll;
+    const accepted = CAT_MERGE[cat];
+    const items = filtered.filter(d => accepted ? accepted.has(d.category) : d.category === cat);
+    items.sort((a, b) => {
+      if (a.per_kg && b.per_kg) return a.per_kg - b.per_kg;
+      if (a.per_kg) return -1; if (b.per_kg) return 1;
+      return (a.price || 0) - (b.price || 0);
+    });
+    for (const d of items.slice(0, 3)) {
+      if (topDeals.length >= 10) break;
+      if (!topDeals.find(x => x.id === d.id)) topDeals.push(d);
+    }
+    if (topDeals.length >= 10) break;
+  }
+
+  if (topDeals.length === 0) return;
+
+  const siteUrl = 'https://alanixqc.github.io/aubaines-rapides/web/';
+  const weekDate = stats.week || '';
+
+  // Build the ItemList
+  const itemList = topDeals.map((d, i) => {
+    const offer = {
+      "@type": "Offer",
+      "price": d.price != null ? d.price.toFixed(2) : undefined,
+      "priceCurrency": "CAD",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "Organization", "name": d.store },
+      "url": siteUrl
+    };
+    if (d.valid_to) {
+      offer["priceValidUntil"] = d.valid_to;
+    }
+
+    const product = {
+      "@type": "Product",
+      "name": d.name_short || d.name,
+      "category": CAT_NAMES[d.category] || d.category,
+      "description": `${d.name} — ${d.price != null ? d.price.toFixed(2) + '$' : ''} chez ${d.store}` +
+        (d.per_kg != null ? ` (${d.per_kg.toFixed(2)}$/kg)` : '') +
+        (d.detail ? `. ${d.detail}` : ''),
+      "offers": offer
+    };
+    if (d.image_url) {
+      product["image"] = d.image_url;
+    }
+    if (d.protein_per_100g) {
+      product["additionalProperty"] = [
+        { "@type": "PropertyValue", "name": "Protéines par dollar", "value": d.protein_per_dollar + "g/$" }
+      ];
+    }
+
+    return {
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": product
+    };
+  });
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": `Aubaines Rapides — Spéciaux de la semaine ${weekDate}`,
+    "description": `Top ${topDeals.length} spéciaux d'épicerie au Québec pour la semaine du ${weekDate}.`,
+    "numberOfItems": topDeals.length,
+    "url": siteUrl,
+    "itemListElement": itemList
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.setAttribute('data-jsonld-deals', 'true');
+  script.textContent = JSON.stringify(jsonLd, null, 2);
+  document.head.appendChild(script);
+
+  // Update dateModified meta tag
+  const dateMod = document.querySelector('meta[name="dateModified"]');
+  if (dateMod && weekDate) {
+    dateMod.setAttribute('content', weekDate);
+  }
+}
+
 function renderAll() {
   document.getElementById("weekBadge").textContent = `📅 ${stats.week || "..."}`;
 
@@ -1652,6 +1742,8 @@ function renderAll() {
       <div class="deals-container">${renderCategory(cat)}</div>
     </div>`;
   }).join("");
+
+  generateJsonLd();
 }
 
 function switchCat(cat) {
