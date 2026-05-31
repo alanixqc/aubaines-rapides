@@ -386,6 +386,7 @@ def run_pipeline():
 
         status["success"] = False
         status["error"] = str(e)
+        status["warning"] = f"Exception lors du pipeline: {str(e)}"
         status["stats"]["elapsed_seconds"] = round(elapsed, 1)
         save_status(status)
         return status
