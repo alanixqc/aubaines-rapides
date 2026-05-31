@@ -17,8 +17,29 @@
 <title>Aubaines Rapides — Les spéciaux d'épicerie de la semaine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
+/* ===== CSS CUSTOM PROPERTIES — Aubaines Rapides Design System ===== */
+:root {
+  --bg-paper: #f7f1e7;
+  --bg-surface: #fffaf2;
+  --bg-card: #fffdf7;
+  --text-main: #2f251c;
+  --text-muted: #7a6b55;
+  --deal-red: #b8492e;
+  --deal-red-dark: #8f3422;
+  --saving-yellow: #ffc857;
+  --saving-gold: #c9942e;
+  --fresh-green: #2f7d46;
+  --fresh-green-soft: #e7f3e8;
+  --verified-blue: #1f6f9f;
+  --verified-blue-soft: #e4f0f7;
+  --border-soft: #d8c7aa;
+  --border-strong: #c6ad83;
+  --badge-beige: #f0e8da;
+  --badge-beige-text: #7a5c2e;
+  --badge-beige-border: #dcccb0;
+}
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-text-size-adjust: 100%; }
@@ -31,26 +52,26 @@ html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 
 /* ===== PAPER TEXTURE BACKGROUND ===== */
 body {
-  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  background-color: #f3ede3;
+  font-family: 'Inter', 'Source Sans 3', Arial, sans-serif;
+  background-color: var(--bg-paper);
   background-image:
     radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b79b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  color: #3d2c1e;
+  color: var(--text-main);
   min-height: 100vh;
   line-height: 1.5;
 }
 
 /* ===== HEADER — CIRCA / FLYER STYLE ===== */
 .header {
-  background: #fff8ee;
-  border-bottom: 3px solid #d4c3a8;
+  background: var(--bg-surface);
+  border-bottom: 3px solid var(--border-soft);
   padding: 18px 16px 14px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(61,44,30,0.06);
+  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
 }
 /* ===== WEEK NAVIGATION ===== */
 .week-nav {
@@ -60,37 +81,38 @@ body {
   gap: 8px;
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px dashed #d4c3a8;
+  border-top: 1px dashed var(--border-soft);
 }
 .week-nav-btn {
-  background: #fffcf5;
-  border: 2px solid #d4c3a8;
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
   padding: 6px 14px;
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: #7a6b55;
+  color: var(--text-muted);
   cursor: pointer;
   transition: all 0.15s;
 }
 .week-nav-btn:hover {
-  border-color: #b8492e;
-  color: #b8492e;
+  border-color: var(--deal-red);
+  color: var(--deal-red);
 }
 .week-nav-btn:disabled {
   opacity: 0.3;
   cursor: default;
-  border-color: #e0d2be;
+  border-color: var(--border-soft);
   color: #c4b79b;
 }
 .week-nav-btn:disabled:hover {
-  border-color: #e0d2be;
+  border-color: var(--border-soft);
   color: #c4b79b;
 }
 .week-nav-label {
-  font-family: 'Caveat', cursive;
-  font-size: 16px;
-  color: #8a7a64;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
   min-width: 120px;
   text-align: center;
 }
@@ -104,27 +126,27 @@ body {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 26px;
   font-weight: 800;
-  color: #b8492e;
+  color: var(--deal-red);
   text-decoration: none;
   letter-spacing: -0.3px;
   line-height: 1.1;
 }
 .logo-sub {
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
   font-weight: 500;
-  color: #8a7a64;
+  color: var(--text-muted);
   display: block;
-  margin-top: -4px;
-  letter-spacing: 0;
+  margin-top: -2px;
 }
 .week-badge {
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-  color: #7a6b55;
-  background: #f3ede3;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-paper);
   padding: 4px 12px;
-  border: 2px dashed #d4c3a8;
+  border: 2px dashed var(--border-soft);
   white-space: nowrap;
 }
 .search-bar {
@@ -133,29 +155,28 @@ body {
 }
 .search-bar input {
   flex: 1;
-  background: #fffcf5;
-  border: 2px solid #d4c3a8;
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
   border-radius: 6px;
   padding: 10px 14px;
-  color: #3d2c1e;
-  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text-main);
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 14px;
   outline: none;
   transition: border-color 0.15s;
 }
 .search-bar input:focus {
-  border-color: #b8492e;
+  border-color: var(--deal-red);
 }
 .search-bar input::placeholder {
-  color: #a89a86;
-  font-style: italic;
+  color: var(--text-muted);
 }
 .search-bar button {
-  background: #b8492e;
+  background: var(--deal-red);
   border: none;
   border-radius: 6px;
   padding: 10px 16px;
-  color: #fff8ee;
+  color: var(--bg-surface);
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 700;
   font-size: 13px;
@@ -163,31 +184,32 @@ body {
   transition: background 0.15s;
 }
 .search-bar button:hover {
-  background: #9e3d26;
+  background: var(--deal-red-dark);
 }
 
 /* ===== HERO BANNER ===== */
 .hero-banner {
-  background: #fff8ee;
+  background: var(--bg-surface);
   padding: 22px 16px 18px;
   text-align: center;
-  border-bottom: 2px solid #d4c3a8;
+  border-bottom: 2px solid var(--border-soft);
 }
 .hero-banner h1 {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 22px;
   font-weight: 700;
-  color: #3d2c1e;
+  color: var(--text-main);
   margin-bottom: 4px;
   line-height: 1.2;
 }
 .hero-banner h1 span {
-  color: #b8492e;
+  color: var(--deal-red);
   display: inline;
 }
 .hero-banner p {
+  color: var(--text-muted);
   font-size: 14px;
-  color: #7a6b55;
+  margin-top: 4px;
   max-width: 400px;
   margin: 0 auto;
   font-style: italic;
@@ -212,22 +234,22 @@ body {
   line-height: 1.3;
 }
 .cta-primary {
-  background: #b8492e;
-  color: #fff8ee;
-  border: 2px solid #b8492e;
+  background: var(--deal-red);
+  color: var(--bg-surface);
+  border: 2px solid var(--deal-red);
 }
 .cta-primary:hover {
-  background: #9e3d26;
-  border-color: #9e3d26;
+  background: var(--deal-red-dark);
+  border-color: var(--deal-red-dark);
 }
 .cta-secondary {
-  background: #fffcf5;
-  color: #3d2c1e;
-  border: 2px solid #d4c3a8;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 2px solid var(--border-soft);
 }
 .cta-secondary:hover {
-  border-color: #b8492e;
-  color: #b8492e;
+  border-color: var(--deal-red);
+  color: var(--deal-red);
 }
 
 /* ===== SAVINGS TICKER ===== */
@@ -238,27 +260,28 @@ body {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding: 10px 16px;
-  background: #fffaf2;
+  background: var(--bg-surface);
   border-bottom: 2px solid #e8dccb;
 }
 .savings-ticker::-webkit-scrollbar { display: none; }
 .ticker-item {
   flex-shrink: 0;
   padding: 5px 14px;
-  background: #fffcf5;
-  border: 2px solid #e0d2be;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--deal-red);
   white-space: nowrap;
 }
 .ticker-item .num {
-  color: #b8492e;
   font-weight: 700;
   font-size: 15px;
 }
 .ticker-item .label {
-  color: #8a7a64;
-  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text-muted);
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -270,7 +293,7 @@ body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  background: #fffaf2;
+  background: var(--bg-surface);
   position: sticky;
   top: 85px;
   z-index: 99;
@@ -283,25 +306,25 @@ body {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 14px;
   font-weight: 600;
-  background: #fffcf5;
-  color: #7a6b55;
-  border: 2px solid #e0d2be;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 2px solid var(--border-soft);
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s;
   text-align: center;
 }
 .cat-tab.active {
-  background: #b8492e;
-  color: #fff8ee;
-  border-color: #b8492e;
+  background: var(--deal-red);
+  color: var(--bg-surface);
+  border-color: var(--deal-red);
 }
 .cat-tab .count {
   font-weight: 400;
   font-size: 11px;
   opacity: 0.7;
   margin-left: 3px;
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 /* ===== CATEGORY SECTIONS ===== */
@@ -319,15 +342,14 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin: 18px 0 2px;
-  color: #3d2c1e;
+  color: var(--text-main);
   line-height: 1.2;
 }
 .cat-stats {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 13px;
-  color: #8a7a64;
+  color: var(--text-muted);
   font-weight: 400;
-  font-style: italic;
 }
 
 /* ===== TYPE FILTER BAR ===== */
@@ -342,21 +364,21 @@ body {
   font-size: 11px;
   font-weight: 600;
   padding: 4px 12px;
-  background: #fffcf5;
-  color: #7a6b55;
-  border: 2px solid #e0d2be;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 2px solid var(--border-soft);
   cursor: pointer;
   transition: all 0.15s;
   white-space: nowrap;
 }
 .type-filter-btn:hover {
-  border-color: #c9942e;
-  color: #c9942e;
+  border-color: var(--saving-gold);
+  color: var(--saving-gold);
 }
 .type-filter-btn.active {
-  background: #b8492e;
-  color: #fff8ee;
-  border-color: #b8492e;
+  background: var(--deal-red);
+  color: var(--bg-surface);
+  border-color: var(--deal-red);
 }
 .type-filter-btn .count {
   font-weight: 400;
@@ -371,8 +393,8 @@ body {
 
 /* ===== DEAL CARDS — FLYER/LIST STYLE ===== */
 .deal-card {
-  background: #fffcf5;
-  border: 2px solid #e0d2be;
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
   padding: 12px 14px;
   margin-bottom: 8px;
   display: flex;
@@ -382,19 +404,19 @@ body {
   position: relative;
 }
 .deal-card:hover {
-  border-color: #c9942e;
+  border-color: var(--saving-gold);
 }
 @media (min-width: 900px) {
   .deal-card {
-    box-shadow: 0 1px 3px rgba(61,44,30,0.06);
+    box-shadow: 0 1px 3px rgba(47,37,28,0.06);
   }
   .deal-card:hover {
-    box-shadow: 0 2px 8px rgba(61,44,30,0.10);
+    box-shadow: 0 2px 8px rgba(47,37,28,0.10);
     transform: translateY(-1px);
   }
 }
 .deal-card.top-deal {
-  border-color: #c9942e;
+  border-color: var(--saving-gold);
   background: #fffbf0;
   margin-top: 4px;
 }
@@ -403,8 +425,8 @@ body {
   position: absolute;
   top: -1px;
   right: -1px;
-  background: #c9942e;
-  color: #fff8ee;
+  background: var(--deal-red);
+  color: var(--bg-surface);
   font-family: 'Fraunces', Georgia, serif;
   font-size: 10px;
   font-weight: 700;
@@ -416,14 +438,14 @@ body {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 22px;
   font-weight: 800;
-  color: #d4c3a8;
+  color: var(--border-soft);
   min-width: 28px;
   line-height: 1.2;
   text-align: center;
   padding-top: 2px;
 }
 .deal-card.top-deal .deal-rank {
-  color: #c9942e;
+  color: var(--saving-gold);
 }
 .deal-info {
   flex: 1;
@@ -435,7 +457,7 @@ body {
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 2px;
-  color: #3d2c1e;
+  color: var(--text-main);
 }
 .deal-store {
   display: inline-block;
@@ -461,14 +483,14 @@ body {
   vertical-align: middle;
 }
 .deal-type-badge.frais {
-  background: #e6f0e2;
-  color: #4a7c3f;
+  background: var(--fresh-green-soft);
+  color: var(--fresh-green);
   border: 1px solid #c4dbbc;
 }
 .deal-type-badge.transforme {
-  background: #f0e8da;
-  color: #8a6d3b;
-  border: 1px solid #dcccb0;
+  background: var(--badge-beige);
+  color: var(--badge-beige-text);
+  border: 1px solid var(--badge-beige-border);
 }
 .deal-prices {
   display: flex;
@@ -478,32 +500,31 @@ body {
 }
 .deal-price {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
-  color: #b8492e;
+  color: var(--deal-red);
   line-height: 1.1;
 }
 .deal-per-kg {
   font-size: 13px;
-  color: #7a6b55;
-  font-style: italic;
+  color: var(--text-muted);
 }
 .deal-protein {
   font-size: 11px;
-  color: #7a9a5a;
+  color: var(--fresh-green);
   font-weight: 600;
-  background: #f0f5ea;
+  background: var(--fresh-green-soft);
   padding: 2px 8px;
   border: 1px solid #d4dfc8;
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Inter', Arial, sans-serif;
 }
 .deal-recipe {
   margin-top: 6px;
   padding-top: 5px;
-  border-top: 1px dashed #d4c3a8;
+  border-top: 1px dashed var(--border-soft);
 }
 .deal-recipe a {
-  color: #7a6b55;
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 13px;
   font-weight: 500;
@@ -513,18 +534,18 @@ body {
   transition: color 0.15s;
 }
 .deal-recipe a:hover {
-  color: #b8492e;
+  color: var(--deal-red);
 }
 
 /* ===== SUBCATEGORY HEADERS ===== */
 .sub-header {
-  font-family: 'Caveat', cursive;
-  font-size: 18px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 16px;
   font-weight: 700;
   margin: 18px 0 6px;
   padding-bottom: 4px;
-  border-bottom: 2px dashed #d4c3a8;
-  color: #7a6b55;
+  border-bottom: 2px dashed var(--border-soft);
+  color: var(--text-muted);
 }
 
 /* ===== SEARCH RESULTS ===== */
@@ -532,7 +553,7 @@ body {
   margin-top: 8px;
   padding: 10px 12px;
   background: #fffbf0;
-  border: 2px solid #c9942e;
+  border: 2px solid var(--saving-gold);
 }
 
 /* ===== SHARE BAR ===== */
@@ -563,38 +584,38 @@ body {
   transform: translateY(-1px);
 }
 .share-btn.discord {
-  background: #fffcf5;
+  background: var(--bg-card);
   color: #5865F2;
-  border-color: #d4c3a8;
+  border-color: var(--border-soft);
 }
 .share-btn.discord:hover {
   border-color: #5865F2;
 }
 .share-btn.whatsapp {
-  background: #fffcf5;
+  background: var(--bg-card);
   color: #25D366;
-  border-color: #d4c3a8;
+  border-color: var(--border-soft);
 }
 .share-btn.whatsapp:hover {
   border-color: #25D366;
 }
 .share-btn.email {
-  background: #fffcf5;
-  color: #7a6b55;
-  border-color: #d4c3a8;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border-color: var(--border-soft);
 }
 .share-btn.email:hover {
-  border-color: #b8492e;
-  color: #b8492e;
+  border-color: var(--deal-red);
+  color: var(--deal-red);
 }
 .share-btn.copy {
-  background: #fffcf5;
-  color: #7a6b55;
-  border-color: #d4c3a8;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border-color: var(--border-soft);
   font-size: 12px;
 }
 .share-btn.copy:hover {
-  border-color: #7a6b55;
+  border-color: var(--text-muted);
 }
 
 /* ===== SUBSCRIBE FORM ===== */
@@ -605,15 +626,15 @@ body {
   margin: 0 auto;
 }
 .subscribe-inner {
-  background: #fffcf5;
-  border: 2px solid #e0d2be;
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
   padding: 16px;
   text-align: center;
 }
 .subscribe-inner p {
   font-size: 14px;
   margin-bottom: 10px;
-  color: #3d2c1e;
+  color: var(--text-main);
 }
 .subscribe-inner p strong {
   font-family: 'Fraunces', Georgia, serif;
@@ -624,22 +645,22 @@ body {
 }
 .subscribe-row input {
   flex: 1;
-  background: #fffaf2;
-  border: 2px solid #e0d2be;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-soft);
   padding: 10px 14px;
-  color: #3d2c1e;
-  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text-main);
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 14px;
   outline: none;
 }
 .subscribe-row input:focus {
-  border-color: #b8492e;
+  border-color: var(--deal-red);
 }
 .subscribe-row button {
-  background: #b8492e;
+  background: var(--deal-red);
   border: none;
   padding: 10px 18px;
-  color: #fff8ee;
+  color: var(--bg-surface);
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 700;
   font-size: 13px;
@@ -647,9 +668,8 @@ body {
 }
 .subscribe-note {
   font-size: 11px;
-  color: #8a7a64;
+  color: var(--text-muted);
   margin-top: 8px;
-  font-style: italic;
 }
 
 /* ===== STORES BAR ===== */
@@ -664,12 +684,12 @@ body {
   justify-content: center;
 }
 .store-badge {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 11px;
-  color: #7a6b55;
+  color: var(--text-muted);
   padding: 3px 10px;
-  background: #fffcf5;
-  border: 1px solid #e0d2be;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
 }
 
 /* ===== TOAST ===== */
@@ -678,8 +698,8 @@ body {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: #3d2c1e;
-  color: #fff8ee;
+  background: var(--text-main);
+  color: var(--bg-surface);
   padding: 12px 24px;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 14px;
@@ -701,7 +721,7 @@ body {
   text-align: center;
   padding: 24px 16px;
   font-size: 12px;
-  color: #a89a86;
+  color: var(--text-muted);
   border-top: 2px solid #e8dccb;
   margin-top: 8px;
 }
@@ -713,16 +733,16 @@ body {
 .loading {
   text-align: center;
   padding: 80px 20px;
-  color: #8a7a64;
+  color: var(--text-muted);
 }
 .loading .spinner {
   display: inline-block;
-  width: 36px;
-  height: 36px;
-  border: 3px solid #e0d2be;
-  border-top-color: #b8492e;
-  animation: spin 0.7s linear infinite;
-  margin-bottom: 14px;
+  width: 32px; height: 32px;
+  border: 3px solid var(--border-soft);
+  border-top-color: var(--deal-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 12px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -735,21 +755,20 @@ body {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 28px;
   margin-bottom: 8px;
-  color: #b8492e;
+  color: var(--deal-red);
 }
 .error-state p {
-  color: #7a6b55;
-  font-style: italic;
+  color: var(--text-muted);
 }
 
 /* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
   padding: 40px 20px;
-  color: #a89a86;
+  color: var(--text-muted);
   font-style: italic;
-  background: #fffcf5;
-  border: 2px dashed #e0d2be;
+  background: var(--bg-card);
+  border: 2px dashed var(--border-soft);
 }
 .empty-state .icon {
   font-size: 40px;
@@ -757,38 +776,36 @@ body {
 }
 
 /* ===== MODAL DÉTAIL PRODUIT ===== */
-.modal-overlay { display:none; position:fixed; inset:0; background:rgba(61,44,30,0.5); z-index:200; }
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(47,37,28,0.5); z-index:200; }
 .modal-overlay.open { display:block; }
 .modal-panel {
   display:none; position:fixed; bottom:0; left:0; right:0;
-  background:#fffaf2; border-top:4px solid #b8492e;
-  padding:24px 20px 32px; z-index:201;
-  border-radius:12px 12px 0 0;
-  max-height:80vh; overflow-y:auto;
-  animation:modalUp 0.2s ease;
+  background:var(--bg-surface); border-top:4px solid var(--deal-red);
+  padding:20px 24px 28px; z-index:201;
+  animation: modalUp 0.25s ease-out;
   max-width:600px; margin:0 auto;
 }
 .modal-panel.open { display:block; }
 @keyframes modalUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
 .modal-close {
   float:right; background:none; border:none;
-  font-family:'Caveat',cursive; font-size:28px;
-  color:#7a6b55; cursor:pointer; line-height:1;
+  font-size:28px;
+  color:var(--text-muted); cursor:pointer; line-height:1;
 }
-.modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:#3d2c1e; margin-bottom:4px; padding-right:40px; }
-.modal-store { font-size:14px; color:#7a6b55; margin-bottom:16px; font-style:italic; }
-.modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:#b8492e; }
+.modal-panel h3 { font-family:'Fraunces',Georgia,serif; font-size:20px; color:var(--text-main); margin-bottom:4px; padding-right:40px; }
+.modal-store { font-size:14px; color:var(--text-muted); margin-bottom:16px; }
+.modal-price-lg { font-family:'Fraunces',Georgia,serif; font-size:32px; font-weight:800; color:var(--deal-red); }
 .modal-details { margin:16px 0; }
 .modal-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e8dccb; font-size:14px; }
-.modal-row .lbl { color:#7a6b55; }
-.modal-row .val { font-weight:600; color:#3d2c1e; }
+.modal-row .lbl { color:var(--text-muted); }
+.modal-row .val { font-weight:600; color:var(--text-main); }
 .modal-recipe-btn {
-  display:block; margin-top:16px; padding:12px; background:#b8492e; color:#fff8ee;
+  display:block; margin-top:16px; padding:12px; background:var(--deal-red); color:var(--bg-surface);
   text-align:center; border:none; font-family:'Fraunces',Georgia,serif;
-  font-size:15px; font-weight:700; border-radius:4px; cursor:pointer;
+  font-size:15px; font-weight:700; cursor:pointer;
   text-decoration:none; transition:background 0.15s;
 }
-.modal-recipe-btn:hover { background:#9e3d26; }
+.modal-recipe-btn:hover { background:var(--deal-red-dark); }
 
 /* Image dans le modal — cliquable pour plein écran */
 .modal-img-wrap {
@@ -1122,7 +1139,7 @@ body {
 <footer class="footer">
   <p>Aubaines Rapides &copy; 2026</p>
   <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque jeudi</p>
-  <p style="margin-top:4px;font-size:10px;color:#a89a86">Sources directes (aucun agrégateur tiers)</p>
+  <p style="margin-top:4px;font-size:10px;color:var(--text-muted)">Sources directes (aucun agrégateur tiers)</p>
   <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
 </footer>
 
@@ -1542,7 +1559,7 @@ function doSearch() {
   const catMap = {};
   results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
   const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
-  div.innerHTML = `<div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:#3d2c1e;margin-bottom:8px">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:#7a6b55">${catSummary}</span></div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
+  div.innerHTML = `<div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:var(--text-main);margin-bottom:8px">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:var(--text-muted)">${catSummary}</span></div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
   section.insertBefore(div, section.querySelector(".type-filter-bar")?.nextSibling || section.firstChild.nextSibling);
 }
 
@@ -1654,7 +1671,7 @@ async function init() {
     document.getElementById("app").innerHTML = `<div class="error-state">
       <h2>😕 Données temporairement indisponibles</h2>
       <p>Les spéciaux de la semaine n'ont pas pu être chargés.</p>
-      <p style="margin-top:12px;color:#7a6b55;font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
+      <p style="margin-top:12px;color:var(--text-muted);font-size:13px">Essaie de rafraîchir la page dans quelques instants.</p>
       <button type="button" class="cta-primary" style="margin-top:16px;border:none;cursor:pointer" onclick="location.reload()">🔄 Réessayer</button>
     </div>`;
     return;
