@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aubaines Rapides — Preview TikTok</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-paper: #f7f1e7;
+  --bg-surface: #fffaf2;
+  --bg-card: #fffdf7;
+  --text-main: #2f251c;
+  --text-muted: #7a6b55;
+  --deal-red: #b8492e;
+  --deal-red-dark: #8f3422;
+  --border-soft: #d8c7aa;
+  --saving-yellow: #ffc857;
+  --saving-gold: #c9942e;
+  --fresh-green: #2f7d46;
+  --verified-blue: #1f6f9f;
+  --tt-black: #010101;
+  --tt-pink: #fe2c55;
+  --tt-blue: #25f4ee;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-paper);
+  background-image: radial-gradient(ellipse at 20% 50%, rgba(210,180,140,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(180,140,100,0.04) 0%, transparent 50%);
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ───── HEADER ───── */
+.header {
+  background: var(--bg-surface);
+  border-bottom: 3px solid var(--border-soft);
+  padding: 18px 16px 14px;
+  margin: -20px -20px 24px;
+  box-shadow: 0 2px 12px rgba(47,37,28,0.06);
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+.logo-img {
+  width: 42px;
+  height: 42px;
+  background: var(--deal-red);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Fraunces', serif;
+}
+.logo-text {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+}
+.logo-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.tag-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--deal-red);
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ───── CONTROLS ───── */
+.controls {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 10px 20px;
+  border: 2px solid var(--border-soft);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tab-btn:hover { border-color: var(--deal-red); color: var(--deal-red); }
+.tab-btn.active {
+  background: var(--deal-red);
+  border-color: var(--deal-red);
+  color: #fff;
+}
+.tab-btn .count {
+  background: var(--border-soft);
+  color: var(--text-muted);
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+.tab-btn.active .count {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+/* ───── CARDS GRID ───── */
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+.grid.active { display: grid; }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(47,37,28,0.1);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 0;
+}
+.card-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--border-soft);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.card-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.card-author {
+  flex: 1;
+  min-width: 0;
+}
+.card-author-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-author-handle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: var(--tt-black);
+  color: #fff;
+}
+
+.card-body { padding: 12px 16px; }
+.card-text {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text-main);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+.card-tag {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  background: var(--bg-paper);
+  border-radius: 6px;
+  color: var(--deal-red);
+}
+
+.card-stats {
+  display: flex;
+  gap: 14px;
+  padding: 0 16px 14px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.card-stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-stat-icon { font-size: 0.9rem; }
+.card-views { color: var(--deal-red); font-weight: 600; }
+
+.card-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: var(--bg-paper);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.card-link:hover {
+  background: var(--deal-red);
+  color: #fff;
+}
+
+/* ───── FOOTER NOTE ───── */
+.footer-note {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 20px;
+}
+
+/* ───── LOADING ───── */
+.loading {
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--text-muted);
+}
+.loading .spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--border-soft);
+  border-top: 3px solid var(--deal-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ───── RESPONSIVE ───── */
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  .header { margin: -10px -10px 16px; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <a class="logo" href="https://alanixqc.github.io/aubaines-rapides/">
+      <div class="logo-img">AR</div>
+      <div class="logo-text">
+        Aubaines Rapides
+        <div class="logo-sub">Preview TikTok</div>
+      </div>
+    </a>
+    <span class="tag-preview">🧪 Preview</span>
+  </div>
+</div>
+
+<div class="controls" id="tabs"></div>
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  Chargement des recettes TikTok...
+</div>
+<div id="grids"></div>
+
+<div class="footer-note">
+  Données scrappées via Apify clockworks/tiktok-scraper &bull;
+  Mise à jour : <span id="update-date">—</span>
+</div>
+
+<script>
+(async () => {
+  const resp = await fetch('data/tiktok_preview.json');
+  const data = await resp.json();
+
+  document.getElementById('update-date').textContent =
+    new Date(data.generated).toLocaleDateString('fr-CA', {
+      year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    });
+
+  const cats = data.categories;
+  const names = { poulet: '🐔 Poulet', boeuf: '🥩 Boeuf', economie: '💰 Économie' };
+  const icons = { poulet: '⭐', boeuf: '⭐', economie: '🛒' };
+
+  // Render tabs
+  const tabs = document.getElementById('tabs');
+  const tabIds = Object.keys(cats);
+  tabIds.forEach((key, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (idx === 0 ? ' active' : '');
+    btn.dataset.tab = key;
+    btn.innerHTML = `${names[key] || key} <span class="count">${cats[key].length}</span>`;
+    btn.onclick = () => switchTab(key);
+    tabs.appendChild(btn);
+  });
+
+  // Render grids
+  const container = document.getElementById('grids');
+  tabIds.forEach((key, idx) => {
+    const grid = document.createElement('div');
+    grid.className = 'grid' + (idx === 0 ? ' active' : '');
+    grid.id = 'grid-' + key;
+
+    cats[key].forEach(v => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const header = document.createElement('div');
+      header.className = 'card-header';
+      header.innerHTML = `
+        <div class="card-avatar">${v.avatar ? `<img src="${v.avatar}" alt="">` : '🎥'}</div>
+        <div class="card-author">
+          <div class="card-author-name">${v.author}</div>
+          <div class="card-author-handle">${v.nickname || '@' + v.author}</div>
+        </div>
+        <div class="card-badge">TikTok</div>
+      `;
+      card.appendChild(header);
+
+      const body = document.createElement('div');
+      body.className = 'card-body';
+      const safeText = v.text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      body.innerHTML = `
+        <div class="card-text">${safeText}</div>
+        <div class="card-tags">${v.hashtags.slice(0, 5).map(t => `<span class="card-tag">#${t}</span>`).join('')}</div>
+      `;
+      card.appendChild(body);
+
+      const stats = document.createElement('div');
+      stats.className = 'card-stats';
+      stats.innerHTML = `
+        <span class="card-stat card-views">▶️ ${v.plays >= 1000000 ? (v.plays/1000000).toFixed(1)+'M' : v.plays >= 1000 ? (v.plays/1000).toFixed(0)+'K' : v.plays}</span>
+        <span class="card-stat">❤️ ${v.likes >= 1000 ? (v.likes/1000).toFixed(0)+'K' : v.likes}</span>
+        <span class="card-stat">👥 ${v.fans >= 1000 ? (v.fans/1000).toFixed(0)+'K' : v.fans}</span>
+        <span class="card-stat">⏱ ${v.duration}s</span>
+      `;
+      card.appendChild(stats);
+
+      const link = document.createElement('a');
+      link.className = 'card-link';
+      link.href = v.url;
+      link.target = '_blank';
+      link.textContent = 'Voir sur TikTok →';
+      card.appendChild(link);
+
+      grid.appendChild(card);
+    });
+
+    container.appendChild(grid);
+  });
+
+  document.getElementById('loading').style.display = 'none';
+
+  // Tab switch
+  window.switchTab = (key) => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
+    document.querySelector(`.tab-btn[data-tab="${key}"]`).classList.add('active');
+    document.getElementById('grid-' + key).classList.add('active');
+  };
+})();
+</script>
+</body>
+</html>
