@@ -310,11 +310,11 @@ function createRecipeCard(recipe) {
   const meta = document.createElement('div');
   meta.className = 'recipe-card-meta';
 
-  // Badge
-  const badge = document.createElement('span');
-  badge.className = `recipe-badge ${recipe.meat_type}`;
-  badge.textContent = `${MEAT_EMOJI[recipe.meat_type] || '🍖'} ${MEAT_LABEL[recipe.meat_type] || recipe.meat_type}`;
-  meta.appendChild(badge);
+  // Meat-type badge
+  const meatBadge = document.createElement('span');
+  meatBadge.className = `recipe-badge ${recipe.meat_type}`;
+  meatBadge.textContent = `${MEAT_EMOJI[recipe.meat_type] || '🍖'} ${MEAT_LABEL[recipe.meat_type] || recipe.meat_type}`;
+  meta.appendChild(meatBadge);
 
   // Stars
   const starsSpan = document.createElement('span');
