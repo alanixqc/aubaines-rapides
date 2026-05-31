@@ -1121,7 +1121,7 @@ body {
 <!-- FOOTER -->
 <footer class="footer">
   <p>Aubaines Rapides &copy; 2026</p>
-  <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque mardi</p>
+  <p style="margin-top:2px">Données des circulaires en ligne · Mis à jour chaque jeudi</p>
   <p style="margin-top:4px;font-size:10px;color:#a89a86">Sources directes (aucun agrégateur tiers)</p>
   <p id="pipelineStatus" style="margin-top:6px;font-size:11px;font-style:italic"></p>
 </footer>
@@ -1165,6 +1165,7 @@ const STORE_COLORS = {
   "Metro":             { bg: "#f5eadc", border: "#e0d0b8", text: "#8c6a2a" },
   "Tigre Géant":       { bg: "#e8dcf5", border: "#d0b8e0", text: "#6a2a8c" },
   "Walmart":           { bg: "#dce8f5", border: "#b8cce0", text: "#2a5a8c" },
+  "Loblaws":           { bg: "#dce8f5", border: "#b8cce0", text: "#1a4a7c" },
   "Provigo":           { bg: "#e8f0dc", border: "#cce0b8", text: "#4a7a2a" },
   "Costco":            { bg: "#f5dce8", border: "#e0b8cc", text: "#8c2a5a" },
   "Mayrand":           { bg: "#f5f0dc", border: "#e0dcc0", text: "#7a6a2a" },
@@ -1199,10 +1200,11 @@ function fetchWithTimeout(url, ms = 8000) {
 
 async function loadData() {
   try {
-    const [dealsRes, recipesRes, statsRes] = await Promise.all([
+    const [dealsRes, recipesRes, statsRes, mergedRes] = await Promise.all([
       fetchWithTimeout("data/deals.json"),
       fetchWithTimeout("data/recipes.json"),
       fetchWithTimeout("data/stats.json"),
+      fetchWithTimeout("data/deals_merged.json").catch(() => null),
     ]);
     
     if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) {
@@ -1220,6 +1222,41 @@ async function loadData() {
     weeks = dealsData.weeks || [];
     weekDealsMap = dealsData.deals_by_week || {};
     currentWeekIdx = 0;
+    
+    // Try to merge supplementary data (deals_merged.json from new scrapers)
+    if (mergedRes && mergedRes.ok) {
+      try {
+        const mergedData = await mergedRes.json();
+        if (Array.isArray(mergedData) && mergedData.length > 0) {
+          // Add merged items to the current week's deals
+          const currentWeek = weeks[0];
+          if (currentWeek && weekDealsMap[currentWeek]) {
+            const existingIds = new Set(
+              (weekDealsMap[currentWeek].deals_with_kg || []).map(d => d.id)
+            );
+            // Convert merged items to deals format and append
+            const converted = mergedData.map((item, i) => ({
+              id: `merged_${Date.now()}_${i}`,
+              name: item.name,
+              name_short: item.name?.substring(0, 50),
+              category: item.category || "viande",
+              store: item.store,
+              store_emoji: "🏪",
+              price: item.price,
+              valid_to: null,
+              image_url: item.image,
+              product_type: item.on_sale ? "frais" : "transformé",
+            }));
+            weekDealsMap[currentWeek].deals_with_kg = [
+              ...(weekDealsMap[currentWeek].deals_with_kg || []),
+              ...converted.filter(d => !existingIds.has(d.id)),
+            ];
+          }
+        }
+      } catch (e) {
+        // silently ignore merge errors
+      }
+    }
     
     loadWeek(0, dealsData);
     return true;
@@ -1369,16 +1406,16 @@ function renderDealCard(d, rank) {
   const storeHtml = escapeHTML(d.store);
   const storeEmoji = d.store_emoji || "🏪";
   const storeInline = storeStyle(d.store);
-  const badgeHtml = d.product_type
-    ? `<span class="deal-type-badge ${d.product_type === 'frais' ? 'frais' : 'transforme'}">${d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.'}</span>`
-    : "";
+  const badgeClass = d.product_type === 'frais' ? 'frais' : 'transforme';
+  const badgeText = d.product_type === 'frais' ? '🌿 Frais' : '🏭 Transf.';
+  const badgeHtml = d.product_type ? `<span class="deal-type-badge ${badgeClass}">${badgeText}</span>` : "";
   const priceHtml = d.price != null ? `${d.price.toFixed(2)}$` : "";
   const perKgHtml = d.per_kg != null ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : "";
   const perLbHtml = d.per_lb != null ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : "";
   const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
   const recipeHtml = recipe ? `<div class="deal-recipe">🍳 ${escapeHTML(recipe.title.substring(0, 55))}${recipe.title.length > 55 ? "…" : ""}</div>` : "";
 
-  return `<div class="deal-card${isTop ? " top-deal" : ""}" onclick="showDealDetail('${d.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')showDealDetail('${d.id}')" aria-label="${nameHtml} chez ${storeHtml}">
+  return `<div class="deal-card${isTop ? " top-deal" : ""}" data-deal-id="${d.id}" role="button" tabindex="0" aria-label="${nameHtml} chez ${storeHtml}">
     <div class="deal-rank">#${rank}</div>
     <div class="deal-info">
       <div class="deal-name">${nameHtml}${badgeHtml}</div>
@@ -1486,21 +1523,27 @@ function doSearch() {
     const store = (d.store || "").toLowerCase();
     const cat = (d.category || "").toLowerCase();
     return name.includes(ql) || store.includes(ql) || cat.includes(ql);
-  }).slice(0, 10);
+  }).slice(0, 15);
   
-  const section = document.getElementById(`section-${currentCat}`);
-  const existing = section.querySelector(".search-results");
-  if (existing) existing.remove();
+  // Remove any existing search results
+  document.querySelectorAll(".search-results").forEach(el => el.remove());
   
   if (results.length === 0) {
     showToast(`🔍 Aucun résultat pour "${q}"`);
     return;
   }
   
+  // Show results in current section + badge count
+  const section = document.getElementById(`section-${currentCat}`);
+  if (!section) return;
+  
   const div = document.createElement("div");
   div.className = "search-results";
-  div.innerHTML = `<div class="sub-header" style="color:#7a6b55">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s)</div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
-  section.insertBefore(div, section.firstChild.nextSibling);
+  const catMap = {};
+  results.forEach(d => { catMap[d.category] = (catMap[d.category] || 0) + 1; });
+  const catSummary = Object.entries(catMap).map(([c, n]) => `${CAT_NAMES[c] || c}: ${n}`).join(" · ");
+  div.innerHTML = `<div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:600;color:#3d2c1e;margin-bottom:8px">🔍 « ${escapeHTML(q)} » — ${results.length} résultat(s) <span style="font-size:11px;font-weight:400;color:#7a6b55">${catSummary}</span></div>${results.map((d,i) => renderDealCard(d,i+1)).join("")}`;
+  section.insertBefore(div, section.querySelector(".type-filter-bar")?.nextSibling || section.firstChild.nextSibling);
 }
 
 // ─── CTA ───
@@ -1583,6 +1626,27 @@ document.addEventListener("keydown", e => {
 
 // ─── INIT ───
 document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+
+// Délégation d'événements : clic sur les cartes deal
+document.addEventListener("click", e => {
+  const card = e.target.closest("[data-deal-id]");
+  if (card) {
+    const id = card.dataset.dealId;
+    if (id) showDealDetail(id);
+  }
+});
+
+// Support clavier : Enter/Espace sur les cartes deal
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") {
+    const card = e.target.closest("[data-deal-id]");
+    if (card) {
+      e.preventDefault();
+      const id = card.dataset.dealId;
+      if (id) showDealDetail(id);
+    }
+  }
+});
 
 async function init() {
   const ok = await loadData();

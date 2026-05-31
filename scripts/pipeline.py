@@ -9,6 +9,7 @@ Exécuté par cron chaque mardi 8h30
 import sys
 import os
 import json
+import re
 import logging
 import subprocess
 from datetime import datetime, date
@@ -183,6 +184,64 @@ def run_pipeline():
             scrapers_stats[name] = {"success": ok, "error": err if not ok else None}
             logger.info(f"   {'✅' if ok else '❌'} {name}")
 
+        # ── Phase 0c: Scrapers PC Express (Maxi, Provigo, Loblaws) ──
+        logger.info("\n🏪 Phase 0c: Scrapers PC Express (HTML)...")
+        pcexpress_stores = ["maxi", "provigo", "loblaws"]
+        for store in pcexpress_stores:
+            try:
+                logger.info(f"   ▶️ scraper_maxi.py --store {store}")
+                result = subprocess.run(
+                    [PYTHON, os.path.join(SCRIPTERS_DIR, "scraper_maxi.py"), "--store", store, "--db"],
+                    capture_output=True, text=True, timeout=60
+                )
+                if result.returncode == 0 and result.stdout:
+                    match = re.search(r'---JSON_OUTPUT---\n(\[.*?\])', result.stdout, re.DOTALL)
+                    if match:
+                        data = json.loads(match.group(1))
+                        out_path = os.path.join(PROJECT_ROOT, "web", "data", f"deals_{store}.json")
+                        with open(out_path, "w", encoding="utf-8") as f:
+                            json.dump(data, f, ensure_ascii=False, indent=2)
+                        logger.info(f"   ✅ {store}: {len(data)} produits sauvegardés")
+                    else:
+                        logger.warning(f"   ⚠️ {store}: pas de JSON dans la sortie")
+                else:
+                    logger.error(f"   ❌ {store} échec (code {result.returncode})")
+                    if result.stderr:
+                        logger.error(f"      {result.stderr[:200]}")
+            except Exception as e:
+                logger.error(f"   ❌ {store}: {e}")
+
+        # ── Phase 0d: IGA (via Apify Voilà) ──
+        logger.info("\n🏪 Phase 0d: Scraper IGA (Apify)...")
+        iga_script = os.path.join(SCRIPTERS_DIR, "scraper_iga.py")
+        if os.path.exists(iga_script):
+            try:
+                result = subprocess.run(
+                    [PYTHON, iga_script, "--db"],
+                    capture_output=True, text=True, timeout=300
+                )
+                if result.returncode == 0:
+                    # Parse JSON from ---JSON_OUTPUT--- marker
+                    match = re.search(r'---JSON_OUTPUT---\n(\[.*?\])', result.stdout, re.DOTALL)
+                    if match:
+                        data = json.loads(match.group(1))
+                        out_path = os.path.join(PROJECT_ROOT, "web", "data", "deals_iga.json")
+                        with open(out_path, "w", encoding="utf-8") as f:
+                            json.dump(data, f, ensure_ascii=False, indent=2)
+                        logger.info(f"   ✅ IGA: {len(data)} produits sauvegardés")
+                    else:
+                        logger.warning("   ⚠️ IGA: pas de JSON dans la sortie")
+                else:
+                    logger.warning(f"   ⚠️ IGA: code {result.returncode}")
+                    if result.stderr:
+                        logger.error(f"      {result.stderr[:200]}")
+            except subprocess.TimeoutExpired:
+                logger.warning("   ⚠️ IGA: timeout (300s), skip")
+            except Exception as e:
+                logger.error(f"   ❌ IGA: {e}")
+        else:
+            logger.warning(f"   ⚠️ IGA scraper introuvable: {iga_script}")
+
         # ── Phase 1: Déduplication ──
         logger.info("\n🧹 Phase 1: Nettoyage des doublons...")
         db = get_db()
@@ -263,6 +322,33 @@ def run_pipeline():
             logger.info("   ✅ Site data généré")
         except subprocess.CalledProcessError as e:
             logger.error(f"   ⚠️ build_site: {e.stderr}")
+
+        # ── Phase: Merge supplementary deals ──
+        logger.info("\n🔀 Fusion des données supplémentaires (PC Express, IGA)...")
+        merged_file = os.path.join(PROJECT_ROOT, "web", "data", "deals_merged.json")
+        supplementary = []
+        for fname in ["deals_maxi.json", "deals_provigo.json", "deals_loblaws.json", "deals_iga.json"]:
+            fpath = os.path.join(PROJECT_ROOT, "web", "data", fname)
+            if os.path.exists(fpath):
+                try:
+                    with open(fpath, encoding="utf-8") as f:
+                        data = json.load(f)
+                    supplementary.extend(data)
+                    os.remove(fpath)  # cleanup temp file
+                    logger.info(f"   ✅ {fname}: {len(data)} produits fusionnés")
+                except Exception as e:
+                    logger.warning(f"   ⚠️ {fname}: {e}")
+        
+        if supplementary:
+            # Save merged supplementary data
+            with open(merged_file, "w", encoding="utf-8") as f:
+                json.dump(supplementary, f, ensure_ascii=False, indent=2)
+            logger.info(f"   📦 {len(supplementary)} produits supplémentaires sauvegardés")
+        else:
+            # Remove empty file if exists
+            if os.path.exists(merged_file):
+                os.remove(merged_file)
+            logger.info("   Aucune donnée supplémentaire")
 
         # ── Commit & push site data ──
         logger.info("\n📤 Push vers GitHub Pages...")
