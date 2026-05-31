@@ -558,7 +558,10 @@ CONSERVE_KW = ['conserve','canne','boîte','tin','lentille','pois chiche','haric
                'farine','sucre','huile','beurre d\'arachide','beurre de peanut','café',
                'thon en','maïs en','crevette en','compote','ketchup','moutarde','mayonnaise',
                'vinaigre','bouillon','cubes','épices','sel','poivre','gruau','céréale',
-               'lait','beurre','œuf','oeuf','fromage','yogourt','yaourt','crème','pain']
+               'lait','beurre','œuf','oeuf','fromage','crème','pain']
+
+YOGOURT_KW = ['yogourt','yaourt','yogurt','kéfir','kefir','skyr',
+              'yogourt grec','yaourt grec','greek yogurt','yogourt grecque']
 
 PROTEIN_PER_100G = {
     "boeuf": {"haché maigre": 20, "haché": 17, "steak": 23, "rôti": 22, "cube": 20, "generic": 20},
@@ -566,6 +569,7 @@ PROTEIN_PER_100G = {
     "porc": {"longe": 22, "côtelette": 20, "haché": 17, "rôti": 22, "generic": 20},
     "veau": {"haché": 18, "generic": 18},
     "poisson": {"saumon": 20, "thon": 23, "crevette": 20, "morue": 18, "generic": 18},
+    "yogourt": {"grec": 9, "grecque": 9, "nature": 4, "generic": 5},
 }
 
 
@@ -578,6 +582,9 @@ def classify_meat_type(name, current_mt):
     for kw in FRUIT_KW:
         if kw in name_lower:
             return "fruit"
+    for kw in YOGOURT_KW:
+        if kw in name_lower:
+            return "yogourt"
     for kw in CONSERVE_KW:
         if kw in name_lower:
             return "panier"
@@ -959,7 +966,7 @@ def export_deals():
             per_lb = round(per_kg / 2.20462, 2) if per_kg else None
             
             # Protéines
-            protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson"] else None
+            protein_per_100g = estimate_protein_per_100g(r["name"], mt) if mt in ["boeuf","porc","poulet","veau","poisson","yogourt"] else None
             protein_per_dollar = None
             if protein_per_100g and per_kg:
                 protein_per_dollar = round((protein_per_100g * 10) / per_kg, 1)
