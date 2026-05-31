@@ -68,7 +68,9 @@ def run_voila(max_items=100):
     return items
 
 def is_meat(item):
-    tags = item.get("tags", [])
+    tags = item.get("tags")
+    if not isinstance(tags, (list, tuple)):
+        tags = [str(tags)] if tags is not None else []
     if isinstance(tags, str): tags = [tags]
     name = (item.get("name","") + " " + " ".join(tags)).lower()
     return any(k in name for k in MEAT_KW) and not any(k in name for k in EXCLUDE)
