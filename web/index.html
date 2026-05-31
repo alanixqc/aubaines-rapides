@@ -1057,6 +1057,30 @@ body {
   .deal-card { padding: 20px 26px; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Aubaines Rapides",
+  "url": "https://alanixqc.github.io/aubaines-rapides/web/",
+  "description": "Les meilleurs spéciaux d'épicerie de la semaine au Québec : viande, poisson, fruits, légumes comparés par prix.",
+  "inLanguage": "fr-CA",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://alanixqc.github.io/aubaines-rapides/web/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Aubaines Rapides — Les spéciaux d'épicerie de la semaine",
+  "description": "Trouve tes spéciaux en 30 secondes — pas 30 minutes ⚡ Viande, poisson, fruits, légumes comparés par prix au Québec.",
+  "image": "https://alanixqc.github.io/aubaines-rapides/web/favicon-social.png"
+}
+</script>
 </head>
 <body>
 
@@ -1232,7 +1256,7 @@ let dealsAll = [], recipesAll = [], stats = {};
 let currentCat = "viande";
 let currentWeekIdx = 0;
 let weeks = [];
-let weekDealsMap = {};
+let weekDealsMap = {};   // lazy-load cache: week -> {deals_with_kg, deals_wo_kg}
 
 // ─── LOAD AVEC TIMEOUT ───
 function fetchWithTimeout(url, ms = 8000) {
@@ -1242,7 +1266,54 @@ function fetchWithTimeout(url, ms = 8000) {
   });
 }
 
+// ─── CHARGEMENT PROGRESSIF (P1-3) ───
 async function loadData() {
+  // Try the new lazy-loading approach first (deals-index.json + per-week files)
+  let ok = await tryLazyLoad();
+  if (ok) return true;
+
+  // Fallback: load the old monolithic deals.json
+  console.warn("Lazy loading failed, trying fallback deals.json");
+  ok = await tryFallbackLoad();
+  if (ok) return true;
+
+  return false;
+}
+
+async function tryLazyLoad() {
+  try {
+    const [indexRes, recipesRes] = await Promise.all([
+      fetchWithTimeout("data/deals-index.json"),
+      fetchWithTimeout("data/recipes.json"),
+    ]);
+
+    if (!indexRes.ok || !recipesRes.ok) return false;
+
+    const indexData = await indexRes.json();
+    recipesAll = await recipesRes.json();
+
+    if (!indexData.weeks || indexData.weeks.length === 0) return false;
+
+    weeks = indexData.weeks;
+    currentWeekIdx = 0;
+    weekDealsMap = {};
+
+    // Load the current week's file
+    const currentWeek = weeks[0];
+    const weekRes = await fetchWithTimeout(`data/deals-${currentWeek}.json`);
+    if (!weekRes.ok) return false;
+
+    weekDealsMap[currentWeek] = await weekRes.json();
+
+    loadWeek(0);
+    return true;
+  } catch (e) {
+    console.warn("tryLazyLoad failed:", e);
+    return false;
+  }
+}
+
+async function tryFallbackLoad() {
   try {
     const [dealsRes, recipesRes, statsRes, mergedRes] = await Promise.all([
       fetchWithTimeout("data/deals.json"),
@@ -1250,35 +1321,29 @@ async function loadData() {
       fetchWithTimeout("data/stats.json"),
       fetchWithTimeout("data/deals_merged.json").catch(() => null),
     ]);
-    
-    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) {
-      throw new Error("Un des fichiers est introuvable (HTTP " + dealsRes.status + ")");
-    }
-    
+
+    if (!dealsRes.ok || !recipesRes.ok || !statsRes.ok) return false;
+
     const dealsData = await dealsRes.json();
     recipesAll = await recipesRes.json();
     stats = await statsRes.json();
-    
-    if (!dealsData.weeks || dealsData.weeks.length === 0) {
-      throw new Error("Aucune semaine trouvée dans les données");
-    }
-    
+
+    if (!dealsData.weeks || dealsData.weeks.length === 0) return false;
+
     weeks = dealsData.weeks || [];
     weekDealsMap = dealsData.deals_by_week || {};
     currentWeekIdx = 0;
-    
+
     // Try to merge supplementary data (deals_merged.json from new scrapers)
     if (mergedRes && mergedRes.ok) {
       try {
         const mergedData = await mergedRes.json();
         if (Array.isArray(mergedData) && mergedData.length > 0) {
-          // Add merged items to the current week's deals
           const currentWeek = weeks[0];
           if (currentWeek && weekDealsMap[currentWeek]) {
             const existingIds = new Set(
               (weekDealsMap[currentWeek].deals_with_kg || []).map(d => d.id)
             );
-            // Convert merged items to deals format and append
             const converted = mergedData.map((item, i) => ({
               id: `merged_${Date.now()}_${i}`,
               name: item.name,
@@ -1297,29 +1362,26 @@ async function loadData() {
             ];
           }
         }
-      } catch (e) {
-        // silently ignore merge errors
-      }
+      } catch (e) { /* silently ignore merge errors */ }
     }
-    
-    loadWeek(0, dealsData);
+
+    loadWeek(0);
     return true;
   } catch (e) {
-    console.error("Erreur chargement:", e);
+    console.error("tryFallbackLoad failed:", e);
     return false;
   }
 }
 
-function loadWeek(idx, dealsData) {
-  if (!dealsData) return;
+function loadWeek(idx) {
   const week = weeks[idx];
   if (!week) return;
-  
+
   const wd = weekDealsMap[week];
   if (!wd) return;
-  
+
   dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-  
+
   const byCat = {};
   const storesSet = new Set();
   for (const d of dealsAll) {
@@ -1334,7 +1396,7 @@ function loadWeek(idx, dealsData) {
     week: week,
     weeks: weeks,
   };
-  
+
   updateWeekNav();
   renderAll();
 }
@@ -1399,17 +1461,58 @@ function updateWeekNav() {
   document.getElementById("nextWeek").disabled = currentWeekIdx >= weeks.length - 1;
 }
 
-function switchWeek(dir) {
+async function switchWeek(dir) {
   const newIdx = currentWeekIdx + dir;
   if (newIdx < 0 || newIdx >= weeks.length) return;
   currentWeekIdx = newIdx;
-  
+
   const week = weeks[newIdx];
+
+  // Lazy-load this week if not yet cached
+  if (!weekDealsMap[week]) {
+    const app = document.getElementById("app");
+    app.style.opacity = "0.5";
+    try {
+      const res = await fetchWithTimeout(`data/deals-${week}.json`);
+      if (res.ok) {
+        weekDealsMap[week] = await res.json();
+      } else {
+        // If per-week file not found, try fallback monolithic deals.json
+        console.warn(`deals-${week}.json not found, trying fallback...`);
+        const fallbackRes = await fetchWithTimeout("data/deals.json");
+        if (fallbackRes.ok) {
+          const fb = await fallbackRes.json();
+          if (fb.deals_by_week && fb.deals_by_week[week]) {
+            weekDealsMap[week] = fb.deals_by_week[week];
+          } else {
+            currentWeekIdx = newIdx - dir;
+            app.style.opacity = "1";
+            showToast("Données non disponibles pour cette semaine");
+            return;
+          }
+        } else {
+          currentWeekIdx = newIdx - dir;
+          app.style.opacity = "1";
+          showToast("Impossible de charger cette semaine");
+          return;
+        }
+      }
+    } catch (e) {
+      console.error("Lazy load failed for week", week, e);
+      currentWeekIdx = newIdx - dir;
+      app.style.opacity = "1";
+      return;
+    }
+  }
+
   const wd = weekDealsMap[week];
-  if (!wd) return;
-  
+  if (!wd) {
+    currentWeekIdx = newIdx - dir;
+    return;
+  }
+
   dealsAll = (wd.deals_with_kg || []).concat(wd.deals_wo_kg || []);
-  
+
   const byCat = {};
   const storesSet = new Set();
   for (const d of dealsAll) {
@@ -1423,14 +1526,14 @@ function switchWeek(dir) {
     stores: Array.from(storesSet).sort(),
     week: week,
   };
-  
+
   updateWeekNav();
-  
+
   const app = document.getElementById("app");
   app.style.opacity = "0.5";
-  
+
   renderAll();
-  
+
   app.style.opacity = "1";
 }
 

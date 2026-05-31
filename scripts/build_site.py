@@ -1317,6 +1317,28 @@ def main():
         json.dump(deals, f, ensure_ascii=False, indent=2)
     print(f"    ✅ {deals['stats']['total']} deals exportés, noms en français")
 
+    # P1-3: Export hebdomadaire séparé (lazy loading côté frontend)
+    deals_by_week = deals.get("deals_by_week", {})
+    weeks_list = deals.get("weeks", [])
+    current_week = deals.get("current_week", "")
+
+    # Index léger
+    index_data = {
+        "weeks": weeks_list,
+        "current_week": current_week,
+    }
+    with open(os.path.join(WEB_DIR, "deals-index.json"), "w", encoding="utf-8") as f:
+        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    print(f"    📇 deals-index.json ({len(weeks_list)} semaines référencées)")
+
+    # Un fichier par semaine
+    week_count = 0
+    for week, wd in deals_by_week.items():
+        week_count += 1
+        with open(os.path.join(WEB_DIR, f"deals-{week}.json"), "w", encoding="utf-8") as f:
+            json.dump(wd, f, ensure_ascii=False, indent=2)
+    print(f"    📂 {week_count} fichiers deals-YYYY-MM-DD.json exportés")
+
     # Flagged deals (prix aberrants exclus)
     flagged = deals.get("flagged_deals", {})
     all_flagged = []
