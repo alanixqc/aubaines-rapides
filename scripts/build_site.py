@@ -654,11 +654,12 @@ def export_deals():
     week_stats = {}
     
     for week in all_weeks:
-        rows = db.execute("""
+        rows = db.execute("""\
             SELECT p.id, p.name, p.meat_type, p.package_weight_g,
                    s.name as store, s.id as store_id,
                    ph.price, ph.unit_price, ph.unit_type,
-                   ph.valid_to, ph.merchant_name, ph.image_url
+                   ph.valid_to, ph.merchant_name, ph.image_url,
+                   ph.sale_text
             FROM products p
             JOIN stores s ON s.id = p.store_id
             JOIN price_history ph ON ph.product_id = p.id
@@ -749,6 +750,7 @@ def export_deals():
                 "protein_per_dollar": protein_per_dollar,
                 "product_type": classify_product_type(clean_name),
                 "recipe": recipe,
+                "detail": r.get("sale_text", "").strip() if r.get("sale_text") else None,
             })
         
         deals_with_kg = [d for d in deals if d["per_kg"]]
@@ -814,9 +816,11 @@ def export_trends():
 def export_products():
     db = get_db()
     max_week = db.execute("SELECT MAX(week_start) as w FROM price_history").fetchone()["w"]
-    rows = db.execute("""
-        SELECT DISTINCT p.name, p.meat_type, s.name as store,
-               ph.price, ph.merchant_name, ph.valid_to, ph.image_url
+    rows = db.execute("""\
+        SELECT p.id, p.name, p.meat_type, p.package_weight_g,
+               s.name as store, s.id as store_id,
+               ph.price, ph.unit_price, ph.unit_type,
+               ph.valid_to, ph.merchant_name, ph.image_url
         FROM products p
         JOIN stores s ON s.id = p.store_id
         JOIN price_history ph ON ph.product_id = p.id

@@ -518,6 +518,13 @@ body {
   border: 1px solid #d4dfc8;
   font-family: 'Inter', Arial, sans-serif;
 }
+.deal-detail {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 2px 8px;
+  font-family: 'Inter', Arial, sans-serif;
+}
 .deal-recipe {
   margin-top: 6px;
   padding-top: 5px;
@@ -1434,7 +1441,8 @@ function renderDealCard(d, rank) {
   const priceHtml = d.price != null ? `${d.price.toFixed(2)}$` : "";
   const perKgHtml = d.per_kg != null ? `<span class="deal-per-kg">${d.per_kg.toFixed(2)}$/kg</span>` : "";
   const perLbHtml = d.per_lb != null ? `<span class="deal-per-kg">${d.per_lb.toFixed(2)}$/lb</span>` : "";
-  const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
+    const detailHtml = d.detail ? `<span class="deal-detail">${escapeHTML(d.detail.substring(0, 35))}</span>` : "";
+    const proteinHtml = hasProtein ? `<span class="deal-protein">💪 ${d.protein_per_dollar}g/$</span>` : "";
   const recipeHtml = recipe ? `<div class="deal-recipe">🍳 ${escapeHTML(recipe.title.substring(0, 55))}${recipe.title.length > 55 ? "…" : ""}</div>` : "";
 
   return `<div class="deal-card${isTop ? " top-deal" : ""}" data-deal-id="${d.id}" role="button" tabindex="0" aria-label="${nameHtml} chez ${storeHtml}">
@@ -1444,7 +1452,7 @@ function renderDealCard(d, rank) {
       <div class="deal-store" style="${storeInline}">${storeEmoji} ${storeHtml}</div>
       <div class="deal-prices">
         <span class="deal-price">${priceHtml}</span>
-        ${perKgHtml}${perLbHtml}${proteinHtml}
+        ${perKgHtml}${perLbHtml}${detailHtml}${proteinHtml}
       </div>
       ${recipeHtml}
     </div>

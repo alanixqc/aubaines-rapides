@@ -58,7 +58,7 @@ except ImportError:
 # Configuration
 # ═══════════════════════════════════════════════════════════════════════════════
 
-BASE_URL = "https://www.superc.ca/en"
+BASE_URL = "https://www.superc.ca/fr"
 
 CATEGORIES = {
     "beef": {
@@ -165,10 +165,18 @@ class SuperCScraper:
     # ── Navigation helpers ────────────────────────────────────────────────
 
     def _navigate(self, url: str) -> bool:
-        """Navigate to a URL, wait for content, handle cookie consent."""
+        """Navigate to URL and wait for content."""
         try:
             self._page.goto(url, wait_until="domcontentloaded", timeout=60000)
             self._page.wait_for_timeout(3000)  # let JS settle
+            # Forcer la langue française via cookie/lang préf
+            try:
+                self._page.evaluate("""() => {
+                    localStorage.setItem('lang', 'fr');
+                    document.cookie = "lang=fr; path=/; max-age=86400";
+                }""")
+            except Exception:
+                pass
             self._handle_cookies()
             self._page.wait_for_timeout(1500)
 
@@ -278,11 +286,27 @@ class SuperCScraper:
                     ? secondaryPrice.textContent.trim()
                     : null;
 
-                // Product full name/title
-                const titleEl = tile.querySelector('.head__title');
-                const fullName = titleEl
-                    ? titleEl.textContent.trim()
-                    : name;
+                // Product full name/title — cherche d'abord le lien titre, 
+                // puis .head__title, puis fallback sur data-product-name
+                let fullName = name;
+                const titleLink = tile.querySelector('a[data-testid="product-title"]') ||
+                                  tile.querySelector('.product-tile__title a') ||
+                                  tile.querySelector('[class*="product-name"] a') ||
+                                  tile.querySelector('.head__title');
+                if (titleLink) {
+                    const t = titleLink.textContent.trim();
+                    if (t) fullName = t;
+                } else {
+                    // Fallback: chercher le premier lien dans la tuile avec un texte long
+                    const links = tile.querySelectorAll('a');
+                    for (const a of links) {
+                        const t = a.textContent.trim();
+                        if (t.length > fullName.length) {
+                            fullName = t;
+                            break;
+                        }
+                    }
+                }
 
                 // Weight/size info
                 const unitDetails = tile.querySelector('.head__unit-details');
@@ -660,6 +684,19 @@ class SuperCScraper:
                 continue
 
             try:
+                # Extraire le poids en grammes à partir du package_weight (ex: "1600 g" -> 1600)
+                weight_g = None
+                pw = self._parse_weight(p.get("package_info"))
+                if pw:
+                    m = re.match(r'([\d.]+)\s*(?:g|kg)', str(pw), re.IGNORECASE)
+                    if m:
+                        val = float(m.group(1))
+                        unit = m.group(2).lower()
+                        if unit == 'kg':
+                            weight_g = int(val * 1000)
+                        else:
+                            weight_g = int(val)
+
                 # Insert or get product
                 db.execute(
                     """INSERT OR IGNORE INTO products (name, store_id, meat_type, category)
@@ -675,6 +712,13 @@ class SuperCScraper:
                     continue
 
                 product_id = product["id"]
+
+                # Mettre à jour le poids si on en a un
+                if weight_g:
+                    db.execute(
+                        "UPDATE products SET package_weight_g = ? WHERE id = ? AND package_weight_g IS NULL",
+                        (weight_g, product_id),
+                    )
 
                 # Insert price history
                 db.execute(
