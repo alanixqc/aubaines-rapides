@@ -750,7 +750,7 @@ def export_deals():
                 "protein_per_dollar": protein_per_dollar,
                 "product_type": classify_product_type(clean_name),
                 "recipe": recipe,
-                "detail": r.get("sale_text", "").strip() if r.get("sale_text") else None,
+                "detail": r["sale_text"].strip() if r["sale_text"] else None,
             })
         
         deals_with_kg = [d for d in deals if d["per_kg"]]

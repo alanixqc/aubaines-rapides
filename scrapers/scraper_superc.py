@@ -58,7 +58,7 @@ except ImportError:
 # Configuration
 # ═══════════════════════════════════════════════════════════════════════════════
 
-BASE_URL = "https://www.superc.ca/fr"
+BASE_URL = "https://www.superc.ca/en"
 
 CATEGORIES = {
     "beef": {
@@ -688,7 +688,7 @@ class SuperCScraper:
                 weight_g = None
                 pw = self._parse_weight(p.get("package_info"))
                 if pw:
-                    m = re.match(r'([\d.]+)\s*(?:g|kg)', str(pw), re.IGNORECASE)
+                    m = re.match(r'([\d.]+)\s*(g|kg)', str(pw), re.IGNORECASE)
                     if m:
                         val = float(m.group(1))
                         unit = m.group(2).lower()
