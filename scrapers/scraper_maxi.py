@@ -10,11 +10,14 @@ from scripts.db_saver import save_products_to_db, save_deals_json
 
 STORES = {
     "maxi": {"domain": "www.maxi.ca", "banner": "maxi", "name": "Maxi",
-             "color": "#2563eb", "category_url": "https://www.maxi.ca/fr/alimentation/viande/c/27998"},
+             "color": "#2563eb", "category_url": "https://www.maxi.ca/fr/alimentation/viande/c/27998",
+             "dairy_url": "https://www.maxi.ca/fr/produits-laitiers-et-oeufs/c/28003"},
     "provigo": {"domain": "www.provigo.ca", "banner": "provigo", "name": "Provigo",
-                "color": "#dc2626", "category_url": "https://www.provigo.ca/fr/alimentation/viande/c/27998"},
+                "color": "#dc2626", "category_url": "https://www.provigo.ca/fr/alimentation/viande/c/27998",
+                "dairy_url": "https://www.provigo.ca/fr/produits-laitiers-et-oeufs/c/28003"},
     "loblaws": {"domain": "www.loblaws.ca", "banner": "loblaw", "name": "Loblaws",
-                "color": "#1d4ed8", "category_url": "https://www.loblaws.ca/fr/alimentation/viande/c/27998"},
+                "color": "#1d4ed8", "category_url": "https://www.loblaws.ca/fr/alimentation/viande/c/27998",
+                "dairy_url": "https://www.loblaws.ca/fr/produits-laitiers-et-oeufs/c/28003"},
 }
 
 def fetch_page(url):
@@ -42,7 +45,7 @@ def extract_products(html):
                 products.append(tile)
     return products
 
-def normalize(tile, store):
+def normalize(tile, store, is_dairy=False):
     pricing = tile.get('pricing', {})
     price = 0.0
     try: price = float(pricing.get('price', '0').replace(',', '.'))
@@ -68,7 +71,7 @@ def normalize(tile, store):
         "url": link,
         "sizing": tile.get('packageSizing', ''),
         "store": store['name'],
-        "category": "Viande",
+        "category": None if is_dairy else "Viande",
         "meat_type": None,
         "scraped_at": datetime.now().isoformat(),
     }
@@ -76,17 +79,36 @@ def normalize(tile, store):
 def scrape(store_key):
     store = STORES.get(store_key)
     if not store: return []
-    print(f"🔄 {store['name']}... ", end='', flush=True)
+    
+    all_products = []
+    
+    # Scrape meat category
+    print(f"🔄 {store['name']} viande... ", end='', flush=True)
     try:
         html = fetch_page(store['category_url'])
         tiles = extract_products(html)
-        products = [normalize(t, store) for t in tiles]
-        sales = sum(1 for p in products if p.get('on_sale'))
-        print(f"✅ {len(products)} produits ({sales} spéciaux)")
-        return products
+        meat_products = [normalize(t, store) for t in tiles]
+        sales = sum(1 for p in meat_products if p.get('on_sale'))
+        print(f"✅ {len(meat_products)} produits ({sales} spéciaux)")
+        all_products.extend(meat_products)
     except Exception as e:
         print(f"❌ {e}")
-        return []
+    
+    # Scrape dairy/yogourt category
+    dairy_url = store.get('dairy_url')
+    if dairy_url:
+        print(f"🔄 {store['name']} laitages... ", end='', flush=True)
+        try:
+            html = fetch_page(dairy_url)
+            tiles = extract_products(html)
+            dairy_products = [normalize(t, store, is_dairy=True) for t in tiles]
+            sales = sum(1 for p in dairy_products if p.get('on_sale'))
+            print(f"✅ {len(dairy_products)} produits ({sales} spéciaux)")
+            all_products.extend(dairy_products)
+        except Exception as e:
+            print(f"❌ {e}")
+    
+    return all_products
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()

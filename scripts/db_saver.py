@@ -8,9 +8,10 @@ from db.schema import get_db
 from datetime import date, datetime, timedelta
 
 def get_week_start(d=None):
-    """Retourne le lundi de la semaine (YYYY-MM-DD)."""
+    """Retourne la date du jour (YYYY-MM-DD) pour grouper les prix par jour de scraping.
+    NOTE: build_site.py utilise directement week_start comme clé de semaine."""
     d = d or date.today()
-    return (d - timedelta(days=d.weekday())).isoformat()
+    return d.isoformat()
 
 def save_products_to_db(products, merchant_name, slug=None):
     """Sauvegarde une liste de produits scrapés dans aubaines.db.
