@@ -1,5 +1,16 @@
 [
   {
+    "id": 53440,
+    "name": "Boneless Top Sirloin Roast",
+    "store": "Super C",
+    "price": 49.57,
+    "per_kg": 154.91,
+    "weight_kg": 0.32,
+    "source": "reel",
+    "reason": "per_kg_trop_eleve",
+    "week": "2026-06-02"
+  },
+  {
     "id": 54918,
     "name": "Duck Foie Gras with Guérande Salt",
     "store": "Metro",

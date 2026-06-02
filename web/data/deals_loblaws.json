@@ -11,7 +11,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116957"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Tortilla Española Omelette aux pommes de terre et oignons caramélisés",
@@ -25,7 +25,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116985"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucissesᴹᴰ kiosque de rue italliennes piquantes",
@@ -39,7 +39,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116988"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de bœuf L’Intrépide au cheddar et jalapeno",
@@ -53,7 +53,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116990"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de boeuf Donair à la manière d'Halifax",
@@ -67,21 +67,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116992"
-  },
-  {
-    "name": "Bouchées de chou-fleur Gobi 65",
-    "brand": "le Choix du Président",
-    "price": 8.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21633508_EA/fr/1/21633508_enfr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/bouch-es-de-chou-fleur-gobi-65/p/21633508_EA",
-    "sizing": "400 g, 2,00 $/100g",
-    "store": "Loblaws",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.116994"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Côtes de dos de porc Stampede fumé",
@@ -95,7 +81,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117002"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc bangers",
@@ -109,7 +95,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117004"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de dinde épais et juteux Menu bleu",
@@ -123,7 +109,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117006"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de surlonge de bœuf",
@@ -137,21 +123,21 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117008"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Côtes de dos de porc avec sauce dorée de la Caroline",
     "brand": "le Choix du Président",
-    "price": 12.0,
+    "price": 10.0,
     "was_price": 14.0,
     "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21517824_EA/fr/1/21517824_fr_front_v1_400.png",
     "url": "https://www.loblaws.ca/fr/c-tes-de-dos-de-porc-avec-sauce-dor-e-de-la-caroli/p/21517824_EA",
-    "sizing": "500 g, 2,40 $/100g",
+    "sizing": "500 g, 2,00 $/100g",
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117011"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc fumées SmokiesMC au cheddar",
@@ -165,7 +151,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117013"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de poulet cuites au fumoir à la mozzarella et aux poivrons rouges ",
@@ -179,7 +165,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117015"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de poulet cuites au fumoir à l’ail rôti et aux fines herbes",
@@ -193,7 +179,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117017"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de poulet fumées épinards et feta",
@@ -207,7 +193,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117018"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc chorizo",
@@ -221,7 +207,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117020"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Côtes de dos de porc à la marinade sèche sel de mer et poivre noir",
@@ -235,7 +221,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117022"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de bœuf Angus Simplement bon",
@@ -249,7 +235,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117024"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucissesᴹᴰ kiosque de rue classiques au fromage cheddar",
@@ -263,7 +249,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117025"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses kiosque de rue classiquesᴹᴰ ",
@@ -277,7 +263,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117027"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc fumées SmokiesMC cheddar et jalapeno",
@@ -291,7 +277,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117029"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de boeuf épais et juteux",
@@ -305,7 +291,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117031"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de surlonge de bœuf Épais et juteuxMC",
@@ -319,7 +305,21 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117033"
+    "scraped_at": "2026-06-02T06:08:33.873319"
+  },
+  {
+    "name": "Les fabuleux burger de Chez Nous",
+    "brand": "le Choix du Président",
+    "price": 20.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21011355_EA/fr/1/21011355_enfr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/les-fabuleux-burger-de-chez-nous/p/21011355_EA",
+    "sizing": "852 g, 2,35 $/100g",
+    "store": "Loblaws",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burger wagyu umami",
@@ -333,7 +333,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117034"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers De Bœuf Wagyu",
@@ -347,7 +347,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117036"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses Oktober Wurst au porc",
@@ -361,7 +361,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117038"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses fumées Smokies originales",
@@ -375,21 +375,21 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117040"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Côtes de dos de porc Stampede fumé",
     "brand": "le Choix du Président",
-    "price": 12.0,
+    "price": 10.0,
     "was_price": 14.0,
     "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21284542_EA/fr/1/21284542_enfr_front_400.png",
     "url": "https://www.loblaws.ca/fr/c-tes-de-dos-de-porc-stampede-fum/p/21284542_EA",
-    "sizing": "500 g, 2,40 $/100g",
+    "sizing": "500 g, 2,00 $/100g",
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117042"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc à saveur de miel et ail",
@@ -403,7 +403,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117044"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc fumées SmokiesMC miel et ail",
@@ -417,7 +417,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117045"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc italiennes piquantes",
@@ -431,7 +431,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117047"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Saucisses de porc fumées SmokiesMC italiennes",
@@ -445,7 +445,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117049"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers Angus de bœuf maigre Menu Bleu",
@@ -459,7 +459,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117051"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de bœuf maigre Menu Bleu",
@@ -473,21 +473,21 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117052"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Côtes de dos de porc barbecue au miel",
     "brand": "le Choix du Président",
-    "price": 12.0,
+    "price": 10.0,
     "was_price": 14.0,
     "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21284538_EA/fr/1/21284538_enfr_front_400.png",
     "url": "https://www.loblaws.ca/fr/c-tes-de-dos-de-porc-barbecue-au-miel/p/21284538_EA",
-    "sizing": "500 g, 2,40 $/100g",
+    "sizing": "500 g, 2,00 $/100g",
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117055"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Végéburger à base de plantes haricots noirs, maïs et patates douces",
@@ -501,7 +501,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117056"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Végéburger à base de plantes pois chiches et patates douces",
@@ -515,7 +515,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117058"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de poulet épais et juteux",
@@ -529,7 +529,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117060"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Burgers de côte de bœuf Épais et juteuxMC",
@@ -543,7 +543,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117062"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon",
@@ -557,7 +557,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117063"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon à teneur réduite en sel",
@@ -571,7 +571,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117065"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon naturellement fumé à saveur d’érable",
@@ -585,7 +585,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117067"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon naturellement fumé salé à sec tranché épais",
@@ -599,7 +599,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117069"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon fumé naturellement Simplement bon",
@@ -613,7 +613,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117070"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon doublement fumé au coin du feu",
@@ -627,7 +627,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117072"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon fumé au bois de pommier",
@@ -641,7 +641,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117074"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon à l’ancienne",
@@ -655,7 +655,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117076"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon au poivre en grains à l'ancienne",
@@ -669,7 +669,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117077"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon entièrement cuit et fumé naturellement Simplement bon",
@@ -683,7 +683,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117079"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Bacon en tranches épaisses entièrement cuit et fumé naturellement Simplement bon",
@@ -697,7 +697,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117081"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Plaque de cuisson pour bacon exceptionnelle en acier au carbone antiadhésif",
@@ -711,7 +711,7 @@
     "store": "Loblaws",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:02.117083"
+    "scraped_at": "2026-06-02T06:08:33.873319"
   },
   {
     "name": "Yogourt probiotique à l’arôme de vanille",
@@ -725,7 +725,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663703"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Oeufs Gros Pondus Liberte",
@@ -739,7 +739,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663712"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre salé de campagne baratté",
@@ -753,7 +753,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663715"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage cheddar râpé avec habanero ",
@@ -767,7 +767,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663717"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage cheddar râpé à arôme de fumée",
@@ -781,7 +781,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663719"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine avec huile d’olive",
@@ -795,7 +795,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663721"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt Grec 8%, nature",
@@ -809,7 +809,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663723"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt probiotique aux bleuets",
@@ -823,7 +823,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663725"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Œufs de caille frais de la ferme",
@@ -837,7 +837,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663727"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Blancs d’œufs",
@@ -851,7 +851,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663729"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Alternative au beurre salée À base de plantes",
@@ -865,7 +865,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663731"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec aux cerises noires",
@@ -879,7 +879,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663733"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Lot de 12 œufs blancs de calibre gros pondus en liberté Menu Bleu",
@@ -893,7 +893,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663735"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Alternative au beurre non salée À base de plantes",
@@ -907,7 +907,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663736"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt probiotique aux fraises",
@@ -921,7 +921,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663738"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Oeufs X Gros Pondu Lib., Un",
@@ -935,7 +935,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663740"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec au miel",
@@ -949,7 +949,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663742"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine originale",
@@ -963,7 +963,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663744"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Blancs d’œufs pondus en liberté",
@@ -977,7 +977,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663746"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec, limette",
@@ -991,7 +991,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663748"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec 2 % M.G., nature",
@@ -1005,7 +1005,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663749"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages triple cheddar râpés ",
@@ -1019,7 +1019,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663751"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage râpé pizza mozzarella",
@@ -1033,7 +1033,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663753"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages Tex Mex râpés",
@@ -1047,7 +1047,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663755"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec nature à 0 % de M.G.",
@@ -1061,7 +1061,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663757"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage parmesan râpé ",
@@ -1075,7 +1075,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663759"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec nature de 2 % M.G.",
@@ -1089,7 +1089,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663761"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages râpés triple cheddar, sans lactose",
@@ -1103,7 +1103,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663763"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage à pizza mozzarella râpé, sans lactose",
@@ -1117,7 +1117,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663765"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages nacho sans lactose",
@@ -1131,7 +1131,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663766"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Fromage feta finement émietté",
@@ -1145,7 +1145,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663768"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec à la vanille",
@@ -1159,7 +1159,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663770"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages pour pizza Mozzarella et cheddar",
@@ -1173,7 +1173,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663772"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec à 2 % de M.G., vanille",
@@ -1187,7 +1187,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663774"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages râpés tre formaggi",
@@ -1201,7 +1201,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663776"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec nature sans lactose",
@@ -1215,7 +1215,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663778"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Mélange de fromages râpés macaroni au fromage",
@@ -1229,7 +1229,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663780"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Lait fermenté probiotique Kéfir nature",
@@ -1243,7 +1243,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663784"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Épices pour bifteck à la Montréalaise, assaisonné avec un mélange pizza mozzarella et cheddar",
@@ -1257,7 +1257,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663786"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec nature 5%",
@@ -1271,7 +1271,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663788"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Yogourt grec aux bleuets",
@@ -1285,7 +1285,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663790"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre salé.",
@@ -1299,133 +1299,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663792"
-  },
-  {
-    "name": "Beurre végétal - bâtonnets salés",
-    "brand": "Becel",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21088919_EA/fr/1/21088919_fr_front_v2_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-b-tonnets-sal-s/p/21088919_EA",
-    "sizing": "454 g, 1,21 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663794"
-  },
-  {
-    "name": "Beurre non salé",
-    "brand": "Sans Nom",
-    "price": 6.19,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20316543002_EA/fr/1/20316543002_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-non-sal/p/20316543002_EA",
-    "sizing": "454 g, 1,36 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663796"
-  },
-  {
-    "name": "Beurre non salé.",
-    "brand": "Lactantia",
-    "price": 4.98,
-    "was_price": 6.0,
-    "on_sale": true,
-    "image": "https://digital.loblaws.ca/PCX/20296112005_EA/fr/1/20296112005_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-non-sal/p/20296112005_EA",
-    "sizing": "454 g, 1,10 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663798"
-  },
-  {
-    "name": "Beurre végétal – salé",
-    "brand": "Becel",
-    "price": 5.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21279365_EA/fr/1/21279365_fr_front_v2_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-sal/p/21279365_EA",
-    "sizing": "454 g, 1,32 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663800"
-  },
-  {
-    "name": "Margarine originale",
-    "brand": "Becel",
-    "price": 7.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747692_EA/fr/1/5995019012_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747692_EA",
-    "sizing": "800 g, 0,88 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663802"
-  },
-  {
-    "name": "Bâtonnets de beurre salé",
-    "brand": "Lactantia",
-    "price": 9.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20315960_EA/fr/1/20315960_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/b-tonnets-de-beurre-sal/p/20315960_EA",
-    "sizing": "4x113.0 g, 2,10 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663804"
-  },
-  {
-    "name": "Beurre végétal – avec huile d’olive, salé",
-    "brand": "Becel",
-    "price": 5.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21535352_EA/fr/1/21535352_fr_front_v2_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-avec-huile-d-olive-sal/p/21535352_EA",
-    "sizing": "454 g, 1,32 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663806"
-  },
-  {
-    "name": "Tartinade de margarine",
-    "brand": "I Can’t Believe It’s Not Butter!",
-    "price": 3.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20061949001_EA/fr/1/20061949001_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/tartinade-de-margarine/p/20061949001_EA",
-    "sizing": "427 g, 0,93 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663808"
-  },
-  {
-    "name": "Margarine avec huile d'olive",
-    "brand": "Becel",
-    "price": 7.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747558_EA/fr/1/1111515703_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-avec-huile-d-olive/p/21747558_EA",
-    "sizing": "800 g, 0,88 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663810"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre végétal – bâtonnets non-salés",
@@ -1439,77 +1313,35 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663811"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
-    "name": "Beurre salé",
-    "brand": "Gay Lea",
-    "price": 8.99,
+    "name": "Beurre non salé",
+    "brand": "Sans Nom",
+    "price": 6.19,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20559408_EA/fr/1/6601359862_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-sal/p/20559408_EA",
-    "sizing": "454 g, 1,98 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20316543002_EA/fr/1/20316543002_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-non-sal/p/20316543002_EA",
+    "sizing": "454 g, 1,36 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663813"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
-    "name": "Margarine originale",
-    "brand": "Becel",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747653_EA/fr/1/5995019011_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747653_EA",
-    "sizing": "400 g, 1,37 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663815"
-  },
-  {
-    "name": "Margarine Or",
-    "brand": "Becel",
-    "price": 7.0,
-    "was_price": 9.49,
-    "on_sale": true,
-    "image": "https://digital.loblaws.ca/PCX/21279362_EA/fr/1/21279362_fr_front_v1_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-or/p/21279362_EA",
-    "sizing": "637 g, 1,10 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663818"
-  },
-  {
-    "name": "Beurre à l’ail et aux herbes de provence.",
+    "name": "Beurre non salé.",
     "brand": "Lactantia",
-    "price": 3.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20106744_EA/fr/1/20106744_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-l-ail-et-aux-herbes-de-provence/p/20106744_EA",
-    "sizing": "125 g, 3,19 $/100g",
+    "price": 4.98,
+    "was_price": 6.0,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/20296112005_EA/fr/1/20296112005_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-non-sal/p/20296112005_EA",
+    "sizing": "454 g, 1,10 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663819"
-  },
-  {
-    "name": "Margarine originale",
-    "brand": "I Can’t Believe It’s Not Butter!",
-    "price": 3.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747538_EA/fr/1/5995030015_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747538_EA",
-    "sizing": "400 g, 1,00 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663821"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre végétal sans produits laitiers – non-salé",
@@ -1523,21 +1355,175 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663823"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
-    "name": "Beurre de culture non salé .",
+    "name": "Margarine originale",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747692_EA/fr/1/5995019012_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747692_EA",
+    "sizing": "800 g, 0,88 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre salé",
+    "brand": "Gay Lea",
+    "price": 8.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20559408_EA/fr/1/6601359862_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-sal/p/20559408_EA",
+    "sizing": "454 g, 1,98 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre végétal - bâtonnets salés",
+    "brand": "Becel",
+    "price": 5.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21088919_EA/fr/1/21088919_fr_front_v2_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-b-tonnets-sal-s/p/21088919_EA",
+    "sizing": "454 g, 1,21 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine avec huile d'olive",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747558_EA/fr/1/1111515703_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-avec-huile-d-olive/p/21747558_EA",
+    "sizing": "800 g, 0,88 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Bâtonnets de beurre salé",
     "brand": "Lactantia",
     "price": 9.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20056675_EA/fr/1/20056675_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-de-culture-non-sal/p/20056675_EA",
-    "sizing": "4x113.5 g, 2,09 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20315960_EA/fr/1/20315960_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/b-tonnets-de-beurre-sal/p/20315960_EA",
+    "sizing": "4x113.0 g, 2,10 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663825"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre végétal – salé",
+    "brand": "Becel",
+    "price": 5.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21279365_EA/fr/1/21279365_fr_front_v2_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-sal/p/21279365_EA",
+    "sizing": "454 g, 1,32 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine originale",
+    "brand": "Becel",
+    "price": 5.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747653_EA/fr/1/5995019011_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747653_EA",
+    "sizing": "400 g, 1,37 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Tartinade de margarine",
+    "brand": "I Can’t Believe It’s Not Butter!",
+    "price": 3.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20061949001_EA/fr/1/20061949001_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/tartinade-de-margarine/p/20061949001_EA",
+    "sizing": "427 g, 0,93 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre végétal – avec huile d’olive, salé",
+    "brand": "Becel",
+    "price": 5.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21535352_EA/fr/1/21535352_fr_front_v2_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-v-g-tal-avec-huile-d-olive-sal/p/21535352_EA",
+    "sizing": "454 g, 1,32 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre à l’ail et aux herbes de provence.",
+    "brand": "Lactantia",
+    "price": 3.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20106744_EA/fr/1/20106744_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-l-ail-et-aux-herbes-de-provence/p/20106744_EA",
+    "sizing": "125 g, 3,19 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine originale",
+    "brand": "I Can’t Believe It’s Not Butter!",
+    "price": 3.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747538_EA/fr/1/5995030015_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-originale/p/21747538_EA",
+    "sizing": "400 g, 1,00 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine Or",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": 9.49,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/21279362_EA/fr/1/21279362_fr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-or/p/21279362_EA",
+    "sizing": "637 g, 1,10 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre de campagne barraté non salé",
@@ -1551,7 +1537,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663827"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre de culture non salé .",
+    "brand": "Lactantia",
+    "price": 9.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20056675_EA/fr/1/20056675_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-de-culture-non-sal/p/20056675_EA",
+    "sizing": "4x113.5 g, 2,09 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Signature du Chef - salé",
@@ -1565,77 +1565,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663829"
-  },
-  {
-    "name": "Signature du Chef - non salé",
-    "brand": "Becel",
-    "price": 7.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747584_EA/fr/1/21747584_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/signature-du-chef-non-sal/p/21747584_EA",
-    "sizing": "454 g, 1,65 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663831"
-  },
-  {
-    "name": "Beurre ordinaire Spreadables",
-    "brand": "Gay Lea",
-    "price": 6.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20119926002_EA/fr/1/6601380842_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-ordinaire-spreadables/p/20119926002_EA",
-    "sizing": "227 g, 2,86 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663832"
-  },
-  {
-    "name": "Margarine à 55 % d'huile végétale originale",
-    "brand": "I Can’t Believe It’s Not Butter!",
-    "price": 6.29,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747598_EA/fr/1/5995030016_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-55-d-huile-v-g-tale-originale/p/21747598_EA",
-    "sizing": "800 g, 0,79 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663834"
-  },
-  {
-    "name": "Margarine Mirage",
-    "brand": "Mirage Margarine",
-    "price": 8.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20074944_EA/fr/1/20074944_fr_front_v1_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-mirage/p/20074944_EA",
-    "sizing": "850 g, 1,00 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663836"
-  },
-  {
-    "name": "Margarine avec huile d'avocat",
-    "brand": "Becel",
-    "price": 7.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747671_EA/fr/1/5995030018_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-avec-huile-d-avocat/p/21747671_EA",
-    "sizing": "800 g, 0,88 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663838"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre non salé",
@@ -1649,21 +1579,91 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663840"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
-    "name": "Margarine",
-    "brand": "Mirage Margarine",
-    "price": 15.99,
-    "was_price": 20.99,
-    "on_sale": true,
-    "image": "https://digital.loblaws.ca/PCX/20162225_EA/fr/1/6844510055_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine/p/20162225_EA",
-    "sizing": "2.72 kg, 0,59 $/100g",
+    "name": "Signature du Chef - non salé",
+    "brand": "Becel",
+    "price": 7.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747584_EA/fr/1/21747584_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/signature-du-chef-non-sal/p/21747584_EA",
+    "sizing": "454 g, 1,65 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663843"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre ordinaire Spreadables",
+    "brand": "Gay Lea",
+    "price": 6.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20119926002_EA/fr/1/6601380842_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-ordinaire-spreadables/p/20119926002_EA",
+    "sizing": "227 g, 2,86 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre de culture non salé de première qualité",
+    "brand": "Président",
+    "price": 6.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21209251_EA/fr/1/21209251_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-de-culture-non-sal-de-premi-re-qualit/p/21209251_EA",
+    "sizing": "250 g, 2,80 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine à 55 % d'huile végétale originale",
+    "brand": "I Can’t Believe It’s Not Butter!",
+    "price": 6.29,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747598_EA/fr/1/5995030016_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-55-d-huile-v-g-tale-originale/p/21747598_EA",
+    "sizing": "800 g, 0,79 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine avec huile d'avocat",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747671_EA/fr/1/5995030018_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-avec-huile-d-avocat/p/21747671_EA",
+    "sizing": "800 g, 0,88 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre de culture salé de première qualité",
+    "brand": "Président",
+    "price": 6.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21209150_EA/fr/1/6820087950_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-de-culture-sal-de-premi-re-qualit/p/21209150_EA",
+    "sizing": "250 g, 2,80 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine avec huile d'olive",
@@ -1677,21 +1677,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663845"
-  },
-  {
-    "name": "Margarine d'huile végétale 50 % non hydrogénée",
-    "brand": "Imperial",
-    "price": 8.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747537_EA/fr/1/5995012443_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-d-huile-v-g-tale-50-non-hydrog-n-e/p/21747537_EA",
-    "sizing": "1.2 kg, 0,75 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663847"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine végétale",
@@ -1705,7 +1691,49 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663849"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine Mirage",
+    "brand": "Mirage Margarine",
+    "price": 8.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20074944_EA/fr/1/20074944_fr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-mirage/p/20074944_EA",
+    "sizing": "850 g, 1,00 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine d'huile végétale 50 % non hydrogénée",
+    "brand": "Imperial",
+    "price": 8.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747537_EA/fr/1/5995012443_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-d-huile-v-g-tale-50-non-hydrog-n-e/p/21747537_EA",
+    "sizing": "1.2 kg, 0,75 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine",
+    "brand": "Mirage Margarine",
+    "price": 15.99,
+    "was_price": 20.99,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/20162225_EA/fr/1/6844510055_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine/p/20162225_EA",
+    "sizing": "2.72 kg, 0,59 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine",
@@ -1719,7 +1747,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663851"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Tartinade à l’ail",
@@ -1733,7 +1761,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663853"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Bâtonnets de beurre salé",
@@ -1747,7 +1775,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663854"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine sans produits laitiers à base de plantes",
@@ -1761,7 +1789,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663856"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Bâtonnets de beurre au sel de mer",
@@ -1775,7 +1803,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663858"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine d'huile végétale 55 % non hydrogénée",
@@ -1789,21 +1817,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663860"
-  },
-  {
-    "name": "Margarine d'huile végétale 55 % non hydrogénée",
-    "brand": "Imperial",
-    "price": 4.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747189_EA/fr/1/5995012441_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/margarine-d-huile-v-g-tale-55-non-hydrog-n-e/p/21747189_EA",
-    "sizing": "400 g, 1,25 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663862"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine réduite en calories légère",
@@ -1817,7 +1831,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663864"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Margarine d'huile végétale 55 % non hydrogénée",
+    "brand": "Imperial",
+    "price": 4.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747189_EA/fr/1/5995012441_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/margarine-d-huile-v-g-tale-55-non-hydrog-n-e/p/21747189_EA",
+    "sizing": "400 g, 1,25 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine avec huile d'avocat",
@@ -1831,7 +1859,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663866"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine Quarters Value Size",
@@ -1845,7 +1873,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663868"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Sans lactose beurre salé",
@@ -1859,7 +1887,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663870"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Beurre en bâtonnets non salé",
@@ -1873,7 +1901,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663872"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine végétale",
@@ -1887,7 +1915,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663874"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine",
@@ -1901,7 +1929,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663875"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Margarine originale",
@@ -1915,21 +1943,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663877"
-  },
-  {
-    "name": "Beurre salé",
-    "brand": "Sans Nom",
-    "price": 6.19,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20325029_EA/fr/1/20325029_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/beurre-sal/p/20325029_EA",
-    "sizing": "454 g, 1,36 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663879"
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Sans lactose beurre non salé",
@@ -1943,7 +1957,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663881"
+    "scraped_at": "2026-06-02T06:08:35.578162"
+  },
+  {
+    "name": "Beurre salé",
+    "brand": "Sans Nom",
+    "price": 6.19,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20325029_EA/fr/1/20325029_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/beurre-sal/p/20325029_EA",
+    "sizing": "454 g, 1,36 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.578162"
   },
   {
     "name": "Pâte originale Crescents, 8 pièces",
@@ -1957,7 +1985,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663883"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte à biscuits aux pépites de chocolat, Prête à cuire",
@@ -1971,21 +1999,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663885"
-  },
-  {
-    "name": "Pâte feuilletée au beurre",
-    "brand": "le Choix du Président",
-    "price": 6.5,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21288850_EA/fr/1/21288850_fr_front_v1_400.png",
-    "url": "https://www.loblaws.ca/fr/p-te-feuillet-e-au-beurre/p/21288850_EA",
-    "sizing": "450 g, 1,44 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663887"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte à biscuits aux morceaux de chocolat",
@@ -1999,7 +2013,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663888"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Pâte feuilletée au beurre",
+    "brand": "le Choix du Président",
+    "price": 6.5,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21288850_EA/fr/1/21288850_fr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/p-te-feuillet-e-au-beurre/p/21288850_EA",
+    "sizing": "450 g, 1,44 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Brioches à la Cannelle avec glaçage, prêts à cuire 8 unités",
@@ -2013,7 +2041,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663890"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Biscuits de Campagne, Pâte Prête à Cuire, 10 unités",
@@ -2027,21 +2055,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663893"
-  },
-  {
-    "name": "Pâte feuilletée",
-    "brand": "ALFA",
-    "price": 5.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21606988_EA/fr/1/520253548300_enfr_front_centre_marketing_1_GS1_Ecommerce_400.png",
-    "url": "https://www.loblaws.ca/fr/p-te-feuillet-e/p/21606988_EA",
-    "sizing": "850 g, 0,70 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663894"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte à biscuits aux pépites de chocolat, Prête à cuire, 24 unités",
@@ -2055,21 +2069,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663896"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
-    "name": "Croûtes à tarte profondes",
-    "brand": "Sans Nom",
-    "price": 4.99,
+    "name": "Pâte feuilletée",
+    "brand": "ALFA",
+    "price": 5.99,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20671251_EA/fr/1/20671251_fr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/cro-tes-tarte-profondes/p/20671251_EA",
-    "sizing": "380 g, 1,31 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21606988_EA/fr/1/520253548300_enfr_front_centre_marketing_1_GS1_Ecommerce_400.png",
+    "url": "https://www.loblaws.ca/fr/p-te-feuillet-e/p/21606988_EA",
+    "sizing": "850 g, 0,70 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663898"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Brioches à la Cannelle Grands! avec Glaçage de , Cannelle, 5 unités",
@@ -2083,7 +2097,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663900"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Croûtes à tarte profondes",
+    "brand": "Sans Nom",
+    "price": 4.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20671251_EA/fr/1/20671251_fr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/cro-tes-tarte-profondes/p/20671251_EA",
+    "sizing": "380 g, 1,31 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Croûtes à tartelette prêtes à cuire",
@@ -2097,7 +2125,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663902"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Croûtes à tarte, Pâte Préparée Réfrigérée",
@@ -2111,7 +2139,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663904"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Croissants Prêts À Cuire - Teneur Réduite En Gras",
@@ -2125,7 +2153,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663905"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte Pour Saucisses, Pâte Réfrigérée, Prête à Cuire, 6 unités",
@@ -2139,7 +2167,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663907"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte phyllo moyenne",
@@ -2153,7 +2181,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663910"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte à Pizza , Pâte Préparée Réfrigérée, 1 unité",
@@ -2167,21 +2195,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663912"
-  },
-  {
-    "name": "Pâte à biscuits Morceaux et brisures de chocolat",
-    "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20301101003_EA/fr/1/20301101003_fr_front_v3_400.png",
-    "url": "https://www.loblaws.ca/fr/p-te-biscuits-morceaux-et-brisures-de-chocolat/p/20301101003_EA",
-    "sizing": "454 g, 1,21 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663914"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Prêts à cuire Pâte à biscuits Reese's beurre d'arachide",
@@ -2195,35 +2209,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663915"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
-    "name": "Chaussons feuilletés Vraies pommes",
+    "name": "Pâte à biscuits Morceaux et brisures de chocolat",
     "brand": "Pillsbury",
-    "price": 4.79,
+    "price": 5.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20121195001_EA/fr/1/20121195001_fr_front_v2_400.png",
-    "url": "https://www.loblaws.ca/fr/chaussons-feuillet-s-vraies-pommes/p/20121195001_EA",
-    "sizing": "383 g, 1,25 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20301101003_EA/fr/1/20301101003_fr_front_v3_400.png",
+    "url": "https://www.loblaws.ca/fr/p-te-biscuits-morceaux-et-brisures-de-chocolat/p/20301101003_EA",
+    "sizing": "454 g, 1,21 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663917"
-  },
-  {
-    "name": "Grands! Croissants, Rouleaux de Croissant, Prêts à Cuire, 4 unités",
-    "brand": "Pillsbury",
-    "price": 4.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20317832001_EA/fr/1/20317832001_fr_front_v2_400.png",
-    "url": "https://www.loblaws.ca/fr/grands-croissants-rouleaux-de-croissant-pr-ts-cuir/p/20317832001_EA",
-    "sizing": "318 g, 1,51 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663919"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Monster Pâte à Biscuits Avec Morceaux De Bonbons, Beurre de Cacahuète et Pépites de Chocolat, Prête à Cuire, 12 ct",
@@ -2237,7 +2237,35 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663921"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Chaussons feuilletés Vraies pommes",
+    "brand": "Pillsbury",
+    "price": 4.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20121195001_EA/fr/1/20121195001_fr_front_v2_400.png",
+    "url": "https://www.loblaws.ca/fr/chaussons-feuillet-s-vraies-pommes/p/20121195001_EA",
+    "sizing": "383 g, 1,25 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Grands! Croissants, Rouleaux de Croissant, Prêts à Cuire, 4 unités",
+    "brand": "Pillsbury",
+    "price": 4.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20317832001_EA/fr/1/20317832001_fr_front_v2_400.png",
+    "url": "https://www.loblaws.ca/fr/grands-croissants-rouleaux-de-croissant-pr-ts-cuir/p/20317832001_EA",
+    "sizing": "318 g, 1,51 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte à Biscuits Double Chocolat , Prête à Cuire, 12 ct",
@@ -2251,7 +2279,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663923"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Brioches à la cannelle Grands! avec glaçage à saveur de fromage à la crème",
@@ -2265,21 +2293,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663925"
-  },
-  {
-    "name": "Avoine sans cuisson chocolaté noir",
-    "brand": "MUSH",
-    "price": 2.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21673552_EA/fr/1/21673552_enfr_front_400.png",
-    "url": "https://www.loblaws.ca/fr/avoine-sans-cuisson-chocolat-noir/p/21673552_EA",
-    "sizing": "141 g, 2,12 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663927"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson protéinée, brownie chocolaté",
@@ -2293,7 +2307,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663929"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Avoine sans cuisson chocolaté noir",
+    "brand": "MUSH",
+    "price": 2.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21673552_EA/fr/1/21673552_enfr_front_400.png",
+    "url": "https://www.loblaws.ca/fr/avoine-sans-cuisson-chocolat-noir/p/21673552_EA",
+    "sizing": "141 g, 2,12 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson gousse de vanille",
@@ -2307,7 +2335,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663931"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pamplemousse rouge",
@@ -2321,21 +2349,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663933"
-  },
-  {
-    "name": "Brioches à la cannelle Grands! Feuilleté suprême avec glaçage",
-    "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20301101004_EA/fr/1/20301101004_fr_front_v1_400.png",
-    "url": "https://www.loblaws.ca/fr/brioches-la-cannelle-grands-feuillet-supr-me-avec/p/20301101004_EA",
-    "sizing": "496 g, 1,11 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663935"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Minecraft Pate A Biscuits Au Sucre 20 CT",
@@ -2349,21 +2363,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663937"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
-    "name": "Petits pains feuilletés",
+    "name": "Brioches à la cannelle Grands! Feuilleté suprême avec glaçage",
     "brand": "Pillsbury",
-    "price": 4.79,
+    "price": 5.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20317832004_EA/fr/1/20317832004_fr_front_v3_400.png",
-    "url": "https://www.loblaws.ca/fr/petits-pains-feuillet-s/p/20317832004_EA",
-    "sizing": "340 g, 1,41 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20301101004_EA/fr/1/20301101004_fr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/brioches-la-cannelle-grands-feuillet-supr-me-avec/p/20301101004_EA",
+    "sizing": "496 g, 1,11 $/100g",
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663938"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson pomme et cannelle",
@@ -2377,7 +2391,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663940"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Petits pains feuilletés",
+    "brand": "Pillsbury",
+    "price": 4.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20317832004_EA/fr/1/20317832004_fr_front_v3_400.png",
+    "url": "https://www.loblaws.ca/fr/petits-pains-feuillet-s/p/20317832004_EA",
+    "sizing": "340 g, 1,41 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson bleuets",
@@ -2391,21 +2419,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663942"
-  },
-  {
-    "name": "Croûtes à tarte",
-    "brand": "Sans Nom",
-    "price": 4.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20153259_EA/fr/1/20153259_fr_front_v1_400.png",
-    "url": "https://www.loblaws.ca/fr/cro-tes-tarte/p/20153259_EA",
-    "sizing": "350 g, 1,43 $/100g",
-    "store": "Loblaws",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663944"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson protéinée, vanille française",
@@ -2419,7 +2433,21 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663946"
+    "scraped_at": "2026-06-02T06:08:35.579156"
+  },
+  {
+    "name": "Croûtes à tarte",
+    "brand": "Sans Nom",
+    "price": 4.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20153259_EA/fr/1/20153259_fr_front_v1_400.png",
+    "url": "https://www.loblaws.ca/fr/cro-tes-tarte/p/20153259_EA",
+    "sizing": "350 g, 1,43 $/100g",
+    "store": "Loblaws",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Croûte à tarte sans gluten surgelée",
@@ -2433,7 +2461,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663948"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Morceaux de pêches",
@@ -2447,7 +2475,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663950"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Avoine sans cuisson protéinée, tarte aux pommes",
@@ -2461,7 +2489,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663951"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "PILLSBURY BISCUITS SUCRE 468G",
@@ -2475,7 +2503,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663953"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte feuilletée pour desserts casher",
@@ -2489,7 +2517,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663955"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Pâte Feuilletée  casher",
@@ -2503,7 +2531,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663958"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Enveloppes Pour Rouleaux De Printemps ",
@@ -2517,7 +2545,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663960"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Cachitos congelés jambon & bacon le traditionnel",
@@ -2531,7 +2559,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663962"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Enveloppes à won ton, rond",
@@ -2545,7 +2573,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663964"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Barre de yaourt grec Yobar, noisette",
@@ -2559,7 +2587,7 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663966"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   },
   {
     "name": "Malawach surgelé ",
@@ -2573,6 +2601,6 @@
     "store": "Loblaws",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-05-31T18:25:06.663968"
+    "scraped_at": "2026-06-02T06:08:35.579156"
   }
 ]
