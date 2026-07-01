@@ -168,9 +168,9 @@
       "detail": "$1.47"
     },
     {
-      "id": 56088,
-      "name": "Arachides ou noix mélangées trophy, économisez $1",
-      "name_short": "Arachides ou noix mélangées trophy, écon…",
+      "id": 56089,
+      "name": "Noix mélangées trophy",
+      "name_short": "Noix mélangées trophy",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -190,9 +190,9 @@
       "detail": "$1.97"
     },
     {
-      "id": 56089,
-      "name": "Noix mélangées trophy",
-      "name_short": "Noix mélangées trophy",
+      "id": 56088,
+      "name": "Arachides ou noix mélangées trophy, économisez $1",
+      "name_short": "Arachides ou noix mélangées trophy, écon…",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -256,9 +256,9 @@
       "detail": "$2.27"
     },
     {
-      "id": 56069,
-      "name": "Petits gäteaux vachon",
-      "name_short": "Petits gäteaux vachon",
+      "id": 56070,
+      "name": "Petits gâteaux vachon",
+      "name_short": "Petits gâteaux vachon",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -278,9 +278,9 @@
       "detail": "$2.67"
     },
     {
-      "id": 56070,
-      "name": "Petits gâteaux vachon",
-      "name_short": "Petits gâteaux vachon",
+      "id": 56069,
+      "name": "Petits gäteaux vachon",
+      "name_short": "Petits gäteaux vachon",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -388,9 +388,9 @@
       "detail": "$2.97"
     },
     {
-      "id": 56091,
-      "name": "Grignotines cheetos",
-      "name_short": "Grignotines cheetos",
+      "id": 56092,
+      "name": "Grignotines doritos",
+      "name_short": "Grignotines doritos",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -410,9 +410,9 @@
       "detail": "$3.47"
     },
     {
-      "id": 56092,
-      "name": "Grignotines doritos",
-      "name_short": "Grignotines doritos",
+      "id": 56091,
+      "name": "Grignotines cheetos",
+      "name_short": "Grignotines cheetos",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,

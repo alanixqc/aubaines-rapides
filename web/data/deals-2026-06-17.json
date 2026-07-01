@@ -168,9 +168,9 @@
       "detail": "$1.16"
     },
     {
-      "id": 55983,
-      "name": "Céréales post",
-      "name_short": "Céréales post",
+      "id": 55984,
+      "name": "Céréales post, économisez $1.47",
+      "name_short": "Céréales post, économisez $1.47",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
@@ -190,9 +190,9 @@
       "detail": "$1.47"
     },
     {
-      "id": 55984,
-      "name": "Céréales post, économisez $1.47",
-      "name_short": "Céréales post, économisez $1.47",
+      "id": 55983,
+      "name": "Céréales post",
+      "name_short": "Céréales post",
       "category": "panier",
       "store": "Tigre Géant",
       "store_id": 39116,
