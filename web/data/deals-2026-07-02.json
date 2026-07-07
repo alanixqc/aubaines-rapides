@@ -5195,9 +5195,9 @@
       "detail": null
     },
     {
-      "id": 53640,
-      "name": "Poitrines de poulet désossées, sans peau, d'élevage canadien",
-      "name_short": "Poitrines de poulet désossées, sans peau…",
+      "id": 53651,
+      "name": "Hauts de cuisse de poulet désossés, sans peau, d'élevage canadien",
+      "name_short": "Hauts de cuisse de poulet désossés, sans…",
       "category": "poulet",
       "store": "Maxi",
       "store_id": 40525,
@@ -5209,8 +5209,8 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": "https://digital.loblaws.ca/PCX/20569087_EA/fr/1/20569087_fr_front_400.png",
-      "protein_per_100g": 25,
+      "image_url": "https://digital.loblaws.ca/PCX/20648017_EA/fr/1/20648017_fr_front_400.png",
+      "protein_per_100g": 20,
       "protein_per_dollar": null,
       "product_type": "frais",
       "recipe": {
@@ -5228,9 +5228,9 @@
       "detail": null
     },
     {
-      "id": 53651,
-      "name": "Hauts de cuisse de poulet désossés, sans peau, d'élevage canadien",
-      "name_short": "Hauts de cuisse de poulet désossés, sans…",
+      "id": 53640,
+      "name": "Poitrines de poulet désossées, sans peau, d'élevage canadien",
+      "name_short": "Poitrines de poulet désossées, sans peau…",
       "category": "poulet",
       "store": "Maxi",
       "store_id": 40525,
@@ -5242,8 +5242,8 @@
       "weight_kg": null,
       "source": null,
       "valid_to": null,
-      "image_url": "https://digital.loblaws.ca/PCX/20648017_EA/fr/1/20648017_fr_front_400.png",
-      "protein_per_100g": 20,
+      "image_url": "https://digital.loblaws.ca/PCX/20568928_EA/fr/1/20568928_fr_front_400.png",
+      "protein_per_100g": 25,
       "protein_per_dollar": null,
       "product_type": "frais",
       "recipe": {
