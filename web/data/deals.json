@@ -822,6 +822,39 @@
         "detail": "$6.99"
       },
       {
+        "id": 54777,
+        "name": "Compliments split ailes de poulet paquet de valeur 13 - 18 pieces",
+        "name_short": "Compliments split ailes de poulet paquet…",
+        "category": "poulet",
+        "store": "IGA",
+        "store_id": 37937,
+        "store_emoji": "🟢",
+        "store_url": "https://www.iga.net/",
+        "price": 14.62,
+        "per_kg": null,
+        "per_lb": null,
+        "weight_kg": null,
+        "source": null,
+        "valid_to": null,
+        "image_url": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/00946267-8f92-4d28-b448-519b8d934905/300x300.jpg",
+        "protein_per_100g": 20,
+        "protein_per_dollar": null,
+        "product_type": "frais",
+        "recipe": {
+          "title": "Chili vert au poulet",
+          "source": "Ricardo",
+          "url": "https://www.ricardocuisine.com/fr/recettes/5764-chili-vert-au-poulet",
+          "rating_count": 20,
+          "rating": 5.0,
+          "prep_time": "15 min",
+          "cook_time": "Time\": \"PT50M\",",
+          "total_time": "Time\": \"PT1H5M\",",
+          "servings": "\": \"4 serving(s)\",",
+          "ingredient_count": 8
+        },
+        "detail": null
+      },
+      {
         "id": 56635,
         "name": "Café moulu maxwell house",
         "name_short": "Café moulu maxwell house",
@@ -1273,6 +1306,39 @@
         "product_type": "transformé",
         "recipe": null,
         "detail": "$6.99"
+      },
+      {
+        "id": 54777,
+        "name": "Compliments split ailes de poulet paquet de valeur 13 - 18 pieces",
+        "name_short": "Compliments split ailes de poulet paquet…",
+        "category": "poulet",
+        "store": "IGA",
+        "store_id": 37937,
+        "store_emoji": "🟢",
+        "store_url": "https://www.iga.net/",
+        "price": 14.62,
+        "per_kg": null,
+        "per_lb": null,
+        "weight_kg": null,
+        "source": null,
+        "valid_to": null,
+        "image_url": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/00946267-8f92-4d28-b448-519b8d934905/300x300.jpg",
+        "protein_per_100g": 20,
+        "protein_per_dollar": null,
+        "product_type": "frais",
+        "recipe": {
+          "title": "Chili vert au poulet",
+          "source": "Ricardo",
+          "url": "https://www.ricardocuisine.com/fr/recettes/5764-chili-vert-au-poulet",
+          "rating_count": 20,
+          "rating": 5.0,
+          "prep_time": "15 min",
+          "cook_time": "Time\": \"PT50M\",",
+          "total_time": "Time\": \"PT1H5M\",",
+          "servings": "\": \"4 serving(s)\",",
+          "ingredient_count": 8
+        },
+        "detail": null
       },
       {
         "id": 56635,
@@ -2105,6 +2171,39 @@
           "product_type": "transformé",
           "recipe": null,
           "detail": "$6.99"
+        },
+        {
+          "id": 54777,
+          "name": "Compliments split ailes de poulet paquet de valeur 13 - 18 pieces",
+          "name_short": "Compliments split ailes de poulet paquet…",
+          "category": "poulet",
+          "store": "IGA",
+          "store_id": 37937,
+          "store_emoji": "🟢",
+          "store_url": "https://www.iga.net/",
+          "price": 14.62,
+          "per_kg": null,
+          "per_lb": null,
+          "weight_kg": null,
+          "source": null,
+          "valid_to": null,
+          "image_url": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/00946267-8f92-4d28-b448-519b8d934905/300x300.jpg",
+          "protein_per_100g": 20,
+          "protein_per_dollar": null,
+          "product_type": "frais",
+          "recipe": {
+            "title": "Chili vert au poulet",
+            "source": "Ricardo",
+            "url": "https://www.ricardocuisine.com/fr/recettes/5764-chili-vert-au-poulet",
+            "rating_count": 20,
+            "rating": 5.0,
+            "prep_time": "15 min",
+            "cook_time": "Time\": \"PT50M\",",
+            "total_time": "Time\": \"PT1H5M\",",
+            "servings": "\": \"4 serving(s)\",",
+            "ingredient_count": 8
+          },
+          "detail": null
         },
         {
           "id": 56635,
@@ -226709,15 +226808,17 @@
     }
   },
   "stats": {
-    "total": 32,
+    "total": 33,
     "by_category": {
       "panier": 16,
       "fruit": 3,
       "porc": 11,
       "sauce": 1,
-      "legume": 1
+      "legume": 1,
+      "poulet": 1
     },
     "stores": [
+      "IGA",
       "Provigo",
       "Tigre Géant"
     ],
@@ -226738,7 +226839,7 @@
       "2026-05-30",
       "2026-05-29"
     ],
-    "generated_at": "2026-07-17T15:20:28.295561"
+    "generated_at": "2026-07-17T15:25:19.237769"
   },
   "recipes_available": {
     "boeuf": 5,
