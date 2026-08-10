@@ -2,58 +2,58 @@
   {
     "name": "Bacon",
     "brand": "le Choix du Président",
-    "price": 7.5,
+    "price": 5.0,
     "was_price": null,
     "on_sale": false,
     "image": "https://digital.loblaws.ca/PCX/21738792_EA/fr/1/21738792_fr_front_400.png",
     "url": "https://www.provigo.ca/fr/bacon/p/21738792_EA",
-    "sizing": "375 g, 2,00 $/100g",
+    "sizing": "375 g, 1,33 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627788"
+    "scraped_at": "2026-08-10T08:18:22.258916"
   },
   {
     "name": "Bacon à teneur réduite en sel",
     "brand": "le Choix du Président",
-    "price": 7.5,
-    "was_price": null,
-    "on_sale": false,
+    "price": 5.0,
+    "was_price": 7.0,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21738736_EA/fr/1/21738736_fr_front_400.png",
     "url": "https://www.provigo.ca/fr/bacon-teneur-r-duite-en-sel/p/21738736_EA",
-    "sizing": "375 g, 2,00 $/100g",
+    "sizing": "375 g, 1,33 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627815"
+    "scraped_at": "2026-08-10T08:18:22.258951"
   },
   {
     "name": "Bacon naturellement fumé à saveur d’érable",
     "brand": "le Choix du Président",
-    "price": 7.5,
-    "was_price": null,
-    "on_sale": false,
+    "price": 5.0,
+    "was_price": 7.0,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21738785_EA/fr/1/21738785_fr_front_400.png",
     "url": "https://www.provigo.ca/fr/bacon-naturellement-fum-saveur-d-rable/p/21738785_EA",
-    "sizing": "375 g, 2,00 $/100g",
+    "sizing": "375 g, 1,33 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627819"
+    "scraped_at": "2026-08-10T08:18:22.258957"
   },
   {
     "name": "Bacon fumé naturellement Simplement bon",
     "brand": "le Choix du Président",
-    "price": 10.0,
-    "was_price": null,
-    "on_sale": false,
+    "price": 5.0,
+    "was_price": 10.0,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21727155_EA/fr/1/21727155_fr_front_400.png",
     "url": "https://www.provigo.ca/fr/bacon-fum-naturellement-simplement-bon/p/21727155_EA",
-    "sizing": "375 g, 2,67 $/100g",
+    "sizing": "375 g, 1,33 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627821"
+    "scraped_at": "2026-08-10T08:18:22.258960"
   },
   {
     "name": "Bacon doublement fumé au coin du feu",
@@ -67,7 +67,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627823"
+    "scraped_at": "2026-08-10T08:18:22.258963"
   },
   {
     "name": "Bacon à l’ancienne",
@@ -81,7 +81,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627825"
+    "scraped_at": "2026-08-10T08:18:22.258965"
   },
   {
     "name": "Plaque de cuisson pour bacon exceptionnelle en acier au carbone antiadhésif",
@@ -95,21 +95,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627827"
+    "scraped_at": "2026-08-10T08:18:22.258967"
   },
   {
-    "name": "Cuisse de poulet (attachée au dos)",
+    "name": "Poitrine de poulet désossée et sans peau",
     "brand": null,
-    "price": 12.07,
+    "price": 23.33,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20153925_KG/fr/1/20153925_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/cuisse-de-poulet-attach-e-au-dos/p/20153925_KG",
-    "sizing": "9,24 $/1kg 4,19 $/1lb",
+    "image": "https://digital.loblaws.ca/PCX/20028450_KG/fr/1/20028450_enfr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/poitrine-de-poulet-d-soss-e-et-sans-peau/p/20028450_KG",
+    "sizing": "19,82 $/1kg 8,99 $/1lb",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627829"
+    "scraped_at": "2026-08-10T08:18:22.258969"
   },
   {
     "name": "Lanières d’escalope de poitrine de poulet panée entièrement cuite, sans gluten",
@@ -123,35 +123,35 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627831"
+    "scraped_at": "2026-08-10T08:18:22.258971"
   },
   {
-    "name": "Poitrines de poulet extra-maigres désossées sans peau",
-    "brand": "PC Menu Bleu",
-    "price": 13.0,
+    "name": "Cuisse de poulet (attachée au dos)",
+    "brand": null,
+    "price": 12.27,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21340952_EA/fr/1/21340952_enfr_front_v3_400.png",
-    "url": "https://www.provigo.ca/fr/poitrines-de-poulet-extra-maigres-d-soss-es-sans-p/p/21340952_EA",
-    "sizing": "1 ea, 13,00 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20153925_KG/fr/1/20153925_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/cuisse-de-poulet-attach-e-au-dos/p/20153925_KG",
+    "sizing": "9,24 $/1kg 4,19 $/1lb",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627833"
+    "scraped_at": "2026-08-10T08:18:22.258973"
   },
   {
-    "name": "Hachis de dinde",
-    "brand": "PC Menu Bleu",
-    "price": 9.0,
+    "name": "Pilons de poulet, format club",
+    "brand": null,
+    "price": 12.79,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21100092_EA/fr/1/21100092_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/hachis-de-dinde/p/21100092_EA",
-    "sizing": "454 g, 1,98 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20004494_KG/fr/1/20004494_enfr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/pilons-de-poulet-format-club/p/20004494_KG",
+    "sizing": "11,44 $/1kg 5,19 $/1lb",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627834"
+    "scraped_at": "2026-08-10T08:18:22.258975"
   },
   {
     "name": "Burger de poitrine de poulet pané",
@@ -165,21 +165,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627836"
+    "scraped_at": "2026-08-10T08:18:22.258977"
   },
   {
-    "name": "Languettes de poulet style pub, entièrement cuites",
-    "brand": "Janes",
-    "price": 15.0,
+    "name": "Hachis de dinde",
+    "brand": "PC Menu Bleu",
+    "price": 9.0,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21191828_EA/fr/1/6929912689_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/languettes-de-poulet-style-pub-enti-rement-cuites/p/21191828_EA",
-    "sizing": "700 g, 2,14 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21100092_EA/fr/1/21100092_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/hachis-de-dinde/p/21100092_EA",
+    "sizing": "454 g, 1,98 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627838"
+    "scraped_at": "2026-08-10T08:18:22.258979"
   },
   {
     "name": "Poulet haché",
@@ -193,7 +193,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627840"
+    "scraped_at": "2026-08-10T08:18:22.258980"
   },
   {
     "name": "Burgers de poulet",
@@ -207,26 +207,26 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627841"
+    "scraped_at": "2026-08-10T08:18:22.258982"
   },
   {
-    "name": "Cuisses de poulet",
-    "brand": null,
-    "price": 16.26,
+    "name": "Languettes de poulet style pub, entièrement cuites",
+    "brand": "Janes",
+    "price": 15.0,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20058163_KG/fr/1/20058163_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/cuisses-de-poulet/p/20058163_KG",
-    "sizing": "12,10 $/1kg 5,49 $/1lb",
+    "image": "https://digital.loblaws.ca/PCX/21191828_EA/fr/1/6929912689_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
+    "url": "https://www.provigo.ca/fr/languettes-de-poulet-style-pub-enti-rement-cuites/p/21191828_EA",
+    "sizing": "700 g, 2,14 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627843"
+    "scraped_at": "2026-08-10T08:18:22.258984"
   },
   {
     "name": "Hauts de cuisse de poulet sans os, format club",
     "brand": null,
-    "price": 22.18,
+    "price": 20.98,
     "was_price": null,
     "on_sale": false,
     "image": "https://digital.loblaws.ca/PCX/20162170_KG/fr/1/20162170_enfr_front_v1_400.png",
@@ -235,7 +235,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627845"
+    "scraped_at": "2026-08-10T08:18:22.258986"
   },
   {
     "name": "Ailes de poulet saveur miel et ail douces",
@@ -249,7 +249,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627847"
+    "scraped_at": "2026-08-10T08:18:22.258989"
+  },
+  {
+    "name": "Cuisses de poulet",
+    "brand": null,
+    "price": 16.26,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20058163_KG/fr/1/20058163_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/cuisses-de-poulet/p/20058163_KG",
+    "sizing": "12,10 $/1kg 5,49 $/1lb",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.258991"
   },
   {
     "name": "Pépites de poulet style pub, entièrement cuites",
@@ -263,21 +277,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627849"
-  },
-  {
-    "name": "Burger de poulet style pub, entièrement cuit",
-    "brand": "Janes",
-    "price": 15.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21191970_EA/fr/1/21191970_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/burger-de-poulet-style-pub-enti-rement-cuit/p/21191970_EA",
-    "sizing": "700 g, 2,14 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627850"
+    "scraped_at": "2026-08-10T08:18:22.258993"
   },
   {
     "name": "Ailes de poulet BBQ Flamingo",
@@ -291,21 +291,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627852"
-  },
-  {
-    "name": "Lanières de poulet",
-    "brand": null,
-    "price": 10.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21447587_EA/fr/1/21447587_enfr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/lani-res-de-poulet/p/21447587_EA",
-    "sizing": "1.5 kg, 0,67 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627854"
+    "scraped_at": "2026-08-10T08:18:22.258994"
   },
   {
     "name": "Poitrines de poulet sans peau, format club",
@@ -319,7 +305,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627856"
+    "scraped_at": "2026-08-10T08:18:22.258996"
+  },
+  {
+    "name": "Lanières de poulet",
+    "brand": null,
+    "price": 10.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21447587_EA/fr/1/21447587_enfr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/lani-res-de-poulet/p/21447587_EA",
+    "sizing": "1.5 kg, 0,67 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.258998"
   },
   {
     "name": "Ailes de poulet Buffalo",
@@ -333,7 +333,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627857"
+    "scraped_at": "2026-08-10T08:18:22.259000"
+  },
+  {
+    "name": "Burger de poulet style pub, entièrement cuit",
+    "brand": "Janes",
+    "price": 15.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21191970_EA/fr/1/21191970_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/burger-de-poulet-style-pub-enti-rement-cuit/p/21191970_EA",
+    "sizing": "700 g, 2,14 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259002"
   },
   {
     "name": "Morceaux de poitrine de poulet au babeurre",
@@ -347,21 +361,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627859"
-  },
-  {
-    "name": "Burgers popcorn, entièrement cuits",
-    "brand": "Janes",
-    "price": 15.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21191827_EA/fr/1/6929912642_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/burgers-popcorn-enti-rement-cuits/p/21191827_EA",
-    "sizing": "700 g, 2,14 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627861"
+    "scraped_at": "2026-08-10T08:18:22.259004"
   },
   {
     "name": "Languettes de poulet légèrement poivrées",
@@ -375,7 +375,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627863"
+    "scraped_at": "2026-08-10T08:18:22.259006"
   },
   {
     "name": "Bouchées de poulet popcorn",
@@ -389,7 +389,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627865"
+    "scraped_at": "2026-08-10T08:18:22.259008"
   },
   {
     "name": "Croquettes de poulet à la viande blanche panée dino",
@@ -403,7 +403,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627866"
+    "scraped_at": "2026-08-10T08:18:22.259010"
   },
   {
     "name": "Pépites de poitrine de poulet panées",
@@ -417,7 +417,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627868"
+    "scraped_at": "2026-08-10T08:18:22.259012"
   },
   {
     "name": "Pépites de poulet",
@@ -431,7 +431,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627870"
+    "scraped_at": "2026-08-10T08:18:22.259014"
   },
   {
     "name": "Cuisses de poulet avec os",
@@ -445,7 +445,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627872"
+    "scraped_at": "2026-08-10T08:18:22.259015"
   },
   {
     "name": "Lanières de poulet",
@@ -459,7 +459,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627873"
+    "scraped_at": "2026-08-10T08:18:22.259017"
   },
   {
     "name": "Lanières de poulet pané entièrement cuites",
@@ -473,7 +473,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627882"
+    "scraped_at": "2026-08-10T08:18:22.259020"
   },
   {
     "name": "Burgers de poulet panés entièrement cuits",
@@ -487,7 +487,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627885"
+    "scraped_at": "2026-08-10T08:18:22.259022"
   },
   {
     "name": "Pépites de poulet fantastiques",
@@ -501,7 +501,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627887"
+    "scraped_at": "2026-08-10T08:18:22.259024"
   },
   {
     "name": "Ailes de poulet séparées",
@@ -515,7 +515,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627889"
+    "scraped_at": "2026-08-10T08:18:22.259026"
+  },
+  {
+    "name": "Burgers popcorn, entièrement cuits",
+    "brand": "Janes",
+    "price": 15.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21191827_EA/fr/1/6929912642_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
+    "url": "https://www.provigo.ca/fr/burgers-popcorn-enti-rement-cuits/p/21191827_EA",
+    "sizing": "700 g, 2,14 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259028"
   },
   {
     "name": "Burgers au poulet entièrement cuits et panés",
@@ -529,21 +543,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627890"
-  },
-  {
-    "name": "Ailes de poulet bbq épicées et croustillantes",
-    "brand": "Flamingo",
-    "price": 17.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21464816_EA/fr/1/6513787733_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ailes-de-poulet-bbq-pic-es-et-croustillantes/p/21464816_EA",
-    "sizing": "550 g, 3,09 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627892"
+    "scraped_at": "2026-08-10T08:18:22.259030"
   },
   {
     "name": "Filets de poitrines de poulet extra-maigres",
@@ -557,7 +557,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627894"
+    "scraped_at": "2026-08-10T08:18:22.259032"
   },
   {
     "name": "Poitrines de poulet désossées sans peau halal",
@@ -571,21 +571,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627896"
-  },
-  {
-    "name": "Ailes de poulet chili doux et lime",
-    "brand": "Flamingo",
-    "price": 17.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21699788_EA/fr/1/6513796687_fr_front_centre_marketing_A_GS1_Marketing_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ailes-de-poulet-chili-doux-et-lime/p/21699788_EA",
-    "sizing": "550 g, 3,09 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627898"
+    "scraped_at": "2026-08-10T08:18:22.259034"
   },
   {
     "name": "Frites de poulet",
@@ -599,7 +585,21 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627899"
+    "scraped_at": "2026-08-10T08:18:22.259036"
+  },
+  {
+    "name": "Poitrine de poulet désossée et sans peau Simplement bon, refroidies à l'air",
+    "brand": "le Choix du Président",
+    "price": 12.37,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21668470_KG/fr/1/21668470_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/poitrine-de-poulet-d-soss-e-et-sans-peau-simplemen/p/21668470_KG",
+    "sizing": "26,43 $/1kg 11,99 $/1lb",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259038"
   },
   {
     "name": "Bouchées pépites de poulet pané, entièrement cuites",
@@ -613,21 +613,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627902"
-  },
-  {
-    "name": "Ailes de poulet bbq douces et croustillantes",
-    "brand": "Flamingo",
-    "price": 17.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21464728_EA/fr/1/6513787734_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ailes-de-poulet-bbq-douces-et-croustillantes/p/21464728_EA",
-    "sizing": "550 g, 3,09 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627904"
+    "scraped_at": "2026-08-10T08:18:22.259040"
   },
   {
     "name": "Poitrines de poulet désossées sans peau halal",
@@ -641,7 +627,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627906"
+    "scraped_at": "2026-08-10T08:18:22.259042"
   },
   {
     "name": "Recette Pub Lanieres Poulet, entièrement cuits",
@@ -655,35 +641,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627907"
-  },
-  {
-    "name": "Poulet haché extra-maigre ",
-    "brand": "Sufra",
-    "price": 9.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21430675_EA/fr/1/21430675_enfr_front_400.png",
-    "url": "https://www.provigo.ca/fr/poulet-hach-extra-maigre/p/21430675_EA",
-    "sizing": "454 g, 1,98 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627909"
-  },
-  {
-    "name": "Lanières De Poulet Sans Gluten",
-    "brand": "le Choix du Président",
-    "price": 8.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21079476_EA/fr/1/6038320488_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/lani-res-de-poulet-sans-gluten/p/21079476_EA",
-    "sizing": "600 g, 1,33 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627911"
+    "scraped_at": "2026-08-10T08:18:22.259044"
   },
   {
     "name": "Pilons de poulet",
@@ -697,21 +655,35 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627912"
+    "scraped_at": "2026-08-10T08:18:22.259046"
   },
   {
-    "name": "Poitrines de poulet désossées et sans peau Simplement bon",
-    "brand": "le Choix du Président",
-    "price": 23.66,
+    "name": "Poulet haché extra-maigre ",
+    "brand": "Sufra",
+    "price": 9.0,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21668770_KG/fr/1/21668770_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/poitrines-de-poulet-d-soss-es-et-sans-peau-simplem/p/21668770_KG",
-    "sizing": "25,33 $/1kg 11,49 $/1lb",
+    "image": "https://digital.loblaws.ca/PCX/21430675_EA/fr/1/21430675_enfr_front_400.png",
+    "url": "https://www.provigo.ca/fr/poulet-hach-extra-maigre/p/21430675_EA",
+    "sizing": "454 g, 1,98 $/100g",
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627914"
+    "scraped_at": "2026-08-10T08:18:22.259048"
+  },
+  {
+    "name": "Lanières De Poulet Sans Gluten",
+    "brand": "le Choix du Président",
+    "price": 8.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21079476_EA/fr/1/6038320488_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/lani-res-de-poulet-sans-gluten/p/21079476_EA",
+    "sizing": "600 g, 1,33 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259050"
   },
   {
     "name": "Lanières de poulet format Club",
@@ -725,7 +697,35 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627916"
+    "scraped_at": "2026-08-10T08:18:22.259051"
+  },
+  {
+    "name": "Ailes de poulet Buffalo épicées Exceldor",
+    "brand": "La Cage",
+    "price": 12.0,
+    "was_price": 14.0,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/21286677_EA/fr/1/85071500002_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/ailes-de-poulet-buffalo-pic-es-exceldor/p/21286677_EA",
+    "sizing": "550 g, 2,18 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259054"
+  },
+  {
+    "name": "Poitrines de poulet désossées et sans peau Simplement bon",
+    "brand": "le Choix du Président",
+    "price": 26.01,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21668770_KG/fr/1/21668770_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/poitrines-de-poulet-d-soss-es-et-sans-peau-simplem/p/21668770_KG",
+    "sizing": "25,33 $/1kg 11,49 $/1lb",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259056"
   },
   {
     "name": "Ailes de dinde sel et poivre",
@@ -739,35 +739,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627918"
-  },
-  {
-    "name": "Ailes de poulet Buffalo épicées Exceldor",
-    "brand": "La Cage",
-    "price": 16.0,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21286677_EA/fr/1/85071500002_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/ailes-de-poulet-buffalo-pic-es-exceldor/p/21286677_EA",
-    "sizing": "550 g, 2,91 $/100g",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627919"
-  },
-  {
-    "name": "Haut de cuisse de poulet désossé sans peau Simplement Bon",
-    "brand": "le Choix du Président",
-    "price": 17.02,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21668586_KG/fr/1/21668586_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/haut-de-cuisse-de-poulet-d-soss-sans-peau-simpleme/p/21668586_KG",
-    "sizing": "23,35 $/1kg 10,59 $/1lb",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627921"
+    "scraped_at": "2026-08-10T08:18:22.259058"
   },
   {
     "name": "Hauts de cuisses de poulet avec l’os et la peau halal",
@@ -781,7 +753,35 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627923"
+    "scraped_at": "2026-08-10T08:18:22.259060"
+  },
+  {
+    "name": "Haut de cuisse de poulet désossé sans peau Simplement Bon",
+    "brand": "le Choix du Président",
+    "price": 17.02,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21668586_KG/fr/1/21668586_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/haut-de-cuisse-de-poulet-d-soss-sans-peau-simpleme/p/21668586_KG",
+    "sizing": "23,35 $/1kg 10,59 $/1lb",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259062"
+  },
+  {
+    "name": "Ailes de poulet BBQ",
+    "brand": "La Cage",
+    "price": 12.0,
+    "was_price": 14.0,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/21592006_EA/fr/1/85071500004_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/ailes-de-poulet-bbq/p/21592006_EA",
+    "sizing": "550 g, 2,18 $/100g",
+    "store": "Provigo",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:22.259064"
   },
   {
     "name": "Cuisses de poulet halal désossées et sans peau",
@@ -795,7 +795,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627925"
+    "scraped_at": "2026-08-10T08:18:22.259066"
   },
   {
     "name": "Pépites De Poulet Sans Gluten",
@@ -809,49 +809,7 @@
     "store": "Provigo",
     "category": "Viande",
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627926"
-  },
-  {
-    "name": "Poulet entier",
-    "brand": null,
-    "price": 20.3,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20147976_KG/fr/1/20147976_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/poulet-entier/p/20147976_KG",
-    "sizing": "13,20 $/1kg 5,99 $/1lb",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627928"
-  },
-  {
-    "name": "Cuisses de poulet Simplement bon désossé et sans peau format club",
-    "brand": "le Choix du Président",
-    "price": 25.05,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21668800_KG/fr/1/21668800_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/cuisses-de-poulet-simplement-bon-d-soss-et-sans-pe/p/21668800_KG",
-    "sizing": "23,13 $/1kg 10,49 $/1lb",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627930"
-  },
-  {
-    "name": "Ailes de poulet séparées Simplement bon ",
-    "brand": "le Choix du Président",
-    "price": 15.65,
-    "was_price": 17.58,
-    "on_sale": true,
-    "image": "https://digital.loblaws.ca/PCX/21668685_KG/fr/1/21668685_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/ailes-de-poulet-s-par-es-simplement-bon/p/21668685_KG",
-    "sizing": "17,64 $/1kg 8,00 $/1lb",
-    "store": "Provigo",
-    "category": "Viande",
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:36.627932"
+    "scraped_at": "2026-08-10T08:18:22.259068"
   },
   {
     "name": "Beurre non salé",
@@ -865,7 +823,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242484"
+    "scraped_at": "2026-08-10T08:18:24.957261"
   },
   {
     "name": "Beurre végétal - bâtonnets salés",
@@ -879,77 +837,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242504"
+    "scraped_at": "2026-08-10T08:18:24.957270"
   },
   {
     "name": "Beurre salé.",
     "brand": "Lactantia",
-    "price": 8.99,
-    "was_price": null,
-    "on_sale": false,
+    "price": 6.0,
+    "was_price": 6.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20639926_EA/fr/1/20639926_fr_front_400.png",
     "url": "https://www.provigo.ca/fr/beurre-sal/p/20639926_EA",
-    "sizing": "454 g, 1,98 $/100g",
+    "sizing": "454 g, 1,32 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242510"
+    "scraped_at": "2026-08-10T08:18:24.957275"
   },
   {
     "name": "Margarine originale",
     "brand": "Becel",
-    "price": 9.79,
+    "price": 7.0,
     "was_price": null,
     "on_sale": false,
     "image": "https://digital.loblaws.ca/PCX/21747692_EA/fr/1/5995019012_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
     "url": "https://www.provigo.ca/fr/margarine-originale/p/21747692_EA",
-    "sizing": "800 g, 1,22 $/100g",
+    "sizing": "800 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242515"
-  },
-  {
-    "name": "Beurre végétal – avec huile d’olive, salé",
-    "brand": "Becel",
-    "price": 6.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21535352_EA/fr/1/21535352_fr_1_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-v-g-tal-avec-huile-d-olive-sal/p/21535352_EA",
-    "sizing": "454 g, 1,54 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242520"
-  },
-  {
-    "name": "Margarine originale",
-    "brand": "Becel",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747653_EA/fr/1/5995019011_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-originale/p/21747653_EA",
-    "sizing": "400 g, 1,37 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242525"
-  },
-  {
-    "name": "Margarine avec huile d'olive",
-    "brand": "Becel",
-    "price": 9.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747558_EA/fr/1/1111515703_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-olive/p/21747558_EA",
-    "sizing": "800 g, 1,22 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242530"
+    "scraped_at": "2026-08-10T08:18:24.957277"
   },
   {
     "name": "Beurre végétal – salé",
@@ -963,35 +879,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242535"
+    "scraped_at": "2026-08-10T08:18:24.957279"
   },
   {
-    "name": "Beurre non salé.",
-    "brand": "Lactantia",
-    "price": 8.99,
+    "name": "Margarine originale",
+    "brand": "Becel",
+    "price": 5.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20296112005_EA/fr/1/20296112005_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-non-sal/p/20296112005_EA",
-    "sizing": "454 g, 1,98 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21747653_EA/fr/1/5995019011_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-originale/p/21747653_EA",
+    "sizing": "400 g, 1,37 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242540"
+    "scraped_at": "2026-08-10T08:18:24.957281"
   },
   {
-    "name": "Bâtonnets de beurre salé",
-    "brand": "Lactantia",
-    "price": 9.49,
+    "name": "Margarine avec huile d'olive",
+    "brand": "Becel",
+    "price": 7.0,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20315960_EA/fr/1/20315960_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/b-tonnets-de-beurre-sal/p/20315960_EA",
-    "sizing": "4x113.0 g, 2,10 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21747558_EA/fr/1/1111515703_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-olive/p/21747558_EA",
+    "sizing": "800 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242545"
+    "scraped_at": "2026-08-10T08:18:24.957283"
   },
   {
     "name": "Beurre végétal sans produits laitiers – non-salé",
@@ -1005,35 +921,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242550"
+    "scraped_at": "2026-08-10T08:18:24.957284"
   },
   {
-    "name": "Beurre à l’ail et aux herbes de provence.",
+    "name": "Beurre non salé.",
     "brand": "Lactantia",
-    "price": 4.49,
+    "price": 8.99,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20106744_EA/fr/1/20106744_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-l-ail-et-aux-herbes-de-provence/p/20106744_EA",
-    "sizing": "125 g, 3,59 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20296112005_EA/fr/1/20296112005_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-non-sal/p/20296112005_EA",
+    "sizing": "454 g, 1,98 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242555"
+    "scraped_at": "2026-08-10T08:18:24.957287"
   },
   {
-    "name": "Traditionnel à Tartiner",
+    "name": "Bâtonnets de beurre salé",
     "brand": "Lactantia",
-    "price": 4.79,
+    "price": 9.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20218912_EA/fr/1/6820070106_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/traditionnel-tartiner/p/20218912_EA",
-    "sizing": "427 g, 1,12 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20315960_EA/fr/1/20315960_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/b-tonnets-de-beurre-sal/p/20315960_EA",
+    "sizing": "4x113.0 g, 2,10 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242559"
+    "scraped_at": "2026-08-10T08:18:24.957289"
   },
   {
     "name": "Beurre végétal – bâtonnets non-salés",
@@ -1047,35 +963,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242564"
+    "scraped_at": "2026-08-10T08:18:24.957291"
   },
   {
-    "name": "Margarine avec huile d'olive",
-    "brand": "Becel",
-    "price": 5.49,
+    "name": "Beurre à l’ail et aux herbes de provence.",
+    "brand": "Lactantia",
+    "price": 4.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747703_EA/fr/1/1111515702_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-olive/p/21747703_EA",
-    "sizing": "400 g, 1,37 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20106744_EA/fr/1/20106744_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-l-ail-et-aux-herbes-de-provence/p/20106744_EA",
+    "sizing": "125 g, 3,59 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242569"
+    "scraped_at": "2026-08-10T08:18:24.957292"
   },
   {
-    "name": "Beurre de campagne barraté non salé",
-    "brand": "le Choix du Président",
-    "price": 9.49,
+    "name": "Traditionnel à Tartiner",
+    "brand": "Lactantia",
+    "price": 4.79,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20313456001_EA/fr/1/20313456001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-de-campagne-barrat-non-sal/p/20313456001_EA",
-    "sizing": "454 g, 2,09 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20218912_EA/fr/1/6820070106_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/traditionnel-tartiner/p/20218912_EA",
+    "sizing": "427 g, 1,12 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242574"
+    "scraped_at": "2026-08-10T08:18:24.957294"
   },
   {
     "name": "Signature du Chef - non salé",
@@ -1089,35 +1005,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242578"
+    "scraped_at": "2026-08-10T08:18:24.957296"
   },
   {
-    "name": "Beurre salé de campagne baratté",
+    "name": "Margarine avec huile d'olive",
+    "brand": "Becel",
+    "price": 5.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747703_EA/fr/1/1111515702_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-olive/p/21747703_EA",
+    "sizing": "400 g, 1,37 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957298"
+  },
+  {
+    "name": "Beurre de campagne barraté non salé",
     "brand": "le Choix du Président",
     "price": 9.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20313456002_EA/fr/1/20313456002_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-sal-de-campagne-baratt/p/20313456002_EA",
+    "image": "https://digital.loblaws.ca/PCX/20313456001_EA/fr/1/20313456001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-de-campagne-barrat-non-sal/p/20313456001_EA",
     "sizing": "454 g, 2,09 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242583"
-  },
-  {
-    "name": "Margarine d'huile végétale 50 % non hydrogénée",
-    "brand": "Imperial",
-    "price": 8.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747537_EA/fr/1/5995012443_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-d-huile-v-g-tale-50-non-hydrog-n-e/p/21747537_EA",
-    "sizing": "1.2 kg, 0,75 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242588"
+    "scraped_at": "2026-08-10T08:18:24.957300"
   },
   {
     "name": "Signature du Chef - salé",
@@ -1131,35 +1047,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242593"
+    "scraped_at": "2026-08-10T08:18:24.957302"
   },
   {
-    "name": "Beurre de culture non salé .",
-    "brand": "Lactantia",
+    "name": "Beurre salé de campagne baratté",
+    "brand": "le Choix du Président",
     "price": 9.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20056675_EA/fr/1/20056675_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-de-culture-non-sal/p/20056675_EA",
-    "sizing": "4x113.5 g, 2,09 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20313456002_EA/fr/1/20313456002_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-sal-de-campagne-baratt/p/20313456002_EA",
+    "sizing": "454 g, 2,09 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242605"
+    "scraped_at": "2026-08-10T08:18:24.957304"
   },
   {
-    "name": "Beurre demi-sel",
-    "brand": "Sans Nom",
-    "price": 5.99,
+    "name": "Margarine avec huile d'avocat",
+    "brand": "Becel",
+    "price": 7.0,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20316543001_EA/fr/1/20316543001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-demi-sel/p/20316543001_EA",
-    "sizing": "454 g, 1,32 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21747671_EA/fr/1/5995030018_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-avocat/p/21747671_EA",
+    "sizing": "800 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242610"
+    "scraped_at": "2026-08-10T08:18:24.957306"
   },
   {
     "name": "Beurre de culture non salé de première qualité",
@@ -1173,35 +1089,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242615"
+    "scraped_at": "2026-08-10T08:18:24.957307"
   },
   {
-    "name": "Margarine avec huile d'avocat",
-    "brand": "Becel",
-    "price": 9.79,
+    "name": "Beurre de culture non salé .",
+    "brand": "Lactantia",
+    "price": 9.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747671_EA/fr/1/5995030018_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-avec-huile-d-avocat/p/21747671_EA",
-    "sizing": "800 g, 1,22 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20056675_EA/fr/1/20056675_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-de-culture-non-sal/p/20056675_EA",
+    "sizing": "4x113.5 g, 2,09 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242620"
+    "scraped_at": "2026-08-10T08:18:24.957309"
   },
   {
-    "name": "Margarine végétale",
-    "brand": "Becel",
-    "price": 9.79,
+    "name": "Beurre demi-sel",
+    "brand": "Sans Nom",
+    "price": 5.99,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747712_EA/fr/1/1111515705_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-v-g-tale/p/21747712_EA",
-    "sizing": "800 g, 1,22 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20316543001_EA/fr/1/20316543001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-demi-sel/p/20316543001_EA",
+    "sizing": "454 g, 1,32 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242625"
+    "scraped_at": "2026-08-10T08:18:24.957311"
   },
   {
     "name": "Beurre de culture salé de première qualité",
@@ -1215,7 +1131,49 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242630"
+    "scraped_at": "2026-08-10T08:18:24.957313"
+  },
+  {
+    "name": "Margarine végétale",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747712_EA/fr/1/1111515705_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-v-g-tale/p/21747712_EA",
+    "sizing": "800 g, 0,88 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957315"
+  },
+  {
+    "name": "Margarine d'huile végétale 50 % non hydrogénée",
+    "brand": "Imperial",
+    "price": 8.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747537_EA/fr/1/5995012443_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-d-huile-v-g-tale-50-non-hydrog-n-e/p/21747537_EA",
+    "sizing": "1.2 kg, 0,75 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957317"
+  },
+  {
+    "name": "Margarine de soja à 100 %",
+    "brand": "Mirage Margarine",
+    "price": 6.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20053705_EA/fr/1/6844510022_enfr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-de-soja-100/p/20053705_EA",
+    "sizing": "850 g, 0,76 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957319"
   },
   {
     "name": "Margarine avec huile d’olive",
@@ -1229,7 +1187,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242635"
+    "scraped_at": "2026-08-10T08:18:24.957321"
   },
   {
     "name": "Margarine avec huile d'avocat",
@@ -1243,49 +1201,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242640"
-  },
-  {
-    "name": "Margarine de soja à 100 %",
-    "brand": "Mirage Margarine",
-    "price": 6.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20053705_EA/fr/1/20053705_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-de-soja-100/p/20053705_EA",
-    "sizing": "850 g, 0,76 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242645"
-  },
-  {
-    "name": "Margarine originale",
-    "brand": "PC Menu Bleu",
-    "price": 6.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20604565_EA/fr/1/20604565_enfr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-originale/p/20604565_EA",
-    "sizing": "907 g, 0,72 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242650"
-  },
-  {
-    "name": "Margarine végétale",
-    "brand": "Becel",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747599_EA/fr/1/1111515704_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-v-g-tale/p/21747599_EA",
-    "sizing": "400 g, 1,37 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242655"
+    "scraped_at": "2026-08-10T08:18:24.957322"
   },
   {
     "name": "Margarine Mirage",
@@ -1299,35 +1215,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242660"
+    "scraped_at": "2026-08-10T08:18:24.957324"
   },
   {
-    "name": "Margarine sans produits laitiers à base de plantes",
-    "brand": "le Choix du Président",
-    "price": 3.49,
+    "name": "Margarine végétale",
+    "brand": "Becel",
+    "price": 5.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21615278_EA/fr/1/21615278_enfr_front_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-sans-produits-laitiers-base-de-plantes/p/21615278_EA",
-    "sizing": "427 g, 0,82 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21747599_EA/fr/1/1111515704_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-v-g-tale/p/21747599_EA",
+    "sizing": "400 g, 1,37 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242666"
+    "scraped_at": "2026-08-10T08:18:24.957326"
   },
   {
-    "name": "Margarine à l'ail",
-    "brand": "Lactantia",
-    "price": 3.99,
+    "name": "Margarine originale",
+    "brand": "PC Menu Bleu",
+    "price": 6.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20544549_EA/fr/1/6820070100_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-l-ail/p/20544549_EA",
-    "sizing": "227 g, 1,76 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20604565_EA/fr/1/20604565_enfr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-originale/p/20604565_EA",
+    "sizing": "907 g, 0,72 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242671"
+    "scraped_at": "2026-08-10T08:18:24.957328"
   },
   {
     "name": "Margarine",
@@ -1341,35 +1257,49 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242682"
+    "scraped_at": "2026-08-10T08:18:24.957331"
   },
   {
     "name": "Margarine réduite en calories légère",
     "brand": "Becel",
-    "price": 9.79,
+    "price": 7.0,
     "was_price": null,
     "on_sale": false,
     "image": "https://digital.loblaws.ca/PCX/21747681_EA/fr/1/5995030019_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
     "url": "https://www.provigo.ca/fr/margarine-r-duite-en-calories-l-g-re/p/21747681_EA",
-    "sizing": "800 g, 1,22 $/100g",
+    "sizing": "800 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242687"
+    "scraped_at": "2026-08-10T08:18:24.957333"
   },
   {
-    "name": "Margarine d'huile végétale 55 % non hydrogénée",
-    "brand": "Imperial",
-    "price": 8.79,
+    "name": "Margarine sans produits laitiers à base de plantes",
+    "brand": "le Choix du Président",
+    "price": 3.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21747711_EA/fr/1/5995012442_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-d-huile-v-g-tale-55-non-hydrog-n-e/p/21747711_EA",
-    "sizing": "800 g, 1,10 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/21615278_EA/fr/1/21615278_enfr_front_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-sans-produits-laitiers-base-de-plantes/p/21615278_EA",
+    "sizing": "427 g, 0,82 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242692"
+    "scraped_at": "2026-08-10T08:18:24.957335"
+  },
+  {
+    "name": "Margarine à l'ail",
+    "brand": "Lactantia",
+    "price": 3.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20544549_EA/fr/1/6820070100_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-l-ail/p/20544549_EA",
+    "sizing": "227 g, 1,76 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957337"
   },
   {
     "name": "Bâtonnets de beurre au sel de mer",
@@ -1383,7 +1313,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242697"
+    "scraped_at": "2026-08-10T08:18:24.957339"
   },
   {
     "name": "Sans lactose beurre salé",
@@ -1397,7 +1327,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242702"
+    "scraped_at": "2026-08-10T08:18:24.957341"
+  },
+  {
+    "name": "Margarine d'huile végétale 55 % non hydrogénée",
+    "brand": "Imperial",
+    "price": 8.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21747711_EA/fr/1/5995012442_enfr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-d-huile-v-g-tale-55-non-hydrog-n-e/p/21747711_EA",
+    "sizing": "800 g, 1,10 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957343"
   },
   {
     "name": "Margarine d'huile végétale 55 % non hydrogénée",
@@ -1411,21 +1355,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242707"
-  },
-  {
-    "name": "Beurre demi-sel.",
-    "brand": "Lactantia",
-    "price": 8.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20296112003_EA/fr/1/20296112003_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/beurre-demi-sel/p/20296112003_EA",
-    "sizing": "454 g, 1,98 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242712"
+    "scraped_at": "2026-08-10T08:18:24.957345"
   },
   {
     "name": "Alternative au beurre salée À base de plantes",
@@ -1439,7 +1369,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242717"
+    "scraped_at": "2026-08-10T08:18:24.957347"
+  },
+  {
+    "name": "Beurre demi-sel.",
+    "brand": "Lactantia",
+    "price": 8.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20296112003_EA/fr/1/20296112003_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/beurre-demi-sel/p/20296112003_EA",
+    "sizing": "454 g, 1,98 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957349"
   },
   {
     "name": "Margarine originale",
@@ -1453,35 +1397,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242722"
-  },
-  {
-    "name": "Alternative au beurre non salée À base de plantes",
-    "brand": "le Choix du Président",
-    "price": 5.29,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21381971_EA/fr/1/6038302406_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/alternative-au-beurre-non-sal-e-base-de-plantes/p/21381971_EA",
-    "sizing": "454 g, 1,17 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242727"
+    "scraped_at": "2026-08-10T08:18:24.957351"
   },
   {
     "name": "Margarine sans sel",
     "brand": "Becel",
-    "price": 9.79,
+    "price": 7.0,
     "was_price": null,
     "on_sale": false,
     "image": "https://digital.loblaws.ca/PCX/21747498_EA/fr/1/1111515713_fr_front_centre_marketing_A_1_GS1_Ecommerce_400.png",
     "url": "https://www.provigo.ca/fr/margarine-sans-sel/p/21747498_EA",
-    "sizing": "800 g, 1,22 $/100g",
+    "sizing": "800 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242733"
+    "scraped_at": "2026-08-10T08:18:24.957353"
   },
   {
     "name": "Beurre Traditionnel à Tartiner",
@@ -1495,7 +1425,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242738"
+    "scraped_at": "2026-08-10T08:18:24.957355"
+  },
+  {
+    "name": "Alternative au beurre non salée À base de plantes",
+    "brand": "le Choix du Président",
+    "price": 5.29,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21381971_EA/fr/1/6038302406_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/alternative-au-beurre-non-sal-e-base-de-plantes/p/21381971_EA",
+    "sizing": "454 g, 1,17 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957357"
+  },
+  {
+    "name": "Margarine Or",
+    "brand": "Becel",
+    "price": 7.0,
+    "was_price": 9.79,
+    "on_sale": true,
+    "image": "https://digital.loblaws.ca/PCX/21279379_EA/fr/1/1111500116_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
+    "url": "https://www.provigo.ca/fr/margarine-or/p/21279379_EA",
+    "sizing": "637 g, 1,10 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957359"
   },
   {
     "name": "Sans lactose beurre non salé",
@@ -1509,21 +1467,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242743"
-  },
-  {
-    "name": "Margarine Or",
-    "brand": "Becel",
-    "price": 9.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21279379_EA/fr/1/1111500116_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/margarine-or/p/21279379_EA",
-    "sizing": "637 g, 1,54 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242747"
+    "scraped_at": "2026-08-10T08:18:24.957361"
   },
   {
     "name": "Margarine",
@@ -1537,7 +1481,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242753"
+    "scraped_at": "2026-08-10T08:18:24.957363"
   },
   {
     "name": "Margarine originale",
@@ -1551,21 +1495,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242758"
-  },
-  {
-    "name": "Traditionnel à Tartiner ",
-    "brand": "Lactantia",
-    "price": 7.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20285368_EA/fr/8/6820070121_enfr_front_noPlunge_ecomm_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/traditionnel-tartiner/p/20285368_EA",
-    "sizing": "1.28 kg, 0,62 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242762"
+    "scraped_at": "2026-08-10T08:18:24.957365"
   },
   {
     "name": "Beurre salé",
@@ -1579,7 +1509,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242768"
+    "scraped_at": "2026-08-10T08:18:24.957367"
+  },
+  {
+    "name": "Traditionnel à Tartiner ",
+    "brand": "Lactantia",
+    "price": 7.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20285368_EA/fr/8/6820070121_enfr_front_noPlunge_ecomm_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/traditionnel-tartiner/p/20285368_EA",
+    "sizing": "1.28 kg, 0,62 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957369"
   },
   {
     "name": "Beurre de culture salé",
@@ -1593,7 +1537,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242773"
+    "scraped_at": "2026-08-10T08:18:24.957371"
   },
   {
     "name": "Pâte originale Crescents, 8 pièces",
@@ -1607,7 +1551,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242778"
+    "scraped_at": "2026-08-10T08:18:24.957373"
   },
   {
     "name": "Pâte feuilletée au beurre",
@@ -1621,35 +1565,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242784"
+    "scraped_at": "2026-08-10T08:18:24.957375"
   },
   {
     "name": "Pâte à biscuits aux pépites de chocolat, Prête à cuire",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20318034001_EA/fr/1/20318034001_fr_1_400.png",
     "url": "https://www.provigo.ca/fr/p-te-biscuits-aux-p-pites-de-chocolat-pr-te-cuire/p/20318034001_EA",
-    "sizing": "468 g, 1,17 $/100g",
+    "sizing": "468 g, 0,85 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242789"
+    "scraped_at": "2026-08-10T08:18:24.957377"
   },
   {
     "name": "Pâte à biscuits aux morceaux de chocolat",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20318034002_EA/fr/1/20318034002_fr_1_400.png",
     "url": "https://www.provigo.ca/fr/p-te-biscuits-aux-morceaux-de-chocolat/p/20318034002_EA",
-    "sizing": "468 g, 1,17 $/100g",
+    "sizing": "468 g, 0,85 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242794"
+    "scraped_at": "2026-08-10T08:18:24.957379"
   },
   {
     "name": "Brioches à la Cannelle avec glaçage, prêts à cuire 8 unités",
@@ -1663,21 +1607,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242799"
+    "scraped_at": "2026-08-10T08:18:24.957381"
   },
   {
     "name": "Pâte à biscuits aux pépites de chocolat, Prête à cuire, 24 unités",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20301101005_EA/fr/1/20301101005_fr_1_400.png",
     "url": "https://www.provigo.ca/fr/p-te-biscuits-aux-p-pites-de-chocolat-pr-te-cuire/p/20301101005_EA",
-    "sizing": "454 g, 1,21 $/100g",
+    "sizing": "454 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242804"
+    "scraped_at": "2026-08-10T08:18:24.957384"
   },
   {
     "name": "Biscuits de Campagne, Pâte Prête à Cuire, 10 unités",
@@ -1691,21 +1635,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242810"
+    "scraped_at": "2026-08-10T08:18:24.957385"
   },
   {
     "name": "Brioches à la Cannelle Grands! avec Glaçage de , Cannelle, 5 unités",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20301101001_EA/fr/1/20301101001_fr_front_v3_400.png",
     "url": "https://www.provigo.ca/fr/brioches-la-cannelle-grands-avec-gla-age-de-cannel/p/20301101001_EA",
-    "sizing": "496 g, 1,11 $/100g",
+    "sizing": "496 g, 0,81 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242815"
+    "scraped_at": "2026-08-10T08:18:24.957388"
   },
   {
     "name": "Croûtes à tartelette prêtes à cuire",
@@ -1719,7 +1663,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242820"
+    "scraped_at": "2026-08-10T08:18:24.957390"
   },
   {
     "name": "Croûtes à tarte profondes",
@@ -1733,21 +1677,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242825"
-  },
-  {
-    "name": "Croûtes à tarte, Pâte Préparée Réfrigérée",
-    "brand": "Pillsbury",
-    "price": 4.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20187585_EA/fr/1/20187585_fr_1_400.png",
-    "url": "https://www.provigo.ca/fr/cro-tes-tarte-p-te-pr-par-e-r-frig-r-e/p/20187585_EA",
-    "sizing": "400 g, 1,20 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242830"
+    "scraped_at": "2026-08-10T08:18:24.957392"
   },
   {
     "name": "Pâte feuilletée",
@@ -1761,7 +1691,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242835"
+    "scraped_at": "2026-08-10T08:18:24.957394"
+  },
+  {
+    "name": "Croûtes à tarte, Pâte Préparée Réfrigérée",
+    "brand": "Pillsbury",
+    "price": 4.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20187585_EA/fr/1/20187585_fr_1_400.png",
+    "url": "https://www.provigo.ca/fr/cro-tes-tarte-p-te-pr-par-e-r-frig-r-e/p/20187585_EA",
+    "sizing": "400 g, 1,20 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957396"
   },
   {
     "name": "Pâte Pour Saucisses, Pâte Réfrigérée, Prête à Cuire, 6 unités",
@@ -1775,7 +1719,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242841"
+    "scraped_at": "2026-08-10T08:18:24.957398"
   },
   {
     "name": "Croissants Prêts À Cuire - Teneur Réduite En Gras",
@@ -1789,7 +1733,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242846"
+    "scraped_at": "2026-08-10T08:18:24.957400"
   },
   {
     "name": "Pâte à Pizza , Pâte Préparée Réfrigérée, 1 unité",
@@ -1803,7 +1747,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242852"
+    "scraped_at": "2026-08-10T08:18:24.957402"
   },
   {
     "name": "Pâte phyllo moyenne",
@@ -1817,35 +1761,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242857"
+    "scraped_at": "2026-08-10T08:18:24.957404"
   },
   {
     "name": "Monster Pâte à Biscuits Avec Morceaux De Bonbons, Beurre de Cacahuète et Pépites de Chocolat, Prête à Cuire, 12 ct",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21619255_EA/fr/1/21619255_fr_1_v1_400.png",
     "url": "https://www.provigo.ca/fr/monster-p-te-biscuits-avec-morceaux-de-bonbons-beu/p/21619255_EA",
-    "sizing": "454 g, 1,21 $/100g",
+    "sizing": "454 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242862"
+    "scraped_at": "2026-08-10T08:18:24.957406"
   },
   {
     "name": "Prêts à cuire Pâte à biscuits Reese's beurre d'arachide",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21477773_EA/fr/1/21477773_fr_1_v1_400.png",
     "url": "https://www.provigo.ca/fr/pr-ts-cuire-p-te-biscuits-reese-s-beurre-d-arachid/p/21477773_EA",
-    "sizing": "454 g, 1,21 $/100g",
+    "sizing": "454 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242867"
+    "scraped_at": "2026-08-10T08:18:24.957409"
   },
   {
     "name": "Grands! Croissants, Rouleaux de Croissant, Prêts à Cuire, 4 unités",
@@ -1859,21 +1803,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242872"
+    "scraped_at": "2026-08-10T08:18:24.957411"
   },
   {
     "name": "Pâte à Biscuits Double Chocolat , Prête à Cuire, 12 ct",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21619335_EA/fr/1/21619335_fr_1_400.png",
     "url": "https://www.provigo.ca/fr/p-te-biscuits-double-chocolat-pr-te-cuire-12-ct/p/21619335_EA",
-    "sizing": "454 g, 1,21 $/100g",
+    "sizing": "454 g, 0,88 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242877"
+    "scraped_at": "2026-08-10T08:18:24.957413"
   },
   {
     "name": "Chaussons feuilletés Vraies pommes",
@@ -1887,21 +1831,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242882"
+    "scraped_at": "2026-08-10T08:18:24.957415"
   },
   {
     "name": "Brioches à la cannelle Grands! Feuilleté suprême avec glaçage",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/20301101004_EA/fr/1/20301101004_fr_front_v1_400.png",
     "url": "https://www.provigo.ca/fr/brioches-la-cannelle-grands-feuillet-supr-me-avec/p/20301101004_EA",
-    "sizing": "496 g, 1,11 $/100g",
+    "sizing": "496 g, 0,81 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242887"
+    "scraped_at": "2026-08-10T08:18:24.957417"
   },
   {
     "name": "Pamplemousse rouge",
@@ -1915,7 +1859,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242892"
+    "scraped_at": "2026-08-10T08:18:24.957420"
   },
   {
     "name": "Petits pains feuilletés",
@@ -1929,7 +1873,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242897"
+    "scraped_at": "2026-08-10T08:18:24.957422"
   },
   {
     "name": "Croûte à tarte sans gluten surgelée",
@@ -1943,21 +1887,21 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242903"
+    "scraped_at": "2026-08-10T08:18:24.957424"
   },
   {
     "name": "PILLSBURY BISCUITS SUCRE 468G",
     "brand": "Pillsbury",
-    "price": 5.49,
-    "was_price": null,
-    "on_sale": false,
+    "price": 4.0,
+    "was_price": 4.5,
+    "on_sale": true,
     "image": "https://digital.loblaws.ca/PCX/21193674_EA/fr/1/21193674_fr_1_v1_400.png",
     "url": "https://www.provigo.ca/fr/pillsbury-biscuits-sucre-468g/p/21193674_EA",
-    "sizing": "468 g, 1,17 $/100g",
+    "sizing": "468 g, 0,85 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242908"
+    "scraped_at": "2026-08-10T08:18:24.957426"
   },
   {
     "name": "Morceaux de pêches",
@@ -1971,7 +1915,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242913"
+    "scraped_at": "2026-08-10T08:18:24.957428"
   },
   {
     "name": "Badam Barfi",
@@ -1985,7 +1929,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242918"
+    "scraped_at": "2026-08-10T08:18:24.957430"
   },
   {
     "name": " Besan Ladoo",
@@ -1999,7 +1943,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242923"
+    "scraped_at": "2026-08-10T08:18:24.957432"
   },
   {
     "name": "Kaju Katli",
@@ -2013,7 +1957,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242928"
+    "scraped_at": "2026-08-10T08:18:24.957434"
   },
   {
     "name": "Besan Barfi ",
@@ -2027,7 +1971,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242933"
+    "scraped_at": "2026-08-10T08:18:24.957436"
   },
   {
     "name": "Bâtonnets au fromage style vénézuélien tequechitos",
@@ -2041,7 +1985,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242939"
+    "scraped_at": "2026-08-10T08:18:24.957438"
   },
   {
     "name": "Cachitos congelés jambon & fromage",
@@ -2055,7 +1999,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242944"
+    "scraped_at": "2026-08-10T08:18:24.957440"
   },
   {
     "name": "Cachitos congelés jambon & bacon le traditionnel",
@@ -2069,7 +2013,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242954"
+    "scraped_at": "2026-08-10T08:18:24.957442"
   },
   {
     "name": "Pâte phyllo",
@@ -2083,7 +2027,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242960"
+    "scraped_at": "2026-08-10T08:18:24.957445"
   },
   {
     "name": "Lot de 12 œufs de calibre gros",
@@ -2097,217 +2041,7 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242965"
-  },
-  {
-    "name": "Blancs d’œufs de poules élevées en liberté",
-    "brand": "Les Fermes Burnbrae",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20820130001_EA/fr/1/6565100526_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/blancs-d-ufs-de-poules-lev-es-en-libert/p/20820130001_EA",
-    "sizing": "500 g, 1,16 $/100g 0,53 $/1lb",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242971"
-  },
-  {
-    "name": "Œufs, calibre gros",
-    "brand": "Sans Nom",
-    "price": 10.33,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21435777001_EA/fr/1/21435777001_enfr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-calibre-gros/p/21435777001_EA",
-    "sizing": "30 ea, 0,34 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242976"
-  },
-  {
-    "name": "Lot de 12 œufs calibre extra-gros",
-    "brand": "Sans Nom",
-    "price": 4.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20812726001_EA/fr/1/20812726001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-calibre-extra-gros/p/20812726001_EA",
-    "sizing": "12 ea, 0,40 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.242981"
-  },
-  {
-    "name": "Que des blancs d’œufs",
-    "brand": "Les Fermes Burnbrae",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20820355001_EA/fr/1/6565100249_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/que-des-blancs-d-ufs/p/20820355001_EA",
-    "sizing": "500 ml, 1,16 $/100ml",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243003"
-  },
-  {
-    "name": "Oeufs Gros Pondus Liberte",
-    "brand": "le Choix du Président",
-    "price": 6.25,
-    "was_price": 6.99,
-    "on_sale": true,
-    "image": "https://digital.loblaws.ca/PCX/20813628001_EA/fr/1/20813628001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/oeufs-gros-pondus-liberte/p/20813628001_EA",
-    "sizing": "12 ea, 0,52 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243013"
-  },
-  {
-    "name": "Lot de 12 œufs calibre moyen",
-    "brand": "Sans Nom",
-    "price": 4.19,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20813386001_EA/fr/1/20813386001_fr_front_v2_400.png",
-    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-calibre-moyen/p/20813386001_EA",
-    "sizing": "12 ea, 0,35 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243019"
-  },
-  {
-    "name": "Egg Creations original",
-    "brand": "Les Fermes Burnbrae",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20820690001_EA/fr/1/6565100345_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/egg-creations-original/p/20820690001_EA",
-    "sizing": "500 g, 1,16 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243024"
-  },
-  {
-    "name": "Lot de 12 œufs bruns de calibre gros",
-    "brand": "Sans Nom",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20813936001_EA/fr/1/20813936001_fr_front_v3_400.png",
-    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-bruns-de-calibre-gros/p/20813936001_EA",
-    "sizing": "12 ea, 0,48 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243029"
-  },
-  {
-    "name": "Carton de 12 œufs bruns pondus en liberté Biologique calibre gros",
-    "brand": "PC Biologique",
-    "price": 7.99,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20813711001_EA/fr/1/20813711001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/carton-de-12-ufs-bruns-pondus-en-libert-biologique/p/20813711001_EA",
-    "sizing": "12 ea, 0,67 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243035"
-  },
-  {
-    "name": "Egg Creations Oeufs Orig, Ch",
-    "brand": "Les Fermes Burnbrae",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20984144001_EA/fr/1/6565101250_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
-    "url": "https://www.provigo.ca/fr/egg-creations-oeufs-orig-ch/p/20984144001_EA",
-    "sizing": "500 g, 1,16 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243040"
-  },
-  {
-    "name": "Blancs d’œufs",
-    "brand": "PC Menu Bleu",
-    "price": 10.78,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20821364001_EA/fr/1/20821364001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/blancs-d-ufs/p/20821364001_EA",
-    "sizing": "1 kg, 1,08 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243046"
-  },
-  {
-    "name": "Lot de 12 œufs blancs de calibre gros pondus en liberté Menu Bleu",
-    "brand": "PC Menu Bleu",
-    "price": 7.49,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20992723001_EA/fr/1/20992723001_fr_front_v2_400.png",
-    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-blancs-de-calibre-gros-pondus-en-lib/p/20992723001_EA",
-    "sizing": "12 ea, 0,62 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243051"
-  },
-  {
-    "name": "Œufs durs oméga 6 écalés Eggs2go!",
-    "brand": "Les Fermes Burnbrae",
-    "price": 5.79,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21180376001_EA/fr/1/21180376001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-durs-om-ga-6-cal-s-eggs2go/p/21180376001_EA",
-    "sizing": "6 ea, 0,97 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243057"
-  },
-  {
-    "name": "Blancs d’œufs pondus en liberté",
-    "brand": "PC Menu Bleu",
-    "price": 6.7,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20821366001_EA/fr/1/20821366001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/blancs-d-ufs-pondus-en-libert/p/20821366001_EA",
-    "sizing": "500 g, 1,34 $/100g",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243062"
-  },
-  {
-    "name": "Oeufs Gros Categorie A",
-    "brand": "Les Fermes Burnbrae",
-    "price": 3.1,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20814818001_EA/fr/1/20814818001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/oeufs-gros-categorie-a/p/20814818001_EA",
-    "sizing": "6 ea, 0,52 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243067"
+    "scraped_at": "2026-08-10T08:18:24.957448"
   },
   {
     "name": "Gros œufs de catégorie A",
@@ -2321,35 +2055,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243073"
+    "scraped_at": "2026-08-10T08:18:24.957451"
   },
   {
-    "name": "Naeg Oeufs Omega 3 Grd Chq",
-    "brand": "Les Fermes Burnbrae",
-    "price": 6.49,
+    "name": "Œufs, calibre gros",
+    "brand": "Sans Nom",
+    "price": 10.33,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21069384001_EA/fr/1/6565100830_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/naeg-oeufs-omega-3-grd-chq/p/21069384001_EA",
-    "sizing": "12 ea, 6,49 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/21435777001_EA/fr/1/21435777001_enfr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-calibre-gros/p/21435777001_EA",
+    "sizing": "30 ea, 0,34 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243078"
+    "scraped_at": "2026-08-10T08:18:24.957454"
   },
   {
-    "name": "Œufs bruns pondus en liberté Menu Bleu calibre gros",
-    "brand": "PC Menu Bleu",
-    "price": 7.99,
+    "name": "Lot de 12 œufs calibre extra-gros",
+    "brand": "Sans Nom",
+    "price": 4.79,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20812736001_EA/fr/1/20812736001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-bruns-pondus-en-libert-menu-bleu-calibre-gros/p/20812736001_EA",
-    "sizing": "12 ea, 0,67 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20812726001_EA/fr/1/20812726001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-calibre-extra-gros/p/20812726001_EA",
+    "sizing": "12 ea, 0,40 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243083"
+    "scraped_at": "2026-08-10T08:18:24.957457"
   },
   {
     "name": "Oeufs Super Extra Gros Cat. A",
@@ -2363,35 +2097,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243089"
+    "scraped_at": "2026-08-10T08:18:24.957460"
   },
   {
-    "name": "Œufs oméga-3 pondus en liberté cuits durs écalés",
-    "brand": "PC Menu Bleu",
-    "price": 5.79,
+    "name": "Oeufs Gros Pondus Liberte",
+    "brand": "le Choix du Président",
+    "price": 7.17,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21048196001_EA/fr/1/21048196001_fr_front_v2_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-om-ga-3-pondus-en-libert-cuits-durs-cal-s/p/21048196001_EA",
-    "sizing": "3x88.0 g, 6,58 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20813628001_EA/fr/1/20813628001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/oeufs-gros-pondus-liberte/p/20813628001_EA",
+    "sizing": "12 ea, 0,60 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243094"
+    "scraped_at": "2026-08-10T08:18:24.957462"
   },
   {
-    "name": "Omega Plus solaire parcours libre œufs, gros",
-    "brand": "Les Fermes Burnbrae",
-    "price": 8.19,
+    "name": "Lot de 12 œufs calibre moyen",
+    "brand": "Sans Nom",
+    "price": 4.19,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21565655001_EA/fr/1/6565102338_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/omega-plus-solaire-parcours-libre-ufs-gros/p/21565655001_EA",
-    "sizing": "12 ea, 0,68 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20813386001_EA/fr/1/20813386001_fr_front_v2_400.png",
+    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-calibre-moyen/p/20813386001_EA",
+    "sizing": "12 ea, 0,35 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243101"
+    "scraped_at": "2026-08-10T08:18:24.957464"
   },
   {
     "name": "Oeufs A Double Jaune Cat A",
@@ -2405,35 +2139,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243106"
+    "scraped_at": "2026-08-10T08:18:24.957466"
   },
   {
-    "name": "Œufs de caille frais de la ferme",
-    "brand": "le Choix du Président",
-    "price": 3.99,
+    "name": "Lot de 12 œufs bruns de calibre gros",
+    "brand": "Sans Nom",
+    "price": 5.79,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21688098001_EA/fr/1/21688098001_fr_front_v1_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-de-caille-frais-de-la-ferme/p/21688098001_EA",
-    "sizing": "18 ea, 0,22 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20813936001_EA/fr/1/20813936001_fr_front_v3_400.png",
+    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-bruns-de-calibre-gros/p/20813936001_EA",
+    "sizing": "12 ea, 0,48 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243111"
+    "scraped_at": "2026-08-10T08:18:24.957468"
   },
   {
-    "name": "Solaire parcours libre œufs, gros",
-    "brand": "Les Fermes Burnbrae",
-    "price": 8.19,
+    "name": "Carton de 12 œufs bruns pondus en liberté Biologique calibre gros",
+    "brand": "PC Biologique",
+    "price": 7.99,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21565857001_EA/fr/1/21565857001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/solaire-parcours-libre-ufs-gros/p/21565857001_EA",
-    "sizing": "12 ea, 0,68 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20813711001_EA/fr/1/20813711001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/carton-de-12-ufs-bruns-pondus-en-libert-biologique/p/20813711001_EA",
+    "sizing": "12 ea, 0,67 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243117"
+    "scraped_at": "2026-08-10T08:18:24.957471"
   },
   {
     "name": "Nature'S Best Oeufs Gros",
@@ -2447,35 +2181,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243123"
+    "scraped_at": "2026-08-10T08:18:24.957474"
   },
   {
-    "name": "Pc Bio Blanc Oeuf Liberte",
-    "brand": "PC Biologique",
+    "name": "Blancs d’œufs",
+    "brand": "PC Menu Bleu",
+    "price": 10.78,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20821364001_EA/fr/1/20821364001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/blancs-d-ufs/p/20821364001_EA",
+    "sizing": "1 kg, 1,08 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957477"
+  },
+  {
+    "name": "Lot de 12 œufs blancs de calibre gros pondus en liberté Menu Bleu",
+    "brand": "PC Menu Bleu",
     "price": 7.49,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21334400_EA/fr/1/6038322336_fr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/pc-bio-blanc-oeuf-liberte/p/21334400_EA",
-    "sizing": "500 g, 1,50 $/100g",
+    "image": "https://digital.loblaws.ca/PCX/20992723001_EA/fr/1/20992723001_fr_front_v2_400.png",
+    "url": "https://www.provigo.ca/fr/lot-de-12-ufs-blancs-de-calibre-gros-pondus-en-lib/p/20992723001_EA",
+    "sizing": "12 ea, 0,62 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243128"
-  },
-  {
-    "name": "Naturoeuf Oeufs Bio Gros, Un.",
-    "brand": "Les Fermes Burnbrae",
-    "price": 8.13,
-    "was_price": null,
-    "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20827074001_EA/fr/1/6565100221_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
-    "url": "https://www.provigo.ca/fr/naturoeuf-oeufs-bio-gros-un/p/20827074001_EA",
-    "sizing": "12 ea, 0,68 $/1ch",
-    "store": "Provigo",
-    "category": null,
-    "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243133"
+    "scraped_at": "2026-08-10T08:18:24.957480"
   },
   {
     "name": "Naturoeuf Oeufs Omega 3 Gros",
@@ -2489,35 +2223,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243139"
+    "scraped_at": "2026-08-10T08:18:24.957483"
   },
   {
-    "name": "Grands œufs bruns élevés en liberté, emballage club (30 unités)",
-    "brand": "PC Biologique",
-    "price": 17.25,
+    "name": "Blancs d’œufs pondus en liberté",
+    "brand": "PC Menu Bleu",
+    "price": 6.7,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/21205224001_EA/fr/1/21205224001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/grands-ufs-bruns-lev-s-en-libert-emballage-club-30/p/21205224001_EA",
-    "sizing": "30 ea, 0,58 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20821366001_EA/fr/1/20821366001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/blancs-d-ufs-pondus-en-libert/p/20821366001_EA",
+    "sizing": "500 g, 1,34 $/100g",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243144"
+    "scraped_at": "2026-08-10T08:18:24.957487"
   },
   {
-    "name": "Œufs de poules en liberté, gros",
+    "name": "Oeufs Gros Categorie A",
     "brand": "Les Fermes Burnbrae",
-    "price": 4.39,
+    "price": 3.1,
     "was_price": null,
     "on_sale": false,
-    "image": "https://digital.loblaws.ca/PCX/20815566001_EA/fr/1/20815566001_fr_front_400.png",
-    "url": "https://www.provigo.ca/fr/ufs-de-poules-en-libert-gros/p/20815566001_EA",
-    "sizing": "6 ea, 0,73 $/1ch",
+    "image": "https://digital.loblaws.ca/PCX/20814818001_EA/fr/1/20814818001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/oeufs-gros-categorie-a/p/20814818001_EA",
+    "sizing": "6 ea, 0,52 $/1ch",
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243150"
+    "scraped_at": "2026-08-10T08:18:24.957490"
   },
   {
     "name": "Nturoeuf Oeufs Omga3 Pq Dble",
@@ -2531,7 +2265,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243155"
+    "scraped_at": "2026-08-10T08:18:24.957493"
+  },
+  {
+    "name": "Œufs bruns pondus en liberté Menu Bleu calibre gros",
+    "brand": "PC Menu Bleu",
+    "price": 7.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20812736001_EA/fr/1/20812736001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-bruns-pondus-en-libert-menu-bleu-calibre-gros/p/20812736001_EA",
+    "sizing": "12 ea, 0,67 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957496"
+  },
+  {
+    "name": "Que des blancs d’œufs",
+    "brand": "Les Fermes Burnbrae",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20820355001_EA/fr/1/6565100249_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/que-des-blancs-d-ufs/p/20820355001_EA",
+    "sizing": "500 ml, 1,16 $/100ml",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957500"
   },
   {
     "name": "Naturoeuf Oeufs Omga 3 Br Gros",
@@ -2545,7 +2307,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243160"
+    "scraped_at": "2026-08-10T08:18:24.957503"
+  },
+  {
+    "name": "Blancs d’œufs de poules élevées en liberté",
+    "brand": "Les Fermes Burnbrae",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20820130001_EA/fr/1/6565100526_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/blancs-d-ufs-de-poules-lev-es-en-libert/p/20820130001_EA",
+    "sizing": "500 g, 1,16 $/100g 0,53 $/1lb",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957506"
+  },
+  {
+    "name": "Œufs durs oméga 6 écalés Eggs2go!",
+    "brand": "Les Fermes Burnbrae",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21180376001_EA/fr/1/21180376001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-durs-om-ga-6-cal-s-eggs2go/p/21180376001_EA",
+    "sizing": "6 ea, 0,97 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957510"
   },
   {
     "name": "Naturoeuf Oeufs Omega Plus, Ea",
@@ -2559,7 +2349,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243166"
+    "scraped_at": "2026-08-10T08:18:24.957514"
+  },
+  {
+    "name": "Œufs oméga-3 pondus en liberté cuits durs écalés",
+    "brand": "PC Menu Bleu",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21048196001_EA/fr/1/21048196001_fr_front_v2_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-om-ga-3-pondus-en-libert-cuits-durs-cal-s/p/21048196001_EA",
+    "sizing": "3x88.0 g, 6,58 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957517"
+  },
+  {
+    "name": "Egg Creations original",
+    "brand": "Les Fermes Burnbrae",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20820690001_EA/fr/1/6565100345_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/egg-creations-original/p/20820690001_EA",
+    "sizing": "500 g, 1,16 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957521"
   },
   {
     "name": "Burnbrae Oeufs Gros",
@@ -2573,7 +2391,35 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243171"
+    "scraped_at": "2026-08-10T08:18:24.957524"
+  },
+  {
+    "name": "Œufs de caille frais de la ferme",
+    "brand": "le Choix du Président",
+    "price": 3.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21688098001_EA/fr/1/21688098001_fr_front_v1_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-de-caille-frais-de-la-ferme/p/21688098001_EA",
+    "sizing": "18 ea, 0,22 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957527"
+  },
+  {
+    "name": "Œufs de poules en liberté, gros",
+    "brand": "Les Fermes Burnbrae",
+    "price": 4.39,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20815566001_EA/fr/1/20815566001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/ufs-de-poules-en-libert-gros/p/20815566001_EA",
+    "sizing": "6 ea, 0,73 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957530"
   },
   {
     "name": "Naturoeuf Oeufs Omega Pqt 18",
@@ -2587,6 +2433,104 @@
     "store": "Provigo",
     "category": null,
     "meat_type": null,
-    "scraped_at": "2026-08-04T06:17:39.243176"
+    "scraped_at": "2026-08-10T08:18:24.957534"
+  },
+  {
+    "name": "Pc Bio Blanc Oeuf Liberte",
+    "brand": "PC Biologique",
+    "price": 7.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21334400_EA/fr/1/6038322336_fr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/pc-bio-blanc-oeuf-liberte/p/21334400_EA",
+    "sizing": "500 g, 1,50 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957537"
+  },
+  {
+    "name": "Egg Creations Oeufs Orig, Ch",
+    "brand": "Les Fermes Burnbrae",
+    "price": 5.79,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20984144001_EA/fr/1/6565101250_fr_front_centre_marketing_A_1_GS1_Ecommerce_v1_400.png",
+    "url": "https://www.provigo.ca/fr/egg-creations-oeufs-orig-ch/p/20984144001_EA",
+    "sizing": "500 g, 1,16 $/100g",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957540"
+  },
+  {
+    "name": "Naturoeuf Oeufs Bio Gros, Un.",
+    "brand": "Les Fermes Burnbrae",
+    "price": 8.13,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/20827074001_EA/fr/1/6565100221_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/naturoeuf-oeufs-bio-gros-un/p/20827074001_EA",
+    "sizing": "12 ea, 0,68 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957543"
+  },
+  {
+    "name": "Grands œufs bruns élevés en liberté, emballage club (30 unités)",
+    "brand": "PC Biologique",
+    "price": 17.25,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21205224001_EA/fr/1/21205224001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/grands-ufs-bruns-lev-s-en-libert-emballage-club-30/p/21205224001_EA",
+    "sizing": "30 ea, 0,58 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957546"
+  },
+  {
+    "name": "Naeg Oeufs Omega 3 Grd Chq",
+    "brand": "Les Fermes Burnbrae",
+    "price": 6.49,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21069384001_EA/fr/1/6565100830_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/naeg-oeufs-omega-3-grd-chq/p/21069384001_EA",
+    "sizing": "12 ea, 6,49 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957550"
+  },
+  {
+    "name": "Omega Plus solaire parcours libre œufs, gros",
+    "brand": "Les Fermes Burnbrae",
+    "price": 8.19,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21565655001_EA/fr/1/6565102338_enfr_front_centre_marketing_GS1_Ecommerce_400.png",
+    "url": "https://www.provigo.ca/fr/omega-plus-solaire-parcours-libre-ufs-gros/p/21565655001_EA",
+    "sizing": "12 ea, 0,68 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957553"
+  },
+  {
+    "name": "Solaire parcours libre œufs, gros",
+    "brand": "Les Fermes Burnbrae",
+    "price": 8.19,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://digital.loblaws.ca/PCX/21565857001_EA/fr/1/21565857001_fr_front_400.png",
+    "url": "https://www.provigo.ca/fr/solaire-parcours-libre-ufs-gros/p/21565857001_EA",
+    "sizing": "12 ea, 0,68 $/1ch",
+    "store": "Provigo",
+    "category": null,
+    "meat_type": null,
+    "scraped_at": "2026-08-10T08:18:24.957557"
   }
 ]

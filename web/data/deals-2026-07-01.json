@@ -1068,6 +1068,28 @@
       "detail": null
     },
     {
+      "id": 56267,
+      "name": "Compliments surgelé bœuf pour fondue chinoise 300 g",
+      "name_short": "Compliments surgelé bœuf pour fondue chi…",
+      "category": "fruit",
+      "store": "IGA",
+      "store_id": 37937,
+      "store_emoji": "🟢",
+      "store_url": "https://www.iga.net/",
+      "price": 6.99,
+      "per_kg": 23.3,
+      "per_lb": 10.57,
+      "weight_kg": 0.3,
+      "source": "nom",
+      "valid_to": null,
+      "image_url": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/e9779fe0-2dda-48b0-96fa-7f1c9989ed8c/300x300.jpg",
+      "protein_per_100g": null,
+      "protein_per_dollar": null,
+      "product_type": "transformé",
+      "recipe": null,
+      "detail": null
+    },
+    {
       "id": 56194,
       "name": "Jambon fumé désossé Géant Valeur,",
       "name_short": "Jambon fumé désossé Géant Valeur,",

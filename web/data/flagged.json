@@ -1,5 +1,16 @@
 [
   {
+    "id": 54802,
+    "name": "Tenderloin Steak",
+    "store": "Metro",
+    "price": 35.05,
+    "per_kg": 116.82,
+    "weight_kg": null,
+    "source": "image",
+    "reason": "per_kg_trop_eleve",
+    "week": "2026-08-10"
+  },
+  {
     "id": 53440,
     "name": "Boneless Top Sirloin Roast",
     "store": "Super C",
