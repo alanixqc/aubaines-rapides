@@ -1,7 +1,7 @@
 {
   "success": true,
-  "last_run": "2026-07-17T15:11:23.402260",
-  "warning": "Seulement 33 items viande (seuil: 50)",
-  "total_products": 5079,
-  "total_prices": 12281
+  "last_run": "2026-08-11T08:33:07.626182",
+  "warning": null,
+  "total_products": 5184,
+  "total_prices": 13461
 }
