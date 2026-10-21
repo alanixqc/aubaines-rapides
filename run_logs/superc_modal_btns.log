@@ -1,0 +1,72 @@
+{
+ "btns": [
+  {
+   "text": "Close the contextual modal window",
+   "cls": "modal__close focusable",
+   "hidden": false
+  },
+  {
+   "text": "Submit",
+   "cls": "postalCode_submit_pickup_list cta-primary hide",
+   "hidden": true
+  },
+  {
+   "text": "Please remove items from your order",
+   "cls": "cta-link dark-mode d-inline text-align-left mr-1",
+   "hidden": true
+  },
+  {
+   "text": "Try pickup",
+   "cls": "cta-secondary tryPickUp",
+   "hidden": true
+  },
+  {
+   "text": "Lowest fee? \n                \n          ",
+   "cls": "lowestFeeBtn",
+   "hidden": true
+  },
+  {
+   "text": "Try deliveries",
+   "cls": "cta-secondary tryDelivery",
+   "hidden": true
+  },
+  {
+   "text": "Flexible",
+   "cls": "cta-link showTimeslotFlexible",
+   "hidden": true
+  },
+  {
+   "text": "Try Mpriority",
+   "cls": "medium cta-secondary d-block mt-2 showTimeslotFlexible",
+   "hidden": true
+  },
+  {
+   "text": "See all timeslots",
+   "cls": "cta-link seeAllTimeslot",
+   "hidden": true
+  },
+  {
+   "text": "Got it",
+   "cls": "medium cta-secondary confirmBtn w-100",
+   "hidden": true
+  },
+  {
+   "text": "See all timeslots",
+   "cls": "medium cta-secondary w-100 seeAllTimeslot hide",
+   "hidden": true
+  },
+  {
+   "text": "Confirm",
+   "cls": "medium cta-primary",
+   "hidden": false
+  },
+  {
+   "text": "Choose later",
+   "cls": "medium cta-secondary chooseLater",
+   "hidden": false
+  }
+ ],
+ "tabs": [],
+ "footer": "Your selected service.\nConfirm\nChoose later"
+}
+EXIT=0

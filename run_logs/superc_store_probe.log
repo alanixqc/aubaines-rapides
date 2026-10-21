@@ -1,0 +1,103 @@
+text="Select" count=11
+text="Pick-up or Delivery" count=1
+text="Choose" count=0
+text="Choisir" count=0
+click fail Pick-up or Delivery TimeoutError Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for get_by_text("Pick-up or Delivery")
+inputs: 30
+  input 0 hidden None freeText
+  input 1 search Search products filter
+  input 2 checkbox None _spring_security_remember_me
+  input 3 radio None cartSelected2
+  input 4 radio None cartSelected2
+  input 5 text   None
+  input 6 text   None
+  input 7 text   None
+--- modal/body excerpt ---
+Skip to content
+METRO Logo
+Search products
+Start a search
+Super C - Ste-Anne-des-Plaines
+Change store
+
+savings just for Moi!
+Enroll in
+the program.
+
+FR
+0
+ item
+Aisles
+Flyer
+Cart Genius
+Tips & meal ideas
+Savings
+Local Products
+World cuisine
+My coupons
+My Quick Shop
+My orders
+Home
+Back
+Aisles
+View all
+Fruits & Vegetables
+Dairy & Eggs
+Pantry
+Cooked Meals
+Value Pack
+Beverages
+Beer & Wine
+Meat & Poultry
+Vegan & Vegetarian Food
+Organic Groceries
+Snacks
+Frozen
+Bread & Bakery Products
+Deli & Prepared Meals
+Fish & Seafood
+World Cuisine
+Household & Cleaning
+Baby
+Health & Beauty
+Pet Care
+Pharmacy
+Lottery Tickets
+Magazines & Books
+Home
+Back
+Featured shops
+Get $60 off your first 3 online orders! Promo codes: 20SUPER1, 20SUPER2, and 20SUPER3. Learn more.
+Newsletter signup
+Select
+Pick-up or Delivery
+Aisles 
+Meat & poultry 
+Beef & veal
+Beef & Veal
+All
+Steak Cuts
+Angus & Aged Beef
+Ground
+Roasts, Ribs & Racks
+Fondue, Cubes & Strips
+Marrow Soup Bone & Shank
+Blood Sausage & Giblets
+Filter and sort
+Close the contextual modal window
+Sort
+Price (low to high)
+Price (high to low)
+Relevance
+Product (A-Z)
+Product (Z-A)
+Apply
+Clear All
+Clear All
+0 item
+We found 0 results that match the criteria you selected.
+
+FINAL URL: https://www.superc.ca/en/aisles/meat-poultry/beef-veal
+EXIT=0

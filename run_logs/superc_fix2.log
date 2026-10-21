@@ -1,0 +1,10 @@
+   → postal filled
+   radios: 11
+    radio 0 registeredCart2 REGISTERED checked= True
+    radio 1 anonymousCart2 ANONYMOUS checked= False
+    radio 2 deliveryRadio HOME_DELIVERY checked= False
+    radio 3 pickUpRadio PICK_UP_IN_STORE checked= True
+   → confirm: clicked
+   → products visible after confirm: False
+❌ Super C always 0 results
+EXIT=1

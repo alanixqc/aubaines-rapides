@@ -1,0 +1,16 @@
+AISLE LINKS: ['/en/aisles/meat-poultry', '/en/aisles/meat-poultry/beef-veal/steak-cuts', '/en/aisles/meat-poultry/beef-veal/angus-aged-beef', '/en/aisles/meat-poultry/beef-veal/ground', '/en/aisles/meat-poultry/beef-veal/roasts-ribs-racks', '/en/aisles/meat-poultry/beef-veal/fondue-cubes-strips', '/en/aisles/meat-poultry/beef-veal/marrow-soup-bone-shank', '/en/aisles/meat-poultry/beef-veal/blood-sausage-giblets']
+/en/aisles/meat-poultry                                      zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/steak-cuts                 zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/angus-aged-beef            zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/ground                     zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/roasts-ribs-racks          zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/fondue-cubes-strips        zero=False cards=0 items_txt=-
+/en/aisles/meat-poultry/beef-veal/marrow-soup-bone-shank     zero=True cards=0 items_txt=0
+ item
+/en/aisles/meat-poultry/beef-veal/blood-sausage-giblets      zero=False cards=0 items_txt=-
+EXIT=0

@@ -1,0 +1,14 @@
+=== STEP: confirm fulfillment service ===
+   → banner click: clicked
+   pickup text fail TimeoutError Locator.click: Timeout 6000ms exceeded.
+Call log:
+  - waiting for get_by_text("P
+   pickup css fail TimeoutError Locator.click: Timeout 6000ms exceeded.
+Call log:
+  - waiting for locator("butto
+   confirm fail TimeoutError Locator.click: Timeout 6000ms exceeded.
+Call log:
+  - waiting for locator("butto
+   → after confirm: products_visible=False
+❌ Super C still shows 0 results after service confirmation
+EXIT=1
