@@ -64,18 +64,20 @@ def save_status(status_data):
         json.dump(web_data, f, indent=2, ensure_ascii=False)
 
 
-def run_scraper(name, args=None, timeout=120):
+def run_scraper(name, args=None, timeout=120, add_db=True):
     """Run a scraper subprocess and return (success, output)."""
     path = os.path.join(SCRIPTERS_DIR, f"scraper_{name}.py")
     if not os.path.exists(path):
         logging.warning(f"   ⚠️ Scraper {name} introuvable: {path}")
         return False, ""
 
-    cmd = [PYTHON, path, "--db"]
+    cmd = [PYTHON, path]
+    if add_db:
+        cmd.append("--db")
     if args:
         cmd.extend(args)
 
-    logging.info(f"   ▶️ python scraper_{name}.py {' '.join(args or ['--db'])}")
+    logging.info(f"   ▶️ python scraper_{name}.py {' '.join(cmd[2:])}")
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
         for line in result.stderr.strip().split("\n"):
@@ -180,7 +182,7 @@ def run_pipeline():
         logger.info("\n🌐 Phase 0b: Scrapers Playwright...")
         playwright_scrapers = ["superc"]
         for name in playwright_scrapers:
-            ok, err = run_scraper(name, ["--db", "--headless", "true"], timeout=180)
+            ok, err = run_scraper(name, ["--store", "--headless", "true"], timeout=300, add_db=False)
             scrapers_stats[name] = {"success": ok, "error": err if not ok else None}
             logger.info(f"   {'✅' if ok else '❌'} {name}")
 
