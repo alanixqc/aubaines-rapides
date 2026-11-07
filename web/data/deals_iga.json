@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Schneiders Deli Half Ham Original 700 g",
+    "brand": "",
+    "price": 12.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/469314e4-188f-4fff-a3cb-236420505316/300x300.jpg",
+    "url": "https://voila.ca/products/schneiders-deli-half-ham-original-700-g/791090EA",
+    "sizing": "700g",
+    "store": "IGA",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-11-07T06:43:43.110888"
+  },
+  {
+    "name": "Compliments Bacon Naturally Smoked 375 g",
+    "brand": "",
+    "price": 4.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/1f0dc5b6-6d43-44b6-a23f-8f850d21b645/300x300.jpg",
+    "url": "https://voila.ca/products/compliments-bacon-naturally-smoked-375-g/999495EA",
+    "sizing": "375g",
+    "store": "IGA",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-11-07T06:43:43.110888"
+  },
+  {
+    "name": "Compliments Chicken Thighs Boneless Skinless Value Size 900 g (6-9 Pieces)",
+    "brand": "",
+    "price": 12.9,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/d097cce9-765b-4d31-8b3c-48dcbfdf7cce/300x300.jpg",
+    "url": "https://voila.ca/products/compliments-chicken-thighs-boneless-skinless-value-size-900-g-6-9-pieces/218947KG",
+    "sizing": "0.98kg",
+    "store": "IGA",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-11-07T06:43:43.110888"
+  },
+  {
+    "name": "Wonderful Pistachios Shelled Roasted Salted 170 g",
+    "brand": "",
+    "price": 10.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/1a66133c-4f22-4193-987a-7c89e9e70227/300x300.jpg",
+    "url": "https://voila.ca/products/wonderful-pistachios-shelled-roasted-salted-170-g/344121EA",
+    "sizing": "170g",
+    "store": "IGA",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-11-07T06:43:43.110888"
+  },
+  {
+    "name": "Mastro Genoa Sliced Meat Salami 150 g",
+    "brand": "",
+    "price": 7.99,
+    "was_price": null,
+    "on_sale": false,
+    "image": null,
+    "url": "https://voila.ca/products/mastro-genoa-sliced-meat-salami-150-g/699480EA",
+    "sizing": "150g",
+    "store": "IGA",
+    "category": "Viande",
+    "meat_type": null,
+    "scraped_at": "2026-11-07T06:43:43.110888"
+  }
+]
